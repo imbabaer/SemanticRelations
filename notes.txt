@@ -1,0 +1,19 @@
+"Semantische Beziehungen"
+Vorhandene Korpora lernen/analysieren
+Schauen was als semantisch ähnlich erkannt wird (Testmenge definieren, Auto-kfz, Automobil, Fahrzeug etc.
+Korpus aus spezielle Domäne erstellen zB Gameforen
+
+Reddit, openstack
+
+Vergleich Semantik spezieller Korpus und allgemeiner Korpus
+
+
+
+(Klassifikator über wissenschaftliche paper. Um was geht es eigentlich?)
+
+
+Abstract halbe Seite: was soll in de BA bearbeitet werden
+Projektplan, Teilpakete und wie lang für was Zeit brauchen. 
+
+
+BA anmelden wenn ich denke ich kann es in 3 Monaten vollenden. Ca nach Einarbeitung und ersten Programmierungsversuchen.
