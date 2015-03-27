@@ -13,7 +13,7 @@ Vergleich Semantik spezieller Korpus und allgemeiner Korpus
 
 
 Abstract halbe Seite: was soll in de BA bearbeitet werden
-Projektplan, Teilpakete und wie lang für was Zeit brauchen. 
+Projektplan, Teilpakete und wie lang für was Zeit brauchen.
 
 
 BA anmelden wenn ich denke ich kann es in 3 Monaten vollenden. Ca nach Einarbeitung und ersten Programmierungsversuchen.
