@@ -1,0 +1,17 @@
+\documentclass[11pt]{article}
+
+
+\usepackage[margin=3.5cm]{geometry}
+\usepackage{ngerman}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\section*{Abstract}
+Diese Bachelorthesis beschäftigt sich mit der Analyse der semantischen Beziehungen innerhalb des Word2Vec-Modells.
+\\Dazu sollen zum einen schon vorhandene allgemeine Korpora gelernt und analysiert werden, was als semantisch ähnlich erkannt wird. Zum anderen soll ein Korpus über eine spezielle Domäne erstellt und gelernt werden. Was für eine spezielle Domäne betrachtet werden soll, wird im Laufe der Bearbeitung festgelegt.
+\\Diese beiden Korpora sollen dann verglichen werden, was jeweils als semantisch ähnlich erkannt wird. 
+\\Ziel dieser Arbeit soll es sein festzustellen, ob ein allgemeiner Korpus oder ein spezieller Domänenkorpus 
+
+
+\end{document}
