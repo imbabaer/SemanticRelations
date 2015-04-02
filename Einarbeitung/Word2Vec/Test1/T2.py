@@ -32,16 +32,20 @@ for x in range(1, 100):
 
 #preprocessed Korpus
 file = open(preprocessedKorpus)
-lines= file.read()
+lines= file.readlines()
 lenght=len(lines)
-partitionSize = int(math.ceil(lenght/1000))
+partitionSize = int(math.ceil(lenght/100))
+'''
+'''
 
-for x in range(1, 2):
+for x in range(1, 100):
     f = open(tmpPreprocessed+'file'+str(x),'w')
     print "created: preprocessed/file"+str(x)
     for y in range (0,partitionSize):
         f.write(lines[x*y])
     f.close()
+partlines = lines[1-1000]
+
 
 print "done."
 
