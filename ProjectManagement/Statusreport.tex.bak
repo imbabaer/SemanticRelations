@@ -1,0 +1,26 @@
+\documentclass[11pt,a4paper]{article}
+
+
+\usepackage[margin=3cm]{geometry}
+\usepackage{ngerman}
+\usepackage[utf8]{inputenc}
+\usepackage[onehalfspacing]{setspace}
+
+\begin{document}
+\title{Statusreport zur Bachelorarbeit 'Semantische Beziehungen'}
+\date{}
+\author{Ruben Müller}
+\maketitle
+
+\textbf{Hinweis:} Referenzangaben zum Projektplan sind kursiv und in runden Klammern im Format \textit{(x,xx)}
+\section*{KW13-}
+Am 25.03.2015 um 11 Uhr fand das Kick-Off Meeting\textit{(1,01)} im Raum 321 der Hochschule der Medien  mit Prof. Dr. Johannes Maucher, M.Sc. Andreas Stiegler (via Skype) und Ruben Müller statt. Hier wurde der Umfang und Inhalt der Bachelorarbeit besprochen.
+\\Am 27.03.2015 habe ich den Projektplan(\textit{2,01}), anhand einer Vorlage von \\\texttt{www.meinevorlagen.com}, angefangen und am 28.03.2015 fertig gestellt. 
+\\Am 30. und 31. März 2015 habe ich den Abstract\textit{(2,02)} geschrieben.
+\\Am 02. April 2015 habe ich mit der Einarbeitung in Word2Vec\textit{(3,01)} und dem Wikipedia-Korpus\textit{(3,02)} begonnen. Nachdem ich in PyCharm dann eine Out-of-Memory-Exception hatte, habe ich die neueste Version des Programms heruntergeladen (Version 4.0.5), die auch eine 64-Bit Version bereitstellt. Hier konnte ich dann die Größe des Speichers ausreichend vergrößern. 
+\\Mit dem Perl-Skript von \texttt{http://mattmahoney.net/dc/textdata.html}, unter Appendix A, kann der Wikipedia-Dump preprocessed werden. Allerdings ist dann der komplette Text in einer Zeile und enthält keine Satzzeichen mehr, die aber für Word2Vec gebraucht werden, da der Input hier Sätze sind. 
+
+
+
+\section*{KW1x-}
+\end{document}
