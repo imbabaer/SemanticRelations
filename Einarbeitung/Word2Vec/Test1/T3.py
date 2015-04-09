@@ -30,14 +30,16 @@ for sent in sents:
         sent=sent.replace(c,"")
     splittedSents.append(sent.lower().split(" "))
 
-print splittedSents
+print splittedSents[0]
+print splittedSents[1]
+print splittedSents[2]
 # train word2vec
-model = gensim.models.Word2Vec(sents, min_count=1)
+model = gensim.models.Word2Vec(splittedSents, min_count=1, size=50)
 
 #print model.most_similar(positive=['woman', 'king'], negative=['man'], topn=1)
 #model.doesnt_match("breakfast cereal dinner lunch".split())
 #print model.similarity('woman', 'man')
-print model.similarity('anarchism','organization')
+print model.similarity('organization','anarchism')
 
 '''
 '''
