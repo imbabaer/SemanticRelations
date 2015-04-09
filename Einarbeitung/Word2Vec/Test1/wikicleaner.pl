@@ -39,7 +39,7 @@ while (<>) {
 
     # convert to lowercase letters and spaces, spell digits
     $_=" $_ ";
-    tr/A-Z/a-z/;
+    #tr/A-Z/a-z/;
     s/0/ zero /g;
     s/1/ one /g;
     s/2/ two /g;
@@ -50,12 +50,14 @@ while (<>) {
     s/7/ seven /g;
     s/8/ eight /g;
     s/9/ nine /g;
-    #tr/a-z/ /cs; #removes everything else than letters
-    tr/'//sd;
-    tr/=//sd;
-    tr/*//sd;
-    tr/#//sd;
-    tr/ //s;
+    tr/A-Za-z,.!?;/ /cs; #removes everything else than letters
+    #tr/'//sd;
+    #tr/=//sd;
+    #tr/*//sd;
+    #tr/0xa9//sd;
+    #tr/\#//sd;
+    #tr/\r\n/ /;
+    #tr/ //s;
     chop;
     print $_;
   }

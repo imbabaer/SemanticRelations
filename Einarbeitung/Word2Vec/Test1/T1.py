@@ -25,12 +25,12 @@ sentences = [['woman', 'queen'],
              ['woman', 'queen'],
              ['man', 'king'],
              ['woman', 'queen'],
-             ['man', 'king'], ]
+             ['man', 'kangoroo'], ]
 # train word2vec on the two sentences
 model = gensim.models.Word2Vec(sentences, min_count=1)
 
 print model.most_similar(positive=['woman', 'king'], negative=['man'], topn=1)
 #model.doesnt_match("breakfast cereal dinner lunch".split())
-print model.similarity('woman', 'man')
+print model.similarity('kangoroo', 'man')
 
 print("done.")

@@ -29,14 +29,13 @@ for x in range(1, 100):
     f.close()
 '''
 
+'''
 
 #preprocessed Korpus
 file = open(preprocessedKorpus)
 lines= file.readlines()
 lenght=len(lines)
 partitionSize = int(math.ceil(lenght/100))
-'''
-'''
 
 for x in range(1, 100):
     f = open(tmpPreprocessed+'file'+str(x),'w')
@@ -45,7 +44,19 @@ for x in range(1, 100):
         f.write(lines[x*y])
     f.close()
 partlines = lines[1-1000]
+'''
+#preprocessed Korpus
+file = open(preprocessedKorpus)
+lines= file.read()
+lenght=len(lines)
+partitionSize = int(math.ceil(lenght/1000))
 
+for x in range(0, 1000):
+    f = open(tmpPreprocessed+'file'+str(x),'w')
+    for y in range (0,partitionSize):
+        f.write(lines[x*partitionSize +y])
+    f.close()
+    print "created: preprocessed/file"+str(x)
 
 print "done."
 
