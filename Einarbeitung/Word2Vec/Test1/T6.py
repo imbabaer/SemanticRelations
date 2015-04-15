@@ -1,8 +1,8 @@
-import gensim
 import nltk
 import string
 import time
-import datetime
+import numpy
+import gensim
 
 file1 = open('times.txt','w')
 time1 = time.time()
@@ -44,16 +44,15 @@ print time.time()-start_time
 file1.write('reading file time: '+str(time.time()-start_time))
 
 buildvoctime = time.time()
-model = gensim.models.Word2Vec(size=100, window=5, min_count=20, workers=8)
 z=0
-#splittedSentences = []
+splittedSentences = []
 with open(folder+'enwik9/largefile2') as infile:
     for line in infile:
         line = line.replace("\n",".")
         for c in string.punctuation:
             line=line.replace(c,"")
-        model.build_vocab([x for x in line.lower().split(" ") if x])
-        #splittedSentences.append([x for x in sent.lower().split(" ") if x])
+        #model.build_vocab([x for x in line.lower().split(" ") if x])
+        splittedSentences.append([x for x in line.lower().split(" ") if x])
         print "added splitted sentence: "+str(z)
         z+=1
 #sind irgendwie glaub alle zeichen durchgelaufen> 634522335
@@ -70,6 +69,7 @@ file1.close()
 print "\ntraining model"
 start_time = time.time()
 # train word2vec
+model = gensim.models.Word2Vec(splittedSentences,size=100, window=5, min_count=20, workers=8)
 
 
 #model.init_sims()
