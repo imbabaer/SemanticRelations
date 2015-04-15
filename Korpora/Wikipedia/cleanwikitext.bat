@@ -1,0 +1,1 @@
+perl ../../Einarbeitung/Word2Vec/Test1/wikicleaner.pl enwiki-latest-pages-articles.xml > enwiki-latest-pages-articles_clean.txt

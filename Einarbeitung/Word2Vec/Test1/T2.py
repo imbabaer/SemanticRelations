@@ -45,6 +45,7 @@ for x in range(1, 100):
     f.close()
 partlines = lines[1-1000]
 '''
+'''
 #preprocessed Korpus
 file = open(preprocessedKorpus)
 lines= file.read()
@@ -57,6 +58,26 @@ for x in range(0, 1000):
         f.write(lines[x*partitionSize +y])
     f.close()
     print "created: preprocessed/file"+str(x)
+'''
+
+#preprocessed Korpus
+x = 0
+y=0
+tmp = []
+with open(preprocessedKorpus) as infile:
+    for line in infile:
+        if x < 100000:
+            tmp.extend(line)
+            x+=1
+        else:
+            f = open(tmpPreprocessed+'file'+str(y),'w')
+            for item in tmp:
+                f.write(item)
+            f.close()
+            print "created: preprocessed/file"+str(y)
+            tmp=[]
+            x=0
+            y+=1
 
 print "done."
 
