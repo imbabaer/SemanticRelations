@@ -8,18 +8,31 @@
 
 \begin{document}
 \title{Statusreport zur Bachelorarbeit 'Semantische Beziehungen'}
-\date{}
+\date{2015}
 \author{Ruben Müller}
 \maketitle
 
 \textbf{Hinweis:} Referenzangaben zum Projektplan sind kursiv und in runden Klammern im Format \textit{(x,xx)}
-\section*{KW13-}
+\section*{KW13}
 Am 25.03.2015 um 11 Uhr fand das Kick-Off Meeting\textit{(1,01)} im Raum 321 der Hochschule der Medien  mit Prof. Dr. Johannes Maucher, M.Sc. Andreas Stiegler (via Skype) und Ruben Müller statt. Hier wurde der Umfang und Inhalt der Bachelorarbeit besprochen.
 \\Am 27.03.2015 habe ich den Projektplan(\textit{2,01}), anhand einer Vorlage von \\\texttt{www.meinevorlagen.com}, angefangen und am 28.03.2015 fertig gestellt. 
-\\Am 30. und 31. März 2015 habe ich den Abstract\textit{(2,02)} geschrieben.
+\section*{KW14}
+Am 30. und 31. März 2015 habe ich den Abstract\textit{(2,02)} geschrieben. Um den Abstract zu schreiben, habe ich mich ein wenig in die Grundfunktionen von \LATEX eingearbeitet.
 \\Am 02. April 2015 habe ich mit der Einarbeitung in Word2Vec\textit{(3,01)} und dem Wikipedia-Korpus\textit{(3,02)} begonnen. Nachdem ich in PyCharm dann eine Out-of-Memory-Exception hatte, habe ich die neueste Version des Programms heruntergeladen (Version 4.0.5), die auch eine 64-Bit Version bereitstellt. Hier konnte ich dann die Größe des Speichers ausreichend vergrößern. 
 \\Mit dem Perl-Skript von \texttt{http://mattmahoney.net/dc/textdata.html}, unter Appendix A, kann der Wikipedia-Dump preprocessed werden. Allerdings ist dann der komplette Text in einer Zeile und enthält keine Satzzeichen mehr, die aber für Word2Vec gebraucht werden, da der Input hier Sätze sind. Hier ist das Perl-Skript anzupassen, was nicht viel Aufwand war. Da in der jetzt wegfallenden Regel auch sämtliche Wiki-Formatierungszeichen entfernt werden, müssen diese jetzt wieder in das Skript eingebaut werden.
+\\Nach einigem ausprobieren und mehrfachem Skript ausführen, kam ich dann zum gewünschten Ergebnis.
+\section*{KW15}
+Nach Ostern habe ich dann das Preprocessing der Wikipedia Korpora anhand des kleineren Korpus (die ersten 1 Milliarde Zeichen) weitergeführt. Um einen besseren Überblick zu erhalten, ob das Preprocessing das tut, was ich will, habe ich das große File in kleinere aufgesplittet um diese in Notepad++ überhaupt betrachten zu können. Als nächster Schritt kam die Aufsplittung in einzelne Sätze, da das Word2Vec Modell Sätze als Input verlangt. Die Tokenizierung habe ich mit dem NLTK Tokenizer ('tokenizers/punkt/english.pickle') gemacht.
+\\Als ich die Sätze in ein Array einlesen wollte, um diese dann ins Modell zu geben, bekam ich immer wieder einen MemoryError. Ich habe dann versucht nur eine Teilmenge der Files einzulesen, was dann geklappt hat. Allerdings war mir unklar, was genau das Problem war, da die Fehlermeldung nicht aussagekräftig war. 
+\\Ich habe einiges ausprobiert, unter anderem die build\_vocab()-Funktion des Word2Vec Modells, ich vermute aber, dass die Verwendung nicht ganz korrekt war.
+\\Durch kleinere Denkfehler kam ich eine Weile nicht voran, bzw. durch die längere Laufzeit der Verarbeitung verging viel Zeit.
+\section*{KW16}
+Am Anfang der Woche habe ich dann entdeckt, dass ich zwar PyCharm in der 64-bit Version nutze, allerdings die Python-Distribution nur in der 32-bit Version. So habe ich dann die 64-bit Version installiert und die benötigten Komponenten. Ich war sehr erfreut zu sehen, dass ich den kompletten kleinen Korpus ins Word2Vec-Modell laden konnte. 
+\\Dann habe ich mich an den kompletten Wikipediadump-Korpus getraut. Selbst das Preprocessing mittels Perl-Skript und meinen Skripts dauerte schon mehrere Stunden. Nachdem ich hier dann wieder einen MemoryError erhalten habe, habe ich das Preprocessing noch optimiert, dass nicht so viel im Arbeitsspeicher gehalten wird, sondern direkt in das separate File geschrieben wird.
+\\Als ich dann die Sätze wieder in einem Array zwischenspeichern wollte, reichten mir meine 32 GB Arbeitsspeicher nicht aus und es gab wieder MemoryError. An einem Punkt, bevor das Programm abstürzte, sah es so aus, als ob einige Daten in die Auslagerungsdatei auf meiner Festplatte geschrieben wurde. Danach kam dann der Error auf. Da ich meine Auslagerungsdatei nur 4 GB groß hatte, da ich mir nie Gedanken gemacht habe, ob meine 32 GB RAM nicht ausreichen, war mein Plan die Auslagerungsdatei zu vergrößern und dann zu schauen ob dieses Mal der Speicher reicht. Aber auch mit 32 GB RAM und 24 GB Auslagerungsdatei kam wieder ein MemoryError. Da ich mein Betriebssystem nur auf einer 128 GB großen SSD habe, konnte ich die Auslagerungsdatei nicht vergrößern. Eine Überlegung war dann noch, auf einer größeren Festplatte Windows nochmals zu installieren und zu versuchen die Auslagerungsdatei so groß wie möglich zu machen. Allerdings wollte ich zuvor erst noch einmal überprüfen, ob es eine andere Möglichkeit gibt, die Sätze in dem 18 GB großen File ins Word2Vec Modell zu bekommen.
 
+\section*{KW17}
+Den ersten Versuch, den kompletten Wikipediadump ins Modell zu bekommen, habe ich mit 'gensim.models.word2vec.LineSentence()' gemacht.
 
 
 \section*{KW1x-}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  2 APR 2015 16:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  20 APR 2015 15:14
 entering extended mode
 **Statusreport.tex
 (D:\SoftwareProjects\SemanticRelations\ProjectManagement\Statusreport.tex
@@ -341,28 +341,37 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 20.
+
+Overfull \hbox (3.33124pt too wide) in paragraph at lines 20--24
+\OT1/cmr/m/n/10.95 Nach ei-ni-gem aus-pro-bie-ren und mehr-fa-chem Skript ausf[
+]uhren, kam ich dann zum gew[]unsch-
+ []
+
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
 (D:\SoftwareProjects\SemanticRelations\ProjectManagement\Statusreport.aux) ) 
 Here is how much of TeX's memory you used:
- 1177 strings out of 493921
- 14898 string characters out of 3150478
- 71854 words of memory out of 3000000
- 4498 multiletter control sequences out of 15000+200000
- 8402 words of font info for 30 fonts, out of 3000000 for 9000
+ 1181 strings out of 493921
+ 14970 string characters out of 3150478
+ 74854 words of memory out of 3000000
+ 4502 multiletter control sequences out of 15000+200000
+ 9018 words of font info for 32 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 24i,7n,32p,557b,198s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 24i,7n,32p,1131b,198s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:
 /Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Programme/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programme/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmr12.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Pro
-gramme/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Programme/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Statusreport.pdf (1 page, 88626 bytes).
+gramme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programme/MiKTeX/font
+s/type1/public/amsfonts/cm/cmti10.pfb><D:/Programme/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmtt10.pfb>
+Output written on Statusreport.pdf (3 pages, 102865 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
+ 44 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
