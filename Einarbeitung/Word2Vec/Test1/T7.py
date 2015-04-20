@@ -28,20 +28,21 @@ print str(starttime)
 #fileenwik9preprocessed = open(folder+'enwik9/text')
 #data = fileenwik9preprocessed.read()
 
+file = open(folder+'lates-pages-articles_no-punctuation-and-lower','w')
 x=0
-with open(folder+'enwik9/text') as infile:
+with open(folder+'enwiki-latest-pages-articles_clean.txt') as infile:
     for line in infile:
         sents.extend(sent_tokenizer.tokenize(line))
+        for sent in sents:
+            sent = sent.replace("\n",".")
+            for c in string.punctuation:
+                sent=sent.replace(c,"")
+            file.write(sent.lower())
+            file.write('\n')
         print 'extend tokenized line: '+str(x)
         x+=1
+        sents = []
 print time.time()-starttime
 
-file = open(folder+'enwik9/largefile2','w')
-x=0
-for sent in sents:
-    file.write(sent)
-    file.write('\n')
-    print 'write sent: '+str(x)
-    x+=1
 file.close()
 

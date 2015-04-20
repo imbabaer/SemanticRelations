@@ -1,4 +1,6 @@
 import time
+import datetime
+
 start_time = time.time()
 
 tmp = []
@@ -20,3 +22,5 @@ f.write(str(time.time()-start_time))
 f.close()
 readingstart = time.time()
 print time.time()-readingstart
+
+print datetime.datetime.now()
