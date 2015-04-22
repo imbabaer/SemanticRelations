@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<bookstore>
+<book lang="en">
+	<title>The Language Instinct: How the Mind Creates Language (P.S.)</title>
+	<author>Steven Pinker</author>
+	<price>7.50</price>
+</book>
+<book lang="de">
+	<title>Das unbeschriebene Blatt: Die moderne Leugnung der menschlichen Natur</title>
+	<author>Steven Pinker</author>
+	<price>29.80</price>
+</book>
+<book lang="en">
+	<title>The Black Swan: The Impact of the Highly Improbable</title>
+	<author>Nassim Nicholas Taleb</author>
+	<price>8.10</price>
+</book>
+<book lang="fr">
+	<title>L'Etranger</title>
+	<author>Albert Camus</author>
+	<price>6.10</price>
+</book>
+<book lang="de">
+	<title>Einführung in Python 3</title>
+	<author>Bernd Klein</author>
+	<price>24.99</price>
+</book>
+<book lang="de">
+	<title>Etrusker AG</title>
+	<author>Bernd Klein</author>
+	<price>19.99</price>
+</book>
+<book lang="de">
+	<title>Evariste Galois oder das tragische Scheitern eines Genies</title>
+	<author>Bernd Klein</author>
+	<price>9.99</price>
+</book>
+</bookstore>

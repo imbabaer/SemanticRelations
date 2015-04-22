@@ -1,0 +1,1 @@
+perl ../../../Einarbeitung/Word2Vec/Test1/wikicleaner.pl enwik9 > text

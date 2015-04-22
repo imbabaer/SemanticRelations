@@ -1,0 +1,1 @@
+for /f %%f in ('dir /b D:\SoftwareProjects\SemanticRelations\Korpora\Wikipedia\enwik9\pages1') do perl ../../../../Einarbeitung/Word2Vec/Test1/wikicleaner.pl %%f > text%%f
