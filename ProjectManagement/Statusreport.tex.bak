@@ -32,8 +32,12 @@ Am Anfang der Woche habe ich dann entdeckt, dass ich zwar PyCharm in der 64-bit 
 \\Als ich dann die Sätze wieder in einem Array zwischenspeichern wollte, reichten mir meine 32 GB Arbeitsspeicher nicht aus und es gab wieder MemoryError. An einem Punkt, bevor das Programm abstürzte, sah es so aus, als ob einige Daten in die Auslagerungsdatei auf meiner Festplatte geschrieben wurde. Danach kam dann der Error auf. Da ich meine Auslagerungsdatei nur 4 GB groß hatte, da ich mir nie Gedanken gemacht habe, ob meine 32 GB RAM nicht ausreichen, war mein Plan die Auslagerungsdatei zu vergrößern und dann zu schauen ob dieses Mal der Speicher reicht. Aber auch mit 32 GB RAM und 24 GB Auslagerungsdatei kam wieder ein MemoryError. Da ich mein Betriebssystem nur auf einer 128 GB großen SSD habe, konnte ich die Auslagerungsdatei nicht vergrößern. Eine Überlegung war dann noch, auf einer größeren Festplatte Windows nochmals zu installieren und zu versuchen die Auslagerungsdatei so groß wie möglich zu machen. Allerdings wollte ich zuvor erst noch einmal überprüfen, ob es eine andere Möglichkeit gibt, die Sätze in dem 18 GB großen File ins Word2Vec Modell zu bekommen.
 
 \section*{KW17}
-Den ersten Versuch, den kompletten Wikipediadump ins Modell zu bekommen, habe ich mit 'gensim.models.word2vec.LineSentence()' gemacht.
+Den ersten Versuch, den kompletten Wikipediadump ins Modell zu bekommen, habe ich mit 'gensim.models.word2vec.LineSentence()' gemacht. Dieser Versuch war dann auch erfolgreich. So konnte ich dann zum ersten Mal das Modell auf dem gesamten Wikipediadump erstellen und trainieren. Der erste Durchlauf, mit folgenden Parametern, $size=200, window=5, min\_count=20, workers=12$, dauerte dann ca. 6 Stunden (32 GB RAM, i7-3770 Quadcore bei 3,4 GHz). 
+\\Darauffolgend habe ich mir Gedanken gemacht, wie ich die großen XML-Files in einzelne Wikipedia-Artikel splitten kann, da diese ja klassifiziert werden sollen. Mittels eines SAX-Parsers habe ich dann die einzelnen Artikel in einzelne Files zwischengespeichert. Diese Files habe ich dann mittels Perl-Skript und meinen Preprocessing Skripten wieder in die gewünschte Form gebracht.\\
+
+Ausblick auf die nächste Berichtsperiode:
+\\Der komplette Wikipediadump soll mit guten Parametern im Word2Vec-Modell gelernt werden \textit{(4,01)}. Des weiteren soll ein Domänenkorpus aus dem kompletten Wikipediadump extrahiert werden\textit{(4,02)}. Das Verhalten der beiden Modelle soll dann später verglichen werden.
 
 
-\section*{KW1x-}
+
 \end{document}

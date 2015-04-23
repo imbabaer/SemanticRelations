@@ -28,9 +28,12 @@ print str(starttime)
 #fileenwik9preprocessed = open(folder+'enwik9/text')
 #data = fileenwik9preprocessed.read()
 
-file = open(folder+'lates-pages-articles_no-punctuation-and-lower','w')
+#file = open(folder+'lates-pages-articles_no-punctuation-and-lower','w')
+file = open(folder+'/enwik9/text__no-punctuation-and-lower','w')
+
 x=0
-with open(folder+'enwiki-latest-pages-articles_clean.txt') as infile:
+#with open(folder+'enwiki-latest-pages-articles_clean.txt') as infile:
+with open(folder+'/enwik9/text') as infile:
     for line in infile:
         sents.extend(sent_tokenizer.tokenize(line))
         for sent in sents:
