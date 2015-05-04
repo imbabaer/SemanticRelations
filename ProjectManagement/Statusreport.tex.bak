@@ -12,7 +12,7 @@
 \author{Ruben Müller}
 \maketitle
 
-\textbf{Hinweis:} Referenzangaben zum Projektplan sind kursiv und in runden Klammern im Format \textit{(x,xx)}
+\textbf{Hinweis:} Referenzangaben zum Projektplan sind kursiv und in runden Klammern im Format \textit{(x,xx)}.
 \section*{KW13}
 Am 25.03.2015 um 11 Uhr fand das Kick-Off Meeting\textit{(1,01)} im Raum 321 der Hochschule der Medien  mit Prof. Dr. Johannes Maucher, M.Sc. Andreas Stiegler (via Skype) und Ruben Müller statt. Hier wurde der Umfang und Inhalt der Bachelorarbeit besprochen.
 \\Am 27.03.2015 habe ich den Projektplan(\textit{2,01}), anhand einer Vorlage von \\\texttt{www.meinevorlagen.com}, angefangen und am 28.03.2015 fertig gestellt. 
@@ -38,6 +38,46 @@ Den ersten Versuch, den kompletten Wikipediadump ins Modell zu bekommen, habe ic
 Ausblick auf die nächste Berichtsperiode:
 \\Der komplette Wikipediadump soll mit guten Parametern im Word2Vec-Modell gelernt werden \textit{(4,01)}. Des weiteren soll ein Domänenkorpus aus dem kompletten Wikipediadump extrahiert werden\textit{(4,02)}. Das Verhalten der beiden Modelle soll dann später verglichen werden.
 
+\section*{KW18}
+largetrainedModel400825: 10,5h
+\\largetrainedModel300810: 8,5h
+\\2015-04-29 09:33:51,921 : INFO : capital-common-countries: 81.8\% (414/506)
+\\2015-04-29 09:43:43,187 : INFO : capital-world: 79.6\% (1745/2192)
+\\2015-04-29 09:44:02,069 : INFO : currency: 0.0\% (0/70)
+\\2015-04-29 09:53:58,558 : INFO : city-in-state: 47.3\% (1043/2203)
+\\2015-04-29 09:55:42,911 : INFO : family: 84.5\% (321/380)
+\\2015-04-29 09:59:26,937 : INFO : gram1-adjective-to-adverb: 16.6\% (135/812)
+\\2015-04-29 10:01:22,808 : INFO : gram2-opposite: 37.9\% (159/420)
+\\2015-04-29 10:06:50,884 : INFO : gram3-comparative: 68.4\% (814/1190)
+\\2015-04-29 10:08:57,792 : INFO : gram4-superlative: 33.1\% (153/462)
+\\2015-04-29 10:13:10,012 : INFO : gram5-present-participle: 48.6\% (452/930)
+\\2015-04-29 10:19:17,184 : INFO : gram6-nationality-adjective: 85.6\% (1174/1371)
+\\2015-04-29 10:25:34,414 : INFO : gram7-past-tense: 51.1\% (718/1406)
+\\2015-04-29 10:30:00,645 : INFO : gram8-plural: 59.3\% (588/992)
+\\2015-04-29 10:32:35,388 : INFO : gram9-plural-verbs: 46.3\% (278/600)
+\\2015-04-29 10:32:35,388 : INFO : total: 59.1\% (7994/13534)
+\\largetrainedModel300105: 7,7h
+\\2015-04-29 19:24:36,700 : INFO : capital-common-countries: 83.0% (420/506)
+\\2015-04-29 19:45:12,723 : INFO : capital-world: 80.2% (1759/2192)
+\\2015-04-29 19:45:50,961 : INFO : currency: 0.0% (0/70)
+\\2015-04-29 20:05:06,782 : INFO : city-in-state: 50.4% (1111/2203)
+\\2015-04-29 20:08:13,267 : INFO : family: 81.1% (308/380)
+\\2015-04-29 20:14:57,813 : INFO : gram1-adjective-to-adverb: 16.5% (134/812)
+\\2015-04-29 20:18:29,605 : INFO : gram2-opposite: 38.8% (163/420)
+\\2015-04-29 20:28:27,904 : INFO : gram3-comparative: 68.9% (820/1190)
+\\2015-04-29 20:32:19,788 : INFO : gram4-superlative: 28.4% (131/462)
+\\2015-04-29 20:40:00,747 : INFO : gram5-present-participle: 49.9% (464/930)
+\\2015-04-29 20:51:19,611 : INFO : gram6-nationality-adjective: 88.8% (1217/1371)
+\\2015-04-29 21:02:59,292 : INFO : gram7-past-tense: 48.6% (683/1406)
+\\2015-04-29 21:11:12,999 : INFO : gram8-plural: 60.3% (598/992)
+\\2015-04-29 21:16:14,655 : INFO : gram9-plural-verbs: 44.7% (268/600)
+\\2015-04-29 21:16:14,657 : INFO : total: 59.7% (8076/13534)
+
+
+Tagging von Wiki-Artikeln.
+\section*{KW19}
+Tagging von Wiki-Artikeln.
+Anpassen Perl-Skript, nicht bekannte zeichen löschen, nicht mit " " ersetzen!
 
 
 \end{document}

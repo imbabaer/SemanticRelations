@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Einleitung}{1}
+\contentsline {subsection}{\numberline {1.1}Motivation}{1}
+\contentsline {subsection}{\numberline {1.2}Problemstellung}{1}
+\contentsline {subsection}{\numberline {1.3}Aufbau der Arbeit}{1}
+\contentsline {section}{\numberline {2}Daten und Vorverarbeitung}{1}
+\contentsline {subsection}{\numberline {2.1}Datenbasis}{1}
+\contentsline {subsection}{\numberline {2.2}Externe Programme und Hilfsmittel}{1}
+\contentsline {subsection}{\numberline {2.3}Vorverarbeitung}{1}
+\contentsline {section}{\numberline {3}Word2Vec}{1}
+\contentsline {subsection}{\numberline {3.1}\IeC {\textbullet }}{1}
