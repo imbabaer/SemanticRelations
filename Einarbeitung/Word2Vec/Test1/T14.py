@@ -1,3 +1,4 @@
+
 import nltk
 import string
 import time
@@ -5,7 +6,7 @@ import numpy
 import gensim, logging
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 import datetime
-file1 = open('science300105.txt','w')
+file1 = open('times.txt','w')
 print datetime.datetime.now()
 file1.write(str(datetime.datetime.now()))
 
@@ -19,16 +20,18 @@ tmpPreprocessed = folder + "enwik9/tmpPreprocessed/"
 
 buildvoctime = time.time()
 
-print "\ntraining model"
 print
 start_time = time.time()
+bigram_transformer = gensim.models.Phrases(gensim.models.word2vec.LineSentence(folder+'enwik9/text__no-punctuation-and-lower'))
 # train word2vec
-model = gensim.models.Word2Vec(gensim.models.word2vec.LineSentence(folder+'pages/science_no-punctuation-and-lower'),size=300, window=10, min_count=5, workers=12)
+print "\ntraining model"
+
+model = gensim.models.Word2Vec(list(bigram_transformer[gensim.models.word2vec.LineSentence(folder+'enwik9/text__no-punctuation-and-lower')]),size=300, window=8, min_count=5, workers=12)
 
 file1.write("\nTrainingtime: "+str(time.time()-start_time))
 
 
-model.save("scienceModel300105")
+model.save("prasestrainedModel30085")
 
 
 
@@ -43,6 +46,3 @@ print datetime.datetime.now()
 file1.close()
 
 print("done.")
-
-from Test1.soundtest import playTADA
-playTADA()

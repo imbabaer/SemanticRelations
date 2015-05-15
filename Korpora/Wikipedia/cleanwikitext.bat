@@ -1,1 +1,3 @@
-perl ../../Einarbeitung/Word2Vec/Test1/wikicleaner.pl enwiki-latest-pages-articles.xml > enwiki-latest-pages-articles_clean.txt
+REM perl ../../Einarbeitung/Word2Vec/Test1/wikicleaner_comments.pl enwiki-latest-pages-articles.xml > enwiki-latest-pages-articles_clean_new
+REM perl ../../Einarbeitung/Word2Vec/Test1/wikicleaner.pl enwiki-latest-pages-articles_clean_new > enwiki-latest-pages-articles_clean_new.txt
+perl ../../Einarbeitung/Word2Vec/Test1/wikicleaner.pl enwiki-latest-pages-articles.xml > enwiki-latest-pages-articles_clean_new.txt

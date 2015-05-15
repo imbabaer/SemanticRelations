@@ -31,6 +31,7 @@ while (<>) {
     s/\[\[category:([^|\]]*)[^]]*\]\]/[[$1]]/ig;  # show categories without markup
     s/\[\[[a-z\-]*:[^\]]*\]\]//g;  # remove links to other languages
     s/\[\[[^\|\]]*\|/[[/g;  # remove wiki url, preserve visible text
+    #s/{{.*}}//g;             # remove wiki markup
     s/{{[^}]*}}//g;         # remove {{icons}} and {tables}
     s/{[^}]*}//g;
     s/\[//g;                # remove [ and ]
@@ -50,7 +51,16 @@ while (<>) {
     #s/7/ seven /g;
     #s/8/ eight /g;
     #s/9/ nine /g;
-    tr/A-Za-z,.!?;\r\n/ /cs; #removes everything else than letters
+    #s/ē/e/g;
+    s/Ä/A/g;
+    s/ä/a/g;
+    s/Ö/O/g;
+    s/ö/o/g;
+    s/Ü/U/g;
+    s/ü/u/g;
+    s/ß/ss/g;
+    s/-//g;
+    tr/0-9A-Za-z,.!?;\r\n / /csd; #removes everything else than this characters
     #tr/'//sd;
     #tr/=//sd;
     #tr/*//sd;
