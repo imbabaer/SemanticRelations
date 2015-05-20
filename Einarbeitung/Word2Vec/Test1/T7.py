@@ -33,16 +33,16 @@ f.write(str((datetime.datetime.now())))
 #fileenwik9preprocessed = open(folder+'enwik9/text')
 #data = fileenwik9preprocessed.read()
 
-#file = open(folder+'lates-pages-articles_no-punctuation-and-lower_new','w')
+file = open(folder+'lates-pages-articles_no-punctuation-and-lower_new','w')
 #file = open(folder+'/enwik9/text__no-punctuation-and-lower','w')
 #file = open(folder+'/enwik9/science_no-punctuation-and-lower','w')
 #file = open(folder+'/enwik9/science_no-punctuation-and-lower','w')
-file = open(folder+'/pages/science_no-punctuation-and-lower','w')
+#file = open(folder+'/pages/science_no-punctuation-and-lower','w')
 
 x=0
 #with open(folder+'enwiki-latest-pages-articles_clean_new.txt') as infile:
 #with open(folder+'/enwik9/text') as infile:
-with open(folder+'/pages/sciencefile.txt') as infile:
+with open(folder+'enwiki-latest-pages-articles_clean_new.txt') as infile:
     for line in infile:
         '''
         try:

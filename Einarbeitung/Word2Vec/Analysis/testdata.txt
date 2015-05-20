@@ -21,6 +21,7 @@ architecture
 arpanet
 asus
 audioboo
+auto
 battlefield
 bebo
 bing
@@ -30,7 +31,8 @@ bittorrent
 blackberry
 blizzard
 blogging
-blu-ray
+blog
+bluray
 broadband
 browser
 casual
@@ -54,14 +56,13 @@ cyberwar
 darknet
 data
 dell
+diablo
 digg
-doge
 doodle
 dotcom
 drones
 dropbox
 ds
-e
 e3
 ebay
 email
@@ -70,8 +71,7 @@ encryption
 energy
 engine
 engineering
-e-readers
-eso
+ereader
 events
 facebook
 filesharing
@@ -80,11 +80,9 @@ flickr
 foursquare
 futurefest
 gadgets
-gamecamp
 gameplay
 gamergate
 games
-gamesblog
 gaming
 ghz
 gmail
@@ -106,6 +104,7 @@ ibm
 icloud
 ie
 ifa
+imac
 indie
 instagram
 intel
@@ -114,12 +113,11 @@ ios
 ipad
 iphone
 ipod
-isps
+isp
 itunes
 keyboard
 kickstarter
 kindle
-kindle fire
 kinect
 laptops
 lenovo
@@ -129,9 +127,8 @@ link
 linkedin
 linux
 live
-lulzsec
-lyft
 machinima
+macintosh
 macworld
 malware
 mario
@@ -152,7 +149,6 @@ netbooks
 nfs
 nintendo
 nokia
-nsfw
 oracle
 ouya
 p2p
@@ -161,6 +157,7 @@ pc
 phablets
 phishing
 photography
+photoshop
 pi
 pinterest
 piracy
@@ -182,26 +179,22 @@ raider
 ram
 raspberry
 rayman
-rd
 recommendation
 reddit
 retro
 robots
-rovio
 rpg
 rts
-rumoursville
 safari
 samsung
 search
 security
 seo
-silk road
 skype
 smartphone
 smartphones
+smartwatch
 smartwatches
-software
 software
 songkick
 sonic
@@ -210,6 +203,7 @@ sopa
 spam
 spotify
 steam
+starcraft
 stuxnet
 sun
 surface
@@ -219,13 +213,12 @@ tablet
 technology
 technophile
 ted
-telecoms
-telecoms
+telecom
 television
 tetris
 titanfall
 tomb
-trojans
+trojan
 tumblr
 twitch
 twitter
@@ -234,10 +227,11 @@ viber
 vine
 viruses
 vr
+warcraft
 web
 whatsapp
 wheels
-wi-fi
+wifi
 wii
 wikigame
 wikipedia
@@ -250,7 +244,6 @@ xbox
 xp
 y2k
 yahoo
-youchoose
 youtube
 zelda
 zynga

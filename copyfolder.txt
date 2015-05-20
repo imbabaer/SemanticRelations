@@ -1,0 +1,2 @@
+copy "D:\SoftwareProjects\SemanticRelations\Korpora\Wikipedia\enwik9\pagesTest2\*.txt" "D:\SoftwareProjects\SemanticRelations\Korpora\Wikipedia\enwik9\pages"
+copy "D:\SoftwareProjects\SemanticRelations\Korpora\Wikipedia\enwik9\pages\science*.txt" "D:\SoftwareProjects\SemanticRelations\Korpora\Wikipedia\enwik9\science"
