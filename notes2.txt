@@ -1,0 +1,6 @@
+- Testdaten
+- Wie vergleichen?
+- 
+- Qualität preprocessing/Korpora
+- parallelisieren
+- BA Seitenanzahl, wie viel Theorie, etc.

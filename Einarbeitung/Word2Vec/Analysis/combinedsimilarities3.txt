@@ -48,11 +48,6 @@ nanchara, rukeichi, kangaete, komete, kankeinai
 bi, zi, ys, dis, mei
 oneshot, aifocus, fmode, singleservo, continuousservo
 
-airbnb
-zendesk, groupon, salesforce, taskrabbit, yammer
--, -, -, -, -
--, -, -, -, -
-
 amazon
 amazoncom, amazons, kindle, appstore, arawakanunclassified
 amazoncom, kindle, ebay, netflix, yahoo
@@ -78,15 +73,15 @@ apples, blackberry, raspberry, webos, biokefir
 apples, blackberry, macintosh, pear, app
 iphone, a6x, ipad, apples, a5x
 
-apps
-app, friendcaller, flashscore, android, rublon
-app, blackberry, smartphone, iphone, ipad
-chaton, gmail, getjar, marketplace, google
+app
+apps, facetune, ios, flashscore, friendcaller
+iphone, ipad, ios, apps, smartphone
+getjar, itunes, ios, iphone, apps
 
-ar
-som, blir, inte, aldrig, forbi
-rg, gr, tr, som, yr
-c8, 297, 1086, telefunken, 66mm
+augmented
+vyzar, sightspace, zugaras, enhanced, utilizing
+complemented, supplemented, utilised, combining, underpinned
+vyzar, xarmex, gme, reality, labview
 
 arcade
 dreamcast, 3do, wiiware, gamecube, xbla
@@ -117,11 +112,6 @@ battlefield
 bravery, categorygettysburg, recognise, gettysburg, battlefieldus
 extreme, frontline, combat, wargames, commanders
 crews, desalination, enemy, impetus, crafts
-
-bebo
-contemporaryfolkpoprock, myspace, reverbnation, tumblr, friendsorenemiescom
--, -, -, -, -
--, -, -, -, -
 
 bing
 google, player11zhang, guestlee, baichen, bings
@@ -183,18 +173,8 @@ trendy, flashy, discerning, fun, discreet
 entertaining, savvy, clever, fancy, gamers
 complained, aesthetically, gamers, cheaply, keygens
 
-ces
-comme, doit, savoir, vient, sont
-cartes, mes, minuit, faire, uno
-ifa, tradeshow, finalist, computex, cebit
-
 chatroulette
 omegle, tinychat, nyootv, plurk, stumbleupon
--, -, -, -, -
--, -, -, -, -
-
-chatterbox
-naughtys, dreas, loudmouth, brainie, lovelies
 -, -, -, -, -
 -, -, -, -, -
 
@@ -227,11 +207,6 @@ console
 consoles, ps3, 3ds, handhelds, nintendo
 consoles, wii, nintendos, gamecube, dreamcast
 consoles, openpandora, eighthgeneration, livearea, dreamcast
-
-controversy
-controversies, gamergate, aftonbladetisrael, scandal, backlash
-controversies, speculation, controversial, criticism, incident
-netbsds, smsqe, c64dtv, l7filter, mlan
 
 cookies
 cookie, baked, cakes, sandwiches, muffins
@@ -287,11 +262,6 @@ diablo
 desierto, el, muerto, caballo, camino
 radiant, mailer, merc, ong, tc
 powertoys, maemo, menuetos, gdos, pws
-
-digg
-stumbleupon, reddit, livejournal, socialnetworking, videosharing
-deviantart, livejournal, lifehacker, reddit, twiki
-myspace, picasa, orkut, favorites, twitter
 
 doodle
 doodles, dandy, mammy, eggcitement, celebration
@@ -373,6 +343,11 @@ twitter, tumblr, myspace, instagram, linkedin
 twitter, myspace, linkedin, instagram, tumblr
 twitter, myspace, yahoo, youtube, orkut
 
+fat
+calories, cueritos, milk, fatfree, sodiumsalt
+sticky, flesh, grease, cow, pig
+hfs, ntfs, exfat, vfat, fat32
+
 filesharing
 p2p, bittorrent, limewire, peertopeer, rapidshare
 facebooks, cvs, p2p, freeofcharge, icq
@@ -397,6 +372,11 @@ gadgets
 gadget, reftools, toolbar, popups, disable
 bookmarks, specs, shortcuts, customizing, gadget
 toolbars, applets, widgets, livecom, themes
+
+game
+teslagrad, games, freetoplay, originalsequel, genrepuzzle
+games, nintendos, mmorpg, rpg, tabletop
+games, consoles, eighthgeneration, sega, boy
 
 gameplay
 platforming, cutscenes, minigames, visuals, storydriven
@@ -513,11 +493,6 @@ whereas, eg, hence, certain, specific
 eg, whereas, hence, either, essentially
 sensitive, properly, outdoors, lumped, intrinsically
 
-ifa
-kfa, isfansyah, thirdtier, isfansyahs, canbo
-isl, robocup, cbf, jsl, nla
-date24th, producedstart, q3, computex, cebit
-
 imac
 ibook, macbook, 215inch, macbooks, powerbook
 powerbook, motorolas, ibook, mobileme, macbook
@@ -593,10 +568,10 @@ ps3, wiiware, wii, 3ds, xbox
 neogeo, gba, eyetoy, ouya, gamecom
 lifecam, video4linux, mvp, onenote, gdm
 
-laptops
-netbooks, laptop, computers, desktops, smartphones
-desktops, smartphones, pdas, dongles, modems
-netbooks, notebook, notebooks, laptop, smartphones
+laptop
+laptops, netbook, motherboard, desktop, win7
+harddrive, win7, netbook, laptops, router
+notebook, laptops, allinone, netbooks, nettop
 
 lenovo
 thinkpad, ideapad, ideacentre, lenovos, asus
@@ -703,11 +678,6 @@ firefox, mozillas, webkit, html5, seamonkey
 firefox, ubuntu, seamonkey, netscape, googles
 seamonkey, firefox, flock, safari, thunderbird
 
-mw
-megawatt, megawatts, kilowatts, mwe, 2x600
-megawatts, megawatt, mwe, coalfired, kilowatts
-electricity, kwh, watts, dissipation, gwh
-
 myspace
 facebook, tumblr, twitter, linkedin, instagram
 facebook, twitter, linkedin, instagram, tumblr
@@ -732,6 +702,11 @@ nfs
 webdav, cifs, sftp, ftp, filesystem
 journaling, sna, x25, kerberos, hfs
 cifs, tftp, smb, ftps, sftp
+
+nfts
+neurofibrillary, nfb, neurosensory, astroglial, tauopathy
+-, -, -, -, -
+-, -, -, -, -
 
 nintendo
 3ds, nintendos, wii, gamecube, wiiware
@@ -833,11 +808,6 @@ pokmon, yugioh, videogames, neopets, pikachu
 -, -, -, -, -
 -, -, -, -, -
 
-pokmon
-apoklypse, pikachu, yugioh, battrio, digimon
-digimon, dungeon, naruto, lego, monsters
-emo, 5px, fontweightbold, cc0000, bordersolid
-
 power
 electricity, mppgcl, surgut2, lubilia, egbin
 electricity, generating, energy, hydro, coalfired
@@ -857,6 +827,11 @@ ps
 dp, hp, tp, dap, solidaritas
 re, lol, eh, ec, js
 mm940, cc860, rpmcommon, 2184, mm1000
+
+ps2
+ps3, gamecube, n64, snes, dreamcast
+psp, dreamcast, snes, ps3, nes
+keyboardmouse, centronics, minidin8, rs232, db9
 
 ps3
 xbla, xbox, playstation, wiiware, ps4
@@ -978,11 +953,6 @@ opensource, middleware, webbased, cloudbased, trueerp
 opensource, webbased, developers, hardware, middleware
 cae, notetaking, opencpn, kdeedu, maptitude
 
-songkick
-flipboard, myspaces, friendfeed, posterous, storify
--, -, -, -, -
--, -, -, -, -
-
 sonic
 spinball, saturnpc, metroid, videogame, multiplayeronly
 futuristic, halo, lego, videogame, crossover
@@ -1032,11 +1002,6 @@ surface
 surfaces, droplet, layer, mxene, liquidimpregnated
 subsurface, magma, evaporation, surfaces, vents
 sailcloth, dacron, surfaces, tubing, aluminum
-
-sxswi
-railsconf, infovision, vidcon, gamezombietv, oscon
--, -, -, -, -
--, -, -, -, -
 
 symbian
 android, webos, maemo, j2me, blackberry
@@ -1162,11 +1127,6 @@ wii
 3ds, eshop, nintendo, ps3, gamecube
 gamecube, 3ds, eshop, nintendo, console
 nintendos, gamecube, nintendo, ds, eshop
-
-wikigame
-wpsoapboxing, massnominate, wpdisruption, suckpuppetry, meatsockpuppets
--, -, -, -, -
--, -, -, -, -
 
 wikipedia
 wp, birdsarchive, wikipeida, creationdraft, wikpedia
