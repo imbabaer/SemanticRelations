@@ -3,4 +3,28 @@
 - 
 - Qualität preprocessing/Korpora
 - parallelisieren
-- BA Seitenanzahl, wie viel Theorie, etc.
+
+- Kapitel6: Experimente (Beschreibung, Durchführung, Ergebnis/Interpretation)
+- BA Seitenanzahl(weniger als 40, mehr als 100 muss begründet werden),
+- wie viel Theorie, etc.: Das Wissen über die Experimente muss bekannt sein
+
+- Modell-files auf usb stick.
+
+
+-------------
+Klassifikation:
+- Support Vektor Maschine (skikit learn)
+- Hypothesen aufstellen, und beleben probieren
+  - z.b. unterschiedliche abstraktionsebenen 
+- statistische Analyse,
+- Fragestellungen erarbeiten, wo man von Hypothesen ausgeht, und diese dann belegt/widerlegt
+- 
+
+- Anwendung: Automatisches Finden von Tags; Vorschläge auf andere Artikel im Forum; 
+-----
+- Liste von interessanten Fragen generieren, ("können wir durch das konzept der untersch. korpora, unterschiedliche abstraktionsstufen ermitteln?", "tagsuche, sind das wirklich tags, das das thema beschreiben, oder sind es worte, die irgendwie in beziehung stehen, oder ist es nur ne syntaktische ähnlichkeit","") 
+- Arten von Beziehungen (syntaktische, synnonym, in beziehung, gegenteil, gleiches) zwischen worten
+- Arten von Fällen aufteilen (konkretisieren, allgemein, (mario, apple))
+- Alternativen finden(Abstraktion): Gefundene Ergebnisse nochmal suchen und schauen ob da gleiche dinger rauskommen
+- Distanzmaße ausgeben und z.b. nur > x ausgeben
+
