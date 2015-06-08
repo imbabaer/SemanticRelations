@@ -7,7 +7,7 @@
 \usepackage[onehalfspacing]{setspace}
 
 \begin{document}
-\title{Statusreport zur Bachelorarbeit 'Semantische Beziehungen'}
+\title{Statusreport zur Bachelorarbeit 'Semantische Beziehungen in Texten mit Word2Vec'}
 \date{2015}
 \author{Ruben Müller}
 \maketitle
@@ -100,7 +100,7 @@ $size=300, window=10, min\_count=5$
 \\2015-04-29 21:16:14,657 : INFO : total: 59.7\% (8076/13534)
 \\Der Wikipedia-Gesamtkorpus enthält 319.284.725 Sätze.
 
-Um einen domänenspezifischen Teilkorpus aus dem Wikipedia-Gesamtkorpus zu generieren, habe ich einen Naiven-Bayes-Klassifikator (den selbst implementierten aus der dem Data-Mining Praktikum) ausgewählt. Dazu waren von Hand getaggte Artikel nötig, um den Klassifikator zu trainieren. Ich habe folgende Kategorien ausgewählt: \\$tech, entertainment, sport, science, politic$. Da viele Wikipediaartikel nicht eindeutig einzuordnen waren, mussten deutlich mehr Artikel angeschaut werden. Der Naiven-Bayes-Klassifikator wurde mit je 100 Artikel je Kategorie trainiert.
+Um einen domänenspezifischen Teilkorpus aus dem Wikipedia-Gesamtkorpus zu generieren, habe ich einen Naiven-Bayes-Klassifikator (den selbst implementierten aus der dem Data-Mining Praktikum) ausgewählt. Dazu waren von Hand getaggte Artikel nötig, um den Klassifikator zu trainieren. Ich habe folgende Kategorien ausgewählt: \\$tech, entertainment, sport, science, politic$. Da viele Wikipedia-Artikel nicht eindeutig einzuordnen waren, mussten deutlich mehr Artikel angeschaut werden. Der Naiven-Bayes-Klassifikator wurde mit je 100 Artikel je Kategorie trainiert.
 
 \section*{KW19}
 Weiteres tagging von Wikipedia-Artikeln.
@@ -112,14 +112,15 @@ Die einzelnen Artikel mit dem Perl-Skript gereinigt.
 \\Zwei Modelle mit den gleichen Parametern ($size=300, window=10, min\_count=5$) aus dem Teilkorpus erstellt. Zum einen habe ich den Teilkorpus als Vokabular und Trainingsmenge benutzt, beim anderen nur als Vokabular und auf dem gesamten Wikipedia-Korpus trainiert.
 
 \section*{KW21}
-Testdatenmenge aus Technologie-Begriffen erstellt um die nächsten Nachbarn dieser Worte innerhalb der einzelnen Korpora zu vergleichen.
-\\Bei dem implementierten Test werden jeweils die fünf nächsten Nachbarworte der drei Korpora (Gesamtkorpus, Teilkorpus trainiert auf dem Gesamtkorpus, Teilkorpus) aufgelistet und lesbar formatiert.
+Testdatenmenge aus Technologie-Begriffen erstellt um die nächsten Nachbarn dieser Worte innerhalb der einzelnen Korpora zu vergleichen \textit{(5,01)}.
+\\Bei dem implementierten Test werden jeweils die fünf nächsten Nachbarworte der drei Korpora (Gesamtkorpus, Teilkorpus trainiert auf dem Gesamtkorpus, Teilkorpus) aufgelistet und lesbar formatiert \textit{(5,02)}.
 \\
 
 \section*{KW22}
-Urlaub.
+Urlaub.\\
 
-\section*{KW23}
+Ausblick auf die nächste Berichtsperiode:
+Es soll ein weiterer Domänenkorpus erstellt werden (z.B. aus einem Game-Forum). Dazu sollen auch Testdaten erstellt und der Korpus damit getestet werden. Im Anschluss sollen dann die Ergebnisse aus dem Wikipedia-Korpus und dem anderen Domänenkorpus verglichen werden.
 
 
 \end{document}

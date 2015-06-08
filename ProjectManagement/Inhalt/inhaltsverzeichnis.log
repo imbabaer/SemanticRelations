@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  27 APR 2015 11:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  2 JUN 2015 17:30
 entering extended mode
 **inhaltsverzeichnis.tex
 
@@ -347,37 +347,31 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
- (D:\Programme\MiKTeX\tex\latex\base\omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
 )
 \tf@toc=\write3
-LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 21.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \vbox (65.95554pt too high) has occurred while \output is active []
+
+
+[2]
 (D:\SoftwareProjects\SemanticRelations\ProjectManagement\Inhalt\inhaltsverzeich
 nis.aux) ) 
 Here is how much of TeX's memory you used:
- 1195 strings out of 493921
- 15447 string characters out of 3150478
- 71854 words of memory out of 3000000
- 4513 multiletter control sequences out of 15000+200000
- 8152 words of font info for 29 fonts, out of 3000000 for 9000
+ 1175 strings out of 493921
+ 15135 string characters out of 3150478
+ 75854 words of memory out of 3000000
+ 4497 multiletter control sequences out of 15000+200000
+ 7897 words of font info for 28 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 24i,4n,32p,198b,113s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><D:/P
-rogramme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Programme/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programme/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb>
-Output written on inhaltsverzeichnis.pdf (1 page, 60585 bytes).
+ 24i,4n,32p,182b,107s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Pr
+ogramme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programme/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on inhaltsverzeichnis.pdf (2 pages, 57811 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
+ 21 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

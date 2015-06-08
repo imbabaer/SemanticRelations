@@ -20,7 +20,6 @@ arcade
 architecture
 arpanet
 asus
-audioboo
 auto
 battlefield
 bebo
@@ -60,7 +59,7 @@ diablo
 digg
 doodle
 dotcom
-drones
+drone
 dropbox
 ds
 e3
@@ -78,7 +77,6 @@ filesharing
 firefox
 flickr
 foursquare
-futurefest
 gadgets
 gameplay
 gamergate
@@ -94,7 +92,7 @@ hacking
 halo
 handheld
 hardware
-hashtags
+hashtag
 hd
 heartbleed
 htc

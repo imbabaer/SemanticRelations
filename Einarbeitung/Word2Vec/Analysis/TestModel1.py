@@ -126,6 +126,8 @@ model2.save('../Test1/techModel300105')
 '''
 
 model2 = gensim.models.Word2Vec.load("../Test1/techModel300105fullKorpustrained")
+#model2 = gensim.models.Word2Vec.load("../Test1/largetrainedModel400825")
+
 print 'loaded model2'
 simfile2 = open('similarities2.txt','w')
 #testFunction(model2,simfile2)
@@ -140,7 +142,7 @@ simfile3 = open('similarities3.txt','w')
 
 
 
-simfile4 = open('combinedsimilarities.txt','w')
+#simfile4 = open('combinedsimilarities.txt','w')
 #testFunction(model,model2,simfile4)
 
 
