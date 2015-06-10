@@ -113,9 +113,9 @@ def testFunction2(model,model2,simfile,topn):
 model3 = gensim.models.Word2Vec.load("../Test1/techModel300105")
 print 'loaded model3'
 simfile3 = open('recursiveTechSimilarities.txt','w')
-#testFunction(model3,simfile3,5)
+testFunction(model3,simfile3,5)
 
-model = gensim.models.Word2Vec.load("../Test1/techModel300105fullKorpustrained")
+model = gensim.models.Word2Vec.load("../Test1/largeModel300105")
 print 'loaded model'
 simfile4 = open('recursiveCombSimilarities.txt','w')
 testFunction2(model,model3,simfile4,5)
