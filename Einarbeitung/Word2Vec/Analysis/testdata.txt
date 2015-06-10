@@ -20,6 +20,7 @@ architecture
 arpanet
 asus
 auto
+automobile
 battlefield
 bing
 biometrics
@@ -44,6 +45,7 @@ cookies
 craigslist
 crowdfunding
 crowdsourcing
+cryptocurrency
 cryptocurrencies
 cybercrime
 cyberwar
