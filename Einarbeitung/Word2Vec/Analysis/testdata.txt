@@ -7,7 +7,6 @@ acer
 acta
 activision
 adobe
-ai
 amazon
 android
 anonymous
@@ -38,7 +37,6 @@ chatroulette
 chrome
 chromebook
 cispa
-cod
 computing
 console
 cookies
@@ -57,7 +55,6 @@ doodle
 dotcom
 drone
 dropbox
-ds
 e3
 ebay
 email
@@ -83,6 +80,7 @@ gaming
 ghz
 gmail
 google
+googlemail
 gps
 groupon
 gta
@@ -139,7 +137,7 @@ mozilla
 myspace
 nes
 net
-netbooks
+netbook
 nfs
 nfts
 nintendo
@@ -149,7 +147,7 @@ ouya
 p2p
 paypal
 pc
-phablets
+phablet
 phishing
 photography
 photoshop
@@ -159,7 +157,6 @@ piracy
 pirate
 platform
 playback
-playbook
 playstation
 pokemon
 power
@@ -178,7 +175,7 @@ rayman
 recommendation
 reddit
 retro
-robots
+robot
 rpg
 rts
 safari
@@ -198,6 +195,7 @@ sopa
 spam
 spotify
 steam
+stream
 starcraft
 stuxnet
 sun
@@ -219,12 +217,12 @@ twitter
 uber
 viber
 vine
-viruses
+virus
 vr
 warcraft
 web
 whatsapp
-wheels
+wheel
 wifi
 wii
 wikipedia
