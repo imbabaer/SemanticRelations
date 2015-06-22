@@ -4,7 +4,9 @@
 \usepackage{graphicx}
 
 \begin{document}
+\begin{titlepage}
 
+\end{titlepage}
 \tableofcontents
 
 \title{This is my \LaTeX \ practice}

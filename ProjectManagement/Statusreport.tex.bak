@@ -127,5 +127,14 @@ Es soll ein weiterer Domänenkorpus erstellt werden (z.B. aus einem Game-Forum).
 Krank.
 
 \section*{KW24}
-Am 08.06.2015 um 13:15 Uhr fand das erste Statusmeeting\textit{(5,05)} im Raum 321 der Hochschule der Medien  mit Prof. Dr. Johannes Maucher, M.Sc. Andreas Stiegler (via Skype) und Ruben Müller statt. 
+Am 08.06.2015 um 13:15 Uhr fand das erste Statusmeeting\textit{(5,05)} im Raum 321 der Hochschule der Medien  mit Prof. Dr. Johannes Maucher, M.Sc. Andreas Stiegler (via Skype) und Ruben Müller statt.\\
+
+Wie im Statusmeeting besprochen sollte getestet werden ob die Klassifizierung der Wikipedia-Artikel mit einer Support-Vector-Maschine besser gelingt als mit dem Naiven-Bayes-Classifier. Diese SVM habe ich dann versucht einzubinden und zu trainieren. Ich habe den SGDClassifier aus dem Package sklearn verwendet. Die Implementierung kostete mich viel Zeit, da ich kaum passende Beispiele gefunden habe und dann öfters in Fehler gelaufen bin. Nachdem das Skript dann lief musste ich feststellen, dass alle Artikel in die gleiche Klasse eingeteilt wurden. Habe ich diese Klasse dann beim Training herausgenommen wurden alle Artikel in eine andere, aber wiederum die gleiche, Klasse eingeteilt. Auch das ändern einiger Parameter im SGDClassifier brachte keine Besserung. Da ich bis dahin schon 
+
+\section*{KW25}
+
+
+\section*{KW26}
+
+
 \end{document}

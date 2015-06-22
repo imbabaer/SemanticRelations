@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[12pt,a4paper]{article}
 
 
 \usepackage[margin=3cm]{geometry}
@@ -13,6 +13,12 @@
 	\subsection{Motivation}
 	\subsection{Problemstellung}
 	\subsection{Aufbau der Arbeit}
+\section{Begriffverzeichnis}
+	\begin{tabular}{c|c}
+	
+	\textbf{Ähnliche Worte} & Im Word2Vec-Modell mit der Methode $most\_similar()$ erhaltene Worte.\\
+
+\end{tabular}
 \section{Daten und Vorverarbeitung}
 	\subsection{Datenbasis}
 	\subsection{Externe Programme und Hilfsmittel}
@@ -26,19 +32,42 @@
 	\subsection{Distanz zwischen Vektoren im Word2Vec Modell}
 \section{Wikipedia-Korpus}
 	\subsection{Gesamtkorpus}
+	\label{sec:Gesamtkorpus}
 	\subsection{Teilkorpus}
+	\label{sec:Teilkorpus}	
 	\subsection{Testdaten}
 	\subsection{Vergleich und Analyse}
-\section{Spezieller Domänenkorpus}
-	\subsection{Auswahl}
-	\subsection{Crawling}
-	\subsection{Testdaten}
-\section{Vergleich Korpora}
+\section{Experimente}
+In diesem Kapitel sollen die unterschiedlichen Korpora (Gesamtkorpus\footnote{vgl. \ref{sec:Gesamtkorpus}} und Techkorpus\footnote{vgl. \ref{sec:Teilkorpus}}) untersucht werden. Dies soll durch ausgewählte Fragestellungen realisiert werden.
+\\Die Fragestellungen beziehen sich immer auf die Ergebnisse, die aus den Tastdaten\footnote{vgl. Testdaten unter \ref{sec:Testdaten}} erhaltenen ähnlichen Worten.
+\\Jedes Experiment ist in drei Teile aufgeteilt Beschreibung, Durchführung und Interpretation/Ergebnis.
+	\subsection{Synnonymsuche durch Rekursion}
+		\subsubsection{Beschreibung}
+		Es soll untersucht werden, ob man Synonyme zum Testwort erhält, wenn man die ähnlichen Worte dieses Testwortes erneut im Model mittels der Methode $most\_similar()$ sucht. 
+		\subsubsection{Durchführung}
+		.
+		\subsubsection{Interpretation/Ergebnis}
+		.
+	\subsection{Konkretisierungen}
+		\subsubsection{Beschreibung}
+		\subsubsection{Durchführung}
+		\subsubsection{Interpretation/Ergebnis}
+	\subsection{Verallgemeinerungen}
+		\subsubsection{Beschreibung}
+		\subsubsection{Durchführung}
+		\subsubsection{Interpretation/Ergebnis}
+	\subsection{Beziehungen}
+		\subsubsection{Beschreibung}
+		\subsubsection{Durchführung}
+		\subsubsection{Interpretation/Ergebnis}
+		
 
 \section{Zusammenfassung}
 \section{Ausblick}
 \section{Fazit}
-
+\section{Anhang}
+	\subsection{Testdaten}
+	\label{sec:Testdaten}
 	
 
 	

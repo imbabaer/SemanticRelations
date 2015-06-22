@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  8 JUN 2015 11:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  22 JUN 2015 14:31
 entering extended mode
 **inhaltsverzeichnis.tex
 
@@ -17,8 +17,8 @@ an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
 (D:\Programme\MiKTeX\tex\latex\base\article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(D:\Programme\MiKTeX\tex\latex\base\size11.clo
-File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(D:\Programme\MiKTeX\tex\latex\base\size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -323,12 +323,12 @@ LaTeX Font Info:    ... okay on input line 10.
 * \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=50.0pt
+* \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -342,36 +342,54 @@ LaTeX Font Info:    ... okay on input line 10.
 (D:\SoftwareProjects\SemanticRelations\ProjectManagement\Inhalt\inhaltsverzeich
 nis.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 2.
+(Font)              <12> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
-)
-\tf@toc=\write3
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \vbox (65.95554pt too high) has occurred while \output is active []
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
+\tf@toc=\write3
+ [2] [3]
+Overfull \hbox (62.03159pt too wide) in paragraph at lines 19--27
+[] 
+ []
 
+[4] [5] [6] [7]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 50.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 50.
 
-[2]
+Overfull \hbox (16.22388pt too wide) in paragraph at lines 55--56
+[]\OT1/cmr/m/n/12 ahn-li-chen Wor-te die-ses Test-wor-tes er-neut im Mo-del mit
+-tels der Me-tho-de $\OML/cmm/m/it/12 most[]similar\OT1/cmr/m/n/12 ()$
+ []
+
+[8] [9] [10] [11] [12] [13]
 (D:\SoftwareProjects\SemanticRelations\ProjectManagement\Inhalt\inhaltsverzeich
-nis.aux) ) 
+nis.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1175 strings out of 493921
- 15135 string characters out of 3150478
- 75854 words of memory out of 3000000
- 4497 multiletter control sequences out of 15000+200000
- 7897 words of font info for 28 fonts, out of 3000000 for 9000
+ 1182 strings out of 493921
+ 15226 string characters out of 3150478
+ 74889 words of memory out of 3000000
+ 4503 multiletter control sequences out of 15000+200000
+ 7894 words of font info for 28 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 24i,4n,32p,182b,107s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Pr
-ogramme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programme/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on inhaltsverzeichnis.pdf (2 pages, 57811 bytes).
+ 24i,10n,32p,285b,144s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programme/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Programme/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmr12.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:
+/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on inhaltsverzeichnis.pdf (13 pages, 88406 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  22 JUN 2015 10:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  22 JUN 2015 16:25
 entering extended mode
-**Statusreport.tex
-(D:\SoftwareProjects\SemanticRelations\ProjectManagement\Statusreport.tex
+**Thesis.tex
+(D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,19 +13,20 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(D:\Programme\MiKTeX\tex\latex\base\article.cls
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(D:\Programme\MiKTeX\tex\latex\base\size11.clo
-File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(D:\Programme\MiKTeX\tex\latex\base\report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(D:\Programme\MiKTeX\tex\latex\base\size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
@@ -48,9 +49,9 @@ Package ifvtex Info: VTeX not detected.
 (D:\Programme\MiKTeX\tex\generic\ifxetex\ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count87
-\Gm@cntv=\count88
-\c@Gm@tempcnt=\count89
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
 \Gm@bindingoffset=\dimen103
 \Gm@wd@mp=\dimen104
 \Gm@odd@mp=\dimen105
@@ -287,19 +288,19 @@ Now handling font encoding U ...
 (D:\Programme\MiKTeX\tex\latex\setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(D:\SoftwareProjects\SemanticRelations\ProjectManagement\Statusreport.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+(D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -320,12 +321,12 @@ LaTeX Font Info:    ... okay on input line 9.
 * \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=50.0pt
+* \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -336,73 +337,107 @@ LaTeX Font Info:    ... okay on input line 9.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 13.
+(Font)              <12> on input line 57.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 13.
+(Font)              <8> on input line 57.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 13.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 20.
-
-Overfull \hbox (3.33124pt too wide) in paragraph at lines 20--24
-\OT1/cmr/m/n/10.95 Nach ei-ni-gem aus-pro-bie-ren und mehr-fa-chem Skript ausf[
-]uhren, kam ich dann zum gew[]unsch-
- []
-
+(Font)              <6> on input line 57.
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 35--37
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 72.
 
+(D:\Programme\MiKTeX\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 72.
+
+Overfull \hbox (14.4388pt too wide) in paragraph at lines 67--78
+\OT1/cmr/m/n/12 lor-ar-beit mit dem Ti-tel: SSe-man-ti-sche Be-zie-hun-gen in T
+ex-ten mit Word2Vecelbst[]andig
  []
 
+[2
 
-Overfull \hbox (6.55424pt too wide) in paragraph at lines 42--44
-\OT1/cmr/m/n/10.95 Verschiedene Pa-ra-me-ter beim Ler-nen der Mo-del-le und die
- Aus-wer-tung der $\OML/cmm/m/it/10.95 model:accuracy\OT1/cmr/m/n/10.95 ()$
+] [3
+
+] [4
+
+] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.toc
+[5
+
+])
+\tf@toc=\write3
+ [6]
+Overfull \hbox (62.03159pt too wide) in paragraph at lines 88--96
+[] 
  []
 
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 115--118
+[7
 
+]
+Kapitel 1.
+[1
+
+]
+Kapitel 2.
+[2
+
+]
+Kapitel 3.
+[3
+
+]
+Kapitel 4.
+[4
+
+]
+Kapitel 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 126.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 126.
+
+Overfull \hbox (16.22388pt too wide) in paragraph at lines 131--132
+[]\OT1/cmr/m/n/12 ahn-li-chen Wor-te die-ses Test-wor-tes er-neut im Mo-del mit
+-tels der Me-tho-de $\OML/cmm/m/it/12 most[]similar\OT1/cmr/m/n/12 ()$
  []
 
+[5
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+] [6] [7] [8] [9]
+Kapitel 6.
+[10
 
- []
+] [11]
+Kapitel 7.
+[12
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
-
- []
+]
+Overfull \vbox (6.17595pt too high) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
-
- []
-
-[6] (D:\SoftwareProjects\SemanticRelations\ProjectManagement\Statusreport.aux) 
-) 
+[13] [14] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 1181 strings out of 493921
- 14970 string characters out of 3150478
- 74854 words of memory out of 3000000
- 4502 multiletter control sequences out of 15000+200000
- 9018 words of font info for 32 fonts, out of 3000000 for 9000
+ 1227 strings out of 493921
+ 15564 string characters out of 3150478
+ 78225 words of memory out of 3000000
+ 4543 multiletter control sequences out of 15000+200000
+ 9439 words of font info for 34 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 24i,7n,32p,1131b,198s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Programme/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programme/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D
-:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Programme/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programme/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmti10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mtt10.pfb>
-Output written on Statusreport.pdf (6 pages, 126979 bytes).
+ 24i,10n,32p,319b,191s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:
+/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programme/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><D:/Programme/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi12.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/P
+rogramme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Programme/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb>
+Output written on Thesis.pdf (21 pages, 121867 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

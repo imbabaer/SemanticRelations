@@ -1,0 +1,250 @@
+\documentclass[12pt,a4paper]{report}
+
+
+\usepackage[margin=3cm]{geometry}
+\usepackage{ngerman}
+\usepackage[utf8]{inputenc}
+\usepackage[onehalfspacing]{setspace}
+
+
+\begin{document}
+\pagenumbering{roman}
+\thispagestyle{empty}
+\begin{verbatim}
+
+
+
+
+
+\end{verbatim}
+\begin{center}
+\textbf{\huge{Semantische Beziehungen in Texten mit Word2Vec}}\\
+\end{center}
+\begin{verbatim}
+
+
+
+\end{verbatim}
+\begin{center}
+\large B A C H E L O R A R B E I T
+
+\begin{verbatim}
+\end{verbatim}
+
+\end{center}
+\begin{center}
+im Studiengang\\
+\textsc{Medieninformatik (MI7)}\\
+an der Hochschule der Medien in Stuttgart\\
+vorgelegt von \textsc{Ruben Müller}\\
+\begin{verbatim}
+\end{verbatim}
+im Juli 2015
+
+
+\end{center}
+\begin{verbatim}
+
+
+
+
+
+
+
+\end{verbatim}
+
+\begin{flushleft}
+\begin{tabular}{lll}
+\textbf{Erstprüfer:} & & \textsc{Prof. Dr-Ing. Johannes Maucher},\\ 
+&&\small Hochschule der Medien, Stuttgart  \\
+\textbf{Zweitprüfer:} & & \textsc{M.Sc. Andreas Stiegler},\\
+&&\small Hochschule der Medien, Stuttgart\\
+\end{tabular}
+\end{flushleft}
+
+\newpage
+\chapter*{Erklärung}
+Hiermit versichere ich, Ruben Müller, an Eides Statt, dass ich die vorliegende
+Bachelorarbeit mit dem Titel: "Semantische Beziehungen in Texten mit Word2Vec" selbständig und ohne fremde Hilfe verfasst und keine anderen als die angegebenen
+Hilfsmittel benutzt habe. Die Stellen der Arbeit, die dem Wortlaut oder dem Sinn nach anderen
+Werken entnommen wurden, sind in jedem Fall unter Angabe der Quelle kenntlich gemacht. Die
+Arbeit ist noch nicht veröffentlicht oder in anderer Form als Prüfungsleistung vorgelegt worden.\\
+Ich habe die Bedeutung der eidesstattlichen Versicherung und die prüfungsrechtlichen Folgen (§ 23 Abs. 2 Bachelor-SPO (7 Semester) der HdM) sowie die strafrechtlichen Folgen (gem. § 156 StGB) einer unrichtigen oder
+unvollständigen eidesstattlichen Versicherung zur Kenntnis genommen.\\
+\vspace{2em}
+Filderstadt, den XX. Juli 2015\\
+\vspace*{em}
+Ruben Müller
+
+
+\newpage
+\chapter*{Kurzfassung}
+\newpage
+\chapter*{Abstract}
+\newpage
+\tableofcontents
+\newpage
+\chapter*{Begriffsverzeichnis}
+	\begin{tabular}{r|l}	
+	\textbf{Begriff} & Erklärung\\
+	\hline	
+	\textbf{Ähnliche Worte} & Im Word2Vec-Modell mit der Methode $most\_similar()$ erhaltene Worte.\\
+	\textbf{SVM} & Support Vector Machine\\
+	\textbf{NBC} & Naive Bayes Classifier\\
+
+\end{tabular}
+\newpage
+\pagenumbering{arabic}
+\chapter{Einleitung}
+	\section{Motivation}
+	\section{Problemstellung}
+	\section{Aufbau der Arbeit}
+
+\newpage
+\chapter{Daten und Vorverarbeitung}
+	\section{Datenbasis}
+	\section{Externe Programme und Hilfsmittel}
+	\section{Vorverarbeitung}
+\newpage
+\chapter{Word2Vec}
+	\section{Parameter}
+	\section{CBOW}
+	\section{Skip-gram}
+	\section{Negative sampling}
+	\section{Hierarchical softmax}
+	\section{Distanz zwischen Vektoren im Word2Vec Modell}
+\newpage
+\chapter{Wikipedia-Korpus}
+	\section{Gesamtkorpus}
+	\label{sec:Gesamtkorpus}
+	\section{Teilkorpus}
+	\label{sec:Teilkorpus}	
+	\section{Testdaten}
+	\subsection{Vergleich und Analyse}
+\newpage
+\chapter{Experimente}
+In diesem Kapitel sollen die unterschiedlichen Korpora (Gesamtkorpus\footnote{vgl. \ref{sec:Gesamtkorpus}} und Techkorpus\footnote{vgl. \ref{sec:Teilkorpus}}) untersucht werden. Dies soll durch ausgewählte Fragestellungen realisiert werden.
+\\Die Fragestellungen beziehen sich immer auf die Ergebnisse, die aus den Tastdaten\footnote{vgl. \ref{sec:Testdaten}} erhaltenen ähnlichen Worten.
+\\Jedes Experiment ist in drei Teile aufgeteilt Beschreibung, Durchführung und Interpretation/Ergebnis.
+	\section{Synnonymsuche durch Rekursion}
+		\subsection{Beschreibung}
+		Es soll untersucht werden, ob man Synonyme zum Testwort erhält, wenn man die ähnlichen Worte dieses Testwortes erneut im Model mittels der Methode $most\_similar()$ sucht. 
+		\subsection{Durchführung}
+		.
+		\subsection{Interpretation/Ergebnis}
+		.
+	\newpage
+	\section{Konkretisierungen}
+		\subsection{Beschreibung}
+		.
+		\subsection{Durchführung}
+		.
+		\subsection{Interpretation/Ergebnis}
+		.
+	\newpage
+	\section{Verallgemeinerungen}
+		\subsection{Beschreibung}
+		.
+		\subsection{Durchführung}
+		.
+		\subsection{Interpretation/Ergebnis}
+		.
+	\newpage
+	\section{Unterschiedliche Beziehungen}
+		\subsection{Beschreibung}
+		.
+		\subsection{Durchführung}
+		.
+		\subsection{Interpretation/Ergebnis}
+		.
+	\newpage
+	\section{Mehrdeutigkeit}
+		\subsection{Beschreibung}
+		.
+		\subsection{Durchführung}
+		.
+		\subsection{Interpretation/Ergebnis}
+		.
+		
+
+\newpage
+\chapter{Fazit und Ausblick}
+\section{Fazit}
+
+\newpage
+\section{Ausblick}
+\newpage
+\chapter{Anhang}
+	\section{Testdaten}
+	\label{sec:Testdaten}
+
+\begin{tabular}{l|l|l|l}
+3d & 3ds & 3g & 4chan\\
+4g & acer & acta & activision\\
+adobe & amazon & android & anonymous\\
+aol & apple & app & augmented\\
+arcade & architecture & arpanet & asus\\
+auto & automobile & battlefield & bing\\
+biometrics & bitcoin & bittorrent & blackberry\\
+blizzard & blogging & blog & bluray\\
+broadband & browser & casual & chatroulette\\
+chrome & chromebook & cispa & computing\\
+console & cookies & craigslist & crowdfunding\\
+crowdsourcing & cryptocurrency & cybercrime & cyberwar\\
+darknet & data & dell & diablo\\
+doodle & dotcom & drone & dropbox\\
+e3 & ebay & email & emoji\\
+encryption & energy & engine & engineering\\
+ereader & events & facebook & fat\\
+filesharing & firefox & flickr & foursquare\\
+gadget & game & gameplay & gamergate\\
+games & gaming & ghz & gmail\\
+google & googlemail & gps & groupon\\
+gta & hacking & halo & handheld\\
+hardware & hashtag & hd & heartbleed\\
+htc & html5 & i & ibm\\
+icloud & ie & imac & indie\\
+
+\end{tabular}
+\newpage
+\begin{tabular}{l|l|l|l}
+instagram & intel & internet & ios\\
+ipad & iphone & ipod & isp\\
+itunes & keyboard & kickstarter & kindle\\
+kinect & laptop & lenovo & lg\\
+limewire & link & linkedin & linux\\
+live & machinima & macintosh & macworld\\
+malware & mario & megaupload & microsoft\\
+minecraft & mmorpg & mobile & monitor\\
+motoring & mouse & mozilla & myspace\\
+nes & net & netbook & nfs\\
+nintendo & nokia & oracle & ouya\\
+p2p & paypal & pc & phablet\\
+phishing & photography & photoshop & pi\\
+pinterest & piracy & pirate & platform\\
+playback & playstation & pokemon & power\\
+processor & programming & ps & ps2\\
+ps3 & ps4 & psp & python\\
+raider & ram & raspberry & rayman\\
+recommendation & reddit & retro & robot\\
+rpg & rts & safari & samsung\\
+search & security & seo & skype\\
+smartphone & smartphones & smartwatch & smartwatches\\
+software & sonic & sony & sopa\\
+spam & spotify & steam & stream\\
+starcraft & stuxnet & sun & surface\\
+symbian & tablet & technology & technophile\\
+ted & telecom & television & tetris\\
+titanfall & tomb & trojan & tumblr\\
+twitch & twitter & viber & vine\\
+virus & warcraft & web & whatsapp\\
+wheel & wifi & wii & wikipedia\\
+windows & windows7 & wireless & worms\\
+wow & xbox & xp & y2k\\
+yahoo & youtube & zelda & zynga\\
+
+\end{tabular}
+
+	
+	
+\end{document}

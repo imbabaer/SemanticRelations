@@ -44,7 +44,6 @@ craigslist
 crowdfunding
 crowdsourcing
 cryptocurrency
-cryptocurrencies
 cybercrime
 cyberwar
 darknet
@@ -71,7 +70,7 @@ filesharing
 firefox
 flickr
 foursquare
-gadgets
+gadget
 game
 gameplay
 gamergate
@@ -139,7 +138,6 @@ nes
 net
 netbook
 nfs
-nfts
 nintendo
 nokia
 oracle
@@ -214,11 +212,9 @@ trojan
 tumblr
 twitch
 twitter
-uber
 viber
 vine
 virus
-vr
 warcraft
 web
 whatsapp

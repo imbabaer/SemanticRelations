@@ -57,7 +57,7 @@ def helpFunction1(model,simfile,topn,td,low,high):
     simfile.write('-------------------------------\n')
     ret = model.most_similar(positive=[td], topn=5)
     for x in range(0,topn):
-        simfile.write(str(ret[x][0])+' : '+str(ret[x][1])+'\t||\t'+getSimilar(model,str(ret[x][0]),topn)+'\n')
+        simfile.write(str(ret[x][0])+' : '+str(ret[x][1])+'\t\t||\t\t'+getSimilar(model,str(ret[x][0]),topn)+'\n')
         if ret[x][1] < low[0]:
             low=[ret[x][1],ret[x][0],td]
         if ret[x][1] > high[0]:
@@ -117,7 +117,7 @@ testFunction(model3,simfile3,5)
 
 model = gensim.models.Word2Vec.load("../Test1/largeModel300105")
 print 'loaded model'
-simfile4 = open('recursiveCombSimilarities.txt','w')
+simfile4 = open('recursiveCombSimilarities_new.txt','w')
 testFunction2(model,model3,simfile4,5)
 
 from Test1.soundtest import playTADA

@@ -127,5 +127,15 @@ Es soll ein weiterer Domänenkorpus erstellt werden (z.B. aus einem Game-Forum).
 Krank.
 
 \section*{KW24}
-Am 08.06.2015 um 13:15 Uhr fand das erste Statusmeeting\textit{(5,05)} im Raum 321 der Hochschule der Medien  mit Prof. Dr. Johannes Maucher, M.Sc. Andreas Stiegler (via Skype) und Ruben Müller statt. 
+Am 08.06.2015 um 13:15 Uhr fand das erste Statusmeeting\textit{(5,05)} im Raum 321 der Hochschule der Medien  mit Prof. Dr. Johannes Maucher, M.Sc. Andreas Stiegler (via Skype) und Ruben Müller statt.\\
+
+Wie im Statusmeeting besprochen sollte getestet werden ob die Klassifizierung der Wikipedia-Artikel mit einer Support-Vector-Maschine besser gelingt als mit dem Naiven-Bayes-Classifier. Diese SVM habe ich dann versucht einzubinden und zu trainieren. Ich habe den SGDClassifier aus dem Package sklearn verwendet. Die Implementierung kostete mich viel Zeit, da ich kaum passende Beispiele gefunden habe und dann öfters in Fehler gelaufen bin. Nachdem das Skript dann lief musste ich feststellen, dass alle Artikel in die gleiche Klasse eingeteilt wurden. Habe ich diese Klasse dann beim Training herausgenommen wurden alle Artikel in eine andere, aber wiederum die gleiche, Klasse eingeteilt. Auch das ändern einiger Parameter im SGDClassifier brachte keine Besserung. Da ich bis dahin schon einige Zeit in die Implementierung der SVM gesteckt habe und es ja auch noch die Fragestellungen zu bearbeiten galt, habe ich mich entschlossen meine bisherige Klassifizierung mittels Naivem Bayes Klassifizierer zu behalten und die SVM nicht anzuwenden.\\
+
+
+\section*{KW25}
+Im Statusmeeting wurde vereinbart, dass die trainierten Modelle mit ein paar Fragestellungen getestet werden sollen, bzw Hypothesen bestätigt oder widerlegt werden. Ich habe dann die Fragenstellungen/Hypothesen erarbeitet und mir Gedanken gemacht wie ich die Auswertung am besten darstelle. Ich habe mich entschieden alle Fragestellungen gleichzeitig zu bearbeiten und die Ergebnisse in Excel festzuhalten so musste ich nur einmal über alle Daten (235 Testworte) iterieren. Die Auswertung habe ich dann noch mit Kreisdiagrammen grafisch dargestellt.
+
+\section*{KW26}
+
+
 \end{document}
