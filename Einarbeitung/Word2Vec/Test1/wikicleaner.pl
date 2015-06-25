@@ -31,43 +31,22 @@ while (<>) {
     s/\[\[category:([^|\]]*)[^]]*\]\]/[[$1]]/ig;  # show categories without markup
     s/\[\[[a-z\-]*:[^\]]*\]\]//g;  # remove links to other languages
     s/\[\[[^\|\]]*\|/[[/g;  # remove wiki url, preserve visible text
-    #s/{{.*}}//g;             # remove wiki markup
     s/{{[^}]*}}//g;         # remove {{icons}} and {tables}
     s/{[^}]*}//g;
     s/\[//g;                # remove [ and ]
     s/\]//g;
     s/&[^;]*;/ /g;          # remove URL encoded chars
 
-    # convert to lowercase letters and spaces, spell digits
     $_=" $_ ";
-    #tr/A-Z/a-z/;
-    #s/0/ zero /g;
-    #s/1/ one /g;
-    #s/2/ two /g;
-    #s/3/ three /g;
-    #s/4/ four /g;
-    #s/5/ five /g;
-    #s/6/ six /g;
-    #s/7/ seven /g;
-    #s/8/ eight /g;
-    #s/9/ nine /g;
-    #s/ē/e/g;
-    s/Ä/A/g;
-    s/ä/a/g;
-    s/Ö/O/g;
-    s/ö/o/g;
-    s/Ü/U/g;
-    s/ü/u/g;
+    s/Ä/Ae/g;
+    s/ä/ae/g;
+    s/Ö/Oe/g;
+    s/ö/oe/g;
+    s/Ü/Ue/g;
+    s/ü/ue/g;
     s/ß/ss/g;
     s/-//g;
     tr/0-9A-Za-z,.!?;\r\n / /csd; #removes everything else than this characters
-    #tr/'//sd;
-    #tr/=//sd;
-    #tr/*//sd;
-    #tr/0xa9//sd;
-    #tr/\#//sd;
-    #tr/\r\n/ /;
-    #tr/ //s;
     chop;
     print $_;
   }

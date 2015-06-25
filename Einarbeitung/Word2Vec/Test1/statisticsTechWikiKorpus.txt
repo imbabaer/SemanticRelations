@@ -1,0 +1,4 @@
+wordcount: 9866096
+sentencecount: 3166065
+articlecount: 179253
+calculated in 18056.905 seconds.

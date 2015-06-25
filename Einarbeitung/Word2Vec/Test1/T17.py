@@ -15,7 +15,7 @@ for x in range(0,421):
     print str(x)
     list = get_filelist(mypathtest2+'/'+str(x)+'/texts')
     for fi in list:
-        if fi.startswith('science'):
+        if fi.startswith('tech'):
             print fi
             with open(mypathtest2+'/'+str(x)+'/texts/'+fi,'r') as infile:
                 techfile.writelines(infile.readlines())

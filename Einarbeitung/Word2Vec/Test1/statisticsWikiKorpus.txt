@@ -1,0 +1,3 @@
+wordcount: 2919802692
+sentencecount: 242144317
+calculated in 1179.6170001 seconds.

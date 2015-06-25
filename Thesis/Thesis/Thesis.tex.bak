@@ -1,13 +1,14 @@
-\documentclass[12pt,a4paper]{report}
-
-
+\documentclass[11pt,a4paper]{report}
 \usepackage[margin=3cm]{geometry}
 \usepackage{ngerman}
 \usepackage[utf8]{inputenc}
 \usepackage[onehalfspacing]{setspace}
+\usepackage[numbers,round]{natbib}
 
 
 \begin{document}
+
+
 \pagenumbering{roman}
 \thispagestyle{empty}
 \begin{verbatim}
@@ -71,14 +72,18 @@ Werken entnommen wurden, sind in jedem Fall unter Angabe der Quelle kenntlich ge
 Arbeit ist noch nicht veröffentlicht oder in anderer Form als Prüfungsleistung vorgelegt worden.\\
 Ich habe die Bedeutung der eidesstattlichen Versicherung und die prüfungsrechtlichen Folgen (§ 23 Abs. 2 Bachelor-SPO (7 Semester) der HdM) sowie die strafrechtlichen Folgen (gem. § 156 StGB) einer unrichtigen oder
 unvollständigen eidesstattlichen Versicherung zur Kenntnis genommen.\\
-\vspace{2em}
+\vspace{1em}\\
 Filderstadt, den XX. Juli 2015\\
-\vspace*{em}
+\vspace{5em}\\
 Ruben Müller
 
 
 \newpage
 \chapter*{Kurzfassung}
+Diese Bachelorthesis beschäftigt sich mit der Analyse von semantischen Beziehungen innerhalb mit Word2Vec gelernten Modellen.
+\\Dazu sollen zum einen schon der vorhandene allgemeine Wikipedia-Korpus gelernt und analysiert werden, was als semantisch ähnlich erkannt wird. Zum anderen soll ein Korpus über eine spezielle Domäne erstellt und gelernt werden. Welche spezielle Domäne analysiert und verglichen werden soll, wird im Laufe der Bearbeitung festgelegt.
+\\Diese beiden Korpora sollen sich dann gegenüber gestellt und analysiert werden, was jeweils als semantisch ähnlich erkannt wird. 
+\\Ziel dieser Arbeit soll es sein, festzustellen ob ein allgemeiner Korpus oder ein spezieller Domänenkorpus genauere Resultate im Hinblick auf semantische Ähnlichkeiten erzielt. Anstatt eines allgemeinen Korpus zu verwenden, könnte es sich dann anbieten zwischen mehreren speziellen Korpora auszuwählen, je nachdem welche Domäne aktuell bearbeitet werden soll.
 \newpage
 \chapter*{Abstract}
 \newpage
@@ -91,28 +96,74 @@ Ruben Müller
 	\textbf{Ähnliche Worte} & Im Word2Vec-Modell mit der Methode $most\_similar()$ erhaltene Worte.\\
 	\textbf{SVM} & Support Vector Machine\\
 	\textbf{NBC} & Naive Bayes Classifier\\
+	\textbf{CBOW} & Continuous bag-of-words\\
 
 \end{tabular}
 \newpage
 \pagenumbering{arabic}
 \chapter{Einleitung}
 	\section{Motivation}
+	
 	\section{Problemstellung}
 	\section{Aufbau der Arbeit}
 
 \newpage
 \chapter{Daten und Vorverarbeitung}
 	\section{Datenbasis}
+	Zum erfolgreichen Training des Word2Vec Modells wird eine sehr große Menge an Daten gebraucht\footnote{In \cite{DBLP:journals/corr/MikolovSCCD13} werden Trainingsdaten mit bis zu 30 Milliarden Wörtern benutzt.}. 
+	Für den ersten Korpus wurde der komplette englischsprachige Wikipedia Korpus verwendet\footnote{http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015}. Dieser enthält 8.392.453 Artikel, 242.144.317 Sätze und 2.919.802.692 Worte.\\
+	Der zweite in der Arbeit verwendete Korpus besteht auch aus Wikipedia Artikeln, allerdings wurden hier nur technologiespezifische Artikel verwendet. Der komplette englische Wikipedia Korpus wurde zuerst in die einzelnen Artikel aufgeteilt und diese wurden dann mit einem NBC in die Klassen $tech, entertainment, sport, science, politic$ eingeteilt.\\
+	
+
+\iffalse
+	Kompletter Wikikorpus: \\
+	8392453 Artikel\\
+	wordcount: 2919802692\\
+	sentencecount: 242144317\\
+	187144 Artikel
+	Techkorpus:\\
+	wordcount: 9866096\\
+	sentencecount: 3166065\\
+\fi
 	\section{Externe Programme und Hilfsmittel}
+	Dieser Abschnitt enthält eine Auflistung mit kurzen Beschreibungen, der in dieser Arbeit verwendeten Hilfsmittel und externen Programme.\\
+	\vspace{1em}\\	
+	\textbf{gensim}\cite{rehurek_lrec}\footnote{https://radimrehurek.com/gensim/, abgerufen am 24.06.2015} ist eine Bibliothek für Python. Sie enthält unter anderem eine performanzoptimierte Implementierung von Word2Vec.\\ 
+	\vspace{1em}\\
+	Der NBC der zum Klassifizieren der Artikel verwendet wurde, ist der im DataMining Praktikum selbst implementierte.
+	\vspace{1em}\\
+	
 	\section{Vorverarbeitung}
+	Der komplette Wikipediadump kann als komprimierte XML-Datei heruntergeladen werden\footnote{http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015} die entpackte XML-Datei hat eine Größe von 48,8 GB. Die Daten müssen zunächst bereinigt werden um als Trainingsdaten für Word2Vec Modelle zu dienen.\\		
+	Um das Wiki-Markup, wie unter anderem Links, Referenzen oder Zitate, und die XML-Tags zu entfernen, kann ein schon vorgefertigtes Perl Skript von Matt Mahoney benutzt werden\footnote{http://mattmahoney.net/dc/textdata.html unter Appendix A, abgerufen am 25.06.2015}, welches von Mikolov et al. auf der Google Code Seite von Word2Vec vorgeschlagen wird\footnote{https://code.google.com/p/word2vec/, abgerufen am 25.06.2015}. Dieses Skript wurde speziell zum Bereinigen von Wikipediadaten erstellt und wurde leicht verändert, sodass Zahlen, Satzzeichen und die Groß- und Kleinschreibung erhalten bleibt. Außerdem werden die Umlaute in $ae$, $oe$ und $ue$ umgewandelt. Da die bis hierher bereinigten Daten eine Gesamtgröße von 18 GB haben, ist es nötig die Daten weiter aufzubereiten, sodass sie als Input für die Klasse $gensim.models.word2vec.LineSentence$\footnote{Diese Klasse kann auch als Input zum Trainieren des Word2Vec Modells genutzt werden.}, aus der Gensim Bibliothek dienen. Dazu müssen die einzelnen Sätze in je einer Zeile stehen, alle Worte klein geschrieben sein, frei von Satzzeichen und mit Leerzeichen getrennt sein.\\
+	
+	Um den kompletten Wikipediadump in die einzelnen Wikipedia Artikel aufzuteilen muss die XML-Datei mittels eines SAX-Parsers geparst und dann in einzelne Dateien geschrieben werden. Diese einzelnen Dateien können dann mit dem Perl Skript gereinigt und dann mittels NBC klassifiziert werden. Nach der Klassifizierung können die Dateien wieder in eine große Datei zusammengefasst und weiter verarbeitet werden. Auch diese Daten müssen wie der Gesamtkorpus mit der Klasse $gensim.models.word2vec.LineSentence$ verarbeitet werden.
 \newpage
 \chapter{Word2Vec}
+Im folgenden Kapitel wird kurz erklärt was Word2Vec ist und welche Parameter und Algorithmen bei der Berechnung von Word2Vec benutzt werden können.\\
+
+In Word2Vec Modellen werden Worte als Vektoren dargestellt\footnote{Word2Vec heißt wörtlich Wort zu Vektor.}. Hier wird mittels \textit{distributed representation}\cite{DBLP:journals/corr/abs-1301-3781} ein n-dimensionaler Vektorraum erzeugt, in dem jedes Wort aus den Trainingsdaten durch einen Vektor dargestellt wird.\\
+Als nächster Schritt werden die Vektoren in ein neuronales Netz gegeben und dort mittels eines Lernalgorithmus so verändert, dass Worte mit ähnlicher Bedeutung ähnliche Vektoren haben. So kann die Ähnlichkeit zwischen zwei Vektoren mit der Kosinusähnlichkeit berechnet werden (vgl. \ref{sec:Distanz}).\\
+Die Berechnung der Wortvektoren kann mit neuronalen Netzen unterschiedlicher Architektur erreicht werden, \textit{CBOW} oder \textit{Skip-gram}. Desweiteren stehen unterschiedliche Lernalgorithmen für die neuronalen Netze zur Verfügung, \textit{hierarchical softmax}  und \textit{negative sampling}.\\
+Beim Training können unterschiedliche Parameter eingestellt werden.\\
+
+SCHAUBILD CBOW vs. SKIP-GRAM
+
 	\section{Parameter}
+	
+	size\\
+	
+	window\\
+	
+	min\_count\\
+	
+	negative\\
 	\section{CBOW}
 	\section{Skip-gram}
 	\section{Negative sampling}
 	\section{Hierarchical softmax}
 	\section{Distanz zwischen Vektoren im Word2Vec Modell}
+	\label{sec:Distanz}
 \newpage
 \chapter{Wikipedia-Korpus}
 	\section{Gesamtkorpus}
@@ -174,11 +225,24 @@ In diesem Kapitel sollen die unterschiedlichen Korpora (Gesamtkorpus\footnote{vg
 \newpage
 \section{Ausblick}
 \newpage
+\chapter*{Quellenverzeichnis}
+\bibliographystyle{alpha}
+\bibliography{bibtex_gensim}
+\nocite{DBLP:journals/corr/abs-1301-3781}
+\nocite{DBLP:journals/corr/MikolovSCCD13}
+papers und so
+\listoftables
+\listoffigures 
+
+
+
+
 \chapter{Anhang}
 	\section{Testdaten}
 	\label{sec:Testdaten}
-
-\begin{tabular}{l|l|l|l}
+\begin{table}[h]
+\caption{Testdaten Teil 1}
+\begin{tabular}{l|l|l|l}\\
 3d & 3ds & 3g & 4chan\\
 4g & acer & acta & activision\\
 adobe & amazon & android & anonymous\\
@@ -198,16 +262,19 @@ encryption & energy & engine & engineering\\
 ereader & events & facebook & fat\\
 filesharing & firefox & flickr & foursquare\\
 gadget & game & gameplay & gamergate\\
+
+\end{tabular}
+\end{table}
+\newpage
+\begin{table}[h]
+\caption{Testdaten Teil 2}
+\begin{tabular}{l|l|l|l}\\
 games & gaming & ghz & gmail\\
 google & googlemail & gps & groupon\\
 gta & hacking & halo & handheld\\
 hardware & hashtag & hd & heartbleed\\
 htc & html5 & i & ibm\\
 icloud & ie & imac & indie\\
-
-\end{tabular}
-\newpage
-\begin{tabular}{l|l|l|l}
 instagram & intel & internet & ios\\
 ipad & iphone & ipod & isp\\
 itunes & keyboard & kickstarter & kindle\\
@@ -244,7 +311,7 @@ wow & xbox & xp & y2k\\
 yahoo & youtube & zelda & zynga\\
 
 \end{tabular}
-
+\end{table}
 	
 	
 \end{document}
