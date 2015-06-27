@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[onehalfspacing]{setspace}
 \usepackage[numbers,round]{natbib}
+\usepackage{graphicx}
 
 
 \begin{document}
@@ -140,30 +141,55 @@ Diese Bachelorthesis beschäftigt sich mit der Analyse von semantischen Beziehun
 	Um den kompletten Wikipediadump in die einzelnen Wikipedia Artikel aufzuteilen muss die XML-Datei mittels eines SAX-Parsers geparst und dann in einzelne Dateien geschrieben werden. Diese einzelnen Dateien können dann mit dem Perl Skript gereinigt und dann mittels NBC klassifiziert werden. Nach der Klassifizierung können die Dateien wieder in eine große Datei zusammengefasst und weiter verarbeitet werden. Auch diese Daten müssen wie der Gesamtkorpus mit der Klasse $gensim.models.word2vec.LineSentence$ verarbeitet werden.
 \newpage
 \chapter{Word2Vec}
-Im folgenden Kapitel wird kurz erklärt was Word2Vec ist und welche Parameter und Algorithmen bei der Berechnung von Word2Vec benutzt werden können.\\
+Im folgenden Kapitel wird kurz erklärt was Word2Vec ist und welche wichtigen Parameter und Algorithmen bei der Berechnung von Word2Vec benutzt werden können.\\
 
 In Word2Vec Modellen werden Worte als Vektoren dargestellt\footnote{Word2Vec heißt wörtlich Wort zu Vektor.}. Hier wird mittels \textit{distributed representation}\cite{DBLP:journals/corr/abs-1301-3781} ein n-dimensionaler Vektorraum erzeugt, in dem jedes Wort aus den Trainingsdaten durch einen Vektor dargestellt wird.\\
 Als nächster Schritt werden die Vektoren in ein neuronales Netz gegeben und dort mittels eines Lernalgorithmus so verändert, dass Worte mit ähnlicher Bedeutung ähnliche Vektoren haben. So kann die Ähnlichkeit zwischen zwei Vektoren mit der Kosinusähnlichkeit berechnet werden (vgl. \ref{sec:Distanz}).\\
 Die Berechnung der Wortvektoren kann mit neuronalen Netzen unterschiedlicher Architektur erreicht werden, \textit{CBOW} oder \textit{Skip-gram}. Desweiteren stehen unterschiedliche Lernalgorithmen für die neuronalen Netze zur Verfügung, \textit{hierarchical softmax}  und \textit{negative sampling}.\\
 Beim Training können unterschiedliche Parameter eingestellt werden.\\
 
-SCHAUBILD CBOW vs. SKIP-GRAM
+
+SCHAUBILD CBOW vs. SKIP-GRAM\\
+\begin{figure}[h]
+  \begin{center}
+	\includegraphics[scale=0.55]{CBOWvsSkip-gram.png}
+  \end{center}  
+  \caption{CBOW und Skip-gram im Vergleich, übersetzt nach \cite{DBLP:journals/corr/abs-1301-3781}}
+  \label{cbowvsskipgram}
+\end{figure}
 
 	\section{Parameter}
 	
-	size\\
+	\textbf{size}
+	\vspace{1em}\\
+	Mit dem Parameter \textit{size} wird die Anzahl der Dimensionen der Wortvektoren eingestellt. In einem n-Dimensionalen Vektorraum nimmt n den Wert von \textit{size} an.\\	
+	\vspace{1em}\\
+	\textbf{window}
+	\vspace{1em}\\
+	\textit{window} ist der maximale Abstand innerhalb eines Satzes zwischen benachbarten Worten, die zur Berechnung der Wordvektoren betrachtet werden.\\
+	\vspace{1em}\\
+	\textbf{min\_count}
+	\vspace{1em}\\
+	Der Parameter \textit{min\_count} gibt an, wie oft ein Wort in den Testdaten mindestens vorkommen muss, um in das Wörterbuch aufgenommen zu werden.\\
+	\vspace{1em}\\
+	\textbf{negative}
+	\vspace{1em}\\
+	Dieser Parameter wird nur benötigt, wenn als Lernalgorithmus negative sampling verwendet wird.\footnote{siehe \ref{sec:negativeSampling}}
 	
-	window\\
-	
-	min\_count\\
-	
-	negative\\
 	\section{CBOW}
+	CBOW ist die Abkürzung für Continuous bag-of-words (dt. stetige Menge an Worten). Beim CBOW wird ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet\cite{DBLP:journals/corr/abs-1301-3781}. Im CBOW Model wird aus dem Kontext, die Menge der Worte wird mit dem Parameter \textit{window} angegeben, ein Wort vorhergesagt (siehe Abbildung \ref{cbowvsskipgram}). 
 	\section{Skip-gram}
+	Beim Skip-gram Model wird auch wie beim CBOW Model ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet \citep{DBLP:journals/corr/abs-1301-3781}. Allerdings wird nicht ein Wort aus dem Kontext vorhergesagt, sondern aus einem Wort wird der Kontext vorhergesagt (siehe Abbildung \ref{cbowvsskipgram}).\\
+	
+	Mehrere verdeckte Schichten in neuronalen Netzen machen die Modelle genauer, allerdings kommt auch die meiste Komplexität des ganzen Models von solchen verdeckten Schichten \citep{DBLP:journals/corr/abs-1301-3781}. Mikolov et al. haben deshalb neuronale Netze ohne verdeckte Schichten bevorzugt, da damit sehr große Datenmengen viel effizienter gelernt werden konnten.
 	\section{Negative sampling}
+	\label{sec:negativeSampling}
+	
 	\section{Hierarchical softmax}
+	
 	\section{Distanz zwischen Vektoren im Word2Vec Modell}
 	\label{sec:Distanz}
+	
 \newpage
 \chapter{Wikipedia-Korpus}
 	\section{Gesamtkorpus}
