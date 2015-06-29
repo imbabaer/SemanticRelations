@@ -31,17 +31,17 @@ class BuecherHandler(handler.ContentHandler):
         if name == "text" and not self.current_content.startswith('#redirect') and not self.current_content.startswith('#REDIRECT') and not self.current_content.startswith('#Redirect'):
             number = self.counter.getNumber()
             print str(number)
-            if number > 5742098:
-                subfolder= str(number/20000)+'/'
-                if not os.path.exists(pagelocation+subfolder):
-                    os.makedirs(pagelocation+subfolder)
-                f = codecs.open(pagelocation+subfolder+'page_'+str(number),"w","utf-8",errors='ignore')
-                #f = open(pagelocation+'text'+str(uuid.uuid1()),'w')
-                f.write('<text xml:space="preserve">')
-                f.write(self.current_content)
-                f.write('</text>')
-                f.close()
-                print 'done writing page: '+str(number)
+            #if number > 5742098:
+            subfolder= str(number/20000)+'/'
+            if not os.path.exists(pagelocation+subfolder):
+                os.makedirs(pagelocation+subfolder)
+            f = codecs.open(pagelocation+subfolder+'page_'+str(number),"w","utf-8",errors='ignore')
+            #f = open(pagelocation+'text'+str(uuid.uuid1()),'w')
+            f.write('<text xml:space="preserve">')
+            f.write(self.current_content)
+            f.write('</text>')
+            f.close()
+            print 'done writing page: '+str(number)
 
 times = open('saxparsertime.txt','w')
 times.write(str(datetime.datetime.now()))

@@ -61,6 +61,25 @@ $size=400, window=8, min\_count=25$
 \\2015-06-01 16:51:48,427 : INFO : gram9-plural-verbs: 50.0\% (300/600)
 \\2015-06-01 16:51:48,428 : INFO : total: 61.3\% (8291/13534)
 
+$size=300, window=10, min\_count=5$
+%largetrainedModel300105:
+\\Trainingsdauer: 7,7h
+\\2015-04-29 19:24:36,700 : INFO : capital-common-countries: 83.0\% (420/506)
+\\2015-04-29 19:45:12,723 : INFO : capital-world: 80.2\% (1759/2192)
+\\2015-04-29 19:45:50,961 : INFO : currency: 0.0\% (0/70)
+\\2015-04-29 20:05:06,782 : INFO : city-in-state: 50.4\% (1111/2203)
+\\2015-04-29 20:08:13,267 : INFO : family: 81.1\% (308/380)
+\\2015-04-29 20:14:57,813 : INFO : gram1-adjective-to-adverb: 16.5\% (134/812)
+\\2015-04-29 20:18:29,605 : INFO : gram2-opposite: 38.8\% (163/420)
+\\2015-04-29 20:28:27,904 : INFO : gram3-comparative: 68.9\% (820/1190)
+\\2015-04-29 20:32:19,788 : INFO : gram4-superlative: 28.4\% (131/462)
+\\2015-04-29 20:40:00,747 : INFO : gram5-present-participle: 49.9\% (464/930)
+\\2015-04-29 20:51:19,611 : INFO : gram6-nationality-adjective: 88.8\% (1217/1371)
+\\2015-04-29 21:02:59,292 : INFO : gram7-past-tense: 48.6\% (683/1406)
+\\2015-04-29 21:11:12,999 : INFO : gram8-plural: 60.3\% (598/992)
+\\2015-04-29 21:16:14,655 : INFO : gram9-plural-verbs: 44.7\% (268/600)
+\\2015-04-29 21:16:14,657 : INFO : total: 59.7\% (8076/13534)
+
 $size=300, window=8, min\_count=10$
 %largetrainedModel300810:
 \\Trainingsdauer: 8,5h
@@ -80,24 +99,7 @@ $size=300, window=8, min\_count=10$
 \\2015-04-29 10:32:35,388 : INFO : gram9-plural-verbs: 46.3\% (278/600)
 \\2015-04-29 10:32:35,388 : INFO : total: 59.1\% (7994/13534)
 
-$size=300, window=10, min\_count=5$
-%largetrainedModel300105:
-\\Trainingsdauer: 7,7h
-\\2015-04-29 19:24:36,700 : INFO : capital-common-countries: 83.0\% (420/506)
-\\2015-04-29 19:45:12,723 : INFO : capital-world: 80.2\% (1759/2192)
-\\2015-04-29 19:45:50,961 : INFO : currency: 0.0\% (0/70)
-\\2015-04-29 20:05:06,782 : INFO : city-in-state: 50.4\% (1111/2203)
-\\2015-04-29 20:08:13,267 : INFO : family: 81.1\% (308/380)
-\\2015-04-29 20:14:57,813 : INFO : gram1-adjective-to-adverb: 16.5\% (134/812)
-\\2015-04-29 20:18:29,605 : INFO : gram2-opposite: 38.8\% (163/420)
-\\2015-04-29 20:28:27,904 : INFO : gram3-comparative: 68.9\% (820/1190)
-\\2015-04-29 20:32:19,788 : INFO : gram4-superlative: 28.4\% (131/462)
-\\2015-04-29 20:40:00,747 : INFO : gram5-present-participle: 49.9\% (464/930)
-\\2015-04-29 20:51:19,611 : INFO : gram6-nationality-adjective: 88.8\% (1217/1371)
-\\2015-04-29 21:02:59,292 : INFO : gram7-past-tense: 48.6\% (683/1406)
-\\2015-04-29 21:11:12,999 : INFO : gram8-plural: 60.3\% (598/992)
-\\2015-04-29 21:16:14,655 : INFO : gram9-plural-verbs: 44.7\% (268/600)
-\\2015-04-29 21:16:14,657 : INFO : total: 59.7\% (8076/13534)
+
 \\Der Wikipedia-Gesamtkorpus enthält 319.284.725 Sätze.
 
 Um einen domänenspezifischen Teilkorpus aus dem Wikipedia-Gesamtkorpus zu generieren, habe ich einen Naiven-Bayes-Klassifikator (den selbst implementierten aus der dem Data-Mining Praktikum) ausgewählt. Dazu waren von Hand getaggte Artikel nötig, um den Klassifikator zu trainieren. Ich habe folgende Kategorien ausgewählt: \\$tech, entertainment, sport, science, politic$. Da viele Wikipedia-Artikel nicht eindeutig einzuordnen waren, mussten deutlich mehr Artikel angeschaut werden. Der Naiven-Bayes-Klassifikator wurde mit 100 Artikeln je Kategorie trainiert.
@@ -119,7 +121,7 @@ Testdatenmenge aus Technologie-Begriffen erstellt um die nächsten Nachbarn dies
 \section*{KW22}
 Urlaub.\\
 
-Ausblick auf die nächste Berichtsperiode:
+Ausblick auf die nächste Berichtsperiode:\\
 Es soll ein weiterer Domänenkorpus erstellt werden (z.B. aus einem Game-Forum). Dazu sollen auch Testdaten erstellt und der Korpus damit getestet werden. Im Anschluss sollen dann die Ergebnisse aus dem Wikipedia-Korpus und dem anderen Domänenkorpus verglichen werden.
 
 
@@ -133,9 +135,15 @@ Wie im Statusmeeting besprochen sollte getestet werden ob die Klassifizierung de
 
 
 \section*{KW25}
-Im Statusmeeting wurde vereinbart, dass die trainierten Modelle mit ein paar Fragestellungen getestet werden sollen, bzw Hypothesen bestätigt oder widerlegt werden. Ich habe dann die Fragenstellungen/Hypothesen erarbeitet und mir Gedanken gemacht wie ich die Auswertung am besten darstelle. Ich habe mich entschieden alle Fragestellungen gleichzeitig zu bearbeiten und die Ergebnisse in Excel festzuhalten so musste ich nur einmal über alle Daten (235 Testworte) iterieren. Die Auswertung habe ich dann noch mit Kreisdiagrammen grafisch dargestellt.
+Im Statusmeeting wurde vereinbart, dass die trainierten Modelle mit ein paar Fragestellungen getestet werden sollen, bzw Hypothesen bestätigt oder widerlegt werden. Ich habe dann die Fragenstellungen/Hypothesen erarbeitet und mir Gedanken gemacht wie ich die Auswertung am besten darstelle. Ich habe mich entschieden alle Fragestellungen gleichzeitig zu bearbeiten und die Ergebnisse in Excel festzuhalten so musste ich nur einmal über alle Daten (235 Testworte) iterieren. Die Auswertung habe ich dann noch mit Kreisdiagrammen grafisch dargestellt.\\
+
+Ausblick auf die nächste Berichtsperiode:\\
+Verschriftlichung der Ergebnisse und Erkenntnisse.
 
 \section*{KW26}
+Schreiben der Thesis.
 
+\section*{KW27}
+Schreiben der Thesis.
 
 \end{document}

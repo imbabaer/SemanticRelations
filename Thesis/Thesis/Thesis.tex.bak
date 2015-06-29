@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{report}
+\documentclass[12pt,a4paper]{report}
 \usepackage[margin=3cm]{geometry}
 \usepackage{ngerman}
 \usepackage[utf8]{inputenc}
@@ -20,7 +20,10 @@
 
 \end{verbatim}
 \begin{center}
-\textbf{\huge{Semantische Beziehungen in Texten mit Word2Vec}}\\
+\textbf{\huge{Semantische Beziehungen in Texten mit Word2Vec }}\\
+\begin{verbatim}
+\end{verbatim}
+\textbf{\large{und der Vergleich zwischen allgemeinen und domänenspezifischen Korpora als Trainingsdaten}}
 \end{center}
 \begin{verbatim}
 
@@ -67,7 +70,7 @@ im Juli 2015
 \newpage
 \chapter*{Erklärung}
 Hiermit versichere ich, Ruben Müller, an Eides Statt, dass ich die vorliegende
-Bachelorarbeit mit dem Titel: "Semantische Beziehungen in Texten mit Word2Vec" selbständig und ohne fremde Hilfe verfasst und keine anderen als die angegebenen
+Bachelorarbeit mit dem Titel: \glqq Semantische Beziehungen in Texten mit Word2Vec\grqq{} selbständig und ohne fremde Hilfe verfasst und keine anderen als die angegebenen
 Hilfsmittel benutzt habe. Die Stellen der Arbeit, die dem Wortlaut oder dem Sinn nach anderen
 Werken entnommen wurden, sind in jedem Fall unter Angabe der Quelle kenntlich gemacht. Die
 Arbeit ist noch nicht veröffentlicht oder in anderer Form als Prüfungsleistung vorgelegt worden.\\
@@ -94,7 +97,8 @@ Diese Bachelorthesis beschäftigt sich mit der Analyse von semantischen Beziehun
 	\begin{tabular}{r|l}	
 	\textbf{Begriff} & Erklärung\\
 	\hline	
-	\textbf{Ähnliche Worte} & Im Word2Vec-Modell mit der Methode $most\_similar()$ erhaltene Worte.\\
+	\textbf{Ähnliche Worte} & Im Word2Vec-Modell, mit der Methode\\
+	& \textit{most\_similar()}, erhaltene Worte.\\
 	\textbf{SVM} & Support Vector Machine\\
 	\textbf{NBC} & Naive Bayes Classifier\\
 	\textbf{CBOW} & Continuous bag-of-words\\
@@ -112,44 +116,36 @@ Diese Bachelorthesis beschäftigt sich mit der Analyse von semantischen Beziehun
 \chapter{Daten und Vorverarbeitung}
 	\section{Datenbasis}
 	Zum erfolgreichen Training des Word2Vec Modells wird eine sehr große Menge an Daten gebraucht\footnote{In \cite{DBLP:journals/corr/MikolovSCCD13} werden Trainingsdaten mit bis zu 30 Milliarden Wörtern benutzt.}. 
-	Für den ersten Korpus wurde der komplette englischsprachige Wikipedia Korpus verwendet\footnote{http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015}. Dieser enthält 8.392.453 Artikel, 242.144.317 Sätze und 2.919.802.692 Worte.\\
-	Der zweite in der Arbeit verwendete Korpus besteht auch aus Wikipedia Artikeln, allerdings wurden hier nur technologiespezifische Artikel verwendet. Der komplette englische Wikipedia Korpus wurde zuerst in die einzelnen Artikel aufgeteilt und diese wurden dann mit einem NBC in die Klassen $tech, entertainment, sport, science, politic$ eingeteilt.\\
+	Für den ersten Korpus wurde der komplette englischsprachige Wikipedia Korpus verwendet\footnote{Dump von März 2015, http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015}. Dieser enthält 8.392.453 Artikel, 242.144.317 Sätze und 2.919.802.692 Worte.\\
+	Der zweite in der Arbeit verwendete Korpus besteht auch aus Wikipedia Artikeln, allerdings wurden hier nur technologiespezifische Artikel verwendet. Der komplette englische Wikipedia Korpus wurde zuerst in die einzelnen Artikel aufgeteilt und diese wurden dann mit einem NBC in die Klassen \textit{tech, entertainment, sport, science, politic} eingeteilt.\\
 	
 
-\iffalse
-	Kompletter Wikikorpus: \\
-	8392453 Artikel\\
-	wordcount: 2919802692\\
-	sentencecount: 242144317\\
-	187144 Artikel
-	Techkorpus:\\
-	wordcount: 9866096\\
-	sentencecount: 3166065\\
-\fi
+
 	\section{Externe Programme und Hilfsmittel}
 	Dieser Abschnitt enthält eine Auflistung mit kurzen Beschreibungen, der in dieser Arbeit verwendeten Hilfsmittel und externen Programme.\\
 	\vspace{1em}\\	
 	\textbf{gensim}\cite{rehurek_lrec}\footnote{https://radimrehurek.com/gensim/, abgerufen am 24.06.2015} ist eine Bibliothek für Python. Sie enthält unter anderem eine performanzoptimierte Implementierung von Word2Vec.\\ 
 	\vspace{1em}\\
-	Der NBC der zum Klassifizieren der Artikel verwendet wurde, ist der im DataMining Praktikum selbst implementierte.
+	Der \textbf{NBC}, der zum Klassifizieren der Artikel verwendet wurde, ist der im DataMining Praktikum selbst implementierte.
 	\vspace{1em}\\
 	
 	\section{Vorverarbeitung}
+	\label{sec:Vorverarbeitung}
 	Der komplette Wikipediadump kann als komprimierte XML-Datei heruntergeladen werden\footnote{http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015} die entpackte XML-Datei hat eine Größe von 48,8 GB. Die Daten müssen zunächst bereinigt werden um als Trainingsdaten für Word2Vec Modelle zu dienen.\\		
 	Um das Wiki-Markup, wie unter anderem Links, Referenzen oder Zitate, und die XML-Tags zu entfernen, kann ein schon vorgefertigtes Perl Skript von Matt Mahoney benutzt werden\footnote{http://mattmahoney.net/dc/textdata.html unter Appendix A, abgerufen am 25.06.2015}, welches von Mikolov et al. auf der Google Code Seite von Word2Vec vorgeschlagen wird\footnote{https://code.google.com/p/word2vec/, abgerufen am 25.06.2015}. Dieses Skript wurde speziell zum Bereinigen von Wikipediadaten erstellt und wurde leicht verändert, sodass Zahlen, Satzzeichen und die Groß- und Kleinschreibung erhalten bleibt. Außerdem werden die Umlaute in $ae$, $oe$ und $ue$ umgewandelt. Da die bis hierher bereinigten Daten eine Gesamtgröße von 18 GB haben, ist es nötig die Daten weiter aufzubereiten, sodass sie als Input für die Klasse $gensim.models.word2vec.LineSentence$\footnote{Diese Klasse kann auch als Input zum Trainieren des Word2Vec Modells genutzt werden.}, aus der Gensim Bibliothek dienen. Dazu müssen die einzelnen Sätze in je einer Zeile stehen, alle Worte klein geschrieben sein, frei von Satzzeichen und mit Leerzeichen getrennt sein.\\
 	
-	Um den kompletten Wikipediadump in die einzelnen Wikipedia Artikel aufzuteilen muss die XML-Datei mittels eines SAX-Parsers geparst und dann in einzelne Dateien geschrieben werden. Diese einzelnen Dateien können dann mit dem Perl Skript gereinigt und dann mittels NBC klassifiziert werden. Nach der Klassifizierung können die Dateien wieder in eine große Datei zusammengefasst und weiter verarbeitet werden. Auch diese Daten müssen wie der Gesamtkorpus mit der Klasse $gensim.models.word2vec.LineSentence$ verarbeitet werden.
+	Um den kompletten Wikipediadump in die einzelnen Wikipedia Artikel aufzuteilen muss die XML-Datei mittels eines SAX-Parsers\footnote{xml.sax.handler.ContentHandler} geparst und dann in einzelne Dateien geschrieben werden. Diese einzelnen Dateien können dann mit dem Perl Skript gereinigt und dann mittels NBC klassifiziert werden. Nach der Klassifizierung können die Dateien wieder in eine große Datei zusammengefasst und weiter verarbeitet werden. Auch diese Daten müssen, wie der Gesamtkorpus, mit der Klasse $gensim.models.word2vec.LineSentence$ verarbeitet werden.
 \newpage
 \chapter{Word2Vec}
-Im folgenden Kapitel wird kurz erklärt was Word2Vec ist und welche wichtigen Parameter und Algorithmen bei der Berechnung von Word2Vec benutzt werden können.\\
+Im folgenden Kapitel wird kurz erklärt was Word2Vec\footnote{https://code.google.com/p/word2vec/} ist und welche wichtigen Parameter und Algorithmen bei der Berechnung von Word2Vec benutzt werden können.\\
 
 In Word2Vec Modellen werden Worte als Vektoren dargestellt\footnote{Word2Vec heißt wörtlich Wort zu Vektor.}. Hier wird mittels \textit{distributed representation}\cite{DBLP:journals/corr/abs-1301-3781} ein n-dimensionaler Vektorraum erzeugt, in dem jedes Wort aus den Trainingsdaten durch einen Vektor dargestellt wird.\\
-Als nächster Schritt werden die Vektoren in ein neuronales Netz gegeben und dort mittels eines Lernalgorithmus so verändert, dass Worte mit ähnlicher Bedeutung ähnliche Vektoren haben. So kann die Ähnlichkeit zwischen zwei Vektoren mit der Kosinusähnlichkeit berechnet werden (vgl. \ref{sec:Distanz}).\\
+Als nächster Schritt werden die Vektoren in ein neuronales Netz gegeben und dort mittels eines Lernalgorithmus so verändert, dass Worte mit ähnlicher Bedeutung ähnliche Vektoren haben. So kann die Ähnlichkeit zwischen zwei Vektoren mit der Kosinus-Ähnlichkeit berechnet werden.\\
 Die Berechnung der Wortvektoren kann mit neuronalen Netzen unterschiedlicher Architektur erreicht werden, \textit{CBOW} oder \textit{Skip-gram}. Desweiteren stehen unterschiedliche Lernalgorithmen für die neuronalen Netze zur Verfügung, \textit{hierarchical softmax}  und \textit{negative sampling}.\\
 Beim Training können unterschiedliche Parameter eingestellt werden.\\
 
 
-SCHAUBILD CBOW vs. SKIP-GRAM\\
+
 \begin{figure}[h]
   \begin{center}
 	\includegraphics[scale=0.55]{CBOWvsSkip-gram.png}
@@ -177,26 +173,69 @@ SCHAUBILD CBOW vs. SKIP-GRAM\\
 	Dieser Parameter wird nur benötigt, wenn als Lernalgorithmus negative sampling verwendet wird.\footnote{siehe \ref{sec:negativeSampling}}
 	
 	\section{CBOW}
-	CBOW ist die Abkürzung für Continuous bag-of-words (dt. stetige Menge an Worten). Beim CBOW wird ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet\cite{DBLP:journals/corr/abs-1301-3781}. Im CBOW Model wird aus dem Kontext, die Menge der Worte wird mit dem Parameter \textit{window} angegeben, ein Wort vorhergesagt (siehe Abbildung \ref{cbowvsskipgram}). 
+	CBOW ist die Abkürzung für Continuous bag-of-words (dt. stetige Menge an Worten). Beim CBOW wird ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet\cite{DBLP:journals/corr/abs-1301-3781}.\\
+	Im CBOW Model wird aus dem Kontext ein Wort vorhergesagt (siehe Abbildung \ref{cbowvsskipgram}). Die Anzahl, der aus dem Kontext zu verwendende Worte, wird mit dem Parameter \textit{window} angegeben.
+	
 	\section{Skip-gram}
-	Beim Skip-gram Model wird auch wie beim CBOW Model ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet \citep{DBLP:journals/corr/abs-1301-3781}. Allerdings wird nicht ein Wort aus dem Kontext vorhergesagt, sondern aus einem Wort wird der Kontext vorhergesagt (siehe Abbildung \ref{cbowvsskipgram}).\\
+	Beim Skip-gram Model wird auch wie beim CBOW Model ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet \citep{DBLP:journals/corr/abs-1301-3781}.\\
+	Allerdings wird hier nicht ein Wort aus dem Kontext vorhergesagt, sondern aus einem Wort wird der Kontext vorhergesagt (siehe Abbildung \ref{cbowvsskipgram}).\\
 	
 	Mehrere verdeckte Schichten in neuronalen Netzen machen die Modelle genauer, allerdings kommt auch die meiste Komplexität des ganzen Models von solchen verdeckten Schichten \citep{DBLP:journals/corr/abs-1301-3781}. Mikolov et al. haben deshalb neuronale Netze ohne verdeckte Schichten bevorzugt, da damit sehr große Datenmengen viel effizienter gelernt werden konnten.
-	\section{Negative sampling}
-	\label{sec:negativeSampling}
 	
 	\section{Hierarchical softmax}
+	Eine Annäherung an das allgemeine softmax ist das hierarchical softmax \citep{DBLP:journals/corr/MikolovSCCD13}. Der Hauptvorteil ist, dass anstatt W Ausgabeknoten im neuronalen Netz nur ungefähr $log_2(W) $ Knoten ausgewertet werden müssen um die Wahrscheinlichkeiten zu errechnen. \\
+	Bei diesem Lernalgorithmus wird das Wörterbuch als Huffman Binärbaum dargestellt. Dies hat den weiteren Vorteil, dass häufig genutzte Worte kurze Kodierungen haben, was sich auf das Trainingstempo positiv auswirkt.
 	
-	\section{Distanz zwischen Vektoren im Word2Vec Modell}
-	\label{sec:Distanz}
+	\section{Negative sampling}
+	\label{sec:negativeSampling}
+	Alternativ zum hierarchical softmax kann das negative sampling als Lernalgorithmus für das neuronale Netz verwendet werden \citep{DBLP:journals/corr/MikolovSCCD13}.\\
+	Das negative sampling unterscheidet sich zum hierarchical softmax insofern, dass nicht die Ähnlichkeiten zu anderen Worten berechnet werden, sondern es wird davon ausgegangen, dass zufällig ausgewählte Worte mit einer hohen Wahrscheinlichkeit unähnlich sind. Wie viele solcher zufällig ausgewählter Worte benutzt werden sollen kann mit dem Parameter \textit{negative} angegeben werden.
+	
+
+	
 	
 \newpage
 \chapter{Wikipedia-Korpus}
+Im Folgenden Kapitel werden die in der Arbeit verwendeten Korpora erläutert und die im Word2Vec Modell benutzten Parameter begründet.\\
+Des weiteren werden die benutzten Testdaten vorgestellt.
+\iffalse
+	Kompletter Wikikorpus: \\
+	8392453 Artikel\\
+	wordcount: 2919802692\\
+	sentencecount: 242144317\\
+	
+	
+	Techkorpus:\\
+	187144 Artikel (2,2%)\\
+	wordcount: 9866096 (0,34%)\\
+	sentencecount: 3166065 (1,3%)\\
+\fi
 	\section{Gesamtkorpus}
 	\label{sec:Gesamtkorpus}
+	Da sich die Qualität  der Wortvektoren im Word2Vec Modell wesentlich mit der Menge an Trainingsdaten erhöht, werden möglichst große Textkorpora bevorzugt. Auf der Google Code Seite von Word2Vec\footnote{https://code.google.com/p/word2vec/, abgerufen am 29.06.2015}, werden für Forschungszwecke einige Beispiele für online verfügbare große Korpora genannt. Unter anderem auch der neueste Wikipedia Auszug\footnote{http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 29.06.2015}.\\
+	Da in dieser Arbeit ein allgemeiner und ein domänenspezifischer Korpus als Trainingsdaten für das Word2Vec Modell verglichen werden sollen, eignet sich der Wikipedia Korpus gut. \\
+	Wie in \ref{sec:Vorverarbeitung} beschrieben, mussten die Daten erst einer Säuberung unterzogen werden um dann anschließend im Word2Vec Modell trainiert zu werden. Der bereinigte, komplette englischsprachige Wikipedia Korpus\footnote{Dump von März 2015, http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015} enthält 8.392.453 Artikel, 242.144.317 Sätze und 2.919.802.692 Worte.\\
+
+Skip-gram, hierarchical softmax.\\
+
+
+Beim Erstellen des Word2Vec Modells für diese Trainingsdaten wurden folgende Parameter verwendet:\\
+\textit{window\footnote{Auf der Google Code Seite von Word2Vec (https://code.google.com/p/word2vec/, abgerufen am 29.05.2015) wird eine window size beim Skip-gram Modell von um die 10 vorgeschlagen.} = 10}\\
+\textit{min\_count = 5}\\
+\textit{size = 300}\\
+Die Trainingszeit betrug bei diesen Parametern 7,7h\footnote{Leistungsdaten: PC mit 32 GB RAM, i7-3770 Quadcore bei 3,4 GHz}.\\
+
+Die Word2Vec-Klasse in der Gensim-Implementierung beinhaltet eine Evaluationsfunktion\footnote{\textit{gensim.models.word2vec.Word2Vec.accuracy(FILENAME)}}, die die Accuracy des Models berechnet. Die Funktion erwartet einen Dateinamen, in der jede Zeile ein 4-Tupel ist und die einzelnen Abschnitte mit \glqq : SECTION NAME\grqq{} unterteilt sind. Auf der Google Code Seite ist eine solche Datei als Beispiel vorhanden\footnote{https://code.google.com/p/word2vec/source/browse/trunk/questions-words.txt, abgerufen am 29.06.2015}. Mit den oben genannten Parametern erzielt das Modell einen Gesamtwert von 59.7\%. VERWEIS AUF LISTE\\
+		Bei \textit{size = 400} dauerte das Training des Models 10,5h. Allerdings verbesserte sich \\
+		
+	
 	\section{Teilkorpus}
 	\label{sec:Teilkorpus}	
+	
+	
 	\section{Testdaten}
+	
+	
 	\subsection{Vergleich und Analyse}
 \newpage
 \chapter{Experimente}

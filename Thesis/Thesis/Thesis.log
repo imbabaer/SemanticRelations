@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  27 JUN 2015 17:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  29 JUN 2015 17:39
 entering extended mode
 **Thesis.tex
 (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.tex
@@ -15,8 +15,8 @@ an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
 (D:\Programme\MiKTeX\tex\latex\base\report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(D:\Programme\MiKTeX\tex\latex\base\size11.clo
-File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(D:\Programme\MiKTeX\tex\latex\base\size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -356,12 +356,12 @@ LaTeX Font Info:    ... okay on input line 10.
 * \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=50.0pt
+* \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -386,21 +386,21 @@ LaTeX Font Info:    ... okay on input line 10.
 \everyMPtoPDFconversion=\toks19
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 59.
+(Font)              <12> on input line 62.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 59.
+(Font)              <8> on input line 62.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 59.
+(Font)              <6> on input line 62.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 74.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 77.
 
 (D:\Programme\MiKTeX\tex\latex\base\omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
  [2
 
 ] [3
@@ -413,10 +413,6 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 ])
 \tf@toc=\write3
  [6]
-Overfull \hbox (30.89006pt too wide) in paragraph at lines 94--103
-[] 
- []
-
 [7
 
 ]
@@ -426,54 +422,48 @@ Kapitel 1.
 ]
 Kapitel 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 114.
+(Font)              <7> on input line 118.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 114.
+(Font)              <5> on input line 118.
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
-[][]\OT1/cmr/m/n/9 http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages
--articles.xml.bz2, ab-ge-ru-fen am
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+[][]\OT1/cmr/m/n/10 Dump von M[]arz 2015, http://dumps.wikimedia.org/enwiki/lat
+est/enwiki-latest-pages-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--117
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--136
+Underfull \hbox (badness 10000) in paragraph at lines 118--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--138
-[][]\OT1/cmr/m/n/9 http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages
--articles.xml.bz2, ab-ge-ru-fen am
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
+Underfull \hbox (badness 10000) in paragraph at lines 125--131
 
  []
 
 [2
 
-] [3]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 134--136
+
+ []
+
+[3]
 Kapitel 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--150
+Underfull \hbox (badness 10000) in paragraph at lines 142--146
 
  []
 
-<CBOWvsSkip-gram.png, id=43, 764.8575pt x 554.07pt>
+<CBOWvsSkip-gram.png, id=42, 764.8575pt x 554.07pt>
 File: CBOWvsSkip-gram.png Graphic file (type png)
  <use CBOWvsSkip-gram.png>
-Package pdftex.def Info: CBOWvsSkip-gram.png used on input line 155.
+Package pdftex.def Info: CBOWvsSkip-gram.png used on input line 151.
 (pdftex.def)             Requested size: 420.67291pt x 304.73944pt.
 
 
@@ -481,73 +471,105 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4
 
-]
-Overfull \hbox (49.59383pt too wide) in paragraph at lines 180--181
-\OT1/cmr/m/n/10.95 Beim CBOW wird ein neu-ro-na-les Netz oh-ne ver-deck-te Schi
-ch-ten (hid-den layer) verwendet([]).
- []
+] [5 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/CBOWvsSkip-gram.png>]
 
-[5 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/CBOWvsSkip-gram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 180--182
 
  []
 
-[6]
+[6] [7]
 Kapitel 4.
-[7
 
-]
-Kapitel 5.
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+[][]\OT1/cmr/m/n/10 Dump von M[]arz 2015, http://dumps.wikimedia.org/enwiki/lat
+est/enwiki-latest-pages-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--227
+
+ []
+
 [8
 
-] [9] [10] [11] [12]
-Kapitel 6.
-[13
+]
+Underfull \hbox (badness 10000) in paragraph at lines 228--228
+[][]\OT1/cmr/m/n/10 https://code.google.com/p/word2vec/source/browse/trunk/ques
+tions-words.txt, ab-ge-ru-fen
+ []
 
-] [14] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.bbl
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
+
+ []
+
+[9]
+Kapitel 5.
+
+Overfull \hbox (16.22388pt too wide) in paragraph at lines 247--248
+[]\OT1/cmr/m/n/12 ahn-li-chen Wor-te die-ses Test-wor-tes er-neut im Mo-del mit
+-tels der Me-tho-de $\OML/cmm/m/it/12 most[]similar\OT1/cmr/m/n/12 ()$
+ []
+
+[10
+
+] [11] [12] [13] [14]
+Kapitel 6.
 [15
 
-]) [16
+] [16] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.bbl
+[17
+
+]) [18
 
 ] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.lot)
 \tf@lot=\write4
 
-[17
+[19
 
 ] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.lof)
 \tf@lof=\write5
- [18
+ [20
 
 ]
 Kapitel 7.
-[19
+[21
 
 ]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.aux) ) 
+[22] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 2462 strings out of 493921
- 31946 string characters out of 3150478
- 100362 words of memory out of 3000000
- 5732 multiletter control sequences out of 15000+200000
- 11005 words of font info for 39 fonts, out of 3000000 for 9000
+ 2455 strings out of 493921
+ 31871 string characters out of 3150478
+ 100366 words of memory out of 3000000
+ 5728 multiletter control sequences out of 15000+200000
+ 10132 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,10n,32p,1178b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,8n,32p,1175b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Prog
-ramme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Programme/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programme/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmcsc10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Progr
-amme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programme/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr6.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><
-D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programme/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Thesis.pdf (27 pages, 206875 bytes).
+ramme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programme/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmcsc10.pfb><D:/Programme/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi12.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Progra
+mme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Programme/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb
+><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Thesis.pdf (29 pages, 201031 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
+ 138 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

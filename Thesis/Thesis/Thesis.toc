@@ -8,39 +8,38 @@
 \contentsline {section}{\numberline {2.3}Vorverarbeitung}{3}
 \contentsline {chapter}{\numberline {3}Word2Vec}{4}
 \contentsline {section}{\numberline {3.1}Parameter}{4}
-\contentsline {section}{\numberline {3.2}CBOW}{5}
+\contentsline {section}{\numberline {3.2}CBOW}{6}
 \contentsline {section}{\numberline {3.3}Skip-gram}{6}
-\contentsline {section}{\numberline {3.4}Negative sampling}{6}
-\contentsline {section}{\numberline {3.5}Hierarchical softmax}{6}
-\contentsline {section}{\numberline {3.6}Distanz zwischen Vektoren im Word2Vec Modell}{6}
-\contentsline {chapter}{\numberline {4}Wikipedia-Korpus}{7}
-\contentsline {section}{\numberline {4.1}Gesamtkorpus}{7}
-\contentsline {section}{\numberline {4.2}Teilkorpus}{7}
-\contentsline {section}{\numberline {4.3}Testdaten}{7}
-\contentsline {subsection}{\numberline {4.3.1}Vergleich und Analyse}{7}
-\contentsline {chapter}{\numberline {5}Experimente}{8}
-\contentsline {section}{\numberline {5.1}Synnonymsuche durch Rekursion}{8}
-\contentsline {subsection}{\numberline {5.1.1}Beschreibung}{8}
-\contentsline {subsection}{\numberline {5.1.2}Durchf\IeC {\"u}hrung}{8}
-\contentsline {subsection}{\numberline {5.1.3}Interpretation/Ergebnis}{8}
-\contentsline {section}{\numberline {5.2}Konkretisierungen}{9}
-\contentsline {subsection}{\numberline {5.2.1}Beschreibung}{9}
-\contentsline {subsection}{\numberline {5.2.2}Durchf\IeC {\"u}hrung}{9}
-\contentsline {subsection}{\numberline {5.2.3}Interpretation/Ergebnis}{9}
-\contentsline {section}{\numberline {5.3}Verallgemeinerungen}{10}
-\contentsline {subsection}{\numberline {5.3.1}Beschreibung}{10}
-\contentsline {subsection}{\numberline {5.3.2}Durchf\IeC {\"u}hrung}{10}
-\contentsline {subsection}{\numberline {5.3.3}Interpretation/Ergebnis}{10}
-\contentsline {section}{\numberline {5.4}Unterschiedliche Beziehungen}{11}
-\contentsline {subsection}{\numberline {5.4.1}Beschreibung}{11}
-\contentsline {subsection}{\numberline {5.4.2}Durchf\IeC {\"u}hrung}{11}
-\contentsline {subsection}{\numberline {5.4.3}Interpretation/Ergebnis}{11}
-\contentsline {section}{\numberline {5.5}Mehrdeutigkeit}{12}
-\contentsline {subsection}{\numberline {5.5.1}Beschreibung}{12}
-\contentsline {subsection}{\numberline {5.5.2}Durchf\IeC {\"u}hrung}{12}
-\contentsline {subsection}{\numberline {5.5.3}Interpretation/Ergebnis}{12}
-\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{13}
-\contentsline {section}{\numberline {6.1}Fazit}{13}
-\contentsline {section}{\numberline {6.2}Ausblick}{14}
-\contentsline {chapter}{\numberline {7}Anhang}{19}
-\contentsline {section}{\numberline {7.1}Testdaten}{19}
+\contentsline {section}{\numberline {3.4}Hierarchical softmax}{6}
+\contentsline {section}{\numberline {3.5}Negative sampling}{6}
+\contentsline {chapter}{\numberline {4}Wikipedia-Korpus}{8}
+\contentsline {section}{\numberline {4.1}Gesamtkorpus}{8}
+\contentsline {section}{\numberline {4.2}Teilkorpus}{9}
+\contentsline {section}{\numberline {4.3}Testdaten}{9}
+\contentsline {subsection}{\numberline {4.3.1}Vergleich und Analyse}{9}
+\contentsline {chapter}{\numberline {5}Experimente}{10}
+\contentsline {section}{\numberline {5.1}Synnonymsuche durch Rekursion}{10}
+\contentsline {subsection}{\numberline {5.1.1}Beschreibung}{10}
+\contentsline {subsection}{\numberline {5.1.2}Durchf\IeC {\"u}hrung}{10}
+\contentsline {subsection}{\numberline {5.1.3}Interpretation/Ergebnis}{10}
+\contentsline {section}{\numberline {5.2}Konkretisierungen}{11}
+\contentsline {subsection}{\numberline {5.2.1}Beschreibung}{11}
+\contentsline {subsection}{\numberline {5.2.2}Durchf\IeC {\"u}hrung}{11}
+\contentsline {subsection}{\numberline {5.2.3}Interpretation/Ergebnis}{11}
+\contentsline {section}{\numberline {5.3}Verallgemeinerungen}{12}
+\contentsline {subsection}{\numberline {5.3.1}Beschreibung}{12}
+\contentsline {subsection}{\numberline {5.3.2}Durchf\IeC {\"u}hrung}{12}
+\contentsline {subsection}{\numberline {5.3.3}Interpretation/Ergebnis}{12}
+\contentsline {section}{\numberline {5.4}Unterschiedliche Beziehungen}{13}
+\contentsline {subsection}{\numberline {5.4.1}Beschreibung}{13}
+\contentsline {subsection}{\numberline {5.4.2}Durchf\IeC {\"u}hrung}{13}
+\contentsline {subsection}{\numberline {5.4.3}Interpretation/Ergebnis}{13}
+\contentsline {section}{\numberline {5.5}Mehrdeutigkeit}{14}
+\contentsline {subsection}{\numberline {5.5.1}Beschreibung}{14}
+\contentsline {subsection}{\numberline {5.5.2}Durchf\IeC {\"u}hrung}{14}
+\contentsline {subsection}{\numberline {5.5.3}Interpretation/Ergebnis}{14}
+\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{15}
+\contentsline {section}{\numberline {6.1}Fazit}{15}
+\contentsline {section}{\numberline {6.2}Ausblick}{16}
+\contentsline {chapter}{\numberline {7}Anhang}{21}
+\contentsline {section}{\numberline {7.1}Testdaten}{21}
