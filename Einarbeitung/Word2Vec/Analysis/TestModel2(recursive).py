@@ -78,7 +78,8 @@ def testFunction2(model,model2,simfile,topn):
         total +=1
         td=td.replace('\n','')
         try:
-            print model.most_similar(positive=[td], topn=topn)
+            print td
+            #print model.most_similar(positive=[td], topn=topn)
             #num=4 if len(td)<4 else (20-len(td))/4
             #num=num+1 if len(td)%4 != 0 else num
             simfile.write(td+'\n')
@@ -105,6 +106,49 @@ def testFunction2(model,model2,simfile,topn):
     simfile.close()
 
 
+def testFunction3(model,model2, model3, simfile,topn):
+    testdatafile = open('testdata.txt','r')
+    testdata = testdatafile.readlines()
+    testdatafile.close()
+    low = [10.0,'','']
+    high = [0,'','']
+    total=0
+    found =0
+    notfound = 0
+    for td in testdata:
+        total +=1
+        td=td.replace('\n','')
+        try:
+            print td
+            #print model.most_similar(positive=[td], topn=topn)
+            #num=4 if len(td)<4 else (20-len(td))/4
+            #num=num+1 if len(td)%4 != 0 else num
+            simfile.write(td+'\n')
+            ret = helpFunction1(model,simfile,topn,td,low,high)
+            low = ret[0]
+            high = ret[1]
+            ret = helpFunction1(model2,simfile,topn,td,low,high)
+            low = ret[0]
+            high = ret[1]
+            ret = helpFunction1(model3,simfile,topn,td,low,high)
+            low = ret[0]
+            high = ret[1]
+            simfile.write('\n')
+            found +=1
+
+        except Exception, e:
+            #num=4 if len(td)<4 else (20-len(td))/4
+            #num=num+1 if len(td)%4 != 0 else num
+            simfile.write(td+'\n')
+            simfile.write('-------------------------------\n')
+            simfile.write('-, -, -, -, -\n')
+            simfile.write('-------------------------------\n\n')
+            print repr(e)
+            notfound+=1
+
+    printStatistics(simfile,low,high,total,found,notfound)
+    simfile.close()
+
 
 #model = gensim.models.Word2Vec.load("../Test1/largeModel300105")
 #model2 = gensim.models.Word2Vec.load("../Test1/techModel300105fullKorpustrained")
@@ -113,12 +157,18 @@ def testFunction2(model,model2,simfile,topn):
 model3 = gensim.models.Word2Vec.load("../Test1/techModel300105")
 print 'loaded model3'
 simfile3 = open('recursiveTechSimilarities.txt','w')
-testFunction(model3,simfile3,5)
+#testFunction(model3,simfile3,5)
 
-model = gensim.models.Word2Vec.load("../Test1/largeModel300105")
+#model = gensim.models.Word2Vec.load("../Test1/largeModel300105")
 print 'loaded model'
 simfile4 = open('recursiveCombSimilarities_new.txt','w')
-testFunction2(model,model3,simfile4,5)
+#testFunction2(model,model3,simfile4,5)
 
+
+
+model4 = gensim.models.Word2Vec.load("../Test1/techModel300105fullKorpustrained")
+print 'loaded model'
+simfile4 = open('recursiveSimilarities_WithTechFullKorpusTrained.txt','w')
+testFunction2(model4,model3,simfile4,5)
 from Test1.soundtest import playTADA
 playTADA()

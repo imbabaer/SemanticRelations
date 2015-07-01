@@ -5,7 +5,15 @@
 \usepackage[onehalfspacing]{setspace}
 \usepackage[numbers,round]{natbib}
 \usepackage{graphicx}
-
+\usepackage[colorlinks,
+pdfpagelabels,
+pdfstartview = FitH,
+bookmarksopen = true,
+bookmarksnumbered = true,
+linkcolor = black,
+plainpages = false,
+hypertexnames = false,
+citecolor = black] {hyperref}
 
 \begin{document}
 
@@ -170,7 +178,7 @@ Beim Training können unterschiedliche Parameter eingestellt werden.\\
 	\vspace{1em}\\
 	\textbf{negative}
 	\vspace{1em}\\
-	Dieser Parameter wird nur benötigt, wenn als Lernalgorithmus negative sampling verwendet wird.\footnote{siehe \ref{sec:negativeSampling}}
+	Dieser Parameter wird nur benötigt, wenn als Lernalgorithmus negative sampling verwendet wird.\footnote{siehe \ref{sec:negativeSampling} Negative sampling}
 	
 	\section{CBOW}
 	CBOW ist die Abkürzung für Continuous bag-of-words (dt. stetige Menge an Worten). Beim CBOW wird ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet\cite{DBLP:journals/corr/abs-1301-3781}.\\
@@ -216,22 +224,48 @@ Des weiteren werden die benutzten Testdaten vorgestellt.
 	Da in dieser Arbeit ein allgemeiner und ein domänenspezifischer Korpus als Trainingsdaten für das Word2Vec Modell verglichen werden sollen, eignet sich der Wikipedia Korpus gut. \\
 	Wie in \ref{sec:Vorverarbeitung} beschrieben, mussten die Daten erst einer Säuberung unterzogen werden um dann anschließend im Word2Vec Modell trainiert zu werden. Der bereinigte, komplette englischsprachige Wikipedia Korpus\footnote{Dump von März 2015, http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015} enthält 8.392.453 Artikel, 242.144.317 Sätze und 2.919.802.692 Worte.\\
 
-Skip-gram, hierarchical softmax.\\
+Used: Skip-gram, hierarchical softmax.\\
 
+Um die optimalen Parameter für das Training des Modells herauszufinden wurde ein kleinerer Wikipedia Auszug\footnote{http://mattmahoney.net/dc/enwik9.zip, abgerufen am 30.06.2015, beinhaltet die ersten 1 Milliarde Zeichen des Gesamtkorpus} benutzt und mit den unterschiedlichen Parametern gelernt und evaluiert (siehe Tabelle \ref{tab:VergleichParameter}).\\
+Die Word2Vec-Klasse in der Gensim-Implementierung beinhaltet eine Evaluationsfunktion\footnote{\textit{gensim.models.word2vec.Word2Vec.accuracy(FILENAME)}}, die die Accuracy des Models berechnet. Die Funktion erwartet einen Dateinamen, in der jede Zeile ein 4-Tupel ist und die einzelnen Abschnitte mit \glqq : SECTION NAME\grqq{} unterteilt sind. Auf der Google Code Seite ist eine solche Datei als Beispiel vorhanden\footnote{https://code.google.com/p/word2vec/source/browse/trunk/questions-words.txt, abgerufen am 29.06.2015}. In diesem Beispiel sind 14 Kategorien\footnote{\textit{capital-common-countries, capital-world, currency, city-in-state, family, gram1-adjective-to-adverb, gram2-opposite, gram3-comparative, gram4-superlative, gram5-present-participle, gram6-nationality-adjective, gram7-past-tense, gram8-plural, gram9-plural-verbs}} mit insgesamt 19544 4-Tupel aufgelistet.\\
 
+\begin{table}[h]
+\caption{Vergleich Parameter}
+\begin{center}
+\begin{tabular}{l|l|l|l}\\
+\textbf{Size} & \textbf{Window\footnote{Auf der Google Code Seite von Word2Vec (https://code.google.com/p/word2vec/, abgerufen am 29.05.2015) wird eine window size beim Skip-gram Modell von um die 10 vorgeschlagen.}} & \textbf{Min\_count} & \textbf{Gesamtaccuracy}\\
+\hline	
+400 & 10 &  5 & 52.9\%\\
+400 & 10 & 10 & 52.5\%\\
+300 & 10 &  5 & \textbf{53.3\%}\\
+300 & 10 & 10 & 52.9\%\\
+200 & 10 &  5 & 50.5\%\\
+200 & 10 & 10 & 50.5\%\\
+100 & 10 &  5 & 42.0\%\\
+100 & 10 & 10 & 41.3\%\\
+
+\end{tabular}
+\end{center}
+\end{table}
+
+Auf dem 1 Milliarde Zeichen Korpus erzielte das Modell mit den Parametern \textit{\\size = 300\\ window = 10\\ min\_count = 5\\} die beste Gesamtaccuracy mit 53.3\%. Diese Parameter wurden dann auch beim Gesamtmodell angewandt. Das Gesamtmodell erreichte sogar eine Gesamtaccuracy von 59.7\%.
+
+\textbf{BEGIN Überarbeiten}
+\label{tab:VergleichParameter}
 Beim Erstellen des Word2Vec Modells für diese Trainingsdaten wurden folgende Parameter verwendet:\\
-\textit{window\footnote{Auf der Google Code Seite von Word2Vec (https://code.google.com/p/word2vec/, abgerufen am 29.05.2015) wird eine window size beim Skip-gram Modell von um die 10 vorgeschlagen.} = 10}\\
+\textit{window = 10}\\
 \textit{min\_count = 5}\\
 \textit{size = 300}\\
 Die Trainingszeit betrug bei diesen Parametern 7,7h\footnote{Leistungsdaten: PC mit 32 GB RAM, i7-3770 Quadcore bei 3,4 GHz}.\\
 
-Die Word2Vec-Klasse in der Gensim-Implementierung beinhaltet eine Evaluationsfunktion\footnote{\textit{gensim.models.word2vec.Word2Vec.accuracy(FILENAME)}}, die die Accuracy des Models berechnet. Die Funktion erwartet einen Dateinamen, in der jede Zeile ein 4-Tupel ist und die einzelnen Abschnitte mit \glqq : SECTION NAME\grqq{} unterteilt sind. Auf der Google Code Seite ist eine solche Datei als Beispiel vorhanden\footnote{https://code.google.com/p/word2vec/source/browse/trunk/questions-words.txt, abgerufen am 29.06.2015}. Mit den oben genannten Parametern erzielt das Modell einen Gesamtwert von 59.7\%. VERWEIS AUF LISTE\\
-		Bei \textit{size = 400} dauerte das Training des Models 10,5h. Allerdings verbesserte sich \\
-		
+Mit den oben genannten Parametern erzielt das Modell einen Gesamtwert von 59.7\%. VERWEIS AUF LISTE\\
+		Bei \textit{size = 400} dauerte das Training des Models 10,5h. Allerdings verbesserte sich die Gesamtaccuracy nur auf 61.3\%. \\
+	
+\textbf{END Überarbeiten	}
 	
 	\section{Teilkorpus}
 	\label{sec:Teilkorpus}	
-	
+	Der zweite Korpus ist wie in \ref{sec:Vorverarbeitung} beschrieben, ein Teilkorpus, bestehend aus Technologieartikeln, des Gesamtkorpus. 
 	
 	\section{Testdaten}
 	
