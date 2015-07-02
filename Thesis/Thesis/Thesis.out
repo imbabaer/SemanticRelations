@@ -5,41 +5,40 @@
 \BOOKMARK [0][]{chapter.10}{2 Daten und Vorverarbeitung}{}% 5
 \BOOKMARK [1][]{section.11}{2.1 Datenbasis}{chapter.10}% 6
 \BOOKMARK [1][]{section.14}{2.2 Externe Programme und Hilfsmittel}{chapter.10}% 7
-\BOOKMARK [1][]{section.16}{2.3 Vorverarbeitung}{chapter.10}% 8
-\BOOKMARK [0][]{chapter.22}{3 Word2Vec}{}% 9
-\BOOKMARK [1][]{section.26}{3.1 Parameter}{chapter.22}% 10
-\BOOKMARK [1][]{section.28}{3.2 CBOW}{chapter.22}% 11
-\BOOKMARK [1][]{section.29}{3.3 Skip-gram}{chapter.22}% 12
-\BOOKMARK [1][]{section.30}{3.4 Hierarchical softmax}{chapter.22}% 13
-\BOOKMARK [1][]{section.31}{3.5 Negative sampling}{chapter.22}% 14
-\BOOKMARK [0][]{chapter.32}{4 Wikipedia-Korpus}{}% 15
-\BOOKMARK [1][]{section.33}{4.1 Gesamtkorpus}{chapter.32}% 16
-\BOOKMARK [1][]{section.44}{4.2 Teilkorpus}{chapter.32}% 17
-\BOOKMARK [1][]{section.45}{4.3 Testdaten}{chapter.32}% 18
-\BOOKMARK [2][]{subsection.46}{4.3.1 Vergleich und Analyse}{section.45}% 19
-\BOOKMARK [0][]{chapter.47}{5 Experimente}{}% 20
-\BOOKMARK [1][]{section.51}{5.1 Synnonymsuche durch Rekursion}{chapter.47}% 21
-\BOOKMARK [2][]{subsection.52}{5.1.1 Beschreibung}{section.51}% 22
-\BOOKMARK [2][]{subsection.53}{5.1.2 Durchf\374hrung}{section.51}% 23
-\BOOKMARK [2][]{subsection.54}{5.1.3 Interpretation/Ergebnis}{section.51}% 24
-\BOOKMARK [1][]{section.55}{5.2 Konkretisierungen}{chapter.47}% 25
-\BOOKMARK [2][]{subsection.56}{5.2.1 Beschreibung}{section.55}% 26
-\BOOKMARK [2][]{subsection.57}{5.2.2 Durchf\374hrung}{section.55}% 27
-\BOOKMARK [2][]{subsection.58}{5.2.3 Interpretation/Ergebnis}{section.55}% 28
-\BOOKMARK [1][]{section.59}{5.3 Verallgemeinerungen}{chapter.47}% 29
-\BOOKMARK [2][]{subsection.60}{5.3.1 Beschreibung}{section.59}% 30
-\BOOKMARK [2][]{subsection.61}{5.3.2 Durchf\374hrung}{section.59}% 31
-\BOOKMARK [2][]{subsection.62}{5.3.3 Interpretation/Ergebnis}{section.59}% 32
-\BOOKMARK [1][]{section.63}{5.4 Unterschiedliche Beziehungen}{chapter.47}% 33
-\BOOKMARK [2][]{subsection.64}{5.4.1 Beschreibung}{section.63}% 34
-\BOOKMARK [2][]{subsection.65}{5.4.2 Durchf\374hrung}{section.63}% 35
-\BOOKMARK [2][]{subsection.66}{5.4.3 Interpretation/Ergebnis}{section.63}% 36
-\BOOKMARK [1][]{section.67}{5.5 Mehrdeutigkeit}{chapter.47}% 37
-\BOOKMARK [2][]{subsection.68}{5.5.1 Beschreibung}{section.67}% 38
-\BOOKMARK [2][]{subsection.69}{5.5.2 Durchf\374hrung}{section.67}% 39
-\BOOKMARK [2][]{subsection.70}{5.5.3 Interpretation/Ergebnis}{section.67}% 40
-\BOOKMARK [0][]{chapter.71}{6 Fazit und Ausblick}{}% 41
-\BOOKMARK [1][]{section.72}{6.1 Fazit}{chapter.71}% 42
-\BOOKMARK [1][]{section.73}{6.2 Ausblick}{chapter.71}% 43
-\BOOKMARK [0][]{chapter.78}{7 Anhang}{}% 44
-\BOOKMARK [1][]{section.79}{7.1 Testdaten}{chapter.78}% 45
+\BOOKMARK [1][]{section.17}{2.3 Vorverarbeitung}{chapter.10}% 8
+\BOOKMARK [0][]{chapter.23}{3 Word2Vec}{}% 9
+\BOOKMARK [1][]{section.27}{3.1 Parameter}{chapter.23}% 10
+\BOOKMARK [1][]{section.29}{3.2 CBOW}{chapter.23}% 11
+\BOOKMARK [1][]{section.30}{3.3 Skip-gram}{chapter.23}% 12
+\BOOKMARK [1][]{section.31}{3.4 Hierarchical softmax}{chapter.23}% 13
+\BOOKMARK [1][]{section.32}{3.5 Negative sampling}{chapter.23}% 14
+\BOOKMARK [0][]{chapter.33}{4 Wikipedia-Korpus}{}% 15
+\BOOKMARK [1][]{section.34}{4.1 Gesamtkorpus}{chapter.33}% 16
+\BOOKMARK [1][]{section.46}{4.2 Teilkorpus}{chapter.33}% 17
+\BOOKMARK [1][]{section.48}{4.3 Testdaten}{chapter.33}% 18
+\BOOKMARK [0][]{chapter.49}{5 Experimente}{}% 19
+\BOOKMARK [1][]{section.53}{5.1 Synonymsuche durch Rekursion}{chapter.49}% 20
+\BOOKMARK [2][]{subsection.54}{5.1.1 Beschreibung}{section.53}% 21
+\BOOKMARK [2][]{subsection.55}{5.1.2 Durchf\374hrung}{section.53}% 22
+\BOOKMARK [2][]{subsection.56}{5.1.3 Interpretation/Ergebnis}{section.53}% 23
+\BOOKMARK [1][]{section.57}{5.2 Konkretisierungen}{chapter.49}% 24
+\BOOKMARK [2][]{subsection.58}{5.2.1 Beschreibung}{section.57}% 25
+\BOOKMARK [2][]{subsection.59}{5.2.2 Durchf\374hrung}{section.57}% 26
+\BOOKMARK [2][]{subsection.60}{5.2.3 Interpretation/Ergebnis}{section.57}% 27
+\BOOKMARK [1][]{section.61}{5.3 Verallgemeinerungen}{chapter.49}% 28
+\BOOKMARK [2][]{subsection.62}{5.3.1 Beschreibung}{section.61}% 29
+\BOOKMARK [2][]{subsection.63}{5.3.2 Durchf\374hrung}{section.61}% 30
+\BOOKMARK [2][]{subsection.64}{5.3.3 Interpretation/Ergebnis}{section.61}% 31
+\BOOKMARK [1][]{section.65}{5.4 Unterschiedliche Beziehungen}{chapter.49}% 32
+\BOOKMARK [2][]{subsection.66}{5.4.1 Beschreibung}{section.65}% 33
+\BOOKMARK [2][]{subsection.67}{5.4.2 Durchf\374hrung}{section.65}% 34
+\BOOKMARK [2][]{subsection.68}{5.4.3 Interpretation/Ergebnis}{section.65}% 35
+\BOOKMARK [1][]{section.69}{5.5 Mehrdeutigkeit}{chapter.49}% 36
+\BOOKMARK [2][]{subsection.70}{5.5.1 Beschreibung}{section.69}% 37
+\BOOKMARK [2][]{subsection.71}{5.5.2 Durchf\374hrung}{section.69}% 38
+\BOOKMARK [2][]{subsection.72}{5.5.3 Interpretation/Ergebnis}{section.69}% 39
+\BOOKMARK [0][]{chapter.73}{6 Fazit und Ausblick}{}% 40
+\BOOKMARK [1][]{section.74}{6.1 Fazit}{chapter.73}% 41
+\BOOKMARK [1][]{section.75}{6.2 Ausblick}{chapter.73}% 42
+\BOOKMARK [0][]{chapter.80}{7 Anhang}{}% 43
+\BOOKMARK [1][]{section.81}{7.1 Testdaten}{chapter.80}% 44

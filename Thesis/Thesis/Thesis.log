@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  30 JUN 2015 22:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  2 JUL 2015 18:11
 entering extended mode
 **Thesis.tex
 (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.tex
@@ -443,20 +443,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip45
 )
 (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -515,7 +515,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-Package hyperref Info: Link coloring ON on input line 18.
+Package hyperref Info: Link coloring ON on input line 19.
 
 (D:\Programme\MiKTeX\tex\latex\hyperref\nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -525,29 +525,29 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count109
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
 
 (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.out)
 (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.out)
 \@outlinefile=\write3
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 70.
+(Font)              <12> on input line 71.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 70.
+(Font)              <8> on input line 71.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 70.
+(Font)              <6> on input line 71.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 85.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 86.
 
 (D:\Programme\MiKTeX\tex\latex\base\omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 85.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
  [2
 
 ] [3
@@ -569,48 +569,43 @@ Kapitel 1.
 ]
 Kapitel 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 126.
+(Font)              <7> on input line 127.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 126.
+(Font)              <5> on input line 127.
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--127
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
 [][][]\OT1/cmr/m/n/10 Dump von M[]arz 2015, http://dumps.wikimedia.org/enwiki/l
 atest/enwiki-latest-pages-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--129
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--139
+Underfull \hbox (badness 10000) in paragraph at lines 127--131
 
  []
 
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 142--144
+Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
  []
 
 [3]
 Kapitel 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--154
+Underfull \hbox (badness 10000) in paragraph at lines 153--157
 
  []
 
-<CBOWvsSkip-gram.png, id=307, 764.8575pt x 554.07pt>
+<CBOWvsSkip-gram.png, id=305, 764.8575pt x 554.07pt>
 File: CBOWvsSkip-gram.png Graphic file (type png)
  <use CBOWvsSkip-gram.png>
-Package pdftex.def Info: CBOWvsSkip-gram.png used on input line 159.
+Package pdftex.def Info: CBOWvsSkip-gram.png used on input line 162.
 (pdftex.def)             Requested size: 420.67291pt x 304.73944pt.
 
 
@@ -620,119 +615,131 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ] [5 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/CBOWvsSkip-gram.png>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--190
+Underfull \hbox (badness 10000) in paragraph at lines 191--193
 
  []
 
 [6] [7]
 Kapitel 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--225
+Underfull \hbox (badness 10000) in paragraph at lines 228--228
 [][][]\OT1/cmr/m/n/10 Dump von M[]arz 2015, http://dumps.wikimedia.org/enwiki/l
 atest/enwiki-latest-pages-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--226
+Underfull \hbox (badness 10000) in paragraph at lines 226--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--230
-[][][]\OT1/cmr/m/n/10 https://code.google.com/p/word2vec/source/browse/trunk/qu
-estions-words.txt, ab-ge-ru-fen
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 229--231
+Underfull \hbox (badness 10000) in paragraph at lines 231--233
 
  []
 
 [8
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 253--260
+Underfull \hbox (badness 10000) in paragraph at lines 236--236
+[][][]\OT1/cmr/m/n/10 https://code.google.com/p/word2vec/source/browse/trunk/qu
+estions-words.txt, ab-ge-ru-fen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 261--263
+Underfull \hbox (badness 10000) in paragraph at lines 259--263
+
+ []
+
+
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 268--270
+\OT1/cmr/m/n/12 Ar-ti-kel (2,2% im Ver-gleich zum Ge-samt-kor-pus), 9.866.096 W
+[]orter(0,34%) und 3.166.065
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
 
  []
 
 [10]
 Kapitel 5.
 
-Overfull \hbox (16.22388pt too wide) in paragraph at lines 281--282
-[]\OT1/cmr/m/n/12 ahn-li-chen Wor-te die-ses Test-wor-tes er-neut im Mo-del mit
--tels der Me-tho-de $\OML/cmm/m/it/12 most[]similar\OT1/cmr/m/n/12 ()$
+Underfull \hbox (badness 10000) in paragraph at lines 281--285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
+
  []
 
 [11
 
-] [12] [13] [14] [15]
+] [12] [13] [14] [15] [16]
 Kapitel 6.
-[16
+[17
 
-] [17] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.bbl
-[18
+] [18] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.bbl
+[19
 
-]) [19
+]) [20
 
 ] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.lot)
 \tf@lot=\write5
 
-[20
+[21
 
 ] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.lof)
 \tf@lof=\write6
- [21
+ [22
 
 ]
 Kapitel 7.
-[22
+[23
 
 ]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 416.
-[23]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 416.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 436.
+[24]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 436.
  (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 416.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 416.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 436.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 436.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 8D710E8B0C43EC347F1D6CECB3DFCB78;2959.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 416.
+(rerunfilecheck)             Checksum: E17BCCD0CDFFE61A4C0C5E0745F23CB6;2881.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 436.
  ) 
 Here is how much of TeX's memory you used:
- 6384 strings out of 493921
- 91535 string characters out of 3150478
- 186748 words of memory out of 3000000
- 9496 multiletter control sequences out of 15000+200000
+ 6388 strings out of 493921
+ 91583 string characters out of 3150478
+ 186821 words of memory out of 3000000
+ 9497 multiletter control sequences out of 15000+200000
  10132 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,16n,33p,1177b,419s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.42} has been referenced but does not ex
-ist, replaced by a fixed one
-
-<D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programme/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><D:/Programme/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmmi12.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D
-:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Programme/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programme/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Thesis.pdf (30 pages, 250250 bytes).
+ 29i,9n,33p,1173b,353s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programme/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><D:/Programme/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmmi12.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+<D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Programme/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programme/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmti10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Thesis.pdf (31 pages, 257326 bytes).
 PDF statistics:
- 510 PDF objects out of 1000 (max. 8388607)
- 115 named destinations out of 1000 (max. 500000)
- 366 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 522 PDF objects out of 1000 (max. 8388607)
+ 118 named destinations out of 1000 (max. 500000)
+ 358 words of extra memory for PDF output out of 10000 (max. 10000000)
 

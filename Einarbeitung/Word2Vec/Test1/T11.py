@@ -3,7 +3,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 #model = gensim.models.Word2Vec.load("largetrainedModel2")
 #model = gensim.models.Word2Vec.load("smallModel300105")
 print 'loaded model'
-model2 = gensim.models.Word2Vec.load("largetrainedModel400825")
+model2 = gensim.models.Word2Vec.load("techModel300105")
 print 'loaded model2'
 
 
