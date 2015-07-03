@@ -4,5 +4,7 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces CBOW und Skip-gram im Vergleich, \IeC {\"u}bersetzt nach \cite {DBLP:journals/corr/abs-1301-3781}}}{5}{figure.26}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Synonyme durch Rekursion kompletter Korpus.}}{12}{figure.57}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Synonyme durch Rekursion Technologiekorpus.}}{13}{figure.58}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

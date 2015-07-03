@@ -9,9 +9,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Fragestellungen.xlsx" afterPath="$PROJECT_DIR$/../../Thesis/Fragestellungen.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.pdf" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.synctex.gz" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.synctex.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test1/T11.py" afterPath="$PROJECT_DIR$/Test1/T11.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test1/T6II.py" afterPath="$PROJECT_DIR$/Test1/T6II.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Analysis/TestModel2(recursive).py" afterPath="$PROJECT_DIR$/Analysis/TestModel2(recursive).py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.aux" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.aux" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.lof" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.lof" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.log" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.log" />
@@ -20,8 +17,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.tex.bak" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.tex.bak" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.tex" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.tex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.toc" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.toc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Analysis/recursiveCombSimilarities_new.txt" afterPath="$PROJECT_DIR$/Analysis/recursiveCombSimilarities_new.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Analysis/recursiveSimilarities_WithTechFullKorpusTrained.txt" afterPath="$PROJECT_DIR$/Analysis/recursiveSimilarities_WithTechFullKorpusTrained.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Word2Vec.iws" />
@@ -93,14 +88,14 @@
     <leaf>
       <file leaf-file-name="accuracys.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test1/testkorpora/accuracys.txt">
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="2822" max-vertical-offset="2924">
               <caret line="166" column="58" selection-start-line="166" selection-start-column="58" selection-end-line="166" selection-end-column="58" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-            <state />
           </provider>
         </entry>
       </file>
@@ -117,7 +112,7 @@
       <file leaf-file-name="testdata.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Analysis/testdata.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3184" max-vertical-offset="4097">
+            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="4097">
               <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
               <folding />
             </state>
@@ -139,8 +134,8 @@
       <file leaf-file-name="recursiveSimilarities_WithTechFullKorpusTrained.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Analysis/recursiveSimilarities_WithTechFullKorpusTrained.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-58.53846" vertical-offset="59780" max-vertical-offset="88672">
-              <caret line="3606" column="22" selection-start-line="3606" selection-start-column="22" selection-end-line="3606" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="61302" max-vertical-offset="88672">
+              <caret line="3620" column="31" selection-start-line="3620" selection-start-column="31" selection-end-line="3620" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -149,8 +144,18 @@
       <file leaf-file-name="recursiveCombSimilarities_new.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Analysis/recursiveCombSimilarities_new.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7206823" vertical-offset="63038" max-vertical-offset="63563">
-              <caret line="3728" column="19" selection-start-line="3728" selection-start-column="19" selection-end-line="3728" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.33295193" vertical-offset="19055" max-vertical-offset="63563">
+              <caret line="1138" column="6" selection-start-line="1138" selection-start-column="0" selection-end-line="1138" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GUI.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Analysis/GUI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -263,10 +268,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
-    <option name="y" value="48" />
-    <option name="width" value="1296" />
-    <option name="height" value="1040" />
+    <option name="x" value="92" />
+    <option name="y" value="-8" />
+    <option name="width" value="1836" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -782,30 +787,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="48" width="1296" height="1040" extended-state="6" />
-    <editor active="false" />
+    <frame x="92" y="-8" width="1836" height="1096" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14904387" sideWeight="0.4992272" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39829606" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295838" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837406" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42468855" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284974" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21082391" sideWeight="0.4992272" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295838" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24971879" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284974" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3087739" sideWeight="0.5007728" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39829606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42468855" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39829606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -909,13 +914,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Test3/svmtest2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test3/SVMTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
@@ -1116,13 +1114,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Analysis/combinedSubsampled.txt">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="20162">
           <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test1/T6.py">
@@ -1164,7 +1162,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
           <caret line="4" column="142" selection-start-line="4" selection-start-column="142" selection-end-line="4" selection-end-column="142" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,7 +1169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
           <caret line="4" column="142" selection-start-line="4" selection-start-column="142" selection-end-line="4" selection-end-column="142" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,14 +1224,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test1/testkorpora/accuracys.txt">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2822" max-vertical-offset="2924">
           <caret line="166" column="58" selection-start-line="166" selection-start-column="58" selection-end-line="166" selection-end-column="58" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test1/T11.py">
@@ -1264,19 +1260,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Analysis/recursiveSimilarities_WithTechFullKorpusTrained.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-58.53846" vertical-offset="59780" max-vertical-offset="88672">
-          <caret line="3606" column="22" selection-start-line="3606" selection-start-column="22" selection-end-line="3606" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Analysis/recursiveCombSimilarities.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="62680" max-vertical-offset="63580">
           <caret line="3718" column="6" selection-start-line="3718" selection-start-column="0" selection-end-line="3718" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1293,10 +1280,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Analysis/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Analysis/recursiveSimilarities_WithTechFullKorpusTrained.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="61302" max-vertical-offset="88672">
+          <caret line="3620" column="31" selection-start-line="3620" selection-start-column="31" selection-end-line="3620" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Analysis/recursiveCombSimilarities_new.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7206823" vertical-offset="63038" max-vertical-offset="63563">
-          <caret line="3728" column="19" selection-start-line="3728" selection-start-column="19" selection-end-line="3728" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.33295193" vertical-offset="19055" max-vertical-offset="63563">
+          <caret line="1138" column="6" selection-start-line="1138" selection-start-column="0" selection-end-line="1138" selection-end-column="6" />
           <folding />
         </state>
       </provider>
