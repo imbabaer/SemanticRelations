@@ -242,9 +242,9 @@ Die Word2Vec-Klasse in der Gensim-Implementierung beinhaltet eine Evaluationsfun
 \begin{tabular}{l|l|l|l}\\
 \textbf{Size} & \textbf{Window} & \textbf{Min\_count} & \textbf{Gesamtaccuracy}\\
 \hline	
-400 & 10 &  5 & 52,9\%\\
+400 & 10 &  5 & 53,5\%\\
 400 & 10 & 10 & 52,5\%\\
-300 & 10 &  5 & \textbf{53,3\%}\\
+300 & 10 &  5 & 52,5\%\\
 300 & 10 & 10 & 52,9\%\\
 200 & 10 &  5 & 50,5\%\\
 200 & 10 & 10 & 50,5\%\\
@@ -256,10 +256,11 @@ Die Word2Vec-Klasse in der Gensim-Implementierung beinhaltet eine Evaluationsfun
 \end{table}
 
 Auf dem kleineren Wikipedia Korpus erzielte das Modell mit den Parametern 
-$$\\size = 300, window = 10, min\_count = 5$$
- die beste Gesamtaccuracy mit 53,3\%.\\
+$$\\size = 400, window = 10, min\_count = 5$$
+ die beste Gesamtaccuracy mit 53,5\%.\\
 Diese Parameter wurden dann auch beim Gesamtmodell angewandt.\\
-Das Gesamtmodell erreichte sogar eine Gesamtaccuracy von 59,7\%. Die Trainingszeit beträgt bei diesen Parametern 7,7h\footnote{Leistungsdaten: PC mit 32 GB RAM, i7-3770 Quadcore bei 3,4 GHz} beim Gesamtmodell.\\
+Die Trainingszeit beträgt bei diesen Parametern 10,5h\footnote{Leistungsdaten: PC mit 32 GB RAM, i7-3770 Quadcore bei 3,4 GHz} beim Gesamtmodell.\\
+Nachdem ein kleinerer Fehler im Reiningungsskript aufgetretetn war\footnote{Unbekannte Zeichen wurden mit einem Leerzeichen ersetzt, anstatt gelöscht zu werden, somit entstanden Wortfragmente als eigene Worte.}, musste das komplette Modell nochmals gelernt werden. Hier fiel dann die Entscheidung, andere Parameter zu benutzen und die \textit{window} Größe auf 300 zu reduzieren, da die Accuracy sich nur sehr gering verändert hat, allerdings verkürzte sich die Trainingszeit auf 7,7h. Dies zahlte sich im Laufe der Arbeit aus, da sich das Perl-Reinigungsskript ein paar Mal geringfügig änderte um so kleinere Fehler aus dem Korpus zu entfernen.\\
 
 
 	
@@ -286,6 +287,8 @@ Zum Vergleichen der ähnlichen Worte der unterschiedlichen Korpora wurde eine Da
 	\section{Synonymsuche durch Rekursion}
 		\subsection{Beschreibung}
 		Es soll untersucht werden, ob es möglich ist, Synonyme eines Begriffs zu finden, indem man die vom Modell erhaltenen ähnlichen Worte dieses Begriffs erneut als Input(Suchbegriffe) der Methode  \textit{most\_similar()} verwendet. Also durch einmalige Rekursion.\\
+Eine Anwendung hierfür könnte ein Thesaurus-Lexikon sein.
+
 		
 		
 		\subsection{Durchführung}
@@ -293,9 +296,9 @@ Zum Vergleichen der ähnlichen Worte der unterschiedlichen Korpora wurde eine Da
 		Im Technologiekorpus waren einige Suchbegriffe nicht enthalten.
 	
 \begin{table}[h]
-\caption{Synonyme durch Rekursion}
+\caption{Experiment 1: Synonyme durch Rekursion}
 \begin{center}
-\begin{tabular}{|l||l|l|l|l|}\\
+\begin{tabular}{|l||l|l|l|l|}
 \hline
 Korpus & Synonyme & Synonyme  & Wort nicht  & Relation\\
  & nicht enthalten & enthalten & im Korpus & \\
@@ -303,16 +306,16 @@ Korpus & Synonyme & Synonyme  & Wort nicht  & Relation\\
 \hline
  Komplett & 187 & 49 & 0 & 20,8\% \\
  \hline
- Technologie & 191 & 20 & 25 & 8,5\%\\
+ Technologie & 191 & 20 & 25 & 8,5\% (9,5\%)\\
  \hline
  
 \end{tabular}
 \end{center}
 \end{table}
+		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
 		
 		
-		
-\begin{figure}[h]
+\begin{figure}[p]
   \begin{center}
 	\includegraphics[scale=0.4]{SynonymFull.PNG}
   \end{center}  
@@ -320,10 +323,8 @@ Korpus & Synonyme & Synonyme  & Wort nicht  & Relation\\
 
 \end{figure}
  
-\begin{verbatim}
-\end{verbatim}
 
-\begin{figure}[h]
+\begin{figure}[p]
   \begin{center}
 	\includegraphics[scale=0.4]{SynonymTech.PNG}
   \end{center}  
@@ -333,27 +334,103 @@ Korpus & Synonyme & Synonyme  & Wort nicht  & Relation\\
 		\subsection{Interpretation/Ergebnis}
 		Wie aus den Daten hervorgeht, werden zwar einige Synonyme der Suchbegriffe gefunden, allerdings nicht in großen Mengen. Dazu kommt auch, dass sich die beiden Korpora nochmal unterscheiden. Im kompletten Korpus wurden in \textit{20,8\%} der Testfälle Synonyme gefunden, wobei es im Technologiekorpus sogar nur weniger als halb so viele (\textit{8,5\%}) waren.\\
 		
-		Somit ist dieses Experiment widerlegt.
+		Somit ist die Vermutung dieses Experiments widerlegt.
 		
 		
 	\newpage
 	\section{Konkretisierungen}
 		\subsection{Beschreibung}
-		.
+		In diesem Experiment ist zu untersuchen ob die ähnlichen Worte im domänenspezifischen Korpus eine Konkretisierung des Suchbegriffs darstellen.\\
+		Dies ist gerade bei mehrdeutigen Worten interessant, da hier dann klar eine Definition dominant sein könnte und somit klar ist, in welchem Kontext das mehrdeutige Wort in dieser Domäne gemeint ist.\\
 		\subsection{Durchführung}
-		.
+		Die Fragestellung bezieht sich zwar nur auf den domänenspezifischen Korpus, allerdings wurde auch der allgemeine Korpus auf diese Fragestellung hin untersucht.\\
+		Auch bei diesem Experiment nahm das Nachschlagen von mehreren ähnlichen Worten einige Zeit in Anspruch. Denn um beurteilen zu können, ob es sich um eine Konkretisierung handelt, müssen die inhaltlichen Beziehungen zwischen Suchbegriff und ähnlichen Worten klar sein. \\
+		
+		
+\begin{table}[h]
+\caption{Experiment 2: Konkretisierung}
+\begin{center}
+\begin{tabular}{|l||l|l|l|l|}
+\hline
+Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation\\
+ & nicht konkretisiert & konkretisiert & im Korpus & \\
+
+\hline
+ Komplett & 199 & 37 & 0 & 15,7\% \\
+ \hline
+ Technologie & 146 & 65 & 25 & 27,5\% (30,8\%)\\
+ \hline
+ 
+\end{tabular}
+\end{center}
+\end{table}
+		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
+		
+		
+\begin{figure}[p]
+  \begin{center}
+	\includegraphics[scale=0.4]{KonkretisierungFull.PNG}
+  \end{center}  
+  \caption{Konkretisierung der Testdaten im kompletten Korpus.}
+
+\end{figure}
+\begin{figure}[p]
+  \begin{center}
+	\includegraphics[scale=0.4]{KonkretisierungTech.PNG}
+  \end{center}  
+  \caption{Konkretisierung der Testdaten im Technologiekorpus.}
+  \end{figure}	
+		
 		\subsection{Interpretation/Ergebnis}
-		.
+		Zu beobachten ist, dass der Technologiekorpus besser konkretisiert, als der komplette allgemeine Korpus. Da dies aber nur in ca. 30\% der Testfälle passiert, ist es schwierig, zu verallgemeinern, dass die ähnlichen Worte im Technologiekorpus eine Konkretisierung sind, somit ist auch hier die Annahme des Experiments widerlegt.
 		
 		
 	\newpage
 	\section{Verallgemeinerungen}
 		\subsection{Beschreibung}
-		.
+		In diesem Experiment soll untersucht werden, ob die ähnlichen Worte im allgemeinen kompletten Korpus eine Verallgemeinerung des Suchbegriffs darstellen.\\
+		
 		\subsection{Durchführung}
-		.
+		Die Fragestellung bezieht sich zwar nur auf den allgemeinen Korpus, allerdings wurde auch der Technologiekorpus auf diese Fragestellung hin untersucht.\\
+		Wie beim vorherigen Experiment mussten viele Begriffe nachgeschlagen werden,  um die inhaltlichen Beziehungen zwischen Suchbegriff und ähnlichen Worten beurteilen zu können.\\
+		
+\begin{table}[h]
+\caption{Experiment 3: Verallgemeinerung}
+\begin{center}
+\begin{tabular}{|l||l|l|l|l|}
+\hline
+Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation\\
+ & nicht verallgemeinert & verallgemeinert & im Korpus & \\
+
+\hline
+ Komplett & 102 & 134 & 0 & 56,8\% \\
+ \hline
+ Technologie & 144 & 67 & 25 & 28,4\% (31,8\%)\\
+ \hline
+ 
+\end{tabular}
+\end{center}
+\end{table}
+
+		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
+		
+		
+\begin{figure}[p]
+  \begin{center}
+	\includegraphics[scale=0.4]{VerallgemeinerungFull.PNG}
+  \end{center}  
+  \caption{Verallgemeinerung der Testdaten im kompletten Korpus.}
+
+\end{figure}
+\begin{figure}[p]
+  \begin{center}
+	\includegraphics[scale=0.4]{VerallgemeinerungTech.PNG}
+  \end{center}  
+  \caption{Verallgemeinerung der Testdaten im Technologiekorpus.}
+  \end{figure}	
 		\subsection{Interpretation/Ergebnis}
-		.
+		Die Untersuchungen bei diesem Experiment zeigen, dass die ähnlichen Worte eines Suchbegriffs in mehr als der Hälfte der Fälle, eine Verallgemeinerung des Suchbegriffs sind. \\
+		Die Annahme dieses Experiments wurde bestätigt.\\
 		
 		
 	\newpage
@@ -361,6 +438,20 @@ Korpus & Synonyme & Synonyme  & Wort nicht  & Relation\\
 		\subsection{Beschreibung}
 		.
 		\subsection{Durchführung}
+\begin{figure}[p]
+  \begin{center}
+	\includegraphics[scale=0.4]{BeziehungsartenFull.PNG}
+  \end{center}  
+  \caption{Verschiedene Arten der Beziehungen von den Testdaten zu den ähnlichen Wörtern im kompletten Korpus.}
+
+\end{figure}
+\begin{figure}[p]
+  \begin{center}
+	\includegraphics[scale=0.4]{BeziehungsartenTech.PNG}
+  \end{center}  
+  \caption{Verschiedene Arten der Beziehungen von den Testdaten zu den ähnlichen Wörtern im Technologiekorpus.}
+  \end{figure}			
+		
 		.
 		\subsection{Interpretation/Ergebnis}
 		.
@@ -371,6 +462,22 @@ Korpus & Synonyme & Synonyme  & Wort nicht  & Relation\\
 		\subsection{Beschreibung}
 		.
 		\subsection{Durchführung}
+		
+		
+		\begin{figure}[p]
+  \begin{center}
+	\includegraphics[scale=0.4]{MehrdeutigkeitFull.PNG}
+  \end{center}  
+  \caption{Erkennung von Mehrdeutigkeiten im kompletten Korpus.}
+
+\end{figure}
+\begin{figure}[p]
+  \begin{center}
+	\includegraphics[scale=0.4]{MehrdeutigkeitTech.PNG}
+  \end{center}  
+  \caption{Erkennung von Mehrdeutigkeiten im Technologiekorpus.}
+  \end{figure}	
+  
 		.
 		\subsection{Interpretation/Ergebnis}
 		.
@@ -384,7 +491,7 @@ Korpus & Synonyme & Synonyme  & Wort nicht  & Relation\\
 \section{Ausblick}
 Subsampling, N-Gram (Phrases ) lernen
 \newpage
-\chapter*{Quellenverzeichnis}
+%\chapter*{Quellenverzeichnis}
 \bibliographystyle{alpha}
 \bibliography{bibtex_gensim}
 %\nocite{DBLP:journals/corr/abs-1301-3781}

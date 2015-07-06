@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5575e204-4485-434a-9d40-906d2e34736e" name="Default" comment="">
       <change type="DELETED" beforePath="D:\SoftwareProjects\SemanticRelations\Korpora\Wikipedia\enwik9\pages1\cleanwikitextpages.bat" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Fragestellungen.xlsx" afterPath="$PROJECT_DIR$/../../Thesis/Fragestellungen.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.pdf" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.synctex.gz" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.synctex.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.aux" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.aux" />
@@ -14,9 +13,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.log" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.lot" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.lot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.out" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.tex.bak" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.tex.bak" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.tex" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.tex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.toc" afterPath="$PROJECT_DIR$/../../Thesis/Thesis/Thesis.toc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test1/testkorpora/accuracys.txt" afterPath="$PROJECT_DIR$/Test1/testkorpora/accuracys.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Word2Vec.iws" />
@@ -88,14 +87,14 @@
     <leaf>
       <file leaf-file-name="accuracys.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test1/testkorpora/accuracys.txt">
-          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2822" max-vertical-offset="2924">
-              <caret line="166" column="58" selection-start-line="166" selection-start-column="58" selection-end-line="166" selection-end-column="58" />
+            <state vertical-scroll-proportion="-25.607143" vertical-offset="1833" max-vertical-offset="2924">
+              <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -131,20 +130,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recursiveSimilarities_WithTechFullKorpusTrained.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="recursiveSimilarities_WithTechFullKorpusTrained.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Analysis/recursiveSimilarities_WithTechFullKorpusTrained.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="61302" max-vertical-offset="88672">
-              <caret line="3620" column="31" selection-start-line="3620" selection-start-column="31" selection-end-line="3620" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.4645233" vertical-offset="79107" max-vertical-offset="88672">
+              <caret line="4678" column="2" selection-start-line="4678" selection-start-column="2" selection-end-line="4678" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recursiveCombSimilarities_new.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="recursiveCombSimilarities_new.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Analysis/recursiveCombSimilarities_new.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33295193" vertical-offset="19055" max-vertical-offset="63563">
+            <state vertical-scroll-proportion="0.0" vertical-offset="19346" max-vertical-offset="63563">
               <caret line="1138" column="6" selection-start-line="1138" selection-start-column="0" selection-end-line="1138" selection-end-column="6" />
               <folding />
             </state>
@@ -256,11 +255,11 @@
         <option value="$PROJECT_DIR$/Test1/T6IV.py" />
         <option value="$PROJECT_DIR$/Test1/T6V.py" />
         <option value="$PROJECT_DIR$/Test1/T6VI.py" />
-        <option value="$PROJECT_DIR$/Test1/testkorpora/accuracys.txt" />
         <option value="$PROJECT_DIR$/Test1/T11.py" />
         <option value="$PROJECT_DIR$/Test1/T6II.py" />
         <option value="$PROJECT_DIR$/Analysis/recursiveSimilarities_WithTechFullKorpusTrained.txt" />
         <option value="$PROJECT_DIR$/Analysis/TestModel2(recursive).py" />
+        <option value="$PROJECT_DIR$/Test1/testkorpora/accuracys.txt" />
       </list>
     </option>
   </component>
@@ -787,11 +786,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="92" y="-8" width="1836" height="1096" extended-state="7" />
-    <editor active="true" />
+    <frame x="92" y="-8" width="1836" height="1096" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14904387" sideWeight="0.4992272" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15073116" sideWeight="0.4992272" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39829606" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1114,13 +1113,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Analysis/combinedSubsampled.txt">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="20162">
           <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test1/T6.py">
@@ -1223,17 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test1/testkorpora/accuracys.txt">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2822" max-vertical-offset="2924">
-          <caret line="166" column="58" selection-start-line="166" selection-start-column="58" selection-end-line="166" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test1/T11.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
@@ -1288,18 +1276,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Analysis/recursiveSimilarities_WithTechFullKorpusTrained.txt">
+    <entry file="file://$PROJECT_DIR$/Analysis/recursiveCombSimilarities_new.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="61302" max-vertical-offset="88672">
-          <caret line="3620" column="31" selection-start-line="3620" selection-start-column="31" selection-end-line="3620" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="19346" max-vertical-offset="63563">
+          <caret line="1138" column="6" selection-start-line="1138" selection-start-column="0" selection-end-line="1138" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Analysis/recursiveCombSimilarities_new.txt">
+    <entry file="file://$PROJECT_DIR$/Test1/testkorpora/accuracys.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33295193" vertical-offset="19055" max-vertical-offset="63563">
-          <caret line="1138" column="6" selection-start-line="1138" selection-start-column="0" selection-end-line="1138" selection-end-column="6" />
+        <state vertical-scroll-proportion="-25.607143" vertical-offset="1833" max-vertical-offset="2924">
+          <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Analysis/recursiveSimilarities_WithTechFullKorpusTrained.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4645233" vertical-offset="79107" max-vertical-offset="88672">
+          <caret line="4678" column="2" selection-start-line="4678" selection-start-column="2" selection-end-line="4678" selection-end-column="6" />
           <folding />
         </state>
       </provider>
