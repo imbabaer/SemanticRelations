@@ -314,6 +314,8 @@ Korpus & Synonyme & Synonyme  & Wort nicht  & Relation\\
 \end{table}
 		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
 		
+Einige Beispiele:\\
+ 
 		
 \begin{figure}[p]
   \begin{center}
@@ -366,6 +368,7 @@ Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation\\
 \end{table}
 		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
 		
+Einige Beispiele:\\
 		
 \begin{figure}[p]
   \begin{center}
@@ -414,6 +417,7 @@ Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation\\
 
 		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
 		
+Einige Beispiele:\\
 		
 \begin{figure}[p]
   \begin{center}
@@ -436,8 +440,41 @@ Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation\\
 	\newpage
 	\section{Unterschiedliche Beziehungen}
 		\subsection{Beschreibung}
-		.
+		In diesem Experiment soll untersucht werden, ob die Beziehungen zwischen den Suchbegriffen und den gefunden ähnlichen Worten von unterschiedlichen Arten sind. Die Beziehungen sollen in \textit{syntaktisch, synonym, gleiches, gegenteiliges, in Beziehung} und \textit{verschiedenes} eingeteilt werden.
 		\subsection{Durchführung}
+		Für dieses Experiment müssen beide Korpora untersucht werden, um eine Aussage machen zu können, ob sich die Beziehungsarten unterscheiden. Die Arten \textit{synonym} und \textit{gegenteilig} traten, bei den in der Arbeit verwendeten Testdaten, nicht auf. Die Art \textit{verschiedenes} wurde gewählt, wenn mehrere andere Beziehungsarten in den ähnlichen Worten vorhanden waren.
+		
+\begin{table}[h]
+\caption{Experiment 4: Arten von Beziehungen}
+\begin{center}
+\begin{tabular}{|l||l|l||l|l|}
+\hline
+Beziehungsart	& Kompletter	& Relation & Technologie-  & Relation\\
+ 				& Korpus 		& 		   & Korpus		& \\
+
+\hline
+ Syntaktisch & 1 &  0,4\%	& 0 & 0,0\% \\
+ \hline
+ Gegenteilig & 0 & 0,0\% 	& 0 & 0,0\% \\
+ \hline
+ Gleiches & 81 & 34,3\% 	& 38 & 16,1\% ( 18,0\%) \\
+ \hline
+ Synonym & 0 & 0,0\% 	& 0 & 0,0\% \\
+ \hline
+ In Beziehung & 118 & 50,0\% 	& 126 & 53,4\% (59,7\%)\\
+ \hline
+ Verschiedenes & 36 & 15,3\% 	& 47 & 19,9\%(22,3\%) \\
+ \hline
+ 
+\end{tabular}
+\end{center}
+\end{table}
+		
+		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
+		
+Einige Beispiele:\\
+
+
 \begin{figure}[p]
   \begin{center}
 	\includegraphics[scale=0.4]{BeziehungsartenFull.PNG}
@@ -452,17 +489,56 @@ Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation\\
   \caption{Verschiedene Arten der Beziehungen von den Testdaten zu den ähnlichen Wörtern im Technologiekorpus.}
   \end{figure}			
 		
-		.
+		
 		\subsection{Interpretation/Ergebnis}
-		.
+		Wie man in der Auswertung der Daten erkennt, ist bei beiden Korpora die Beziehungsart \textit{in Beziehung} am stärksten vorhanden, dies kommt daher, dass im Word2Vec Modell Wörter die in ähnlichem Kontext stehen, auch nahe in der Vektorrepräsentation zusammen stehen. Die Art \textit{gleiches} ist im kompletten allgemeinen Korpus mit 34,3\% die zweithäufigste Art, allerdings kommt sie im Technologiekorpus nur ca. halb so oft vor (19,9\%). Hingegen ist die Anzahl mit \textit{verschiedenen} Arten etwas höher, sowie die \textit{in Beziehung}. Der Unterschied zwischen den Beziehungsarten in den unterschiedlichen Korpora ist also nicht zu groß, allerdings deutlich erkennbar.\\
+		
+		
 		
 		
 	\newpage
-	\section{Mehrdeutigkeit}
+	\section{Erkennen von Mehrdeutigkeit}
 		\subsection{Beschreibung}
-		.
+		Das letzte Experiment beschäftigt sich mit der Mehrdeutigkeit von Worten. Es soll untersucht werden, ob im allgemeinen kompletten Korpus die unterschiedlichen Bedeutungen eines mehrdeutigen Wortes in den ähnlichen Worten repräsentiert werden.\\
 		\subsection{Durchführung}
+		Auch hier wurden beide Korpora analysiert um zu vergleichen ob sie sich unterscheiden im Bezug auf mehrdeutige Worte.\\
 		
+		\begin{table}[h]
+\caption{Experiment 5: Erkennen von Mehrdeutigkeiten}
+\begin{center}
+\begin{tabular}{|l||l|l||l|l|}
+\hline
+				& Kompletter	& Relation 		  & Technologie-  & Relation\\
+ 				& Korpus 		& zur Gesamtzahl  & Korpus		& zur Gesamtzahl\\
+
+\hline
+
+ Wort nicht im Korpus& 0 &  0,0\%	& 24 & 10,2\% \\
+ \hline
+ nicht mehrdeutig & 172 &  72,9\%	& 148 & 62,7\% (70,1\%)\\
+ \hline
+ mehrdeutig & 64 & 27,1\% 	& 64 & 27,1\% (30,3\%)\\
+ \hline 
+\hline
+	& Kompletter	& Relation zu	& Technologie-  & Relation zu \\
+	& Korpus 		& mehrdeutigen 	& Korpus		& mehrdeutigen \\
+	& 		 		& Worten	 	& 				& Worten\\
+
+\hline
+ Wort nicht im Korpus & 0 & 0,0\% 	& 1 & 1,7\%\\
+ \hline
+ nicht erkannt & 58 &  90,6\%	& 57 & 89,1\%\\
+ \hline
+ erkannt & 6 &  9,4\%	& 6 & 9,4\% \\
+ \hline
+\end{tabular}
+\end{center}
+\end{table}
+		
+		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
+		
+Einige Beispiele:\\
+
 		
 		\begin{figure}[p]
   \begin{center}
@@ -478,9 +554,11 @@ Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation\\
   \caption{Erkennung von Mehrdeutigkeiten im Technologiekorpus.}
   \end{figure}	
   
-		.
+		
 		\subsection{Interpretation/Ergebnis}
-		.
+		Erstaunlicherweise unterscheiden sich in diesem Experiment die beiden Korpora nicht in der Anzahl der erkannten Mehrdeutigkeiten. Allerdings hat öfters das eine Modell eine Bedeutung abgedeckt und das andere Modell eine oder die andere.\\
+		Es ist deutlich zu erkennen, dass beide Modelle nicht geeignet sind um eine Mehrdeutigkeit in den Testdaten in ihren ähnlichen Worten abzubilden.\\
+		Somit ist die Annahme dieses Experiments widerlegt.
 		
 
 \newpage

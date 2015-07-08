@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  6 JUL 2015 15:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  8 JUL 2015 14:52
 entering extended mode
 **Thesis.tex
 (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.tex
@@ -651,6 +651,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--237
  []
 
 [9]
+Underfull \hbox (badness 10000) in paragraph at lines 259--264
+
+ []
+
+
 Overfull \hbox (15.33324pt too wide) in paragraph at lines 269--271
 \OT1/cmr/m/n/12 Ar-ti-kel (2,2% im Ver-gleich zum Ge-samt-kor-pus), 9.866.096 W
 []orter(0,34%) und 3.166.065
@@ -680,44 +685,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
+
+ []
+
 <SynonymFull.PNG, id=404, 1152.55594pt x 642.90187pt>
 File: SynonymFull.PNG Graphic file (type png)
  <use SynonymFull.PNG>
-Package pdftex.def Info: SynonymFull.PNG used on input line 320.
+Package pdftex.def Info: SynonymFull.PNG used on input line 322.
 (pdftex.def)             Requested size: 461.0142pt x 257.15619pt.
 
-Overfull \hbox (34.22285pt too wide) in paragraph at lines 320--321
+Overfull \hbox (34.22285pt too wide) in paragraph at lines 322--323
  [] 
  []
 
 <SynonymTech.PNG, id=405, 1151.05031pt x 642.14906pt>
 File: SynonymTech.PNG Graphic file (type png)
  <use SynonymTech.PNG>
-Package pdftex.def Info: SynonymTech.PNG used on input line 329.
+Package pdftex.def Info: SynonymTech.PNG used on input line 331.
 (pdftex.def)             Requested size: 460.41197pt x 256.85507pt.
 
-Overfull \hbox (33.62062pt too wide) in paragraph at lines 329--330
+Overfull \hbox (33.62062pt too wide) in paragraph at lines 331--332
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
 [13] [14 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/SynonymFull.PNG> 
 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/SynonymTech.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 343--345
+Underfull \hbox (badness 10000) in paragraph at lines 345--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--348
+Underfull \hbox (badness 10000) in paragraph at lines 348--350
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
 
  []
 
@@ -725,10 +740,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 367--368
 File: KonkretisierungFull.PNG Graphic file (type png)
 
 <use KonkretisierungFull.PNG>
-Package pdftex.def Info: KonkretisierungFull.PNG used on input line 372.
+Package pdftex.def Info: KonkretisierungFull.PNG used on input line 375.
 (pdftex.def)             Requested size: 461.91757pt x 257.15619pt.
 
-Overfull \hbox (35.12622pt too wide) in paragraph at lines 372--373
+Overfull \hbox (35.12622pt too wide) in paragraph at lines 375--376
  [] 
  []
 
@@ -736,144 +751,204 @@ Overfull \hbox (35.12622pt too wide) in paragraph at lines 372--373
 File: KonkretisierungTech.PNG Graphic file (type png)
 
 <use KonkretisierungTech.PNG>
-Package pdftex.def Info: KonkretisierungTech.PNG used on input line 379.
+Package pdftex.def Info: KonkretisierungTech.PNG used on input line 382.
 (pdftex.def)             Requested size: 461.0142pt x 258.9629pt.
 
-Overfull \hbox (34.22285pt too wide) in paragraph at lines 379--380
+Overfull \hbox (34.22285pt too wide) in paragraph at lines 382--383
  [] 
  []
 
 [15] [16 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/KonkretisierungFu
 ll.PNG> <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/KonkretisierungTec
-h.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+h.PNG>] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--396
+Underfull \hbox (badness 10000) in paragraph at lines 397--399
 
  []
 
 
-Overfull \hbox (11.20065pt too wide) in paragraph at lines 400--412
+Overfull \hbox (11.20065pt too wide) in paragraph at lines 403--415
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
 
  []
 
-<VerallgemeinerungFull.PNG, id=434, 1153.30875pt x 642.90187pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
+
+ []
+
+<VerallgemeinerungFull.PNG, id=438, 1153.30875pt x 642.90187pt>
 File: VerallgemeinerungFull.PNG Graphic file (type png)
 
 <use VerallgemeinerungFull.PNG>
-Package pdftex.def Info: VerallgemeinerungFull.PNG used on input line 420.
+Package pdftex.def Info: VerallgemeinerungFull.PNG used on input line 424.
 (pdftex.def)             Requested size: 461.31532pt x 257.15619pt.
 
-Overfull \hbox (34.52397pt too wide) in paragraph at lines 420--421
+Overfull \hbox (34.52397pt too wide) in paragraph at lines 424--425
  [] 
  []
 
-<VerallgemeinerungTech.PNG, id=435, 1154.81438pt x 642.14906pt>
+<VerallgemeinerungTech.PNG, id=439, 1154.81438pt x 642.14906pt>
 File: VerallgemeinerungTech.PNG Graphic file (type png)
 
 <use VerallgemeinerungTech.PNG>
-Package pdftex.def Info: VerallgemeinerungTech.PNG used on input line 427.
+Package pdftex.def Info: VerallgemeinerungTech.PNG used on input line 431.
 (pdftex.def)             Requested size: 461.91757pt x 256.85507pt.
 
-Overfull \hbox (35.12622pt too wide) in paragraph at lines 427--428
+Overfull \hbox (35.12622pt too wide) in paragraph at lines 431--432
  [] 
  []
 
-[17] [18 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/Verallgemeinerung
+
+Underfull \hbox (badness 10000) in paragraph at lines 436--438
+
+ []
+
+[18] [19 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/Verallgemeinerung
 Full.PNG> <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/Verallgemeinerun
-gTech.PNG>] <BeziehungsartenFull.PNG, id=450, 1151.05031pt x 639.89063pt>
+gTech.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
+
+ []
+
+<BeziehungsartenFull.PNG, id=454, 1149.5447pt x 641.39626pt>
 File: BeziehungsartenFull.PNG Graphic file (type png)
 
 <use BeziehungsartenFull.PNG>
-Package pdftex.def Info: BeziehungsartenFull.PNG used on input line 443.
-(pdftex.def)             Requested size: 460.41197pt x 255.9517pt.
+Package pdftex.def Info: BeziehungsartenFull.PNG used on input line 480.
+(pdftex.def)             Requested size: 459.80972pt x 256.55396pt.
 
-Overfull \hbox (33.62062pt too wide) in paragraph at lines 443--444
+Overfull \hbox (33.01837pt too wide) in paragraph at lines 480--481
  [] 
  []
 
-<BeziehungsartenTech.PNG, id=451, 1150.2975pt x 644.4075pt>
+<BeziehungsartenTech.PNG, id=455, 1148.03906pt x 640.64343pt>
 File: BeziehungsartenTech.PNG Graphic file (type png)
 
 <use BeziehungsartenTech.PNG>
-Package pdftex.def Info: BeziehungsartenTech.PNG used on input line 450.
-(pdftex.def)             Requested size: 460.11086pt x 257.75844pt.
+Package pdftex.def Info: BeziehungsartenTech.PNG used on input line 487.
+(pdftex.def)             Requested size: 459.20749pt x 256.25282pt.
 
-Overfull \hbox (33.3195pt too wide) in paragraph at lines 450--451
+Overfull \hbox (32.41614pt too wide) in paragraph at lines 487--488
  [] 
  []
 
-[19] [20 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/BeziehungsartenFu
+
+Overfull \hbox (3.52632pt too wide) in paragraph at lines 494--495
+\OT1/cmr/m/n/12 hungs-art \OT1/cmr/m/it/12 in Be-zie-hung \OT1/cmr/m/n/12 am st
+[]arks-ten vor-han-den, dies kommt da-her, dass im Word2Vec
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
+
+ []
+
+[20] [21 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/BeziehungsartenFu
 ll.PNG> <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/BeziehungsartenTec
-h.PNG>] <MehrdeutigkeitFull.PNG, id=464, 1151.80313pt x 643.6547pt>
+h.PNG>] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 502--503
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 504--505
+
+ []
+
+
+Overfull \hbox (33.78519pt too wide) in paragraph at lines 509--535
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--539
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--541
+
+ []
+
+<MehrdeutigkeitFull.PNG, id=473, 1151.80313pt x 643.6547pt>
 File: MehrdeutigkeitFull.PNG Graphic file (type png)
 
 <use MehrdeutigkeitFull.PNG>
-Package pdftex.def Info: MehrdeutigkeitFull.PNG used on input line 469.
+Package pdftex.def Info: MehrdeutigkeitFull.PNG used on input line 545.
 (pdftex.def)             Requested size: 460.71309pt x 257.4573pt.
 
-Overfull \hbox (33.92174pt too wide) in paragraph at lines 469--470
+Overfull \hbox (33.92174pt too wide) in paragraph at lines 545--546
  [] 
  []
 
-<MehrdeutigkeitTech.PNG, id=465, 1153.30875pt x 645.16031pt>
+<MehrdeutigkeitTech.PNG, id=474, 1153.30875pt x 645.16031pt>
 File: MehrdeutigkeitTech.PNG Graphic file (type png)
 
 <use MehrdeutigkeitTech.PNG>
-Package pdftex.def Info: MehrdeutigkeitTech.PNG used on input line 476.
+Package pdftex.def Info: MehrdeutigkeitTech.PNG used on input line 552.
 (pdftex.def)             Requested size: 461.31532pt x 258.05954pt.
 
-Overfull \hbox (34.52397pt too wide) in paragraph at lines 476--477
+Overfull \hbox (34.52397pt too wide) in paragraph at lines 552--553
  [] 
  []
 
-[21] [22 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/MehrdeutigkeitFul
+[23] [24 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/MehrdeutigkeitFul
 l.PNG> <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/MehrdeutigkeitTech.
-PNG>]
+PNG>] [25]
 Kapitel 6.
-[23
+[26
 
-] [24] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.bbl)
-[25
+] [27] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.bbl)
+[28
 
 ] (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.lot)
 \tf@lot=\write5
- [26
+ [29
 
 ]
 (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.lof)
 \tf@lof=\write6
- [27
+ [30
 
 ]
 Kapitel 7.
-[28
+[31
 
 ]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 584.
-[29]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 584.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 662.
+[32]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 662.
  (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 584.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 584.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 662.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 662.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 669CC3FD563CBCF0EA2419D91298C668;2881.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 584.
+(rerunfilecheck)             Checksum: 1714BBA4CC6643E6ED0B8256294AA2A7;2894.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 662.
  ) 
 Here is how much of TeX's memory you used:
- 6457 strings out of 493921
- 93007 string characters out of 3150478
+ 6462 strings out of 493921
+ 93044 string characters out of 3150478
  186821 words of memory out of 3000000
  9537 multiletter control sequences out of 15000+200000
  10132 words of font info for 36 fonts, out of 3000000 for 9000
@@ -887,9 +962,9 @@ nts/cm/cmr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 eX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programme/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmti10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Thesis.pdf (36 pages, 769281 bytes).
+Output written on Thesis.pdf (39 pages, 781533 bytes).
 PDF statistics:
- 594 PDF objects out of 1000 (max. 8388607)
- 136 named destinations out of 1000 (max. 500000)
+ 614 PDF objects out of 1000 (max. 8388607)
+ 141 named destinations out of 1000 (max. 500000)
  408 words of extra memory for PDF output out of 10000 (max. 10000000)
 
