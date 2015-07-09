@@ -293,7 +293,8 @@ Eine Anwendung hierfür könnte ein Thesaurus-Lexikon sein.
 		
 		\subsection{Durchführung}
 		Oft war der Suchbegriff aus den Testdaten mit in den ähnlichen Wörtern der ähnlichen Wörter. Da in diesem Experiment pro Suchbegriff 25 Ergebnisbegriffe untersucht werden mussten, nahm es etwas mehr Zeit in Anspruch als die übrigen Experimente. Zudem waren viele Begriffe sehr themenspezifisch, deren Zusammenhang mit dem Suchbegriff aus den Testdaten erst einmal herausgefunden werden musste.\\
-		Im Technologiekorpus waren einige Suchbegriffe nicht enthalten.
+		Im Technologiekorpus waren einige Suchbegriffe nicht enthalten.\\
+		Sobald ein Synonym vorhanden war, wurde der Suchbegriff als \textit{Synonym enthalten} markiert.
 	
 \begin{table}[h]
 \caption{Experiment 1: Synonyme durch Rekursion}
@@ -316,6 +317,30 @@ Korpus & Synonyme & Synonyme  & Wort nicht  & Relation\\
 		
 Einige Beispiele:\\
  
+\begin{table}[h]
+\caption{Beispiele von Synonyme durch Rekursion}
+\begin{center}
+\begin{tabular}{|l||l|l|l|l|}
+\hline
+Suchbegriff & Korpus & Synonyme   \\
+
+\hline
+ 3d & Komplett & threedimensional, stereoscopic, autostereoscopic \\
+  	& Technologie& threedimensional, autostereoscopic\\
+ \hline	
+ bitcoin	& Komplett	& cryptocurrencies	\\
+ 	\hline
+ hd	 & Komplett 	& 1080p, 1920x1080 \\
+  	 & Technologie	& 1080p, 1920x1080 \\
+ 	\hline
+ keyboard	& Komplett & synthesizer	\\
+ 	\hline
+ wifi	&	Komplett &	wlan\\
+ 	\hline
+ 
+\end{tabular}
+\end{center}
+\end{table}
 		
 \begin{figure}[p]
   \begin{center}
@@ -368,7 +393,32 @@ Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation\\
 \end{table}
 		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
 		
-Einige Beispiele:\\
+
+\begin{table}[h]
+\caption{Beispiele zur Konkretisierung}
+\begin{center}
+\begin{tabular}{|l||l|l|l|l|}
+\hline
+Suchbegriff & Korpus & Konkretisierung   \\
+
+\hline
+ apple & Technologie & iphone (Kosinusähnlichkeit: 0,587),\\
+ \hline
+ architecture	   & Komplett & revival (0,774), neoclassical (0,677), gothic (0,667) \\
+ & Technologie& armv7a (0,514), multicore (0,493), xmos (0,477) \\
+\hline
+ fat	& Technologie	& exfat (0,751), vfat (0,724), fat32 (0,709)	\\
+ 	\hline
+ intel	 & Technologie& i7 (0,707), t2300 (0,702), i5 (0,666), i52450m (0,663) \\
+ \hline
+ photography	& Technologie& slrs(0,544), panoramic (0,543), polaroid (0,531)\\
+ 	\hline
+ power	&	Komplett &	electricity (0,679), surgut2 (0,637), egbin (0,627) \\
+ 	\hline
+ 
+\end{tabular}
+\end{center}
+\end{table}
 		
 \begin{figure}[p]
   \begin{center}
@@ -383,7 +433,7 @@ Einige Beispiele:\\
   \end{center}  
   \caption{Konkretisierung der Testdaten im Technologiekorpus.}
   \end{figure}	
-		
+		\newpage
 		\subsection{Interpretation/Ergebnis}
 		Zu beobachten ist, dass der Technologiekorpus besser konkretisiert, als der komplette allgemeine Korpus. Da dies aber nur in ca. 30\% der Testfälle passiert, ist es schwierig, zu verallgemeinern, dass die ähnlichen Worte im Technologiekorpus eine Konkretisierung sind, somit ist auch hier die Annahme des Experiments widerlegt.
 		
@@ -406,6 +456,7 @@ Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation\\
  & nicht verallgemeinert & verallgemeinert & im Korpus & \\
 
 \hline
+\hline
  Komplett & 102 & 134 & 0 & 56,8\% \\
  \hline
  Technologie & 144 & 67 & 25 & 28,4\% (31,8\%)\\
@@ -417,8 +468,35 @@ Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation\\
 
 		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
 		
-Einige Beispiele:\\
 		
+\begin{table}[h]
+\caption{Beispiele zur Verallgemeinerung}
+\begin{center}
+\begin{tabular}{|l||l|l|l|l|}
+\hline
+Suchbegriff & Korpus & Verallgemeinerung   \\
+\hline
+\hline
+ apple & Komplett & blackberry (Kosinusähnlichkeit: 0,704),\\
+ 	&	& raspberry (0,657), webos (0,0.643)\\
+ \hline
+ asus	   & Komplett & netbook (0,767), lenovo (0,736), motherboards (0,714) \\
+\hline
+ cookies	& Komplett& baked (0,666), cakes (0,663), sandwiches (0,655),\\
+ & & muffins (0,654)	\\
+ 	\hline
+ dell	 & Komplett & hewlettpackard (0,583), cisco (0,548), lenovo (0,515),\\
+ && compaq (0,506) \\
+ \hline
+ limewire	& Komplett& bittorrent (0,703), filesharing (0,702), kazaa (0,689)\\
+ &&rapidshare (0,668), gnutella (0,653)\\
+ 	\hline
+ security	&	Komplett&	cybersecurity (0,702), counterterrorism (0,685), iviz (0,668) \\
+ 	\hline
+ 
+\end{tabular}
+\end{center}
+\end{table}
 \begin{figure}[p]
   \begin{center}
 	\includegraphics[scale=0.4]{VerallgemeinerungFull.PNG}
@@ -432,6 +510,7 @@ Einige Beispiele:\\
   \end{center}  
   \caption{Verallgemeinerung der Testdaten im Technologiekorpus.}
   \end{figure}	
+  \newpage
 		\subsection{Interpretation/Ergebnis}
 		Die Untersuchungen bei diesem Experiment zeigen, dass die ähnlichen Worte eines Suchbegriffs in mehr als der Hälfte der Fälle, eine Verallgemeinerung des Suchbegriffs sind. \\
 		Die Annahme dieses Experiments wurde bestätigt.\\

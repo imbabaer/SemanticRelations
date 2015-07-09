@@ -20,25 +20,25 @@
 \contentsline {section}{\numberline {5.1}Synonymsuche durch Rekursion}{12}{section.54}
 \contentsline {subsection}{\numberline {5.1.1}Beschreibung}{12}{subsection.55}
 \contentsline {subsection}{\numberline {5.1.2}Durchf\IeC {\"u}hrung}{13}{subsection.56}
-\contentsline {subsection}{\numberline {5.1.3}Interpretation/Ergebnis}{13}{subsection.60}
-\contentsline {section}{\numberline {5.2}Konkretisierungen}{15}{section.61}
-\contentsline {subsection}{\numberline {5.2.1}Beschreibung}{15}{subsection.62}
-\contentsline {subsection}{\numberline {5.2.2}Durchf\IeC {\"u}hrung}{15}{subsection.63}
-\contentsline {subsection}{\numberline {5.2.3}Interpretation/Ergebnis}{15}{subsection.67}
-\contentsline {section}{\numberline {5.3}Verallgemeinerungen}{18}{section.68}
-\contentsline {subsection}{\numberline {5.3.1}Beschreibung}{18}{subsection.69}
-\contentsline {subsection}{\numberline {5.3.2}Durchf\IeC {\"u}hrung}{18}{subsection.70}
-\contentsline {subsection}{\numberline {5.3.3}Interpretation/Ergebnis}{18}{subsection.74}
-\contentsline {section}{\numberline {5.4}Unterschiedliche Beziehungen}{20}{section.75}
-\contentsline {subsection}{\numberline {5.4.1}Beschreibung}{20}{subsection.76}
-\contentsline {subsection}{\numberline {5.4.2}Durchf\IeC {\"u}hrung}{20}{subsection.77}
-\contentsline {subsection}{\numberline {5.4.3}Interpretation/Ergebnis}{20}{subsection.81}
-\contentsline {section}{\numberline {5.5}Erkennen von Mehrdeutigkeit}{23}{section.82}
-\contentsline {subsection}{\numberline {5.5.1}Beschreibung}{23}{subsection.83}
-\contentsline {subsection}{\numberline {5.5.2}Durchf\IeC {\"u}hrung}{23}{subsection.84}
-\contentsline {subsection}{\numberline {5.5.3}Interpretation/Ergebnis}{23}{subsection.88}
-\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{26}{chapter.89}
-\contentsline {section}{\numberline {6.1}Fazit}{26}{section.90}
-\contentsline {section}{\numberline {6.2}Ausblick}{27}{section.91}
-\contentsline {chapter}{\numberline {7}Anhang}{31}{chapter.95}
-\contentsline {section}{\numberline {7.1}Testdaten}{31}{section.96}
+\contentsline {subsection}{\numberline {5.1.3}Interpretation/Ergebnis}{15}{subsection.61}
+\contentsline {section}{\numberline {5.2}Konkretisierungen}{16}{section.62}
+\contentsline {subsection}{\numberline {5.2.1}Beschreibung}{16}{subsection.63}
+\contentsline {subsection}{\numberline {5.2.2}Durchf\IeC {\"u}hrung}{16}{subsection.64}
+\contentsline {subsection}{\numberline {5.2.3}Interpretation/Ergebnis}{18}{subsection.69}
+\contentsline {section}{\numberline {5.3}Verallgemeinerungen}{19}{section.70}
+\contentsline {subsection}{\numberline {5.3.1}Beschreibung}{19}{subsection.71}
+\contentsline {subsection}{\numberline {5.3.2}Durchf\IeC {\"u}hrung}{19}{subsection.72}
+\contentsline {subsection}{\numberline {5.3.3}Interpretation/Ergebnis}{21}{subsection.77}
+\contentsline {section}{\numberline {5.4}Unterschiedliche Beziehungen}{22}{section.78}
+\contentsline {subsection}{\numberline {5.4.1}Beschreibung}{22}{subsection.79}
+\contentsline {subsection}{\numberline {5.4.2}Durchf\IeC {\"u}hrung}{22}{subsection.80}
+\contentsline {subsection}{\numberline {5.4.3}Interpretation/Ergebnis}{22}{subsection.84}
+\contentsline {section}{\numberline {5.5}Erkennen von Mehrdeutigkeit}{25}{section.85}
+\contentsline {subsection}{\numberline {5.5.1}Beschreibung}{25}{subsection.86}
+\contentsline {subsection}{\numberline {5.5.2}Durchf\IeC {\"u}hrung}{25}{subsection.87}
+\contentsline {subsection}{\numberline {5.5.3}Interpretation/Ergebnis}{25}{subsection.91}
+\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{28}{chapter.92}
+\contentsline {section}{\numberline {6.1}Fazit}{28}{section.93}
+\contentsline {section}{\numberline {6.2}Ausblick}{29}{section.94}
+\contentsline {chapter}{\numberline {7}Anhang}{33}{chapter.98}
+\contentsline {section}{\numberline {7.1}Testdaten}{33}{section.99}
