@@ -38,6 +38,7 @@ while (<>) {
     s/&[^;]*;/ /g;          # remove URL encoded chars
 
     $_=" $_ ";
+    #begin changed lines
     s/Ä/Ae/g;
     s/ä/ae/g;
     s/Ö/Oe/g;
@@ -47,6 +48,7 @@ while (<>) {
     s/ß/ss/g;
     s/-//g;
     tr/0-9A-Za-z,.!?;\r\n / /csd; #removes everything else than this characters
+    #end changed lines
     chop;
     print $_;
   }

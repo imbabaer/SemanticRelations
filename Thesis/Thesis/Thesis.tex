@@ -1,6 +1,7 @@
 \documentclass[12pt,a4paper]{report}
 \usepackage[margin=3cm]{geometry}
 \usepackage{ngerman}
+\usepackage{float} 
 \usepackage[utf8]{inputenc}
 \usepackage[onehalfspacing]{setspace}
 \usepackage[numbers,round]{natbib}
@@ -86,19 +87,24 @@ Arbeit ist noch nicht veröffentlicht oder in anderer Form als Prüfungsleistung
 Ich habe die Bedeutung der eidesstattlichen Versicherung und die prüfungsrechtlichen Folgen (§ 23 Abs. 2 Bachelor-SPO (7 Semester) der HdM) sowie die strafrechtlichen Folgen (gem. § 156 StGB) einer unrichtigen oder
 unvollständigen eidesstattlichen Versicherung zur Kenntnis genommen.\\
 \vspace{1em}\\
-Filderstadt, den XX. Juli 2015\\
+Filderstadt, den 15. Juli 2015\\
 \vspace{5em}\\
 Ruben Müller
 
 
 \newpage
 \chapter*{Kurzfassung}
-Diese Bachelorthesis beschäftigt sich mit der Analyse von semantischen Beziehungen innerhalb mit Word2Vec gelernten Modellen.
-\\Dazu sollen zum einen schon der vorhandene allgemeine Wikipedia-Korpus gelernt und analysiert werden, was als semantisch ähnlich erkannt wird. Zum anderen soll ein Korpus über eine spezielle Domäne erstellt und gelernt werden. Welche spezielle Domäne analysiert und verglichen werden soll, wird im Laufe der Bearbeitung festgelegt.
+Diese Bachelorarbeit beschäftigt sich mit der Analyse von semantischen Beziehungen innerhalb mit Word2Vec gelernten Modellen.
+\\Dazu sollen zum einen der allgemeine komplette Wikipedia-Korpus gelernt und analysiert werden, was als semantisch ähnlich erkannt wird. Zum anderen soll ein Korpus über eine spezielle Domäne erstellt und gelernt werden. Welche spezielle Domäne analysiert und verglichen werden soll, wird im Laufe der Bearbeitung festgelegt.
 \\Diese beiden Korpora sollen sich dann gegenüber gestellt und analysiert werden, was jeweils als semantisch ähnlich erkannt wird. 
 \\Ziel dieser Arbeit soll es sein, festzustellen ob ein allgemeiner Korpus oder ein spezieller Domänenkorpus genauere Resultate im Hinblick auf semantische Ähnlichkeiten erzielt. Anstatt eines allgemeinen Korpus zu verwenden, könnte es sich dann anbieten zwischen mehreren speziellen Korpora auszuwählen, je nachdem welche Domäne aktuell bearbeitet werden soll.
 \newpage
 \chapter*{Abstract}
+This bachelor thesis deals with the analysis of semantic relations in models which are learnd by Word2Vec.\\
+For this purpose on the one hand the whole and general wikipedia body shall be learned and analyzed what is detected as semantic similar. On the other hand a body covering a specific domain shall be created and learned. Which specific domain is choosen will be defined due to the working process.\\
+These both bodys shall then be compared against each other to determine what is recognized as semanic similar.\\
+Goal of this thesis will be to determine whether a general body or a domain specific body gives more precise results with regard to semantic similarity. Instead of using a general body it coud be better to choose between multiple domain specific bodys with regard to the actual domain.
+
 \newpage
 \tableofcontents
 \newpage
@@ -117,9 +123,38 @@ Diese Bachelorthesis beschäftigt sich mit der Analyse von semantischen Beziehun
 \pagenumbering{arabic}
 \chapter{Einleitung}
 	\section{Motivation}
+	  
 	
+	Um semantische Beziehungen zwischen Worten abzubilden, gibt es unter anderem die Möglichkeit, Modelle mittels Word2Vec darzustellen. Wie dieses Modell die Beziehungen aufbaut, hängt nicht nur von den Trainingsparametern des Modells ab, sondern auch mit den verwendeten Trainingsdaten zusammen. So können zum Beispiel allgemeine Daten, die keine spezielle Fachdomäne abbilden, als Trainingsdatenkorpus benutzt werden. Oder aber nur Daten über eine spezielle Domäne. \\	
+	Ob nicht nur die Anzahl der Daten eine Rolle spielt, sondern auch deren Inhalt und Zusammenhänge, soll in dieser Arbeit herausgefunden werden. 
+
+
 	\section{Problemstellung}
+	In dieser Arbeit soll untersucht werden, wie sich unterschiedliche Textgrundlagen (Korpora) als Trainingsdaten auf die semantischen Beziehungen zwischen Worten im Word2Vec Modell auswirken. \\
+	Mit den Ergebnissen aus dieser Arbeit soll es möglich sein, dass für eine spezielle Fragestellung oder Anwendung das richtige Modell, bzw die richtigen Trainingsdaten ausgewählt werden können.
+	
+	
+	\newpage
 	\section{Aufbau der Arbeit}
+	Im folgenden Abschnitt wird kurz der Aufbau dieser Arbeit beschrieben.\\
+	
+	\textbf{Kapitel 2: Daten und Vorverarbeitung}\\
+	In diesem Kapitel wird erläutert, welche Daten in dieser Arbeit benutzt wurden. Des weiteren wird kurz erklärt, in welchen Vorverarbeitungsschritten diese Daten bearbeitet wurden um in den nächsten Kapiteln verwendet werden zu können.\\
+	
+	\textbf{Kapitel 3: Word2Vec}\\
+	Hier werden kurz die unterschiedlichen Möglichkeiten im Word2Vec Modell erklärt und die wichtigsten Parameter vorgestellt.\\
+	
+	\textbf{Kapitel 4: Wikipedia-Korpus}\\
+	In Kapitel 4 werden der komplette Wikipedia-Korpus sowie ein Teilkorpus daraus vorgestellt und die zum Training des Word2Vec Modells ausgewählten Parameter erläutert. Außerdem werden die Testdaten vorgestellt.\\
+	
+	\textbf{Kapitel 5: Experimente}\\
+	Kapitel 5 beschäftigt sich mit den Ergebnissen der durch die Testdaten erhaltenen ähnlichen Worte der unterschiedlichen Word2Vec Modelle.\\
+	
+	\textbf{Kapitel 6: Fazit und Ausblick}\\
+	In Kapitel 6 soll sollen die Ergebnisse der Problemstellung gegenüber gestellt und ein Ausblick auf zukünftige Arbeiten gegeben werden.\\
+	
+	\textbf{Kapitel 7: Anhang}\\
+	Hier sind die Testdaten und weitere Auflistungen ausführlich dargestellt.\\
 
 \newpage
 \chapter{Daten und Vorverarbeitung}
@@ -143,7 +178,7 @@ Diese Bachelorthesis beschäftigt sich mit der Analyse von semantischen Beziehun
 	\section{Vorverarbeitung}
 	\label{sec:Vorverarbeitung}
 	Der komplette Wikipediadump kann als komprimierte XML-Datei heruntergeladen werden\footnote{http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015}. Die entpackte XML-Datei hat eine Größe von 48,8 GB. Die Daten müssen zunächst bereinigt werden um als Trainingsdaten für Word2Vec Modelle zu dienen.\\		
-	Um das Wiki-Markup, wie unter anderem Links, Referenzen oder Zitate, und die XML-Tags zu entfernen, kann ein schon vorgefertigtes Perl Skript von Matt Mahoney benutzt werden\footnote{http://mattmahoney.net/dc/textdata.html unter Appendix A, abgerufen am 25.06.2015}, welches von Mikolov et al. auf der Google Code Seite von Word2Vec vorgeschlagen wird\footnote{https://code.google.com/p/word2vec/, abgerufen am 25.06.2015}. Dieses Skript wurde speziell zum Bereinigen von Wikipediadaten erstellt und wurde leicht verändert, sodass Zahlen, Satzzeichen und die Groß- und Kleinschreibung erhalten bleibt. Außerdem werden die Umlaute in $ae$, $oe$ und $ue$ umgewandelt. Da die bis hierher bereinigten Daten eine Gesamtgröße von 18 GB haben, ist es nötig die Daten weiter aufzubereiten, sodass sie als Input für die Klasse $gensim.models.word2vec.LineSentence$\footnote{Diese Klasse kann auch als Input zum Trainieren des Word2Vec Modells genutzt werden.}, aus der Gensim Bibliothek dienen. Dazu müssen die einzelnen Sätze in je einer Zeile stehen, alle Worte klein geschrieben , frei von Satzzeichen und mit Leerzeichen getrennt sein.\\
+	Um das Wiki-Markup, wie unter anderem Links, Referenzen oder Zitate, und die XML-Tags zu entfernen, kann ein schon vorgefertigtes Perl Skript von Matt Mahoney benutzt werden\footnote{http://mattmahoney.net/dc/textdata.html unter Appendix A, abgerufen am 25.06.2015}, welches von Mikolov et al. auf der Google Code Seite von Word2Vec vorgeschlagen wird\footnote{https://code.google.com/p/word2vec/, abgerufen am 25.06.2015}. Dieses Skript wurde speziell zum Bereinigen von Wikipediadaten erstellt und wurde leicht verändert, sodass Zahlen, Satzzeichen und die Groß- und Kleinschreibung erhalten bleibt. Außerdem werden die Umlaute in $ae$, $oe$ und $ue$ umgewandelt\footnote{Für das komplette geänderte Skript siehe Anhang \ref{sec:Perlskript}}. Da die bis hierher bereinigten Daten eine Gesamtgröße von 18 GB haben, ist es nötig die Daten weiter aufzubereiten, sodass sie als Input für die Klasse $gensim.models.word2vec.LineSentence$\footnote{Diese Klasse kann auch als Input zum Trainieren des Word2Vec Modells genutzt werden.}, aus der Gensim Bibliothek dienen. Dazu müssen die einzelnen Sätze in je einer Zeile stehen, alle Worte klein geschrieben, frei von Satzzeichen und mit Leerzeichen getrennt sein.\\
 	
 	Um den kompletten Wikipediadump in die einzelnen Wikipedia Artikel aufzuteilen muss die XML-Datei mittels eines SAX-Parsers\footnote{Es wurde die Klasse \textit{xml.sax.handler.ContentHandler} verwendet.} geparst und dann in einzelne Dateien geschrieben werden. Diese einzelnen Dateien können dann mit dem oben genannten Perl Skript gereinigt und dann mittels NBC klassifiziert werden. Nach der Klassifizierung können die Dateien wieder in eine große Datei zusammengefasst und weiter verarbeitet werden. Auch diese Daten müssen, wie der Gesamtkorpus, mit der Klasse $gensim.models.word2vec.LineSentence$ verarbeitet werden.
 \newpage
@@ -225,7 +260,8 @@ Des weiteren werden die benutzten Testdaten vorgestellt.
 	\label{sec:Gesamtkorpus}
 	Da sich die Qualität  der Wortvektoren im Word2Vec Modell wesentlich mit der Menge an Trainingsdaten erhöht\citep{DBLP:journals/corr/abs-1301-3781}, werden möglichst große Textkorpora bevorzugt. Auf der Google Code Seite von Word2Vec\footnote{https://code.google.com/p/word2vec/, abgerufen am 29.06.2015}, werden für Forschungszwecke einige Beispiele für online verfügbare große Korpora genannt. Unter anderem auch der neueste Wikipedia Auszug\footnote{http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 29.06.2015}.\\
 	Da in dieser Arbeit ein allgemeiner und ein domänenspezifischer Korpus als Trainingsdaten für das Word2Vec Modell verglichen werden sollen, eignet sich der Wikipedia Korpus gut. \\
-	Wie in \ref{sec:Vorverarbeitung} beschrieben, müssen die Daten erst einer Säuberung unterzogen werden um dann anschließend im Word2Vec Modell trainiert zu werden. Der bereinigte, komplette englischsprachige Wikipedia Korpus\footnote{Dump von März 2015, http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015} enthält 8.392.453 Artikel, 242.144.317 Sätze und 2.919.802.692 Worte.\\
+	Wie in \ref{sec:Vorverarbeitung} beschrieben, müssen die Daten erst einer Säuberung unterzogen werden um dann anschließend im Word2Vec Modell trainiert zu werden.\\
+	 Der bereinigte, komplette englischsprachige Wikipedia Korpus\footnote{Dump von März 2015, http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015} enthält 8.392.453 Artikel, 242.144.317 Sätze und 2.919.802.692 Worte.\\
 
 
 Die Skip-gram Architektur verhält sich im Bezug auf syntaktische Ähnlichkeit etwas schlechter als die CBOW Architektur, allerdings ist die Skip-gram Architektur im Bezug auf semantische Ähnlichkeit der CBOW weit überlegen\citep{DBLP:journals/corr/abs-1301-3781}.\\ Aus diesem Grund wurde die Skip-gram Architektur ausgewählt.\\
@@ -379,8 +415,8 @@ Suchbegriff & Korpus & Synonyme   \\
 \begin{center}
 \begin{tabular}{|l||l|l|l|l|}
 \hline
-Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation\\
- & nicht konkretisiert & konkretisiert & im Korpus & \\
+Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation der\\
+ & nicht konkretisiert & konkretisiert & im Korpus & konkretisierten Worte\\
 
 \hline
  Komplett & 199 & 37 & 0 & 15,7\% \\
@@ -452,8 +488,8 @@ Suchbegriff & Korpus & Konkretisierung   \\
 \begin{center}
 \begin{tabular}{|l||l|l|l|l|}
 \hline
-Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation\\
- & nicht verallgemeinert & verallgemeinert & im Korpus & \\
+Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation der\\
+ & nicht verallgemeinert & verallgemeinert & im Korpus & verallgemeinerten Worte\\
 
 \hline
 \hline
@@ -478,7 +514,7 @@ Suchbegriff & Korpus & Verallgemeinerung   \\
 \hline
 \hline
  apple & Komplett & blackberry (Kosinusähnlichkeit: 0,704),\\
- 	&	& raspberry (0,657), webos (0,0.643)\\
+ 	&	& raspberry (0,657), webos (0,643)\\
  \hline
  asus	   & Komplett & netbook (0,767), lenovo (0,736), motherboards (0,714) \\
 \hline
@@ -497,6 +533,8 @@ Suchbegriff & Korpus & Verallgemeinerung   \\
 \end{tabular}
 \end{center}
 \end{table}
+
+
 \begin{figure}[p]
   \begin{center}
 	\includegraphics[scale=0.4]{VerallgemeinerungFull.PNG}
@@ -551,7 +589,32 @@ Beziehungsart	& Kompletter	& Relation & Technologie-  & Relation\\
 		
 		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
 		
-Einige Beispiele:\\
+
+\begin{table}[h]
+\caption{Beispiele zur den verschiedenen Beziehungsarten}
+\begin{center}
+\begin{tabular}{|l||l|l|l|l|}
+\hline
+Art & Suchbegriff & Korpus & Ähnliche Worte   \\
+\hline
+\hline
+ syntaktisch&encription & Komplett & encrypted (Kosinusähnlichkeit: 0,833),\\
+& 	&	& encrypts (0,798)\\
+ \hline
+ gleiches &chrome	   & Komplett & firefox (0,784), safari (0,686), ie8 (0,674) \\
+   &	   & Technologie & firefox (0,733), safari (0,769), flock (0,667),\\
+   &&& seamonkey (0,650) \\
+\hline
+ in Beziehung& browser	 & Komplett & browssers (0,882), firefox (0,812),\\
+ &&& desktop (0,755), javascript (0,751)\\
+ \hline
+verschiedenes& itunes	& Komplett& spotify (0,770), beatport (0,756),\\
+&&& preorder (0,718), download (0,694)\\
+ 	\hline
+ 
+\end{tabular}
+\end{center}
+\end{table}
 
 
 \begin{figure}[p]
@@ -569,6 +632,8 @@ Einige Beispiele:\\
   \end{figure}			
 		
 		
+		
+		\newpage
 		\subsection{Interpretation/Ergebnis}
 		Wie man in der Auswertung der Daten erkennt, ist bei beiden Korpora die Beziehungsart \textit{in Beziehung} am stärksten vorhanden, dies kommt daher, dass im Word2Vec Modell Wörter die in ähnlichem Kontext stehen, auch nahe in der Vektorrepräsentation zusammen stehen. Die Art \textit{gleiches} ist im kompletten allgemeinen Korpus mit 34,3\% die zweithäufigste Art, allerdings kommt sie im Technologiekorpus nur ca. halb so oft vor (19,9\%). Hingegen ist die Anzahl mit \textit{verschiedenen} Arten etwas höher, sowie die \textit{in Beziehung}. Der Unterschied zwischen den Beziehungsarten in den unterschiedlichen Korpora ist also nicht zu groß, allerdings deutlich erkennbar.\\
 		
@@ -616,8 +681,27 @@ Einige Beispiele:\\
 		
 		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
 		
-Einige Beispiele:\\
-
+\begin{table}[h]
+\caption{Beispiele zur Erkennung von Mehrdeutigkeiten}
+\begin{center}
+\begin{tabular}{|l||l|l|l|l|}
+\hline
+Suchbegriff & Korpus & Erkannt & Ähnliche Worte   \\
+\hline
+\hline
+ trojan & Komplett & ja &rsplug (Kosinusähnlichkeit: 0,472), athena (0,462)\\
+ &	&	& bundestrojaner (0,496), centaurs (0,475), \\
+ &  Technologie & ja & horse (0,586), malware (0,560), zinaps (0,476)\\
+ \hline
+ 
+raspberry& Komplett& nein & apple (0,657), apricot (0,629), \\
+&&&blackcurrant (0,586),  \\
+&Technologie & nein & pi (0,677), cubieboard (0,524), trimeslice (0,519)\\
+\hline
+ 
+\end{tabular}
+\end{center}
+\end{table}
 		
 		\begin{figure}[p]
   \begin{center}
@@ -633,7 +717,7 @@ Einige Beispiele:\\
   \caption{Erkennung von Mehrdeutigkeiten im Technologiekorpus.}
   \end{figure}	
   
-		
+		\newpage
 		\subsection{Interpretation/Ergebnis}
 		Erstaunlicherweise unterscheiden sich in diesem Experiment die beiden Korpora nicht in der Anzahl der erkannten Mehrdeutigkeiten. Allerdings hat öfters das eine Modell eine Bedeutung abgedeckt und das andere Modell eine oder die andere.\\
 		Es ist deutlich zu erkennen, dass beide Modelle nicht geeignet sind um eine Mehrdeutigkeit in den Testdaten in ihren ähnlichen Worten abzubilden.\\
@@ -643,17 +727,43 @@ Einige Beispiele:\\
 \newpage
 \chapter{Fazit und Ausblick}
 \section{Fazit}
+Nach einer ausführlichen Vorverarbeitung können die Artikel aus Wikipedia gut als Trainingsdaten für Word2Vec Modelle dienen. Dank der Gensim-Implementierung ist die Benutzung von Word2Vec sehr vereinfacht und kann komfortabel bedient werden.\\
+Die Experimente liefern interessante Resultate im Bezug auf die Problemstellung zu Anfang. Durch die Experimente können die unterschiedlichen semantischen Beziehungen etwas aufgeschlüsselt werden.\\
 
-\newpage
+
+So wird durch die Experimente klar, dass durch einmalige Rekursion der Suchbegriffe, nicht auf Synonyme des ursprünglichen Begriffs geschlossen werden kann.\\
+Des weiteren eignet sich der domänenspezifische Teilkorpus eher für eine Konkretisierung der Suchbegriffe, wobei dies nur in ca. einem Drittel der Testdaten nachgewiesen werden konnte. \\
+Sollen die Testdaten verallgemeinert werden, eignet sich der allgemeine komplette Korpus viel besser als der domänenspezifische Teilkorpus. Soll also ein Überblick über ein gewisses Thema oder Suchbegriff erhalten werden, wird empfohlen das Modell, welches auf dem allgemeinen kompletten Korpus trainiert wurde, zu verwenden.\\
+Die unterschiedlichen Arten von Beziehung zwischen den Testdaten und ihren ähnlichen Wörtern unterscheiden sich nicht grundlegend zwischen den beiden Modellen. Das allgemeine komplette Modell hat einen etwas Größeren Anteil an \textit{gleichen} Worten, hingegen hat das domänenspezifische Teilmodell einen etwas größeren Anteil an \textit{verschiedenen} und \textit{in Beziehung} stehenden Beziehungen. \textit{Synonyme} oder \textit{gegenteilige} Arten an Beziehungen sind in beiden Modellen nicht vorhanden. Und auch \textit{syntaktische} Beziehungen sind nur bei einem Testdatensatz vorhanden.\\
+Soll eine Mehrdeutigkeit gefunden werden, ist die Vorgehensweise nur die ähnlichen Worte zu vergleichen und zu analysieren, nicht zielführend. Die Modelle bilden die Mehrdeutigkeit in den ähnlichen Worten nicht gut ab. Im Ausblick wird ein Vorschlag gemacht, wie die Mehrdeutigkeit eventuell besser erfasst werden könnte.\\
+
+
+Zusammenfassend kann gesagt werden, dass sich das allgemeine komplette Modell dann besser eignet, wenn ein genereller Überblick über die Testdaten erhalten werden soll. Denn in diesem Modell werden die Suchbegriffe eher verallgemeinert und die ähnlichen Worte repräsentieren \textit{Gleiches} im Bezug zu den Testdaten.\\
+Soll aber ein Suchbegriff genauer untersucht, bzw. sehr fokussiert betrachtet werden, eignet sich ein domänenspezifisches Modell besser. Es konkretisiert die Testdaten nicht nur besser, sondern liefert auch fachspezifischere ähnliche Worte.\\
+
+Die Qualität der Beziehungen hängt auch stark von den verwendeten Trainingsdaten ab. Es sollte gewährleistet sein, dass ausreichend viele und auch qualitativ gute Daten zum Training verwendet werden.\\
+Soll ein domänenspezifisches Modell erstellt werden, sollte hier auch darauf geachtet werden, dass nicht nur ein Teil dieser Domäne in den Trainingsdaten abgebildet ist, außer es soll nur dieser spezielle Teil der Domäne im Modell dargestellt werden.\\
+
+
 \section{Ausblick}
-Subsampling, N-Gram (Phrases ) lernen
+
+In der vorangegangenen Arbeit wurden einige Beziehungen zwischen den Testdaten und ihren ähnlichen Worten analysiert. In weiterführenden Arbeiten wäre es möglich, weitere und andersartige Beziehungen zwischen den Wörtern zu untersuchen. Also einfach noch mehrere Experimente durchzuführen.\\
+Zum Beispiel könnte die Mehrdeutigkeit noch anders untersucht werden, indem man mehrere unterschiedliche Modelle hat und dann die ähnlichen Worte eines gleichen Testwortes vergleicht.\\
+
+Auch könnte analysiert werden wie sich subsampling\footnote{Beim subsampling wird das Ungleichgewicht von sehr häufig und sehr selten vorkommenden Worten im Trainingskorpus verringert\citep{DBLP:journals/corr/MikolovSCCD13}. } im Word2Vec Modell, im Blick auf die in dieser Arbeit analysierten Fragestellungen, verhält.\\
+Es wäre auch möglich das Word2Vec Modell mit N-Grammen, auch Phrases genannt, zu lernen, dann könnten auch Mehrwortbegriffe abgebildet und gesucht werden.
+
+
+
+
+
 \newpage
 %\chapter*{Quellenverzeichnis}
 \bibliographystyle{alpha}
 \bibliography{bibtex_gensim}
 %\nocite{DBLP:journals/corr/abs-1301-3781}
 %\nocite{DBLP:journals/corr/MikolovSCCD13}
-papers und so
+
 \listoftables
 \listoffigures 
 
@@ -663,7 +773,7 @@ papers und so
 \chapter{Anhang}
 	\section{Testdaten}
 	\label{sec:Testdaten}
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Testdaten Teil 1}
 \begin{tabular}{l|l|l|l}\\
 3d & 3ds & 3g & 4chan\\
@@ -688,8 +798,9 @@ gadget & game & gameplay & gamergate\\
 
 \end{tabular}
 \end{table}
+
 \newpage
-\begin{table}[h]
+\begin{table}[H]
 \caption{Testdaten Teil 2}
 \begin{tabular}{l|l|l|l}\\
 games & gaming & ghz & gmail\\
@@ -736,6 +847,74 @@ yahoo & youtube & zelda & zynga\\
 \end{tabular}
 \end{table}
 
+\newpage
+\section{Reinigungsskript}
+	\label{sec:Perlskript}
+Das Originalskript von Matt Mahoney kann unter http://mattmahoney.net/dc/textdata.html gefunden werden.
+\begin{verbatim}
 
 
+#!/usr/bin/perl
+
+# Program to filter Wikipedia XML dumps to "clean" text consisting only 
+# of lowercase letters (a-z, converted from A-Z), and spaces 
+# (never consecutive).
+# All other characters are converted to spaces.  Only text which normally
+# appears in the web browser is displayed.  Tables are removed.  
+# Image captions are
+# preserved.  Links are converted to normal text.  
+# Digits are spelled out.
+
+# Written by Matt Mahoney, June 10, 2006.  This program is 
+# released to the public domain.
+
+$/=">";                     # input record separator
+while (<>) {
+  if (/<text /) {$text=1;}  # remove all but between <text> ... </text>
+  if (/#redirect/i) {$text=0;}  # remove #REDIRECT
+  if ($text) {
+
+    # Remove any text not normally visible
+    if (/<\/text>/) {$text=0;}
+    s/<.*>//;               # remove xml tags
+    s/&amp;/&/g;            # decode URL encoded chars
+    s/&lt;/</g;
+    s/&gt;/>/g;
+    s/<ref[^<]*<\/ref>//g;  # remove references <ref...> ... </ref>
+    s/<[^>]*>//g;           # remove xhtml tags
+    s/\[http:[^] ]*/[/g;    # remove normal url, preserve visible text
+    s/\|thumb//ig;          # remove images links, preserve caption
+    s/\|left//ig;
+    s/\|right//ig;
+    s/\|\d+px//ig;
+    s/\[\[image:[^\[\]]*\|//ig;
+    # show categories without markup
+    s/\[\[category:([^|\]]*)[^]]*\]\]/[[$1]]/ig;  
+    s/\[\[[a-z\-]*:[^\]]*\]\]//g;  # remove links to other languages
+    s/\[\[[^\|\]]*\|/[[/g;  # remove wiki url, preserve visible text
+    s/{{[^}]*}}//g;         # remove {{icons}} and {tables}
+    s/{[^}]*}//g;
+    s/\[//g;                # remove [ and ]
+    s/\]//g;
+    s/&[^;]*;/ /g;          # remove URL encoded chars
+
+    $_=" $_ ";
+    ###### begin changed lines ######
+    s/Ä/Ae/g;
+    s/ä/ae/g;
+    s/Ö/Oe/g;
+    s/ö/oe/g;
+    s/Ü/Ue/g;
+    s/ü/ue/g;
+    s/ß/ss/g;
+    s/-//g;
+    #removes everything else than this characters
+    tr/0-9A-Za-z,.!?;\r\n / /csd; 
+    ###### end changed lines ######
+    chop;
+    print $_;
+  }
+}
+	\end{verbatim}
+	
 \end{document}
