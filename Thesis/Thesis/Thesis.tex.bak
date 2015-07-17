@@ -325,8 +325,8 @@ Nachdem ein kleinerer Fehler im Reiningungsskript aufgetretetn war\footnote{Unbe
 	
 	
 	\section{Testdaten}
-Im folgenden Kapitel sollen die beiden Word2Vec Modelle, deren Trainingsdaten aus dem Gesamtkorpus beziehungsweise dem Technologiekorpus bestehen, miteinander verglichen werden. Für diesen Vergleich werden einige Experimente durchgeführt (siehe \ref{chap:Experiment1} - \ref{chap:Experiment5}). In diesen Experimenten werden die semantischen Beziehungen zwischen Wörtern betrachtet. Um diese Experimente durchführen zu können, werden Testdaten benötigt.\\
-
+Im folgenden Kapitel sollen die beiden Word2Vec Modelle, deren Trainingsdaten aus dem Gesamtkorpus beziehungsweise dem Technologiekorpus bestehen, miteinander verglichen werden. Für diesen Vergleich werden einige Experimente durchgeführt (siehe \ref{chap:Experiment1} - \ref{chap:Experiment5}), in diesen Experimenten werden die semantischen Beziehungen zwischen Wörtern betrachtet. Um diese Experimente durchführen zu können, werden Testdaten benötigt.\\
+Da ein Modell auf Technologieartikeln trainiert wird, müssen die Testdaten auch aus dieser Domäne stammen, da 
 
 
 	Die Testdaten umfassen 236 Begriffe (siehe Anhang \ref{sec:Testdaten}) aus der Domäne Technologie/Internet. Die Testdaten werden dazu verwendet, um die ähnlichen Worte in den Modellen zu untersuchen und zu vergleichen. Die genauen Fragestellungen und Experimente werden im Kapitel \ref{chap:Experimente} Experimente ausführlich beschrieben.
