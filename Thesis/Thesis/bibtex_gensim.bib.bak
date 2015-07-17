@@ -42,3 +42,19 @@
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/MikolovSCCD13},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
+@inproceedings{DBLP:conf/naacl/MikolovYZ13,
+  author    = {Tomas Mikolov and
+               Wen{-}tau Yih and
+               Geoffrey Zweig},
+  title     = {Linguistic Regularities in Continuous Space Word Representations},
+  booktitle = {Human Language Technologies: Conference of the North American Chapter
+               of the Association of Computational Linguistics, Proceedings, June
+               9-14, 2013, Westin Peachtree Plaza Hotel, Atlanta, Georgia, {USA}},
+  pages     = {746--751},
+  year      = {2013},
+  crossref  = {DBLP:conf/naacl/2013},
+  url       = {http://aclweb.org/anthology/N/N13/N13-1090.pdf},
+  timestamp = {Fri, 21 Feb 2014 14:03:41 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/naacl/MikolovYZ13},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}

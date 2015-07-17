@@ -1,18 +1,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces CBOW und Skip-gram im Vergleich, \IeC {\"u}bersetzt nach \cite {DBLP:journals/corr/abs-1301-3781}}}{6}{figure.27}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces CBOW und Skip-gram im Vergleich, \IeC {\"u}bersetzt nach \cite {DBLP:journals/corr/abs-1301-3781}}}{6}{figure.28}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Synonyme durch Rekursion kompletter Korpus.}}{15}{figure.60}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Synonyme durch Rekursion Technologiekorpus.}}{15}{figure.61}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Konkretisierung der Testdaten im kompletten Korpus.}}{18}{figure.68}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Konkretisierung der Testdaten im Technologiekorpus.}}{18}{figure.69}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Verallgemeinerung der Testdaten im kompletten Korpus.}}{21}{figure.76}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Verallgemeinerung der Testdaten im Technologiekorpus.}}{21}{figure.77}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Verschiedene Arten der Beziehungen von den Testdaten zu den \IeC {\"a}hnlichen W\IeC {\"o}rtern im kompletten Korpus.}}{24}{figure.84}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Verschiedene Arten der Beziehungen von den Testdaten zu den \IeC {\"a}hnlichen W\IeC {\"o}rtern im Technologiekorpus.}}{24}{figure.85}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Erkennung von Mehrdeutigkeiten im kompletten Korpus.}}{27}{figure.92}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Erkennung von Mehrdeutigkeiten im Technologiekorpus.}}{27}{figure.93}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

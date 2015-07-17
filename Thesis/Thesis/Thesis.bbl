@@ -12,6 +12,14 @@ Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean.
   compositionality.
 \newblock {\em CoRR}, abs/1310.4546, 2013.
 
+\bibitem[MYZ13]{DBLP:conf/naacl/MikolovYZ13}
+Tomas Mikolov, Wen{-}tau Yih, and Geoffrey Zweig.
+\newblock Linguistic regularities in continuous space word representations.
+\newblock In {\em Human Language Technologies: Conference of the North American
+  Chapter of the Association of Computational Linguistics, Proceedings, June
+  9-14, 2013, Westin Peachtree Plaza Hotel, Atlanta, Georgia, {USA}}, pages
+  746--751, 2013.
+
 \bibitem[{\v R}S10]{rehurek_lrec}
 Radim {\v R}eh{\r u}{\v r}ek and Petr Sojka.
 \newblock {Software Framework for Topic Modelling with Large Corpora}.

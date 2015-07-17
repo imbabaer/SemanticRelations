@@ -47,24 +47,4 @@ class ModelBuilder:
 
         print("Model builded.")
 
-        from Test1.soundtest import playTADA
-        playTADA()
         return model
-
-
-#logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
-#get sentences
-
-
-
-
-
-
-# train word2vec
-#pages/tech_no-punctuation-and-lower
-#lates-pages-articles_no-punctuation-and-lower_new
-#model = gensim.models.Word2Vec(gensim.models.word2vec.LineSentence(folder+'lates-pages-articles_no-punctuation-and-lower_new'),size=400, window=10, min_count=5, workers=12)
-#model = gensim.models.Word2Vec(size=300, window=10, min_count=5, workers=12)
-#model.build_vocab(gensim.models.word2vec.LineSentence(folder+'pages/tech_no-punctuation-and-lower'))
-#model.train(gensim.models.word2vec.LineSentence(folder+'lates-pages-articles_no-punctuation-and-lower_new'))
-
