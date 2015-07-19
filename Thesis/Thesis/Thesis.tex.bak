@@ -325,11 +325,37 @@ Nachdem ein kleinerer Fehler im Reiningungsskript aufgetretetn war\footnote{Unbe
 	
 	
 	\section{Testdaten}
-Im folgenden Kapitel sollen die beiden Word2Vec Modelle, deren Trainingsdaten aus dem Gesamtkorpus beziehungsweise dem Technologiekorpus bestehen, miteinander verglichen werden. Für diesen Vergleich werden einige Experimente durchgeführt (siehe \ref{chap:Experiment1} - \ref{chap:Experiment5}), in diesen Experimenten werden die semantischen Beziehungen zwischen Wörtern betrachtet. Um diese Experimente durchführen zu können, werden Testdaten benötigt.\\
-Da ein Modell auf Technologieartikeln trainiert wird, müssen die Testdaten auch aus dieser Domäne stammen, da 
+Im folgenden Kapitel sollen die beiden Word2Vec Modelle, deren Trainingsdaten aus dem Gesamtkorpus, beziehungsweise dem Technologiekorpus bestehen, miteinander verglichen werden. Für diesen Vergleich werden einige Experimente durchgeführt (siehe \ref{chap:Experiment1} - \ref{chap:Experiment5}), in diesen Experimenten werden die semantischen Beziehungen zwischen Wörtern betrachtet. Um diese Experimente durchführen zu können, werden Testdaten benötigt.\\
+Es wird die Annahme getroffen, dass die Testdaten aus der Domäne Technologie (oder einer Unterdomäne) stammen müssen, da das Vokabular eines Modells aus Technologieartikeln besteht und auf diesen trainiert wird und da dann eher sichergestellt ist, dass diese Wörter auch wirklich im Modell vorhanden sind und somit eine Vektordarstellung haben.\\
+Um diese Annahme zu überprüfen, wurden aus den drei Domänen \textit{Medizin}, \textit{Mode/Fashion} und \textit{Technologie/Pc/Internet} je 50 Begriffe ausgewählt um zu testen, ob diese überhaupt im Technologiemodell vorhanden sind\footnote{Eine vollständige Auflistung dieser Daten ist im Anhang unter \ref{Testdatenvergleich} Testdatenvergleich zu finden.}. Die Begriffe wurden von Hand aus Wikipedia Artikeln ausgesucht, um sicherzustellen, dass diese Begriffe im Gesamtmodell eine Vektorrepräsentation haben.\\
+Wird im Word2Vec Modell mit der Methode \textit{most\_similar(positive=[\grq word\grq], topn=1)} nach ähnlichen Wörtern gesucht, aber das Suchwort ist nicht im Modellvokabular vorhanden, wirft diese Methode eine \glqq KeyError\grqq -Exception. Dieses Verhalten wird bei den Tests zur Überprüfung, ob die Testbegriffe im Modellvokabular vorhanden sind, benutzt. Es wird gezählt, bei wie vielen Suchbegriffen eine solche Exception geworfen wird und diese somit nicht im Modell enthalten sind.\\
+
+Die folgende Tabelle zeigt die Resultate der Worttests. Es sind Domäne, Gesamtanzahl an Testdaten, im Modell gefundene Testdaten und im Modell nicht gefundene Testdaten dargestellt.
+
+\begin{table}[H]
+\caption{Testdatenvergleich}
+\begin{center}
+\begin{tabular}{|l||l|l|l|}
+\hline
+Domäne 	& Gesamtanzahl 	& gefundene & nicht gefundene \\
+ 		&  				& Testdaten	& Testdaten \\
+
+\hline
+ Medizin & 50 & 33 & 17\\
+ \hline
+ Mode/Fashion & 50 & 20 & 30\\
+ \hline
+ Technologie/Pc/Internet & 50 & 45 & 5\\
+ \hline
+ 
+\end{tabular}
+\end{center}
+\end{table}
 
 
-	Die Testdaten umfassen 236 Begriffe (siehe Anhang \ref{sec:Testdaten}) aus der Domäne Technologie/Internet. Die Testdaten werden dazu verwendet, um die ähnlichen Worte in den Modellen zu untersuchen und zu vergleichen. Die genauen Fragestellungen und Experimente werden im Kapitel \ref{chap:Experimente} Experimente ausführlich beschrieben.
+Die Resultate zeigen, dass am meisten Testdaten aus der Domäne \textit{Technologie/Pc/Internet} im Modell gefunden werden.
+Somit bestätigt sich die Annahme, dass die Testdaten auch aus dieser Domäne stammen sollten. 
+Die Testdaten wurden dann auf 236 Begriffe erweitert\footnote{Siehe Anhang \ref{sec:Testdaten} Testdaten.}.
 	
 	
 \newpage
@@ -725,11 +751,85 @@ Es wäre auch möglich das Word2Vec Modell mit N-Grammen, auch Phrases genannt, 
 
 
 \chapter{Anhang}
+\section{Testdatenvergleich}
+\label{Testdatenvergleich}
+Auflistung der Testdaten, die zum Vergleich der Testdomänen benutzt wurden.\\
+
+
+\begin{table}[H]
+\caption{Testdaten aus der Domäne Mode/Fashion}
+\begin{center}
+
+\begin{tabular}{l|l|l|l}
+apron & babydoll & bandana & belt\\
+beret & bermuda & bikini & blazer\\
+blouse & boot & boxer & cap\\
+cargo & chaps & chesterfield & coat\\
+cufflink & cummerbund & fashion & fedora\\
+gaiters & handbag & handkerchief & hat\\
+headband & helmet & hood & hoodie\\
+jacket & jersey & jewellery & muff\\
+necktie & negligee & pajamas & pantsuit\\
+sash & shawl & shirt & shrug\\
+sleeveless & slip & sweater & trunks\\
+turban & umbrella & undershirt & veil\\
+wallet & wetsuit &  & \\
+\end{tabular}\\
+
+\end{center}
+\end{table}
+
+
+\begin{table}[H]
+\caption{Testdaten aus der Domäne Medizin}
+\begin{center}
+\begin{tabular}{l|l|l|l}
+allergy & anatomy & arthritis & aseptic\\
+cardiology & cell & clinic & cornea\\
+dental & disability & disease & ect\\
+excision & finger & fistula & gynaecology\\
+hemostat & hernia & hospital & immunology\\
+iris & knee & limb & lip\\
+mammography & medicine & mouth & mri\\
+nephrology & oncology & otoplasty & pain\\
+prolapse & prosthesis & radiology & radiotherapy\\
+retina & scalpel & scapula & skeleton\\
+skull & sterile & surgery & symptom\\
+tomography & transplant & ultrasound & urology\\
+wrist & xray &  & \\
+\end{tabular}\\
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\caption{Testdaten aus der Domäne Technologie/Pc/Internet}
+\begin{center}
+\begin{tabular}{l|l|l|l}
+acer & amazon & apple & arcade\\
+arpanet & biometrics & blogging & chrome\\
+cookies & cyberwar & dell & drone\\
+dropbox & events & filesharing & firefox\\
+foursquare & gameplay & groupon & hacking\\
+instagram & lenovo & macintosh & malware\\
+microsoft & mobile & motoring & mouse\\
+myspace & paypal & pc & photography\\
+playstation & processor & ram & raspberry\\
+samsung & software & sony & starcraft\\
+steam & surface & tablet & tetris\\
+tumblr & twitter & warcraft & windows\\
+yahoo & youtube &  & \\
+\end{tabular}\\
+\end{center}
+\end{table}
+
+\newpage
 	\section{Testdaten}
 	\label{sec:Testdaten}
+	Vollständige Auflistung der Testdaten, die in den Experimenten\ref{chap:Experiment1} bis \ref{chap:Experiment5} benutzt wurden.\\
 \begin{table}[ht]
-\caption{Testdaten Teil 1}
-\begin{tabular}{l|l|l|l}\\
+\caption{Vollständige Testdaten Teil 1}
+\begin{center}
+\begin{tabular}{l|l|l|l}
 3d & 3ds & 3g & 4chan\\
 4g & acer & acta & activision\\
 adobe & amazon & android & anonymous\\
@@ -749,14 +849,6 @@ encryption & energy & engine & engineering\\
 ereader & events & facebook & fat\\
 filesharing & firefox & flickr & foursquare\\
 gadget & game & gameplay & gamergate\\
-
-\end{tabular}
-\end{table}
-
-\newpage
-\begin{table}[H]
-\caption{Testdaten Teil 2}
-\begin{tabular}{l|l|l|l}\\
 games & gaming & ghz & gmail\\
 google & googlemail & gps & groupon\\
 gta & hacking & halo & handheld\\
@@ -770,6 +862,16 @@ kinect & laptop & lenovo & lg\\
 limewire & link & linkedin & linux\\
 live & machinima & macintosh & macworld\\
 malware & mario & megaupload & microsoft\\
+
+\end{tabular}
+\end{center}
+\end{table}
+
+\newpage
+\begin{table}[H]
+\caption{Vollständige Testdaten Teil 2}
+\begin{center}
+\begin{tabular}{l|l|l|l}\\
 minecraft & mmorpg & mobile & monitor\\
 motoring & mouse & mozilla & myspace\\
 nes & net & netbook & nfs\\
@@ -799,6 +901,7 @@ wow & xbox & xp & y2k\\
 yahoo & youtube & zelda & zynga\\
 
 \end{tabular}
+\end{center}
 \end{table}
 
 \newpage
