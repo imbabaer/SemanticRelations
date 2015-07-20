@@ -77,8 +77,8 @@ def helpFunction1(model,simfile,topn,td,low,high):
     return [low,high]
 
 def testFunction2(model,model2,simfile,topn):
-    #testdatafile = open('testdata.txt','r')
-    testdatafile = open('testdata4.txt','r')
+    testdatafile = open('testdata.txt','r')
+    #testdatafile = open('testdata4.txt','r')
     testdata = testdatafile.readlines()
     testdatafile.close()
     low = [10.0,'','']
@@ -172,12 +172,12 @@ print 'loaded model3'
 simfile3 = open('recursiveTechSimilarities.txt','w')
 #testFunction(model3,simfile3,5)
 
-#model = gensim.models.Word2Vec.load("../Test1/largeModel300105")
+model = gensim.models.Word2Vec.load("../Test1/largeModel300105")
 print 'loaded model'
 simfile4 = open('recursiveCombSimilarities_new.txt','w')
 simfile5 = open('othertestdatasimilarities3.txt','w')
 
-testFunction2(model3,model3,simfile5,5)
+testFunction2(model,model3,simfile4,5)
 
 
 '''

@@ -1,0 +1,218 @@
+acer & genusacer, dicotgenus, magnoliopsidgenus\\
+\hline
+adobe & brick, adobebrick, clay\\
+\hline
+amazon & woman, virago, parrot, adultfemale, amazonriver, mythicalbeing, river\\
+\hline
+android & golem, automaton, humanoid, mechanicalman, robot\\
+\hline
+anonymous & unidentified, onymous, faceless, anon., unknown, nameless, unnamed\\
+\hline
+apple & falsefruit, appletree, maluspumila, ediblefruit, pome, orchardappletree\\
+\hline
+arcade & construction, structure, colonnade, passageway\\
+\hline
+architecture & building, discipline, finearts, computerarchitecture, beauxarts, profession, study, edifice, fieldofstudy, subjectarea, field, branchofknowledge, bailiwick, subjectfield, structure, subject\\
+\hline
+augmented & increased\\
+\hline
+auto & car, automobile, machine, motorvehicle, motorcar, automotivevehicle\\
+\hline
+automobile & auto, car, travel, move, machine, go, locomote, motorvehicle, motorcar, automotivevehicle\\
+\hline
+battlefield & fieldofhonor, parcel, pieceofground, field, tract, fieldofbattle, pieceofland, battleground, parcelofland\\
+\hline
+biometrics & statistics, lifescience, bioscience, biostatistics, biometry\\
+\hline
+blackberry & blackberrybush, bramblebush, berry, drupelet\\
+\hline
+blizzard & series, rash, violentstorm, snowstorm, storm\\
+\hline
+blog & communicate, weblog, diary, journal, intercommunicate\\
+\hline
+broadband & wideband, band, system\\
+\hline
+browser & looker, viewer, watcher, application, webbrowser, spectator, applicationsprogramme, witness, applicationprogram\\
+\hline
+casual & occasional, fooling, unplanned, irregular, accidental, nonchalant, light, unconcerned, perfunctory, informal, chance, careless, insouciant, easy, effortless, passing, freeandeasy, cursory, everyday\\
+\hline
+chrome & plate, atomicnumber24, process, chromiumplate, cr, chromium, treat\\
+\hline
+computing & appliedscience, calculation, computerscience, engineeringscience, process, engineering, computation, technology, procedure\\
+\hline
+console & solace, housing, comfort, consoletable, cabinet, soothe, bracket, table, scientificinstrument\\
+\hline
+cybercrime & lawbreaking, crime\\
+\hline
+cyberwar & cyberterrorism, terrorism, actofterrorism, terroristact\\
+\hline
+data & assemblage, information, aggregation, collection, accumulation\\
+\hline
+dell & dingle, holler, hollow\\
+\hline
+doodle & scrabble, draw, scribble, drawing\\
+\hline
+drone & heavierthanaircraft, bourdon, dawdler, droneon, laggard, idler, go, utter, speak, layabout, poke, dronepipe, pilotlessaircraft, verbalize, pitchcontour, lagger, sound, modulation, monotone, loafer, mouth, bum, intonation, taborpipe, droning, radiocontrolledaircraft, bee, pipe, donothing, verbalise, talk, trailer\\
+\hline
+email & electronicmail, snailmail, telecommunicate, electroniccommunication, netmail\\
+\hline
+encryption & secretwriting, steganography, coding, cryptography, encoding\\
+\hline
+energy & force, healthiness, goodhealth, executivedepartment, strength, zip, liveliness, vigour, forcefulness, vigor, life, sprightliness, vitality, physicalphenomenon, vim, spirit, drive, doe, departmentofenergy, energydepartment, push, getupandgo, muscularity\\
+\hline
+engine & railwaylocomotive, causalagency, selfpropelledvehicle, causalagent, motor, locomotiveengine, cause, locomotive\\
+\hline
+engineering & discipline, appliedscience, room, field, study, profession, fieldofstudy, engineeringscience, subjectarea, application, engineroom, branchofknowledge, bailiwick, subjectfield, technology, practicalapplication, subject\\
+\hline
+fat & heavy, lipide, paunchy, fleshout, loosejowled, animaltissue, portly, porcine, avoirdupois, juicy, rounded, nonfat, adiposetissue, rolypoly, chubby, doublechinned, thick, fatness, jowly, fillout, lipid, compact, embonpoint, zaftig, fattish, buttery, leanness, superfatted, lipoid, buxom, pudgy, fruitful, thickset, plumpout, rich, sebaceous, podgy, suety, fattenout, pyknic, oily, plump, obese, endomorphic, profitable, fatty, tubby, bodilyproperty, zoftig, blubbery, overweight, heavyset, change, stocky, productive, stout, blubber, oleaginous, gross, dumpy, fattytissue, greasy, rotund, corpulent, fattenup, adipose, alter, modify, thin, fertile, abdominous, fleshy, potbellied, fatten, weighty\\
+\hline
+foursquare & square, regularpolygon, resolute, straightforwardly, squarely, rectangle\\
+\hline
+gadget & contraption, gismo, appliance, widget, convenience, contrivance, device, gizmo\\
+\hline
+game & brave, job, back, competition, stake, halting, unfit, animatebeing, wager, occupation, caper, plot, bet, lame, frolic, brute, strategy, gage, score, animal, scheme, creature, play, halt, business, spunky, mettlesome, gamy, beast, diversion, beton, biz, crippled, line, gameequipment, courageous, recreation, gritty, meat, romp, lineofwork, contest, gimpy, secretplan, spirited, punt, gambol, activity, fauna, gamey\\
+\hline
+gaming & recreation, gambling, play, diversion, vice\\
+\hline
+ghz & gigacycle, rate, gc, gigahertz, gigacyclepersecond\\
+\hline
+google & search, explore, searchengine, research\\
+\hline
+gps & globalpositioningsystem, navigationalsystem\\
+\hline
+halo & annulus, toroid, anulus, glory, gloriole, nimbus, light, anchorring, atmosphericphenomenon, aura, aureole, ring, lightness, doughnut\\
+\hline
+handheld & \\
+\hline
+hardware & instrumentation, software, munition, component, arms, computerhardware, ironware, weaponry, implementsofwar, constituent, weaponssystem, element, instrumentality\\
+\hline
+i & ane, digit, iodine, figure, ace, iodin, letterofthealphabet, unity, one, 1, single, halogen, cardinal, letteri, letter, element, alphabeticcharacter, chemicalelement, atomicnumber53\\
+\hline
+ie & idest, i.e., explorer, webbrowser, internetexplorer, browser\\
+\hline
+indie & independent, popgroup, filmcompany\\
+\hline
+internet & cyberspace, net, computernetwork\\
+\hline
+keyboard & device, holder\\
+\hline
+kindle & ignite, flareup, raise, fire, light, make, elicit, inflame, enkindle, arouse, evoke, provoke, create, conflagrate\\
+\hline
+laptop & laptopcomputer, portablecomputer\\
+\hline
+link & datalink, nexus, relate, colligate, dissociate, shape, disconnectedness, connect, electricalcircuit, radiolink, connexion, programline, disconnect, yoke, attach, union, fixing, fastener, unite, communicationchannel, connectedness, statement, tie, cogitate, channel, communicationsystem, form, associate, linearunit, electriccircuit, unification, linkup, fastening, line, linkage, join, instruction, intergroupcommunication, cerebrate, connection, contact, command, holdfast, circuit, liaison, think, tiein\\
+\hline
+linux & unix, unixsystem, unixoperatingsystem\\
+\hline
+live & ringing, gothrough, dead, bouncy, springy, exist, lively, inplay, go, loaded, animate, liveborn, holdout, liveout, untaped, living, elastic, recorded, current, hot, vital, resilient, dwell, inhabit, unrecorded, unfilmed, viable, be, livein, liveon, alive, survive, active, holdup, last, reverberant, see, know, experience, endure, subsist, undergo, charged\\
+\hline
+macintosh & fabric, cloth, material, raincoat, textile, mackintosh, mac, waterproof, mack\\
+\hline
+mobile & perambulating, motile, stabile, sculpture, seaborne, changeful, mobileriver, transferrable, floating, motorized, changeable, rotatable, mechanised, immobile, transplantable, flying, peregrine, airborne, port, maneuverable, versatile, raisable, fluid, raiseable, metropolis, manoeuvrable, city, unsettled, movable, waterborne, ambulatory, moving, ambulant, moveable, roving, mechanized, transferable, nomadic, urbancenter, rangy, racy, transportable, river, wandering\\
+\hline
+monitor & varan, watercraft, proctor, guardian, supervise, rideherdon, lizard, videodisplay, monitorlizard, admonisher, observe, monitoringdevice, defender, vessel, supervisor, reminder, protector, display, shielder, electronicequipment\\
+\hline
+motoring & driving\\
+\hline
+mouse & pussyfoot, gnawer, gnawinganimal, bruise, walk, rodent, individual, shiner, manipulate, contusion, electronicdevice, sneakaway, computermouse, blackeye, creep, someone, somebody, sneakout, sneak, soul, person, mortal\\
+\hline
+net & takehome, sack, tissue, fabric, nett, gross, netprofit, takeholdof, goal, profit, netincome, textile, earnings, income, pay, weave, final, trap, cyberspace, material, lucre, web, internet, bear, cloth, mesh, gain, catch, computernetwork, gameequipment, meshing, network, last, clear, yield, meshwork, benefit, ultimate, sackup, grab, profits\\
+\hline
+oracle & prophesier, diviner, seer, prophet, vaticinator, shrine, prophecy, divination\\
+\hline
+pc & microcomputer, personalcomputer, digitalcomputer\\
+\hline
+photography & business, process, pictorialrepresentation, physicalprocess, job, picturetaking, lineofwork, line, picturing, occupation\\
+\hline
+pi & detective, privateinvestigator, letterofthealphabet, antiviraldrug, privateeye, antiviralagent, principalinvestigator, manofscience, scientist, alphabeticcharacter, privatedetective, letter, transcendentalnumber, shamus, proteaseinhibitor, antiviral, operative, sherlock\\
+\hline
+piracy & plagiarization, plagiarism, buccaneering, hijacking, highjacking, copyrightinfringement, plagiarisation, infringementofcopyright\\
+\hline
+pirate & commandeer, despoiler, thief, plunderer, pillager, freebooter, buccaneer, ship, plagiariser, stealer, plagiarizer, literarypirate, searover, pirateship, raider, plagiarist, spoiler, seize, looter, searobber, hijack, steal, highjack\\
+\hline
+platform & politicalplatform, automaticdataprocessingsystem, level, horizontalsurface, weaponsplatform, politicalprogram, adpsystem, writtendocument, program, computingsystem, structure, papers, adps, chopine, construction, document, computersystem, shoe\\
+\hline
+playback & electronicequipment, soundreproduction\\
+\hline
+power & commonwealth, bodypolitic, force, office, supply, mathematicalnotation, powerfulness, mightiness, bigbusinessman, quality, baron, superpower, might, index, strength, knowledge, provide, respublica, state, causalagent, cause, topexecutive, powerlessness, tycoon, ability, causalagency, nation, inability, physicalphenomenon, manofaffairs, cater, ply, greatpower, exponent, king, land, magnate, worldpower, mogul, cognition, businessleader, country, majorpower, businessman, noesis\\
+\hline
+processor & centralprocessingunit, electronicequipment, business, centralprocessor, c.p.u., worker, computerhardware, hardware, mainframe, businessorganisation, businessconcern, businessorganization, cpu, concern\\
+\hline
+programming & creatingbymentalacts, planning, computerprogramming, scheduling, computerprograming, programing\\
+\hline
+ps & note, postscript, annotation, notation\\
+\hline
+python & mythicalcreature, boa, mythicalmonster, spirit, disembodiedspirit\\
+\hline
+raider & corporateinvestor, spoiler, looter, despoiler, thief, plunderer, pillager, freebooter, stealer\\
+\hline
+ram & pound, force, house, sign, thrust, ariestheram, individual, mansion, crash, signofthezodiac, sheep, drive, jam, aries, cram, chockup, volatilestorage, someone, somebody, clash, tup, wad, tool, jampack, collide, randomaccessmemory, drivein, ramdown, planetaryhouse, soul, person, stuff, starsign, mortal, read/writememory, randommemory\\
+\hline
+raspberry & razz, bramblebush, shout, hiss, yell, hoot, raspberrybush, bird, bronxcheer, cry, call, berry, boo, outcry, vociferation, razzing, drupelet, snort\\
+\hline
+recommendation & congratulations, kudos, passport, testimonial, characteristic, advice, extolment, praise, goodword\\
+\hline
+retro & fashion, expostfacto, retrospective, retroactive\\
+\hline
+robot & golem, automaton, mechanism\\
+\hline
+safari & huntingexpedition, campaign, expedition\\
+\hline
+search & investigate, lookinto, highercognitiveprocess, look, hunting, examination, explore, hunt, see, scrutiny, examine, investigation, lookup, lookfor, activity, investigating, operation, research, seek\\
+\hline
+security & warranty, legalinstrument, electricaldevice, securitymeasures, guard, surety, guarantee, certificate, insecurity, section, instrument, safety, department, warrant, fearlessness, securitymeasure, transferredproperty, officialdocument, protection, safeguard, bravery, warrantee, assets, securitysystem, legaldocument, transferredpossession, precaution, securitydepartment\\
+\hline
+software & code, computercode, softwareprogram, softwarepackage, package, hardware, softwaresystem, computersoftware\\
+\hline
+sonic & hearable, supersonic, transonic, audible, subsonic\\
+\hline
+spam & junkemail, electronicmail, tinnedmeat, cannedmeat, netmail, email\\
+\hline
+steam & goup, move, uprise, seered, steamclean, steamer, go, arise, anger, giveout, travel, moveup, comeup, rise, lift, locomote, cook, giveoff, vapour, makeclean, clean, vapor, emit\\
+\hline
+stream & feed, crowd, float, course, bodyofwater, beadrift, blow, oozeout, raincatsanddogs, pelt, current, swarm, transude, flowing, raindown, crowdtogether, watercourse, move, run, drift, rain, pullulate, water, line, rainbuckets, wellout, teem, exudate, flow, pour, motion, ooze, movement, exude\\
+\hline
+sun & lie, lord'sday, sunshine, star, influentialperson, solarize, light, expose, visibleradiation, sunbathe, personage, sunlight, sunday, restday, importantperson, dayofrest, solarise, dominicus, visiblelight, insolate\\
+\hline
+surface & layer, opencast, publicknowledge, ascend, bound, aspect, open, comeon, goup, skindeep, superficial, appear, aerofoil, subsurface, overhead, artefact, comeup, showup, rise, turnup, shallow, artifact, earth'ssurface, device, boundary, coat, controlsurface, cover, bounds, opencut, facet, comeout, generalknowledge, aboveground, gradeconstructed, airfoil, riseup\\
+\hline
+tablet & bar, dose, lozenge, paper, pad, tab, cake, padofpaper, slab, pill\\
+\hline
+technology & discipline, appliedscience, field, study, profession, fieldofstudy, engineeringscience, subjectarea, application, engineering, branchofknowledge, bailiwick, subjectfield, practicalapplication, subject\\
+\hline
+technophile & enthusiast, fancier, technophobe\\
+\hline
+ted & teddyboy, plugugly, toughguy\\
+\hline
+telecom & medium, telecommunication\\
+\hline
+television & telecomequipment, boobtube, televisionsystem, televisionreceiver, telecommunicationsystem, telecomsystem, tv, telly, idiotbox, gogglebox, receivingsystem, broadcasting, video, televisionset, tvset, telecasting, telecommunicationequipment, receiver\\
+\hline
+tomb & spot, topographicpoint, place, grave\\
+\hline
+trojan & city, asiatic, trojanhorse, urbancenter, metropolis, dardanian, asian, dardan, malevolentprogram\\
+\hline
+twitch & grip, vellication, cramp, squeeze, force, jerk, pull, pinch, tweet, move, twinge, musclespasm, moveinvoluntarily, flip, twitching, draw, nip, movereflexively, spasm\\
+\hline
+twitter & sound, chitter, twirp, cheep, chirp, chirrup, peep\\
+\hline
+vine & tracheophyte, vascularplant\\
+\hline
+virus & infectiveagent, computervirus, microorganism, agency, delegacy, infectiousagent, representation, malevolentprogram\\
+\hline
+web & physicalobject, www, blade, computernetwork, network, tissuelayer, material, object, system, worldwideweb, textile, cloth, tissue, vane, trap, weave, membrane, entanglement, net, scheme, fabric\\
+\hline
+wheel & bicycle, wheelaround, wheeledvehicle, move, steeringwheel, helm, goaround, go, force, transport, roulettewheel, travel, machine, bike, instrumentoftorture, roll, locomote, pedal, revolve, gameequipment, cycle, rotate, ride, simplemachine, handwheel, rack\\
+\hline
+wifi & lan, wlan, localareanetwork, wirelessfidelity, wirelesslocalareanetwork\\
+\hline
+windows & os, operatingsystem\\
+\hline
+wireless & communicationsystem, telecommunication, receivingset, telecom, receiver, radiocommunication, radioset, receivingsystem, broadcasting, radio, tuner, wired, radioreceiver\\
+\hline
+wow & sidesplitter, jest, riot, jape, bellylaugh, impress, thighslapper, howler, laugh, joke, gag, scream\\
+\hline
+y2k & yr, twelvemonth, year\\
+\hline
+yahoo & rube, bumpkin, fictionalcharacter, character, searchengine, rustic, hayseed, chawbacon, yokel, fictitiouscharacter, hick\\
+\hline

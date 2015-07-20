@@ -167,18 +167,17 @@ Goal of this thesis will be to determine whether a general body or a domain spec
 	Zum erfolgreichen Training des Word2Vec Modells wird eine sehr große Menge an Daten gebraucht\footnote{In \cite{DBLP:journals/corr/MikolovSCCD13} werden Trainingsdaten mit bis zu 30 Milliarden Wörtern benutzt.}. \\
 	In dieser Arbeit werden unterschiedliche Datenkorpora als Trainingsdaten für unterschiedliche Word2Vec Modelle benutzt.\\	
 	Für den ersten Korpus wurde der komplette englischsprachige Wikipedia Korpus verwendet\footnote{Dump von März 2015, http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015}.\\
-	Der zweite in der Arbeit verwendete Korpus besteht auch aus Wikipedia Artikeln, allerdings wurden hier nur technologiespezifische Artikel verwendet. Der komplette englische Wikipedia Korpus wurde zuerst in die einzelnen Artikel aufgeteilt und diese wurden dann mit einem NBC in die Klassen \textit{tech, entertainment, sport, science, politic} eingeteilt.\\
+	Der zweite in der Arbeit verwendete Korpus besteht auch aus Wikipedia Artikeln, allerdings wurden hier nur technologiespezifische Artikel verwendet. Der komplette englische Wikipedia Korpus wurde zuerst in die einzelnen Artikel aufgeteilt und diese wurden dann mit einem NBC in die Klassen \textit{tech, entertainment, sport, science, politic} eingeteilt.
 	
 
 
 	\section{Externe Programme und Hilfsmittel}
 	Dieser Abschnitt enthält eine Auflistung mit kurzen Beschreibungen, der in dieser Arbeit verwendeten Hilfsmittel und externen Programme.\\
-	\vspace{1em}\\	
 	\textbf{gensim}\cite{rehurek_lrec}\footnote{https://radimrehurek.com/gensim/, abgerufen am 24.06.2015} ist eine Bibliothek für Python. Sie enthält unter anderem eine performanzoptimierte Implementierung von Word2Vec.\\ 
-	\vspace{1em}\\
-	Der \textbf{NBC}, der zum Klassifizieren der Artikel verwendet wurde, ist der im DataMining Praktikum\footnote{https://www.hdm-stuttgart.de/\textasciitilde maucher/Data\_Mining\_SS15.html und https://www.mi.hdm-stuttgart.de/mib/studium/intern/skripte/Data\_Mining/WS1213/V4SpamFilter.pdf, abgerufen am 17.07.2015} selbst implementierte.
-	\vspace{1em}\\
+	Der \textbf{NBC}, der zum Klassifizieren der Artikel verwendet wurde, ist der im DataMining Praktikum\footnote{https://www.hdm-stuttgart.de/\textasciitilde maucher/Data\_Mining\_SS15.html und https://www.mi.hdm-stuttgart.de/mib/studium/intern/skripte/Data\_Mining/WS1213/V4SpamFilter.pdf, abgerufen am 17.07.2015} selbst implementierte.\\
 	\textbf{PyCharm}\footnote{https://www.jetbrains.com/pycharm/, abgerufen am 02.07.2015} wurde als Editor und zum Ausführen der Python Skripte verwendet.
+	\textbf{Thesaurus} ist ein Webservice\footnote{http://thesaurus.altervista.org/thesaurus/v1, abgerufen am 20.07.2015}, der mittels einer HTTP GET Nachricht, mit den Parametern \textit{word}, \textit{language} und \textit{key}, eine Liste von Synonymen des Wortes \textit{word} liefert. Die Synonyme stammen aus den Thesaurus Lexika von OpenOffice\footnote{https://www.openoffice.org/, abgerufen am 20.07.2015}.
+
 	
 	\section{Vorverarbeitung}
 	\label{sec:Vorverarbeitung}
@@ -361,82 +360,105 @@ Die Testdaten wurden dann auf 236 Begriffe erweitert\footnote{Siehe Anhang \ref{
 \newpage
 \chapter{Experimente}
 \label{chap:Experimente}
-In diesem Kapitel sollen die unterschiedlichen Korpora (Gesamtkorpus\footnote{vgl. \ref{sec:Gesamtkorpus}} und Techkorpus\footnote{vgl. \ref{sec:Teilkorpus}}) untersucht werden. Dies soll durch ausgewählte Fragestellungen realisiert werden.
-\\Die Fragestellungen beziehen sich immer auf die Ergebnisse, die aus den Tastdaten\footnote{vgl. \ref{sec:Testdaten}} erhaltenen ähnlichen Worten.
-\\Jedes Experiment ist in drei Teile aufgeteilt Beschreibung, Durchführung und Interpretation/Ergebnis.\\
-Zum Vergleichen der ähnlichen Worte der unterschiedlichen Korpora wurde eine Datei erzeugt, in der die Testdaten und ihre fünf ähnlichsten Worte sowie deren fünf ähnlichsten Worte (Rekursion), leserlich formatiert, ausgegeben werden.\\ 
+In diesem Kapitel sollen die unterschiedlichen Word2Vec Modelle mit ihren Trainingskorpora (Gesamtkorpus\footnote{Siehe \ref{sec:Gesamtkorpus} Gesamtkorpus} und Techkorpus\footnote{Siehe \ref{sec:Teilkorpus} Teilkorpus}) untersucht werden. Dies soll durch fünf Experimente realisiert werden. In allen Experimenten werden semantischen Beziehungen zwischen Wörtern untersucht. Jedes Experiment ist in drei Teile aufgeteilt, Beschreibung, Durchführung und Interpretation/Ergebnis.\\
+Als Grundlage für die Experimente dienen die Testdaten\footnote{Siehe \ref{sec:Testdaten} Testdaten} und die mit der Methode \textit{most\_similar()\footnote{gensim.models.word2vec.Word2Vec.most\_similar()}} gefunden fünf ähnlichsten Worte. Zum Vergleichen der ähnlichen Worte der unterschiedlichen Korpora wurde eine Datei erzeugt, in der die Testdaten und ihre fünf ähnlichsten Worte, mit den dazugehörigen Kosinusähnlichkeiten, leserlich formatiert, ausgegeben werden.\\ 
 
 	\section{Synonymsuche durch Rekursion}
 \label{chap:Experiment1}
-		\subsection{Beschreibung}
-		Es soll untersucht werden, ob es möglich ist, Synonyme eines Begriffs zu finden, indem man die vom Modell erhaltenen ähnlichen Worte dieses Begriffs erneut als Input(Suchbegriffe) der Methode  \textit{most\_similar()} verwendet. Also durch einmalige Rekursion.\\
-Eine Anwendung hierfür könnte ein Thesaurus-Lexikon sein.
+		\subsection*{Beschreibung}
+		Im ersten Experiment soll untersucht werden, ob es möglich ist, im Word2Vec Modell Synonyme eines Begriffs zu finden. Hierzu sollen allerdings nicht die ähnlichen Worte der Testbegriffe betrachtet werden, sondern deren ähnliche Worte. Die Suche nach ähnlichen Worten wird somit ein Mal rekursiv angewandt. Die Überlegung ist, dass durch den rekursiven Aufruf Rückbeziehungen zu den ursprünglichen Suchbegriffen und deren Synonymen entstehen. Eine Anwendung für die Synonymsuche durch Rekursion könnte ein Thesaurus-Lexikon sein.\\
+		
+		\subsection*{Durchführung}
+		Eine Liste mit den Synonymen der Testbegriffe wird vor dem Experiment mit der Hilfe eines Webservices\footnote{Über http://thesaurus.altervista.org/, abgerufen am 20.07.2015} erstellt\footnote{Siehe \ref{sec:Synonymliste}}. Dieser Webservice liefert aber nur für 109 der insgesamt 236 Testwörter Synonyme. So wurden für dieses Experiment nur diese 109 Testwörter benutzt.\\
+		Im ersten Schritt dieses Experiments müssen die ähnlichen Worte ($W_1$) der Testbegriffe, mit der Methode \textit{most\_similar()} des Word2Vec Modells, herausgefunden werden. Diese fünf Wörter ($W_1$) werden in der späteren Analyse nicht betrachtet. Im nächsten Schritt werden die fünf erhaltenen ähnlichen Wörter ($W_1$) dann als Eingabe für die \textit{most\_similar()}-Methode benutzt und liefern wieder jeweils fünf ähnliche Wörter ($W_2$) zurück. Die insgesamt 25 Begriffe werden im letzten Schritt des Experiments dann mit den Synonymen des ursprünglichen Testbegriff verglichen. Sobald einer der 25 erhaltenen Begriffe in der Liste der Synonyme des jeweiligen Testwortes enthalten ist, wird dieses Wort als \textit{Synonym enthalten} gezählt.\\
+		Die nachfolgende Tabelle listet die Resultate dieses Experiments auf. Es sind die Gesamtanzahl der Testwörter, die Anzahl an Testwörter, bei denen Synonyme gefunden wurden und die Anzahl der Testwörter, bei denen keine Synonyme gefunden wurden, sowie die Anzahl der Worte, die nicht im jeweiligen Modell enthalten sind, abgebildet.
+		
+		
 
 		
 		
-		\subsection{Durchführung}
-		Oft war der Suchbegriff aus den Testdaten mit in den ähnlichen Wörtern der ähnlichen Wörter. Da in diesem Experiment pro Suchbegriff 25 Ergebnisbegriffe untersucht werden mussten, nahm es etwas mehr Zeit in Anspruch als die übrigen Experimente. Zudem waren viele Begriffe sehr themenspezifisch, deren Zusammenhang mit dem Suchbegriff aus den Testdaten erst einmal herausgefunden werden musste.\\
-		Im Technologiekorpus waren einige Suchbegriffe nicht enthalten.\\
-		Sobald ein Synonym vorhanden war, wurde der Suchbegriff als \textit{Synonym enthalten} markiert.
-	
 \begin{table}[H]
 \caption{Experiment 1: Synonyme durch Rekursion}
 \begin{center}
 \begin{tabular}{|l||l|l|l|l|}
 \hline
-Korpus & Synonyme & Synonyme  & Wort nicht  & Relation\\
- & nicht enthalten & enthalten & im Korpus & \\
+\textbf{Korpus} & \textbf{Gesamtanzahl}	&\textbf{Synonyme} & \textbf{Synonyme}  & \textbf{Worte nicht}  \\
+ &			& \textbf{nicht enthalten} & \textbf{enthalten} & \textbf{im Korpus}  \\
 
 \hline
- Komplett & 187 & 49 & 0 & 20,8\% \\
+ Komplett & 109 & 97 & 12 & 0 \\
  \hline
- Technologie & 191 & 20 & 25 & 8,5\% (9,5\%)\\
+ Technologie & 109 & 102 & 2 & 5 \\
  \hline
  
 \end{tabular}
 \end{center}
 \end{table}
-		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
 		
-Einige Beispiele:\\
- 
+
 \begin{table}[H]
 \caption{Beispiele von Synonyme durch Rekursion}
+\label{tab:bspsynoyme}
 \begin{center}
 \begin{tabular}{|l||l|l|l|l|}
 \hline
-Suchbegriff & Korpus & Synonyme   \\
+\textbf{Suchbegriff} & \textbf{Modell} & \textbf{Synonym}   \\
 
 \hline
- 3d & Komplett & threedimensional, stereoscopic, autostereoscopic \\
-  	& Technologie& threedimensional, autostereoscopic\\
+ engineering & Technologie & discipline \\
  \hline	
- bitcoin	& Komplett	& cryptocurrencies	\\
- 	\hline
- hd	 & Komplett 	& 1080p, 1920x1080 \\
-  	 & Technologie	& 1080p, 1920x1080 \\
- 	\hline
- keyboard	& Komplett & synthesizer	\\
- 	\hline
- wifi	&	Komplett &	wlan\\
+ power	& Technologie	& supply	\\
+ \hline
+ \hline
+auto & Komplett & automobile\\
+\hline
+automobile & Komplett & car\\
+\hline
+cyberwar & Komplett & cyberterrorism\\
+\hline
+encryption & Komplett & cryptography\\
+\hline
+google & Komplett & search\\
+\hline
+linux & Komplett & unix\\
+\hline
+mouse & Komplett & rodent\\
+\hline
+processor & Komplett & cpu\\
+\hline
+sun & Komplett & star\\
+\hline
+telecom & Komplett & telecommunication\\
+\hline
+television & Komplett & tv\\
+\hline
+wifi & Komplett & wlan\\
  	\hline
  
 \end{tabular}
 \end{center}
 \end{table}
 		
-		\subsection{Interpretation/Ergebnis}
-		Wie aus den Daten hervorgeht, werden zwar einige Synonyme der Suchbegriffe gefunden, allerdings nicht in großen Mengen. Dazu kommt auch, dass sich die beiden Korpora nochmal unterscheiden. Im kompletten Korpus wurden in \textit{20,8\%} der Testfälle Synonyme gefunden, wobei es im Technologiekorpus sogar nur weniger als halb so viele (\textit{8,5\%}) waren.\\
+ In der Tabelle \ref{tab:bspsynoyme} sind alle gefundenen Synonyme und die dazugehörigen Testwörter, sowie der Korpus in dem sie auftreten, aufgelistet.
+		
+		\subsection*{Interpretation/Ergebnis}
+		Wie aus den Daten hervorgeht, werden zwar einige Synonyme der Suchbegriffe gefunden, allerdings jedoch nicht viele. Ein Grund, der die geringe Anzahl an Synonymen erklären könnte, könnte mit der räumlichen Darstellung der Worte im Word2Vec Modell zusammenhängen. Die ähnlichen Worte ($W_1$) eines Suchbegriffs ($O$) haben einen minimalen räumlichen Abstand zum Suchbegriff (O). 
+		Die durch die Rekursion erhaltenen ähnlichen Worte ($W_2$) der ähnlichen Worte ($W_1$), haben wieder einen minimalen räumlichen Abstand (zu $W_1$), allerdings ist der Abstand vom ursprünglichen Suchbegriff ($O$) zu den in $W_2$ enthaltenen Wörter größer als zu den Worten aus $W_1$, denn sonst wären sie schon in der Menge $W_1$ enthalten. Also sind diese Wörter noch weiter vom ursprünglichen Suchbegriffs ($O$) entfernt und somit unähnlicher.\\
+		Des Weiteren hängt das Ergebnis mit den verwendeten Synonymen zusammen. 
+		
+		
+		
+		. Dazu kommt auch, dass sich die beiden Korpora nochmal unterscheiden. Im kompletten Korpus wurden in \textit{20,8\%} der Testfälle Synonyme gefunden, wobei es im Technologiekorpus sogar nur weniger als halb so viele (\textit{8,5\%}) waren.\\
 		
 		Somit ist die Vermutung dieses Experiments widerlegt.
 		
 		
 	
 	\section{Konkretisierungen}
-		\subsection{Beschreibung}
-		In diesem Experiment ist zu untersuchen ob die ähnlichen Worte im domänenspezifischen Korpus eine Konkretisierung des Suchbegriffs darstellen.\\
-		Dies ist gerade bei mehrdeutigen Worten interessant, da hier dann klar eine Definition dominant sein könnte und somit klar ist, in welchem Kontext das mehrdeutige Wort in dieser Domäne gemeint ist.\\
-		\subsection{Durchführung}
+		\subsection*{Beschreibung}
+		In diesem Experiment soll das domänenspezifischen Technologiemodell untersucht werden. Es wird untersucht, ob die ähnlichen Wörter der Testdaten eine Konkretisierung des jeweiligen Suchbegriffs darstellen.\\
+		Dies ist gerade bei mehrdeutigen Wörtern interessant, da hier dann eine Sinnrichtung in den ähnlichen Wörtern dominant vertreten sein könnte und somit klar ist, in welchem Kontext das mehrdeutige Wort in dieser Domäne gemeint ist.\\
+		\subsection*{Durchführung}
 		Die Fragestellung bezieht sich zwar nur auf den domänenspezifischen Korpus, allerdings wurde auch der allgemeine Korpus auf diese Fragestellung hin untersucht.\\
 		Auch bei diesem Experiment nahm das Nachschlagen von mehreren ähnlichen Worten einige Zeit in Anspruch. Denn um beurteilen zu können, ob es sich um eine Konkretisierung handelt, müssen die inhaltlichen Beziehungen zwischen Suchbegriff und ähnlichen Worten klar sein. \\
 		
@@ -488,16 +510,16 @@ Suchbegriff & Korpus & Konkretisierung   \\
 \end{table}
 		
 		
-		\subsection{Interpretation/Ergebnis}
+		\subsection*{Interpretation/Ergebnis}
 		Zu beobachten ist, dass der Technologiekorpus besser konkretisiert, als der komplette allgemeine Korpus. Da dies aber nur in ca. 30\% der Testfälle passiert, ist es schwierig, zu verallgemeinern, dass die ähnlichen Worte im Technologiekorpus eine Konkretisierung sind, somit ist auch hier die Annahme des Experiments widerlegt.
 		
 		
 	
 	\section{Verallgemeinerungen}
-		\subsection{Beschreibung}
+		\subsection*{Beschreibung}
 		In diesem Experiment soll untersucht werden, ob die ähnlichen Worte im allgemeinen kompletten Korpus eine Verallgemeinerung des Suchbegriffs darstellen.\\
 		
-		\subsection{Durchführung}
+		\subsection*{Durchführung}
 		Die Fragestellung bezieht sich zwar nur auf den allgemeinen Korpus, allerdings wurde auch der Technologiekorpus auf diese Fragestellung hin untersucht.\\
 		Wie beim vorherigen Experiment mussten viele Begriffe nachgeschlagen werden,  um die inhaltlichen Beziehungen zwischen Suchbegriff und ähnlichen Worten beurteilen zu können.\\
 		
@@ -554,16 +576,16 @@ Suchbegriff & Korpus & Verallgemeinerung   \\
 
 
   
-		\subsection{Interpretation/Ergebnis}
+		\subsection*{Interpretation/Ergebnis}
 		Die Untersuchungen bei diesem Experiment zeigen, dass die ähnlichen Worte eines Suchbegriffs in mehr als der Hälfte der Fälle, eine Verallgemeinerung des Suchbegriffs sind. \\
 		Die Annahme dieses Experiments wurde bestätigt.\\
 		
 		
 	
 	\section{Unterschiedliche Beziehungen}
-		\subsection{Beschreibung}
+		\subsection*{Beschreibung}
 		In diesem Experiment soll untersucht werden, ob die Beziehungen zwischen den Suchbegriffen und den gefunden ähnlichen Worten von unterschiedlichen Arten sind. Die Beziehungen sollen in \textit{syntaktisch, synonym, gleiches, gegenteiliges, in Beziehung} und \textit{verschiedenes} eingeteilt werden.
-		\subsection{Durchführung}
+		\subsection*{Durchführung}
 		Für dieses Experiment müssen beide Korpora untersucht werden, um eine Aussage machen zu können, ob sich die Beziehungsarten unterscheiden. Die Arten \textit{synonym} und \textit{gegenteilig} traten, bei den in der Arbeit verwendeten Testdaten, nicht auf. Die Art \textit{verschiedenes} wurde gewählt, wenn mehrere andere Beziehungsarten in den ähnlichen Worten vorhanden waren.
 		
 \begin{table}[H]
@@ -626,7 +648,7 @@ verschiedenes& itunes	& Komplett& spotify (0,770), beatport (0,756),\\
 		
 		
 		
-		\subsection{Interpretation/Ergebnis}
+		\subsection*{Interpretation/Ergebnis}
 		Wie man in der Auswertung der Daten erkennt, ist bei beiden Korpora die Beziehungsart \textit{in Beziehung} am stärksten vorhanden, dies kommt daher, dass im Word2Vec Modell Wörter die in ähnlichem Kontext stehen, auch nahe in der Vektorrepräsentation zusammen stehen. Die Art \textit{gleiches} ist im kompletten allgemeinen Korpus mit 34,3\% die zweithäufigste Art, allerdings kommt sie im Technologiekorpus nur ca. halb so oft vor (19,9\%). Hingegen ist die Anzahl mit \textit{verschiedenen} Arten etwas höher, sowie die \textit{in Beziehung}. Der Unterschied zwischen den Beziehungsarten in den unterschiedlichen Korpora ist also nicht zu groß, allerdings deutlich erkennbar.\\
 		
 		
@@ -636,9 +658,9 @@ verschiedenes& itunes	& Komplett& spotify (0,770), beatport (0,756),\\
 	\section{Erkennen von Mehrdeutigkeit}
 	
 \label{chap:Experiment5}
-		\subsection{Beschreibung}
+		\subsection*{Beschreibung}
 		Das letzte Experiment beschäftigt sich mit der Mehrdeutigkeit von Worten. Es soll untersucht werden, ob im allgemeinen kompletten Korpus die unterschiedlichen Bedeutungen eines mehrdeutigen Wortes in den ähnlichen Worten repräsentiert werden.\\
-		\subsection{Durchführung}
+		\subsection*{Durchführung}
 		Auch hier wurden beide Korpora analysiert um zu vergleichen ob sie sich unterscheiden im Bezug auf mehrdeutige Worte.\\
 		
 		\begin{table}[H]
@@ -698,7 +720,7 @@ raspberry& Komplett& nein & apple (0,657), apricot (0,629), \\
 \end{table}
 		
 		
-		\subsection{Interpretation/Ergebnis}
+		\subsection*{Interpretation/Ergebnis}
 		Erstaunlicherweise unterscheiden sich in diesem Experiment die beiden Korpora nicht in der Anzahl der erkannten Mehrdeutigkeiten. Allerdings hat öfters das eine Modell eine Bedeutung abgedeckt und das andere Modell eine oder die andere.\\
 		Es ist deutlich zu erkennen, dass beide Modelle nicht geeignet sind um eine Mehrdeutigkeit in den Testdaten in ihren ähnlichen Worten abzubilden.\\
 		Somit ist die Annahme dieses Experiments widerlegt.
@@ -825,8 +847,8 @@ yahoo & youtube &  & \\
 \newpage
 	\section{Testdaten}
 	\label{sec:Testdaten}
-	Vollständige Auflistung der Testdaten, die in den Experimenten\ref{chap:Experiment1} bis \ref{chap:Experiment5} benutzt wurden.\\
-\begin{table}[ht]
+
+\begin{table}[H]
 \caption{Vollständige Testdaten Teil 1}
 \begin{center}
 \begin{tabular}{l|l|l|l}
@@ -862,6 +884,13 @@ kinect & laptop & lenovo & lg\\
 limewire & link & linkedin & linux\\
 live & machinima & macintosh & macworld\\
 malware & mario & megaupload & microsoft\\
+minecraft & mmorpg & mobile & monitor\\
+motoring & mouse & mozilla & myspace\\
+nes & net & netbook & nfs\\
+nintendo & nokia & oracle & ouya\\
+p2p & paypal & pc & phablet\\
+phishing & photography & photoshop & pi\\
+pinterest & piracy & pirate & platform\\
 
 \end{tabular}
 \end{center}
@@ -872,13 +901,6 @@ malware & mario & megaupload & microsoft\\
 \caption{Vollständige Testdaten Teil 2}
 \begin{center}
 \begin{tabular}{l|l|l|l}\\
-minecraft & mmorpg & mobile & monitor\\
-motoring & mouse & mozilla & myspace\\
-nes & net & netbook & nfs\\
-nintendo & nokia & oracle & ouya\\
-p2p & paypal & pc & phablet\\
-phishing & photography & photoshop & pi\\
-pinterest & piracy & pirate & platform\\
 playback & playstation & pokemon & power\\
 processor & programming & ps & ps2\\
 ps3 & ps4 & psp & python\\
@@ -973,5 +995,239 @@ while (<>) {
   }
 }
 	\end{verbatim}
+
+\newpage
+\section{Synonymliste}	
+	\label{sec:Synonymliste}
+	\begin{table}[H]
+\caption{Synonymliste}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+Wort & Synonym\\
+\hline
+acer & genusacer, dicotgenus, magnoliopsidgenus\\
+\hline
+adobe & brick, adobebrick, clay\\
+\hline
+amazon & woman, virago, parrot, adultfemale, amazonriver, mythicalbeing, river\\
+\hline
+android & golem, automaton, humanoid, mechanicalman, robot\\
+\hline
+anonymous & unidentified, onymous, faceless, anon., unknown, nameless, unnamed\\
+\hline
+apple & falsefruit, appletree, maluspumila, ediblefruit, pome, orchardappletree\\
+\hline
+arcade & construction, structure, colonnade, passageway\\
+\hline
+architecture & building, discipline, finearts, computerarchitecture, beauxarts, profession, study, edifice, fieldofstudy, subjectarea, field, branchofknowledge, bailiwick, subjectfield, structure, subject\\
+\hline
+augmented & increased\\
+\hline
+auto & car, automobile, machine, motorvehicle, motorcar, automotivevehicle\\
+\hline
+automobile & auto, car, travel, move, machine, go, locomote, motorvehicle, motorcar, automotivevehicle\\
+\hline
+battlefield & fieldofhonor, parcel, pieceofground, field, tract, fieldofbattle, pieceofland, battleground, parcelofland\\
+\hline
+biometrics & statistics, lifescience, bioscience, biostatistics, biometry\\
+\hline
+blackberry & blackberrybush, bramblebush, berry, drupelet\\
+\hline
+blizzard & series, rash, violentstorm, snowstorm, storm\\
+\hline
+blog & communicate, weblog, diary, journal, intercommunicate\\
+\hline
+broadband & wideband, band, system\\
+\hline
+browser & looker, viewer, watcher, application, webbrowser, spectator, applicationsprogramme, witness, applicationprogram\\
+\hline
+casual & occasional, fooling, unplanned, irregular, accidental, nonchalant, light, unconcerned, perfunctory, informal, chance, careless, insouciant, easy, effortless, passing, freeandeasy, cursory, everyday\\
+\hline
+chrome & plate, atomicnumber24, process, chromiumplate, cr, chromium, treat\\
+\hline
+computing & appliedscience, calculation, computerscience, engineeringscience, process, engineering, computation, technology, procedure\\
+\hline
+console & solace, housing, comfort, consoletable, cabinet, soothe, bracket, table, scientificinstrument\\
+\hline
+cybercrime & lawbreaking, crime\\
+\hline
+cyberwar & cyberterrorism, terrorism, actofterrorism, terroristact\\
+\hline
+data & assemblage, information, aggregation, collection, accumulation\\
+\hline
+dell & dingle, holler, hollow\\
+\hline
+doodle & scrabble, draw, scribble, drawing\\
+\hline
+drone & heavierthanaircraft, bourdon, dawdler, droneon, laggard, idler, go, utter, speak, layabout, poke, dronepipe, pilotlessaircraft, verbalize, pitchcontour, lagger, sound, modulation, monotone, loafer, mouth, bum, intonation, taborpipe, droning, radiocontrolledaircraft, bee, pipe, donothing, verbalise, talk, trailer\\
+\hline
+email & electronicmail, snailmail, telecommunicate, electroniccommunication, netmail\\
+\hline
+encryption & secretwriting, steganography, coding, cryptography, encoding\\
+\hline
+energy & force, healthiness, goodhealth, executivedepartment, strength, zip, liveliness, vigour, forcefulness, vigor, life, sprightliness, vitality, physicalphenomenon, vim, spirit, drive, doe, departmentofenergy, energydepartment, push, getupandgo, muscularity\\
+\hline
+engine & railwaylocomotive, causalagency, selfpropelledvehicle, causalagent, motor, locomotiveengine, cause, locomotive\\
+\hline
+engineering & discipline, appliedscience, room, field, study, profession, fieldofstudy, engineeringscience, subjectarea, application, engineroom, branchofknowledge, bailiwick, subjectfield, technology, practicalapplication, subject\\
+\hline
+fat & heavy, lipide, paunchy, fleshout, loosejowled, animaltissue, portly, porcine, avoirdupois, juicy, rounded, nonfat, adiposetissue, rolypoly, chubby, doublechinned, thick, fatness, jowly, fillout, lipid, compact, embonpoint, zaftig, fattish, buttery, leanness, superfatted, lipoid, buxom, pudgy, fruitful, thickset, plumpout, rich, sebaceous, podgy, suety, fattenout, pyknic, oily, plump, obese, endomorphic, profitable, fatty, tubby, bodilyproperty, zoftig, blubbery, overweight, heavyset, change, stocky, productive, stout, blubber, oleaginous, gross, dumpy, fattytissue, greasy, rotund, corpulent, fattenup, adipose, alter, modify, thin, fertile, abdominous, fleshy, potbellied, fatten, weighty\\
+\hline
+foursquare & square, regularpolygon, resolute, straightforwardly, squarely, rectangle\\
+\hline
+gadget & contraption, gismo, appliance, widget, convenience, contrivance, device, gizmo\\
+\hline
+game & brave, job, back, competition, stake, halting, unfit, animatebeing, wager, occupation, caper, plot, bet, lame, frolic, brute, strategy, gage, score, animal, scheme, creature, play, halt, business, spunky, mettlesome, gamy, beast, diversion, beton, biz, crippled, line, gameequipment, courageous, recreation, gritty, meat, romp, lineofwork, contest, gimpy, secretplan, spirited, punt, gambol, activity, fauna, gamey\\
+\hline
+gaming & recreation, gambling, play, diversion, vice\\
+\hline
+ghz & gigacycle, rate, gc, gigahertz, gigacyclepersecond\\
+\hline
+google & search, explore, searchengine, research\\
+\hline
+gps & globalpositioningsystem, navigationalsystem\\
+\hline
+halo & annulus, toroid, anulus, glory, gloriole, nimbus, light, anchorring, atmosphericphenomenon, aura, aureole, ring, lightness, doughnut\\
+\hline
+handheld & \\
+\hline
+hardware & instrumentation, software, munition, component, arms, computerhardware, ironware, weaponry, implementsofwar, constituent, weaponssystem, element, instrumentality\\
+\hline
+i & ane, digit, iodine, figure, ace, iodin, letterofthealphabet, unity, one, 1, single, halogen, cardinal, letteri, letter, element, alphabeticcharacter, chemicalelement, atomicnumber53\\
+\hline
+ie & idest, i.e., explorer, webbrowser, internetexplorer, browser\\
+\hline
+indie & independent, popgroup, filmcompany\\
+\hline
+internet & cyberspace, net, computernetwork\\
+\hline
+keyboard & device, holder\\
+\hline
+kindle & ignite, flareup, raise, fire, light, make, elicit, inflame, enkindle, arouse, evoke, provoke, create, conflagrate\\
+\hline
+laptop & laptopcomputer, portablecomputer\\
+\hline
+link & datalink, nexus, relate, colligate, dissociate, shape, disconnectedness, connect, electricalcircuit, radiolink, connexion, programline, disconnect, yoke, attach, union, fixing, fastener, unite, communicationchannel, connectedness, statement, tie, cogitate, channel, communicationsystem, form, associate, linearunit, electriccircuit, unification, linkup, fastening, line, linkage, join, instruction, intergroupcommunication, cerebrate, connection, contact, command, holdfast, circuit, liaison, think, tiein\\
+\hline
+linux & unix, unixsystem, unixoperatingsystem\\
+\hline
+live & ringing, gothrough, dead, bouncy, springy, exist, lively, inplay, go, loaded, animate, liveborn, holdout, liveout, untaped, living, elastic, recorded, current, hot, vital, resilient, dwell, inhabit, unrecorded, unfilmed, viable, be, livein, liveon, alive, survive, active, holdup, last, reverberant, see, know, experience, endure, subsist, undergo, charged\\
+\hline
+macintosh & fabric, cloth, material, raincoat, textile, mackintosh, mac, waterproof, mack\\
+\hline
+mobile & perambulating, motile, stabile, sculpture, seaborne, changeful, mobileriver, transferrable, floating, motorized, changeable, rotatable, mechanised, immobile, transplantable, flying, peregrine, airborne, port, maneuverable, versatile, raisable, fluid, raiseable, metropolis, manoeuvrable, city, unsettled, movable, waterborne, ambulatory, moving, ambulant, moveable, roving, mechanized, transferable, nomadic, urbancenter, rangy, racy, transportable, river, wandering\\
+\hline
+monitor & varan, watercraft, proctor, guardian, supervise, rideherdon, lizard, videodisplay, monitorlizard, admonisher, observe, monitoringdevice, defender, vessel, supervisor, reminder, protector, display, shielder, electronicequipment\\
+\hline
+motoring & driving\\
+\hline
+mouse & pussyfoot, gnawer, gnawinganimal, bruise, walk, rodent, individual, shiner, manipulate, contusion, electronicdevice, sneakaway, computermouse, blackeye, creep, someone, somebody, sneakout, sneak, soul, person, mortal\\
+\hline
+net & takehome, sack, tissue, fabric, nett, gross, netprofit, takeholdof, goal, profit, netincome, textile, earnings, income, pay, weave, final, trap, cyberspace, material, lucre, web, internet, bear, cloth, mesh, gain, catch, computernetwork, gameequipment, meshing, network, last, clear, yield, meshwork, benefit, ultimate, sackup, grab, profits\\
+\hline
+oracle & prophesier, diviner, seer, prophet, vaticinator, shrine, prophecy, divination\\
+\hline
+pc & microcomputer, personalcomputer, digitalcomputer\\
+\hline
+photography & business, process, pictorialrepresentation, physicalprocess, job, picturetaking, lineofwork, line, picturing, occupation\\
+\hline
+pi & detective, privateinvestigator, letterofthealphabet, antiviraldrug, privateeye, antiviralagent, principalinvestigator, manofscience, scientist, alphabeticcharacter, privatedetective, letter, transcendentalnumber, shamus, proteaseinhibitor, antiviral, operative, sherlock\\
+\hline
+piracy & plagiarization, plagiarism, buccaneering, hijacking, highjacking, copyrightinfringement, plagiarisation, infringementofcopyright\\
+\hline
+pirate & commandeer, despoiler, thief, plunderer, pillager, freebooter, buccaneer, ship, plagiariser, stealer, plagiarizer, literarypirate, searover, pirateship, raider, plagiarist, spoiler, seize, looter, searobber, hijack, steal, highjack\\
+\hline
+platform & politicalplatform, automaticdataprocessingsystem, level, horizontalsurface, weaponsplatform, politicalprogram, adpsystem, writtendocument, program, computingsystem, structure, papers, adps, chopine, construction, document, computersystem, shoe\\
+\hline
+playback & electronicequipment, soundreproduction\\
+\hline
+power & commonwealth, bodypolitic, force, office, supply, mathematicalnotation, powerfulness, mightiness, bigbusinessman, quality, baron, superpower, might, index, strength, knowledge, provide, respublica, state, causalagent, cause, topexecutive, powerlessness, tycoon, ability, causalagency, nation, inability, physicalphenomenon, manofaffairs, cater, ply, greatpower, exponent, king, land, magnate, worldpower, mogul, cognition, businessleader, country, majorpower, businessman, noesis\\
+\hline
+processor & centralprocessingunit, electronicequipment, business, centralprocessor, c.p.u., worker, computerhardware, hardware, mainframe, businessorganisation, businessconcern, businessorganization, cpu, concern\\
+\hline
+programming & creatingbymentalacts, planning, computerprogramming, scheduling, computerprograming, programing\\
+\hline
+ps & note, postscript, annotation, notation\\
+\hline
+python & mythicalcreature, boa, mythicalmonster, spirit, disembodiedspirit\\
+\hline
+raider & corporateinvestor, spoiler, looter, despoiler, thief, plunderer, pillager, freebooter, stealer\\
+\hline
+ram & pound, force, house, sign, thrust, ariestheram, individual, mansion, crash, signofthezodiac, sheep, drive, jam, aries, cram, chockup, volatilestorage, someone, somebody, clash, tup, wad, tool, jampack, collide, randomaccessmemory, drivein, ramdown, planetaryhouse, soul, person, stuff, starsign, mortal, read/writememory, randommemory\\
+\hline
+raspberry & razz, bramblebush, shout, hiss, yell, hoot, raspberrybush, bird, bronxcheer, cry, call, berry, boo, outcry, vociferation, razzing, drupelet, snort\\
+\hline
+recommendation & congratulations, kudos, passport, testimonial, characteristic, advice, extolment, praise, goodword\\
+\hline
+retro & fashion, expostfacto, retrospective, retroactive\\
+\hline
+robot & golem, automaton, mechanism\\
+\hline
+safari & huntingexpedition, campaign, expedition\\
+\hline
+search & investigate, lookinto, highercognitiveprocess, look, hunting, examination, explore, hunt, see, scrutiny, examine, investigation, lookup, lookfor, activity, investigating, operation, research, seek\\
+\hline
+security & warranty, legalinstrument, electricaldevice, securitymeasures, guard, surety, guarantee, certificate, insecurity, section, instrument, safety, department, warrant, fearlessness, securitymeasure, transferredproperty, officialdocument, protection, safeguard, bravery, warrantee, assets, securitysystem, legaldocument, transferredpossession, precaution, securitydepartment\\
+\hline
+software & code, computercode, softwareprogram, softwarepackage, package, hardware, softwaresystem, computersoftware\\
+\hline
+sonic & hearable, supersonic, transonic, audible, subsonic\\
+\hline
+spam & junkemail, electronicmail, tinnedmeat, cannedmeat, netmail, email\\
+\hline
+steam & goup, move, uprise, seered, steamclean, steamer, go, arise, anger, giveout, travel, moveup, comeup, rise, lift, locomote, cook, giveoff, vapour, makeclean, clean, vapor, emit\\
+\hline
+stream & feed, crowd, float, course, bodyofwater, beadrift, blow, oozeout, raincatsanddogs, pelt, current, swarm, transude, flowing, raindown, crowdtogether, watercourse, move, run, drift, rain, pullulate, water, line, rainbuckets, wellout, teem, exudate, flow, pour, motion, ooze, movement, exude\\
+\hline
+sun & lie, lord'sday, sunshine, star, influentialperson, solarize, light, expose, visibleradiation, sunbathe, personage, sunlight, sunday, restday, importantperson, dayofrest, solarise, dominicus, visiblelight, insolate\\
+\hline
+surface & layer, opencast, publicknowledge, ascend, bound, aspect, open, comeon, goup, skindeep, superficial, appear, aerofoil, subsurface, overhead, artefact, comeup, showup, rise, turnup, shallow, artifact, earth'ssurface, device, boundary, coat, controlsurface, cover, bounds, opencut, facet, comeout, generalknowledge, aboveground, gradeconstructed, airfoil, riseup\\
+\hline
+tablet & bar, dose, lozenge, paper, pad, tab, cake, padofpaper, slab, pill\\
+\hline
+technology & discipline, appliedscience, field, study, profession, fieldofstudy, engineeringscience, subjectarea, application, engineering, branchofknowledge, bailiwick, subjectfield, practicalapplication, subject\\
+\hline
+technophile & enthusiast, fancier, technophobe\\
+\hline
+ted & teddyboy, plugugly, toughguy\\
+\hline
+telecom & medium, telecommunication\\
+\hline
+television & telecomequipment, boobtube, televisionsystem, televisionreceiver, telecommunicationsystem, telecomsystem, tv, telly, idiotbox, gogglebox, receivingsystem, broadcasting, video, televisionset, tvset, telecasting, telecommunicationequipment, receiver\\
+\hline
+tomb & spot, topographicpoint, place, grave\\
+\hline
+trojan & city, asiatic, trojanhorse, urbancenter, metropolis, dardanian, asian, dardan, malevolentprogram\\
+\hline
+twitch & grip, vellication, cramp, squeeze, force, jerk, pull, pinch, tweet, move, twinge, musclespasm, moveinvoluntarily, flip, twitching, draw, nip, movereflexively, spasm\\
+\hline
+twitter & sound, chitter, twirp, cheep, chirp, chirrup, peep\\
+\hline
+vine & tracheophyte, vascularplant\\
+\hline
+virus & infectiveagent, computervirus, microorganism, agency, delegacy, infectiousagent, representation, malevolentprogram\\
+\hline
+web & physicalobject, www, blade, computernetwork, network, tissuelayer, material, object, system, worldwideweb, textile, cloth, tissue, vane, trap, weave, membrane, entanglement, net, scheme, fabric\\
+\hline
+wheel & bicycle, wheelaround, wheeledvehicle, move, steeringwheel, helm, goaround, go, force, transport, roulettewheel, travel, machine, bike, instrumentoftorture, roll, locomote, pedal, revolve, gameequipment, cycle, rotate, ride, simplemachine, handwheel, rack\\
+\hline
+wifi & lan, wlan, localareanetwork, wirelessfidelity, wirelesslocalareanetwork\\
+\hline
+windows & os, operatingsystem\\
+\hline
+wireless & communicationsystem, telecommunication, receivingset, telecom, receiver, radiocommunication, radioset, receivingsystem, broadcasting, radio, tuner, wired, radioreceiver\\
+\hline
+wow & sidesplitter, jest, riot, jape, bellylaugh, impress, thighslapper, howler, laugh, joke, gag, scream\\
+\hline
+y2k & yr, twelvemonth, year\\
+\hline
+yahoo & rube, bumpkin, fictionalcharacter, character, searchengine, rustic, hayseed, chawbacon, yokel, fictitiouscharacter, hick\\
+\hline
+
+
+\end{tabular}
+\end{center}
+\end{table}
 	
 \end{document}
