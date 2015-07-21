@@ -115,8 +115,8 @@ Goal of this thesis will be to determine whether a general body or a domain spec
 	\begin{tabular}{r|l}	
 	\textbf{Begriff} & Erklärung\\
 	\hline	
-	\textbf{Ähnliche Worte} & Im Word2Vec-Modell, mit der Methode\\
-	& \textit{most\_similar()}, erhaltene Worte.\\
+	\textbf{Ähnliche Worte} & Worte, die im Word2Vec-Modell mit der Methode\\
+	&  \textit{most\_similar()}, erhalten werden\\
 	\textbf{SVM} & Support Vector Machine\\
 	\textbf{NBC} & Naive Bayes Classifier\\
 	\textbf{CBOW} & Continuous bag-of-words\\
@@ -164,10 +164,7 @@ Goal of this thesis will be to determine whether a general body or a domain spec
 \newpage
 \chapter{Daten und Vorverarbeitung}
 	\section{Datenbasis}
-	Zum erfolgreichen Training des Word2Vec Modells wird eine sehr große Menge an Daten gebraucht\footnote{In \cite{DBLP:journals/corr/MikolovSCCD13} werden Trainingsdaten mit bis zu 30 Milliarden Wörtern benutzt.}. \\
-	In dieser Arbeit werden unterschiedliche Datenkorpora als Trainingsdaten für unterschiedliche Word2Vec Modelle benutzt.\\	
-	Für den ersten Korpus wurde der komplette englischsprachige Wikipedia Korpus verwendet\footnote{Dump von März 2015, http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015}.\\
-	Der zweite in der Arbeit verwendete Korpus besteht auch aus Wikipedia Artikeln, allerdings wurden hier nur technologiespezifische Artikel verwendet. Der komplette englische Wikipedia Korpus wurde zuerst in die einzelnen Artikel aufgeteilt und diese wurden dann mit einem NBC in die Klassen \textit{tech, entertainment, sport, science, politic} eingeteilt.
+	In dieser Arbeit werden unterschiedliche Datenkorpora als Trainingsdaten für unterschiedliche Word2Vec Modelle benutzt. Da zum erfolgreichen Training des Word2Vec Modells eine sehr große Menge an Daten benötigt werden\footnote{In \cite{DBLP:journals/corr/MikolovSCCD13} werden Trainingsdaten mit bis zu 30 Milliarden Wörtern benutzt.}, wird für den ersten Korpus der komplette englischsprachige Wikipedia Korpus verwendet\footnote{Dump von März 2015, http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015}. Der zweite in der Arbeit benütze Korpus besteht auch aus Wikipedia Artikeln, allerdings ausschließlich aus technologiespezifischen Artikeln. Hierzu wurde der komplette englische Wikipedia Korpus zuerst in die einzelnen Artikel aufgeteilt und diese wurden dann mit einem NBC in die Klassen \textit{tech, entertainment, sport, science, politic} eingeteilt. Im Anschluss wurden dann die als \textit{tech} klassifizierten Artikel zusammengefasst.
 	
 
 
@@ -181,9 +178,9 @@ Goal of this thesis will be to determine whether a general body or a domain spec
 	
 	\section{Vorverarbeitung}
 	\label{sec:Vorverarbeitung}
-	Der komplette Wikipediadump kann als komprimierte XML-Datei heruntergeladen werden\footnote{http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015}. Die entpackte XML-Datei hat eine Größe von 48,8 GB. Die Daten müssen zunächst bereinigt werden um als Trainingsdaten für Word2Vec Modelle zu dienen.\\		
+	Der komplette Wikipediadump kann als komprimierte XML-Datei heruntergeladen werden\footnote{http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015}. Die entpackte XML-Datei hat eine Größe von 48,8 GB. Um die Daten als Trainingsdaten für Word2Vec Modelle zu verwenden, müssen diese zuerst bereinigt werden..\\		
 	Um das Wiki-Markup, wie unter anderem Links, Referenzen oder Zitate, und die XML-Tags zu entfernen, kann ein schon vorgefertigtes Perl Skript von Matt Mahoney benutzt werden\footnote{http://mattmahoney.net/dc/textdata.html unter Appendix A, abgerufen am 25.06.2015}, welches von Mikolov et al. auf der Google Code Seite von Word2Vec vorgeschlagen wird\footnote{https://code.google.com/p/word2vec/, abgerufen am 25.06.2015}. Dieses Skript wurde speziell zum Bereinigen von Wikipediadaten erstellt und wurde leicht verändert, sodass Zahlen, Satzzeichen und die Groß- und Kleinschreibung erhalten bleiben. Außerdem werden die Umlaute in $ae$, $oe$ und $ue$ umgewandelt\footnote{Für das komplette geänderte Skript siehe Anhang \ref{sec:Perlskript}}. Da die bis hierher bereinigten Daten eine Gesamtgröße von 18 GB haben, ist es nötig die Daten weiter aufzubereiten, sodass sie als Input für die Klasse $gensim.models.word2vec.LineSentence$\footnote{Diese Klasse kann auch als Input zum Trainieren des Word2Vec Modells genutzt werden.}, aus der Gensim Bibliothek dienen. Dazu müssen die einzelnen Sätze in je einer Zeile stehen, alle Worte klein geschrieben, frei von Satzzeichen und mit Leerzeichen getrennt sein.\\	
-	Um den kompletten Wikipediadump in die einzelnen Wikipedia Artikel aufzuteilen muss die XML-Datei mittels eines SAX-Parsers\footnote{Es wurde die Klasse \textit{xml.sax.handler.ContentHandler} verwendet.} geparst und dann in einzelne Dateien geschrieben werden. Diese einzelnen Dateien können dann mit dem oben genannten Perl Skript gereinigt und dann mittels NBC klassifiziert werden. Nach der Klassifizierung können die Dateien wieder in eine große Datei zusammengefasst und weiter verarbeitet werden. Auch diese Daten müssen, wie der Gesamtkorpus, mit der Klasse $gensim.models.word2vec.LineSentence$ verarbeitet werden.
+	Um den kompletten Wikipediadump in die einzelnen Wikipedia Artikel aufzuteilen muss die XML-Datei mittels eines SAX-Parsers\footnote{Es wurde die Klasse \textit{xml.sax.handler.ContentHandler} verwendet.} geparst und dann in einzelne Dateien geschrieben werden. Diese einzelnen Dateien können dann mit dem bereits erwähnten Perl Skript gereinigt und dann mittels NBC klassifiziert werden. Nach der Klassifizierung können die Dateien wieder in eine große Datei zusammengefasst und weiter verarbeitet werden. Auch diese Daten müssen, wie der Gesamtkorpus, mit der Klasse $gensim.models.word2vec.LineSentence$ verarbeitet werden.
 	
 	
 \newpage
@@ -270,14 +267,14 @@ Im Folgenden Kapitel werden die in der Arbeit verwendeten Korpora erläutert und
 \fi
 	\section{Gesamtkorpus}
 	\label{sec:Gesamtkorpus}
-	Da sich die Qualität  der Wortvektoren im Word2Vec Modell wesentlich mit der Menge an Trainingsdaten erhöht\citep{DBLP:journals/corr/abs-1301-3781}, werden möglichst große Textkorpora bevorzugt. Auf der Google Code Seite von Word2Vec\footnote{https://code.google.com/p/word2vec/, abgerufen am 29.06.2015}, werden für Forschungszwecke einige Beispiele für online verfügbare große Korpora genannt. Unter anderem auch der neueste Wikipedia Auszug\footnote{http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 29.06.2015}.\\
-	Da in dieser Arbeit ein allgemeiner und ein domänenspezifischer Korpus als Trainingsdaten für das Word2Vec Modell verglichen werden sollen, eignet sich der Wikipedia Korpus gut. \\
+	Da sich die Qualität  der Wortvektoren im Word2Vec Modell wesentlich mit der Menge an Trainingsdaten erhöht\citep{DBLP:journals/corr/abs-1301-3781}, werden möglichst große Textkorpora bevorzugt. Auf der Google Code Seite von Word2Vec\footnote{https://code.google.com/p/word2vec/, abgerufen am 29.06.2015}, werden für Forschungszwecke einige Beispiele für online verfügbare große Korpora genannt, dazu zählt unter anderem auch der neueste Wikipedia Auszug\footnote{http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 29.06.2015}.\\
+	Da in dieser Arbeit ein allgemeiner und ein domänenspezifischer Korpus als Trainingsdaten für das Word2Vec Modell verglichen werden, eignet sich der Wikipedia Korpus besonders gut. \\
 	Wie in \ref{sec:Vorverarbeitung} beschrieben, müssen die Daten erst einer Säuberung unterzogen werden, um dann anschließend für das Training im Word2Vec Modell benutzt zu werden.\\
 	 Der bereinigte, komplette englischsprachige Wikipedia Korpus\footnote{Dump von März 2015, http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2, abgerufen am 09.04.2015} enthält 8.392.453 Artikel, 242.144.317 Sätze und 2.919.802.692 Worte.\\
 
 
 Die Skip-gram Architektur verhält sich im Bezug auf syntaktische Ähnlichkeit etwas schlechter als die CBOW Architektur, allerdings ist die Skip-gram Architektur im Bezug auf semantische Ähnlichkeit der CBOW weit überlegen\citep{DBLP:journals/corr/abs-1301-3781}.\\ Aus diesem Grund wurde die Skip-gram Architektur ausgewählt.\\
-Da der \textit{hierarchical softmax} Lernalgorithmus eher für selten vorkommende Worte und der \textit{negative sampling} Lernalgorithmus eher für häufig vorkommende Worte und niedrigdimensionale Vektoren geeignet ist\footnote{https://code.google.com/p/word2vec/\#Performance, abgerufen am 01.07.2015}, fiel die Wahl auf den \textit{hierarchical softmax} Lernalgorithmus, da das Modell (wie im Folgenden gezeigt) eine hohe Dimension der Vektoren hat und auf technologiespezifische Daten getestet werden soll (siehe \ref{sec:Testdaten} Testdaten).\\
+Da der \textit{hierarchical softmax} Lernalgorithmus eher für selten vorkommende Worte und der \textit{negative sampling} Lernalgorithmus eher für häufig vorkommende Worte und niedrigdimensionale Vektoren geeignet ist\footnote{https://code.google.com/p/word2vec/\#Performance, abgerufen am 01.07.2015}, wurde der  \textit{hierarchical softmax} Lernalgorithmus gewählt, da das Modell (wie im Folgenden gezeigt wird), eine hohe Dimension an Vektoren hat und auf technologiespezifische Daten getestet werden soll (siehe \ref{sec:Testdaten} Testdaten).\\
 
 
 Um die optimalen Parameter für das Training des Modells herauszufinden wurde ein kleinerer Wikipedia Auszug\footnote{http://mattmahoney.net/dc/enwik9.zip, abgerufen am 30.06.2015, beinhaltet die ersten 1 Milliarde Zeichen des Gesamtkorpus} als Trainingsdaten benutzt und mit unterschiedlichen Parametern wurden mehrere Modelle gelernt und evaluiert (siehe Tabelle \ref{tab:VergleichParameter}).\\
@@ -307,8 +304,7 @@ Das Word2Vec Modell stellt eine Funktion bereit, \textit{most\_similar(positive=
 
 Auf dem kleineren Wikipedia Korpus erzielte das Modell mit den Parametern 
 \textit{size} = 400, \textit{window} = 10, \textit{min\_count} = 5
- die beste Gesamtaccuracy mit 53,5\%. Diese Parameter wurden dann auch beim Gesamtmodell angewandt. Die Trainingszeit beträgt bei diesen Parametern 10,5h\footnote{Leistungsdaten: PC mit 32 GB RAM, i7-3770 Quadcore bei 3,4 GHz} beim Gesamtmodell.\\
-Nachdem ein kleinerer Fehler im Reiningungsskript aufgetretetn war\footnote{Unbekannte Zeichen wurden mit einem Leerzeichen ersetzt, anstatt gelöscht zu werden, somit entstanden Wortfragmente als eigene Worte.}, musste das komplette Modell nochmals gelernt werden. Hier fiel dann die Entscheidung, andere Parameter zu benutzen und die \textit{window} Größe auf 300 zu reduzieren, da die Accuracy sich nur sehr gering verändert hat, allerdings verkürzte sich die Trainingszeit auf 7,7h. Dies zahlte sich im Laufe der Arbeit aus, da sich das Perl-Reinigungsskript ein paar Mal geringfügig änderte um so kleinere Fehler aus dem Korpus zu entfernen.\\
+ die beste Gesamtaccuracy mit 53,5\%. Diese Parameter wurden auf das Gesamtmodell übertragen. Die Trainingszeit beträgt bei diesen Parametern 10,5h\footnote{Leistungsdaten: PC mit 32 GB RAM, i7-3770 Quadcore bei 3,4 GHz} beim Gesamtmodell. Nachdem ein kleinerer Fehler im Reiningungsskript aufgetretetn war\footnote{Unbekannte Zeichen wurden mit einem Leerzeichen ersetzt, anstatt gelöscht zu werden, somit entstanden Wortfragmente als eigene Worte.}, musste das komplette Modell nochmals gelernt werden. Hier fiel dann die Entscheidung, andere Parameter zu benutzen und die \textit{window} Größe auf 300 zu reduzieren, da dies die Accuracy nur sehr gering verändert und sich die Trainingszeit auf 7,7h verkürzte. Dies zahlte sich im Laufe der Arbeit aus, da sich das Perl-Reinigungsskript ein paar Mal geringfügig änderte um so kleinere Fehler aus dem Korpus zu entfernen.\\
 
 
 	
@@ -318,9 +314,10 @@ Nachdem ein kleinerer Fehler im Reiningungsskript aufgetretetn war\footnote{Unbe
 	
 	
 	Dieser domänenspezifische Teilkorpus enthält 187.144 Artikel (2,2\% im Vergleich zum Gesamtkorpus), 9.866.096 Wörter(0,34\%) und 3.166.065 Sätze(1,3\%). Hier beträgt die Trainingszeit ca. 2 Minuten.\\
-	Wird dieser Korpus mit der \textit{.accuracy()}-Methode evaluiert, erreicht er eine Gesamtaccuracy von nur 7,0\%. Das hat den Grund, dass die Testfragen sehr allgemeiner Art sind und diese Beziehungen in einem reinen Technologiekorpus sehr selten bis gar nicht vorkommen.\\
+	Wird dieser Korpus mit der \textit{.accuracy()}-Methode evaluiert, erreicht er eine Gesamtaccuracy von nur 7,0\%. Das hat den Grund, dass die Testfragen von allgemeiner Art sind und diese Beziehungen in einem reinen Technologiekorpus sehr selten bis gar nicht vorkommen.\\
 	
-	Es wäre auch möglich gewesen, andere Daten zu benutzen. Beispielsweise könnten Korpora aus Foren zu technologischen Themen oder Technews Internetseiten, automatisch mittels Crawling, erstellt werden. Die Wahl fiel aber auf den Teilkorpus von Wikipedia, da hier die gleichen Texte in beiden Korpora vorhanden sind und somit auch die gleichen Beziehungen zwischen den einzelnen Wörtern, um so einen möglichst objektiven Vergleich zwischen den unterschiedlichen Korpora zu ermöglichen.\\
+
+	Die Wahl von anderen Daten, beispielsweise könnten Korpora aus Foren zu technologischen Themen oder Technews Internetseiten, automatisch mittels Crawling, erstellt werden, wäre auch möglich gewesen. Die Verwendung des Wikipedia Teilkorpus ist jedoch zielführender, da hier die gleichen Texte in beiden Korpora vorhanden sind und somit auch die gleichen Beziehungen zwischen den einzelnen Wörtern, um so einen möglichst objektiven Vergleich zwischen den unterschiedlichen Korpora zu ermöglichen.\\
 	
 	
 	\section{Testdaten}
@@ -360,13 +357,13 @@ Die Testdaten wurden dann auf 236 Begriffe erweitert\footnote{Siehe Anhang \ref{
 \newpage
 \chapter{Experimente}
 \label{chap:Experimente}
-In diesem Kapitel sollen die unterschiedlichen Word2Vec Modelle mit ihren Trainingskorpora (Gesamtkorpus\footnote{Siehe \ref{sec:Gesamtkorpus} Gesamtkorpus} und Techkorpus\footnote{Siehe \ref{sec:Teilkorpus} Teilkorpus}) untersucht werden. Dies soll durch fünf Experimente realisiert werden. In allen Experimenten werden semantischen Beziehungen zwischen Wörtern untersucht. Jedes Experiment ist in drei Teile aufgeteilt, Beschreibung, Durchführung und Interpretation/Ergebnis.\\
+In diesem Kapitel sollen die beiden unterschiedlichen Word2Vec Modelle mit ihren Trainingskorpora (Gesamtkorpus und Techkorpus) untersucht werden. Dies soll durch fünf Experimente realisiert werden. In allen Experimenten werden semantischen Beziehungen zwischen Wörtern untersucht. Dabei ist jedes Experiment in drei Teile aufgeteilt, Beschreibung, Durchführung und Interpretation/Ergebnis.\\
 Als Grundlage für die Experimente dienen die Testdaten\footnote{Siehe \ref{sec:Testdaten} Testdaten} und die mit der Methode \textit{most\_similar()\footnote{gensim.models.word2vec.Word2Vec.most\_similar()}} gefunden fünf ähnlichsten Worte. Zum Vergleichen der ähnlichen Worte der unterschiedlichen Korpora wurde eine Datei erzeugt, in der die Testdaten und ihre fünf ähnlichsten Worte, mit den dazugehörigen Kosinusähnlichkeiten, leserlich formatiert, ausgegeben werden.\\ 
 
 	\section{Synonymsuche durch Rekursion}
 \label{chap:Experiment1}
 		\subsection*{Beschreibung}
-		Im ersten Experiment soll untersucht werden, ob es möglich ist, im Word2Vec Modell Synonyme eines Begriffs zu finden. Hierzu sollen allerdings nicht die ähnlichen Worte der Testbegriffe betrachtet werden, sondern deren ähnliche Worte. Die Suche nach ähnlichen Worten wird somit ein Mal rekursiv angewandt. Die Überlegung ist, dass durch den rekursiven Aufruf Rückbeziehungen zu den ursprünglichen Suchbegriffen und deren Synonymen entstehen. Eine Anwendung für die Synonymsuche durch Rekursion könnte ein Thesaurus-Lexikon sein.\\
+		Im ersten Experiment wird untersucht, ob es möglich ist, im Word2Vec Modell Synonyme eines Begriffs zu finden. Hierzu sollen allerdings nicht die ähnlichen Worte der Testbegriffe betrachtet werden, sondern deren ähnliche Worte. Die Suche nach ähnlichen Worten wird somit ein Mal rekursiv angewandt. Die Überlegung ist, dass durch den rekursiven Aufruf Rückbeziehungen zu den ursprünglichen Suchbegriffen und deren Synonymen entstehen. Eine Anwendung für die Synonymsuche durch Rekursion könnte ein Thesaurus-Lexikon sein.\\
 		
 		\subsection*{Durchführung}
 		Eine Liste mit den Synonymen der Testbegriffe wird vor dem Experiment mit der Hilfe eines Webservices\footnote{Über http://thesaurus.altervista.org/, abgerufen am 20.07.2015} erstellt\footnote{Siehe \ref{sec:Synonymliste}}. Dieser Webservice liefert aber nur für 109 der insgesamt 236 Testwörter Synonyme. So wurden für dieses Experiment nur diese 109 Testwörter benutzt.\\
@@ -442,50 +439,65 @@ wifi & Komplett & wlan\\
  In der Tabelle \ref{tab:bspsynoyme} sind alle gefundenen Synonyme und die dazugehörigen Testwörter, sowie der Korpus in dem sie auftreten, aufgelistet.
 		
 		\subsection*{Interpretation/Ergebnis}
-		Wie aus den Daten hervorgeht, werden zwar einige Synonyme der Suchbegriffe gefunden, allerdings jedoch nicht viele. Ein Grund, der die geringe Anzahl an Synonymen erklären könnte, könnte mit der räumlichen Darstellung der Worte im Word2Vec Modell zusammenhängen. Die ähnlichen Worte ($W_1$) eines Suchbegriffs ($O$) haben einen minimalen räumlichen Abstand zum Suchbegriff (O). 
-		Die durch die Rekursion erhaltenen ähnlichen Worte ($W_2$) der ähnlichen Worte ($W_1$), haben wieder einen minimalen räumlichen Abstand (zu $W_1$), allerdings ist der Abstand vom ursprünglichen Suchbegriff ($O$) zu den in $W_2$ enthaltenen Wörter größer als zu den Worten aus $W_1$, denn sonst wären sie schon in der Menge $W_1$ enthalten. Also sind diese Wörter noch weiter vom ursprünglichen Suchbegriffs ($O$) entfernt und somit unähnlicher.\\
+		Wie aus den Daten hervorgeht, werden im Gesamtmodell nur bei zwölf, im Technologiemodell nur bei zwei Testbegriffen Synonyme gefunden.
+		Ein Grund, der die geringe Anzahl an Synonymen erklären könnte, könnte mit der räumlichen Darstellung der Worte im Word2Vec Modell zusammenhängen. Die ähnlichen Worte ($W_1$) eines Suchbegriffs ($O$) haben einen minimalen räumlichen Abstand zum Suchbegriff (O). 
+		Die durch die Rekursion erhaltenen ähnlichen Worte ($W_2$) der ähnlichen Worte ($W_1$), haben wieder einen minimalen räumlichen Abstand (zu $W_1$), allerdings ist der Abstand vom ursprünglichen Suchbegriff ($O$) zu den in $W_2$ enthaltenen Wörter größer als zu den Worten aus $W_1$, denn sonst wären sie schon in der Menge $W_1$ enthalten. Also sind diese Wörter noch weiter vom ursprünglichen Suchbegriffs ($O$) entfernt und somit unähnlicher. Somit ist das Finden von Synonymen durch Rekursion im Word2Vec Modell nicht zielführend.\\
 		Des Weiteren kann das Ergebnis mit den verwendeten Synonymen zusammen hängen. Werden ausführlichere Listen mit Synonymen verwendet, sollte sich damit auch die Anzahl der vom Modell gefundenen Synonyme erhöhen.\\
 		
 		
 	
 	\section{Konkretisierungen}
 		\subsection*{Beschreibung}
-		In diesem Experiment soll das domänenspezifischen Technologiemodell untersucht werden. Es wird untersucht, ob die ähnlichen Wörter der Testdaten eine Konkretisierung des jeweiligen Suchbegriffs darstellen.\\
-		Dies ist gerade bei mehrdeutigen Wörtern interessant, da hier dann eine Sinnrichtung in den ähnlichen Wörtern dominant vertreten sein könnte und somit klar ist, in welchem Kontext das mehrdeutige Wort in dieser Domäne gemeint ist.\\
-		\subsection*{Durchführung}
-		Die Fragestellung bezieht sich zwar nur auf den domänenspezifischen Korpus, allerdings wurde auch der allgemeine Korpus auf diese Fragestellung hin untersucht.\\
-		Auch bei diesem Experiment nahm das Nachschlagen von mehreren ähnlichen Worten einige Zeit in Anspruch. Denn um beurteilen zu können, ob es sich um eine Konkretisierung handelt, müssen die inhaltlichen Beziehungen zwischen Suchbegriff und ähnlichen Worten klar sein. \\
+		In diesem Experiment soll hauptsächlich das domänenspezifischen Technologiemodell untersucht werden. Es wird untersucht, ob die ähnlichen Wörter der Testdaten eine Konkretisierung des jeweiligen Suchbegriffs darstellen.	Dies ist gerade bei mehrdeutigen Wörtern interessant, da dann eine Sinnrichtung in den ähnlichen Wörtern dominant vertreten sein könnte und somit klar ist, in welchem Kontext das mehrdeutige Wort in dieser Domäne gemeint ist. Es wird vermutet, dass im Technologiemodell die Konkretisierungen stärker vorhanden sind als im allgemeinen Modell. In diesem Experiment werden wieder alle 236 Testdaten verwendet.\\
 		
+				Es wird definiert, dass von einer Konkretisierung gesprochen werden kann, wenn das ähnliche Wort eine genauere Bedeutung des Suchbegriffs darstellt (z.B. wird \textit{Wissenschaftler} durch \textit{Physiker} konkretisiert). In der Abbildung \ref{pic:Konkretisierung} sind die Abstraktionsbeziehungen zwischen Wörtern als Baumdiagramm dargestellt. Gelb markiert ist der aktuelle Suchbegriff, alle Kindknoten des Suchbegriffs sind grün markiert, hier kann von einer Konkretisierung des Suchbegriffs gesprochen werden. Rot markiert sind alle anderen Knoten, hier kann nicht von einer Verallgemeinerung gesprochen werden. Zur vereinfachten Darstellung ist die Abbildung in 2D und mit einer einfachen Struktur ausgewählt, in komplizierteren Beispielen, unter anderem auch mit mehrdeutigen Begriffen, muss überlegt werden ob eine solche Darstellung überhaupt noch möglich ist.\\
+		
+\begin{figure}[h]
+  \begin{center}
+	\includegraphics[scale=0.55]{Konkretisierung_Baum2.png}
+  \end{center}  
+  \caption{Beispiel der Beziehungen zwischen Wörtern als Baumdiagramm dargestellt.}
+  \label{pic:Konkretisierung}
+\end{figure}
+		
+		\subsection*{Durchführung}
+		Die Fragestellung bezieht sich zwar eigentlich auf das domänenspezifische Modell, allerdings wurde auch das allgemeine Modell auf diese Fragestellung hin untersucht um festzustellen, ob dieses tatsächlich ein schlechteres Verhalten bezüglich der Anzahl an gefundenen Konkretisierungen aufweist.\\
+		Bei diesem Experiment werden die Testwörter mit ihren fünf ähnlichsten Wörtern verglichen. Diese Untersuchung erfolgt von Hand, da es keine Auflistungen mit Konkretisierungen von Begriffen gibt. Außerdem wäre es zu aufwändig, eine solche Liste zu erstellen, da nicht vorhersehbar ist, wie stark die Suchbegriffe konkretisiert werden und somit sehr viele Daten erzeugt werden müssten. Sollten die Modelle hinsichtlich der Konkretisierungstiefe\footnote{Damit ist gemeint ob z.B. der Begriff \textit{Auto} mit \textit{BMW, Mercedes, VW} oder aber mit \textit{X5, A-Klasse, Tuareg} konkretisiert wird.} untersucht werden, könnte das in einem zusätzlichen Experiment analysiert werden. Dann müssten solche Auflistungen mit Konkretisierungen von Begriffen erstellt werden, um das unterschiedliche Verhalten aufzuzeigen. In diesem Experiment geht es aber darum, erst einmal herauszufinden, ob überhaupt eine Konkretisierung stattfindet unabhängig von der Konkretisierungstiefe.\\	
+		 Stellen mindestens drei der fünf ähnlichen Wörter eine Konkretisierung des Suchbegriffs dar, so wird dieser Eintrag als \textit{konkretisiert} markiert. Bei diesem Experiment war das Nachschlagen von mehreren ähnlichen Worten sehr zeitintensiv, denn um beurteilen zu können, ob es sich bei diesem Wort um eine Konkretisierung des Suchbegriffs handelt, müssen die inhaltlichen Beziehungen zwischen Suchbegriff und ähnlichen Worten klar sein. Um die Bedeutungen der Worte und die inhaltlichen Beziehungen zu recherchieren, wird Wikipedia\footnote{https://en.wikipedia.org/, abgerufen am 21.07.2015} und Google\footnote{https://www.google.de/, abgerufen am 21.07.2015} benutzt.\\
+		
+		In der folgenden Tabelle ist die Gesamtanzahl der Testwörter, die Anzahl der Suchbegriffe, die mit \textit{konkretisiert} markiert wurden, die Anzahl der Suchbegriffe,  die nicht mit \textit{konkretisiert} markiert wurden, sowie die Anzahl der nicht im Modell enthaltenen Worte. Die Daten sind nach Modellen getrennt aufgelistet. Des Weiteren sind einige Beispiele in Tabelle \ref{tab:BspKonkretisierung} aufgelistet. Diese Tabelle enthält neben den Suchbegriffen, Modell und den gefundenen konkretisierten ähnlichen Worten auch die Kosinusähnlichkeiten zu den Suchbegriffen.
 		
 \begin{table}[H]
 \caption{Experiment 2: Konkretisierung}
 \begin{center}
 \begin{tabular}{|l||l|l|l|l|}
 \hline
-Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation der\\
- & nicht konkretisiert & konkretisiert & im Korpus & konkretisierten Worte\\
+\textbf{Modell} & \textbf{Gesamtzahl}& \textbf{ähnliche Worte} & \textbf{ähnliche Worte}  & \textbf{Wort nicht}  \\
+ & &\textbf{nicht konkretisiert} & \textbf{konkretisiert} & \textbf{im Korpus} \\
 
 \hline
- Komplett & 199 & 37 & 0 & 15,7\% \\
+ Komplett & 236 & 199 & 37 & 0 \\
  \hline
- Technologie & 146 & 65 & 25 & 27,5\% (30,8\%)\\
+ Technologie & 236 & 146 & 65 & 25 \\
  \hline
  
 \end{tabular}
 \end{center}
 \end{table}
-		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
+		
 		
 
 \begin{table}[H]
 \caption{Beispiele zur Konkretisierung}
+\label{tab:BspKonkretisierung}
 \begin{center}
 \begin{tabular}{|l||l|l|l|l|}
 \hline
-Suchbegriff & Korpus & Konkretisierung   \\
+\textbf{Suchbegriff} & \textbf{Modell} & \textbf{Konkretisierung}   \\
 
 \hline
- apple & Technologie & iphone (Kosinusähnlichkeit: 0,587),\\
+ apple & Technologie & iphone (Kosinusähnlichkeit: 0,587), a6x (0,579)\\
+ & & ipad (0,570), a5x (0,559)\\
  \hline
  architecture	   & Komplett & revival (0,774), neoclassical (0,677), gothic (0,667) \\
  & Technologie& armv7a (0,514), multicore (0,493), xmos (0,477) \\
@@ -505,46 +517,66 @@ Suchbegriff & Korpus & Konkretisierung   \\
 		
 		
 		\subsection*{Interpretation/Ergebnis}
-		Zu beobachten ist, dass der Technologiekorpus besser konkretisiert, als der komplette allgemeine Korpus. Da dies aber nur in ca. 30\% der Testfälle passiert, ist es schwierig, zu verallgemeinern, dass die ähnlichen Worte im Technologiekorpus eine Konkretisierung sind, somit ist auch hier die Annahme des Experiments widerlegt.
+Im Technologiemodell konkretisieren in 65 der 236 Testfälle	die ähnlichen Worte den jeweiligen Suchbegriff, im Gesamtmodell jedoch nur in 37 Fällen. Somit bestätigt sich die Annahme, dass im Gesamtmodell weniger Konkretisierungen auftreten. Dies hat den Grund, dass sich die Daten im Gesamtmodell nicht auf eine Fachrichtung beschränken wie im Technologiemodell. So werden beim Training mit Technologiedaten im Word2Vec Modell die Beziehungen beibehalten, die beim Training mit dem kompletten Wikipediakorpus durch andere, allgemeine Wörter noch weiter verändert werden. \\
+
+TODO: Insgesamt wenig Konkretisierungen, da Wörter-BEziehungen so entstehen, dass wo im gleichen zusammenhang stehen, werden als ähnlich erkannt.\\
+
+		
+		Zu beobachten ist, dass der Technologiekorpus besser konkretisiert, als der komplette allgemeine Korpus. Da dies aber nur in ca. 30\% der Testfälle passiert, ist es schwierig, zu verallgemeinern, dass die ähnlichen Worte im Technologiekorpus eine Konkretisierung sind, somit ist auch hier die Annahme des Experiments widerlegt.\\
 		
 		
 	
 	\section{Verallgemeinerungen}
 		\subsection*{Beschreibung}
-		In diesem Experiment soll untersucht werden, ob die ähnlichen Worte im allgemeinen kompletten Korpus eine Verallgemeinerung des Suchbegriffs darstellen.\\
+		In diesem Experiment wird analysiert, ob die ähnlichen Worte eines Begriffs eine Verallgemeinerung dessen darstellen. Es wird außerdem untersucht, ob im allgemeinen Gesamtmodell mehr Begriffe in ihren ähnlichen Wörtern verallgemeinert werden, als im Technologiemodell. Ein Anwendungsbeispiel für die Verallgemeinerung der Suchbegriffe könnte ein Lexikon sein, bei dem die Worte mit ähnlichen Begriffen beschrieben werden. In diesem Experiment werden wieder alle 236 Testdaten verwendet.\\
+		Es wird definiert, dass von einer Verallgemeinerung gesprochen werden kann, wenn das ähnliche Wort eine abstraktere Bedeutung des Suchbegriffs darstellt (z.B. wird \textit{Physiker} durch \textit{Mensch} verallgemeinert) oder das ähnliche Wort bildet einen vergleichbaren Begriff (kein Synonym) ab (z.b. kann \textit{Physiker} mit \textit{Chemiker} verallgemeinert werden). In der Abbildung \ref{pic:Verallgemeinerung} sind die Abstraktionsbeziehungen zwischen Wörtern als Baumdiagramm dargestellt. Gelb markiert ist der aktuelle Suchbegriff, Elternknoten und direkte Geschwisterknoten sind grün markiert, hier kann von einer Verallgemeinerung des Suchbegriffs gesprochen werden. Rot markiert sind die Kindknoten und weiter entfernte Knoten, hier kann nicht von einer Verallgemeinerung gesprochen werden. Zur vereinfachten Darstellung ist die Abbildung in 2D und mit einer einfachen Struktur ausgewählt, in komplizierteren Beispielen, unter anderem auch mit mehrdeutigen Begriffen, muss überlegt werden ob eine solche Darstellung überhaupt noch möglich ist.\\
+		
+\begin{figure}[h]
+  \begin{center}
+	\includegraphics[scale=0.55]{Verallgemeinerung_Baum2.png}
+  \end{center}  
+  \caption{Beispiel der Beziehungen zwischen Wörtern als Baumdiagramm dargestellt.}
+  \label{pic:Verallgemeinerung}
+\end{figure}
 		
 		\subsection*{Durchführung}
-		Die Fragestellung bezieht sich zwar nur auf den allgemeinen Korpus, allerdings wurde auch der Technologiekorpus auf diese Fragestellung hin untersucht.\\
-		Wie beim vorherigen Experiment mussten viele Begriffe nachgeschlagen werden,  um die inhaltlichen Beziehungen zwischen Suchbegriff und ähnlichen Worten beurteilen zu können.\\
+		In diesem Experiment werden die Testdaten, wie im vorherigen Experiment, mit ihren fünf ähnlichsten Wörtern verglichen. Auch diese Untersuchung wird von Hand durchgeführt, denn auch hier soll, wie im vorherigen Experiment, erst einmal untersucht werden, ob Verallgemeinerungen überhaupt auftreten. In einem weiteren Experiment könnte auch hier untersucht werden, welchen Grad die Verallgemeinerungen haben\footnote{Damit ist gemeint ob \textit{Albert} mit \textit{Einstein}, \textit{Physiker}, \textit{Wissenschaftler} oder \textit{Mensch} verallgemeinert wird.}. Verallgemeinern drei der fünf ähnlichen Worte den Suchbegriff, wird dieser als \textit{verallgemeinert} markiert. 
+		
+		
+		Wie beim vorherigen Experiment mussten viele Begriffe nachgeschlagen werden,  um die inhaltlichen Beziehungen zwischen dem Suchbegriff und den jeweiligen ähnlichen Worten beurteilen zu können.\\
+		
+In Tabelle \ref{tab:Experiment3} sind die Gesamtzahl der Testwörter, die Anzahl der Suchbegriffe, die mit \textit{verallgemeinert} markiert wurden, die Anzahl der Suchbegriffe,  die nicht mit \textit{verallgemeinert} markiert wurden, sowie die Anzahl der Worte, die nicht im Modell enthalten sind. Die Daten sind nach Modellen getrennt aufgelistet. Die Tabelle \ref{tab:bspVerallgemeinerung} enthält einige Beispiele der gefundenen Verallgemeinerungen. Es sind neben den Suchbegriffen, Modell und den gefundenen verallgemeinerten ähnlichen Worten, auch deren Kosinusähnlichkeiten zu den Suchbegriffen.
 		
 \begin{table}[H]
 \caption{Experiment 3: Verallgemeinerung}
+\label{tab:Experiment3}
 \begin{center}
 \begin{tabular}{|l||l|l|l|l|}
 \hline
-Korpus & ähnliche Worte & ähnliche Worte  & Wort nicht  & Relation der\\
- & nicht verallgemeinert & verallgemeinert & im Korpus & verallgemeinerten Worte\\
+\textbf{Modell} & \textbf{Gesamtzahl}& \textbf{ähnliche Worte} & \textbf{ähnliche Worte}  & \textbf{Wort nicht} \\
+ &  & \textbf{nicht verallgemeinert} & \textbf{verallgemeinert} &\textbf{ im Korpus} \\
 
 \hline
 \hline
- Komplett & 102 & 134 & 0 & 56,8\% \\
+ Komplett & 236 & 102 & 134 & 0  \\
  \hline
- Technologie & 144 & 67 & 25 & 28,4\% (31,8\%)\\
+ Technologie & 236 & 144 & 67 & 25 \\
  \hline
  
 \end{tabular}
 \end{center}
 \end{table}
 
-		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
+
 		
 		
 \begin{table}[H]
 \caption{Beispiele zur Verallgemeinerung}
+\label{tab:bspVerallgemeinerung}
 \begin{center}
 \begin{tabular}{|l||l|l|l|l|}
 \hline
-Suchbegriff & Korpus & Verallgemeinerung   \\
+\textbf{Suchbegriff} & \textbf{Modell} & \textbf{Verallgemeinerung}   \\
 \hline
 \hline
  apple & Komplett & blackberry (Kosinusähnlichkeit: 0,704),\\
@@ -552,8 +584,7 @@ Suchbegriff & Korpus & Verallgemeinerung   \\
  \hline
  asus	   & Komplett & netbook (0,767), lenovo (0,736), motherboards (0,714) \\
 \hline
- cookies	& Komplett& baked (0,666), cakes (0,663), sandwiches (0,655),\\
- & & muffins (0,654)	\\
+ cookies	& Komplett& baked (0,666), cakes (0,663), muffins (0,654)\\
  	\hline
  dell	 & Komplett & hewlettpackard (0,583), cisco (0,548), lenovo (0,515),\\
  && compaq (0,506) \\
@@ -561,8 +592,10 @@ Suchbegriff & Korpus & Verallgemeinerung   \\
  limewire	& Komplett& bittorrent (0,703), filesharing (0,702), kazaa (0,689)\\
  &&rapidshare (0,668), gnutella (0,653)\\
  	\hline
- security	&	Komplett&	cybersecurity (0,702), counterterrorism (0,685), iviz (0,668) \\
+ 	
+% security	&	Komplett&	cybersecurity (0,702), counterterrorism (0,685), iviz (0,668) \\
  	\hline
+ 	
  
 \end{tabular}
 \end{center}
@@ -571,62 +604,70 @@ Suchbegriff & Korpus & Verallgemeinerung   \\
 
   
 		\subsection*{Interpretation/Ergebnis}
-		Die Untersuchungen bei diesem Experiment zeigen, dass die ähnlichen Worte eines Suchbegriffs in mehr als der Hälfte der Fälle, eine Verallgemeinerung des Suchbegriffs sind. \\
-		Die Annahme dieses Experiments wurde bestätigt.\\
+		Im Gesamtmodell weißen bei 134 Testbegriffen mindestens drei der dazugehörigen ähnlichen Worte eine Verallgemeinerung des Testwortes auf. Im Technologiemodell ist dies nur bei 67 Begriffen der Fall. Somit bestätigt sich die Vermutung, dass im Gesamtmodell mehr Verallgemeinerungen zu finden sind. Dies hängt mit der Tatsache zusammen, dass das Gesamtmodell mit Daten, die nicht auf ein spezielles Thema beschränkt sind, trainiert wurde und diese Begriffe in allen unterschiedlichen Zusammenhängen im Trainingskorpus enthalten waren. \\
+		
+TODO:		Die Begriffe müssen deshalb öfter in allgemeinen Zusammenhängen in den Trainingsdaten vorgekommen sein, als speziell über das konkrete Thema. Dadurch wurde das Modell beim Training beeinflusst.\\
+
+Da im Gesamtmodell in mehr als der Hälfte der Fälle, eine Verallgemeinerung der Suchbegriffe in den ähnlichen Daten festgestellt wurde, kann davon ausgegangen werden, dass durch die ähnlichen Worte in, mit allgemeinen Daten trainierten, Modellen die Suchbegriffe allgemeiner dargestellt werden.\\
 		
 		
 	
 	\section{Unterschiedliche Beziehungen}
 		\subsection*{Beschreibung}
-		In diesem Experiment soll untersucht werden, ob die Beziehungen zwischen den Suchbegriffen und den gefunden ähnlichen Worten von unterschiedlichen Arten sind. Die Beziehungen sollen in \textit{syntaktisch, synonym, gleiches, gegenteiliges, in Beziehung} und \textit{verschiedenes} eingeteilt werden.
+		Die inhaltlichen Beziehungen zwischen Wörtern können von unterschiedlicher Art sein. So können die Wörter \textit{\textbf{Gleiches}} darstellen, beispielsweise stellen sowohl \glqq dropbox\grqq, als auch \glqq icloud\grqq{}  oder \glqq onedrive\grqq{} Cloud-Speicher dar. Außerdem können Wörter auch \textit{\textbf{Gegenteiliges}} darstellen, wie z.B. \glqq heiß\grqq{} und \glqq kalt\grqq. \textit{\textbf{Syntaktisch}} ist eine weitere Beziehungsart, wie bei \glqq Verschlüsselung\grqq{} und \glqq verschlüsseln\grqq. \glqq Automobil\grqq{} und \glqq KFZ\grqq{} haben eine \textit{\textbf{synonyme}} Beziehung untereinander. Trifft keine der bisher genannten Arten auf die Beziehung zwischen zwei Wörtern, diese haben aber trotzdem etwas miteinander zu tun, wie beispielsweise \glqq Motor\grqq{} und \glqq Benzin\grqq{}, dann stehen diese Begriffe \textit{\textbf{in Beziehung}} miteinander. Diese fünf Beziehungsarten sollen als Kategorien für dieses Experiment dienen.\\
+		 Ziel dieses Experiments ist festzuhalten, ob in den beiden Modellen die Trainingsbegriffe zu ihren ähnlichen Wörtern unterschiedliche Arten von Beziehungen haben. Die Auswertung der Testbegriffe und ihrer ähnlichen Wörter erfolgt hier wieder von Hand. Sobald eine Beziehungsart in mindestens drei der fünf ähnlichen Wörter abgebildet ist, wird dieser Testbegriff mit der jeweiligen Beziehungsart markiert. Erreicht keine Art drei Vorkommen, wird dieser Begriff mit \textit{\textbf{verschiedenes}} markiert, da hier eine Art nicht eindeutig zuordenbar ist. Somit ergeben sich die sechs endgültigen, unterschiedlichen Beziehungskategorien \textit{syntaktisch, synonym, gleiches, gegenteiliges, in Beziehung} und \textit{verschiedenes}. Es werden alle 236 Testbegriffen für dieses Experiment verwendet.\\
+		
+
 		\subsection*{Durchführung}
-		Für dieses Experiment müssen beide Korpora untersucht werden, um eine Aussage machen zu können, ob sich die Beziehungsarten unterscheiden. Die Arten \textit{synonym} und \textit{gegenteilig} traten, bei den in der Arbeit verwendeten Testdaten, nicht auf. Die Art \textit{verschiedenes} wurde gewählt, wenn mehrere andere Beziehungsarten in den ähnlichen Worten vorhanden waren.
+		Für dieses Experiment werden beide Modelle untersucht, um eine Aussage zu treffen, ob sich die Beziehungsarten unterscheiden. Auch hier wird von Hand die Art, die die Beziehung zwischen den einzelnen Testbegriffen und den dazugehörigen ähnlichen Wörtern beschreibt, dem jeweiligen Testbegriff zugeordnet. In der Tabelle \ref{tab:experiment4} werden die Beziehungsarten und die Anzahl der Testbegriffe, die mit der jeweiligen Art markiert sind, nach Modelltyp getrennt, dargestellt. In der darauffolgenden Tabelle \ref{tab:bspBeziehungsarten} sind Beispiele zu den einzelnen Beziehungsarten aufgelistet. Neben der Art der Beziehungen ist der Suchbegriff, Modelltyp und die ähnlichen Worte mit den dazugehörigen Kosinusähnlichkeiten abgebildet.
+		
+		.\\
 		
 \begin{table}[H]
 \caption{Experiment 4: Arten von Beziehungen}
+\label{tab:experiment4}
 \begin{center}
-\begin{tabular}{|l||l|l||l|l|}
+\begin{tabular}{|l||l|l|}
 \hline
-Beziehungsart	& Kompletter	& Relation & Technologie-  & Relation\\
- 				& Korpus 		& 		   & Korpus		& \\
+\textbf{Beziehungsart}	& \textbf{Gesamtmodell}	&   \textbf{Technologie-}   \\
+ 				&  				   & \textbf{modell}		 \\
 
 \hline
- Syntaktisch & 1 &  0,4\%	& 0 & 0,0\% \\
+ syntaktisch & 0 	& 0 \\
  \hline
- Gegenteilig & 0 & 0,0\% 	& 0 & 0,0\% \\
+ gegenteilig & 0 	& 0  \\
  \hline
- Gleiches & 81 & 34,3\% 	& 38 & 16,1\% ( 18,0\%) \\
+ gleiches & 81 	& 38  \\
  \hline
- Synonym & 0 & 0,0\% 	& 0 & 0,0\% \\
+ synonym & 0 	& 0  \\
  \hline
- In Beziehung & 118 & 50,0\% 	& 126 & 53,4\% (59,7\%)\\
+ in Beziehung & 118 	& 126 \\
  \hline
- Verschiedenes & 36 & 15,3\% 	& 47 & 19,9\%(22,3\%) \\
+ verschiedenes & 37	& 47 \\
+ \hline
+ nicht im Modell & 0  & 25  \\
+ enthaltene Worte &   &\\
  \hline
  
 \end{tabular}
 \end{center}
 \end{table}
 		
-		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
 		
 
 \begin{table}[H]
 \caption{Beispiele zur den verschiedenen Beziehungsarten}
+\label{tab:bspBeziehungsarten}
 \begin{center}
 \begin{tabular}{|l||l|l|l|l|}
 \hline
-Art & Suchbegriff & Korpus & Ähnliche Worte   \\
+\textbf{Art} & \textbf{Suchbegriff} & \textbf{Modell} & \textbf{Ähnliche Worte}   \\
 \hline
-\hline
- syntaktisch&encription & Komplett & encrypted (Kosinusähnlichkeit: 0,833),\\
-& 	&	& encrypts (0,798)\\
- \hline
  gleiches &chrome	   & Komplett & firefox (0,784), safari (0,686), ie8 (0,674) \\
    &	   & Technologie & firefox (0,733), safari (0,769), flock (0,667),\\
    &&& seamonkey (0,650) \\
 \hline
- in Beziehung& browser	 & Komplett & browssers (0,882), firefox (0,812),\\
+ in Beziehung& browser	 & Komplett & browsers (0,882), firefox (0,812),\\
  &&& desktop (0,755), javascript (0,751)\\
  \hline
 verschiedenes& itunes	& Komplett& spotify (0,770), beatport (0,756),\\
@@ -643,6 +684,14 @@ verschiedenes& itunes	& Komplett& spotify (0,770), beatport (0,756),\\
 		
 		
 		\subsection*{Interpretation/Ergebnis}
+		
+		\textit{gegenteilig} absolut gar nicht
+		
+		
+		Die Arten \textit{synonym} und \textit{syntaktisch} traten, bei den in der Arbeit verwendeten Testdaten, nicht auf. 
+TODO: Da wieder erst ab 3 von 5 ähnlihen WÖrtern gezählt wurde, ist bei synonym = 0, aber in experiment 1 wurden synonyme gefunden(allerdings nicht bei ähnlichen wörtern, sondern deren ähnliche wörter). es waren auch synonyme unter den ähnlichen wörtern der etstwörter, allerdings jeweils nur 1-2 und somit viel dieses wort in eine andere kategorie oder mixed.\\
+		
+		
 		Wie man in der Auswertung der Daten erkennt, ist bei beiden Korpora die Beziehungsart \textit{in Beziehung} am stärksten vorhanden, dies kommt daher, dass im Word2Vec Modell Wörter die in ähnlichem Kontext stehen, auch nahe in der Vektorrepräsentation zusammen stehen. Die Art \textit{gleiches} ist im kompletten allgemeinen Korpus mit 34,3\% die zweithäufigste Art, allerdings kommt sie im Technologiekorpus nur ca. halb so oft vor (19,9\%). Hingegen ist die Anzahl mit \textit{verschiedenen} Arten etwas höher, sowie die \textit{in Beziehung}. Der Unterschied zwischen den Beziehungsarten in den unterschiedlichen Korpora ist also nicht zu groß, allerdings deutlich erkennbar.\\
 		
 		
@@ -724,30 +773,26 @@ raspberry& Komplett& nein & apple (0,657), apricot (0,629), \\
 \chapter{Fazit und Ausblick}
 \section{Fazit}
 Nach einer ausführlichen Vorverarbeitung können die Artikel aus Wikipedia gut als Trainingsdaten für Word2Vec Modelle dienen. Dank der Gensim-Implementierung ist die Benutzung von Word2Vec sehr vereinfacht und kann komfortabel bedient werden.\\
-Die Experimente liefern interessante Resultate im Bezug auf die Problemstellung zu Anfang. Durch die Experimente können die unterschiedlichen semantischen Beziehungen etwas aufgeschlüsselt werden.\\
-
-
-So wird durch die Experimente klar, dass durch einmalige Rekursion der Suchbegriffe, nicht auf Synonyme des ursprünglichen Begriffs geschlossen werden kann.\\
+Die Experimente liefern interessante Resultate im Bezug auf die Problemstellung dieser Arbeit. Durch die Experimente können die unterschiedlichen semantischen Beziehungen etwas aufgeschlüsselt werden.
+So wird durch die Experimente deutlich, dass durch einmalige Rekursion der Suchbegriffe, nicht auf Synonyme des ursprünglichen Begriffs geschlossen werden kann.\\
 Des weiteren eignet sich der domänenspezifische Teilkorpus eher für eine Konkretisierung der Suchbegriffe, wobei dies nur in ca. einem Drittel der Testdaten nachgewiesen werden konnte. \\
 Sollen die Testdaten verallgemeinert werden, eignet sich der allgemeine komplette Korpus viel besser als der domänenspezifische Teilkorpus. Soll also ein Überblick über ein gewisses Thema oder Suchbegriff erhalten werden, wird empfohlen das Modell, welches auf dem allgemeinen kompletten Korpus trainiert wurde, zu verwenden.\\
 Die unterschiedlichen Arten von Beziehung zwischen den Testdaten und ihren ähnlichen Wörtern unterscheiden sich nicht grundlegend zwischen den beiden Modellen. Das allgemeine komplette Modell hat einen etwas Größeren Anteil an \textit{gleichen} Worten, hingegen hat das domänenspezifische Teilmodell einen etwas größeren Anteil an \textit{verschiedenen} und \textit{in Beziehung} stehenden Beziehungen. \textit{Synonyme} oder \textit{gegenteilige} Arten an Beziehungen sind in beiden Modellen nicht vorhanden. Und auch \textit{syntaktische} Beziehungen sind nur bei einem Testdatensatz vorhanden.\\
-Soll eine Mehrdeutigkeit gefunden werden, ist die Vorgehensweise nur die ähnlichen Worte zu vergleichen und zu analysieren, nicht zielführend. Die Modelle bilden die Mehrdeutigkeit in den ähnlichen Worten nicht gut ab. Im Ausblick wird ein Vorschlag gemacht, wie die Mehrdeutigkeit eventuell besser erfasst werden könnte.\\
+Soll auf Mehrdeutigkeit untersucht werden, ist die Vorgehensweise nur die ähnlichen Worte zu vergleichen und zu analysieren, nicht zielführend, da die Modelle die Mehrdeutigkeit in den ähnlichen Worten nicht gut abbilden. Im Ausblick wird ein Vorschlag gemacht, wie die Mehrdeutigkeit eventuell besser erfasst werden könnte.\\
 
 
-Zusammenfassend kann gesagt werden, dass sich das allgemeine komplette Modell dann besser eignet, wenn ein genereller Überblick über die Testdaten erhalten werden soll. Denn in diesem Modell werden die Suchbegriffe eher verallgemeinert und die ähnlichen Worte repräsentieren \textit{Gleiches} im Bezug zu den Testdaten.\\
-Soll aber ein Suchbegriff genauer untersucht, bzw. sehr fokussiert betrachtet werden, eignet sich ein domänenspezifisches Modell besser. Es konkretisiert die Testdaten nicht nur besser, sondern liefert auch fachspezifischere ähnliche Worte.\\
+Es kann also festgehalten werden, dass sich das allgemeine komplette Modell dann besser eignet, wenn ein genereller Überblick über die Testdaten erhalten werden soll. Denn in diesem Modell werden die Suchbegriffe eher verallgemeinert und die ähnlichen Worte repräsentieren \textit{Gleiches} im Bezug zu den Testdaten.\\
+Soll aber ein Suchbegriff genauer untersucht, bzw. sehr fokussiert betrachtet werden, eignet sich ein domänenspezifisches Modell besser. Dieses konkretisiert die Testdaten nicht nur besser, sondern liefert auch fachspezifischere ähnliche Worte.\\
 
-Die Qualität der Beziehungen hängt auch stark von den verwendeten Trainingsdaten ab. Es sollte gewährleistet sein, dass ausreichend viele und auch qualitativ gute Daten zum Training verwendet werden.\\
+Die Qualität der Beziehungen hängt zudem stark von den verwendeten Trainingsdaten ab. Es sollte gewährleistet sein, dass ausreichend viele und auch qualitativ gute Daten zum Training verwendet werden.\\
 Soll ein domänenspezifisches Modell erstellt werden, sollte hier auch darauf geachtet werden, dass nicht nur ein Teil dieser Domäne in den Trainingsdaten abgebildet ist, außer es soll nur dieser spezielle Teil der Domäne im Modell dargestellt werden.\\
 
 
 \section{Ausblick}
 
-In der vorangegangenen Arbeit wurden einige Beziehungen zwischen den Testdaten und ihren ähnlichen Worten analysiert. In weiterführenden Arbeiten wäre es möglich, weitere und andersartige Beziehungen zwischen den Wörtern zu untersuchen. Also einfach noch mehrere Experimente durchzuführen.\\
-Zum Beispiel könnte die Mehrdeutigkeit noch anders untersucht werden, indem man mehrere unterschiedliche Modelle hat und dann die ähnlichen Worte eines gleichen Testwortes vergleicht.\\
+In dieser Arbeit wurden Beziehungen zwischen den Testdaten und ihren ähnlichen Worten analysiert. Es wurden jedoch bei weitem nicht alle Beziehungen untersucht, weshalb der Fokus weiterführender Arbeiten andersartige Beziehungen zwischen den Wörtern sein könnten. Dies beduetet, dass noch mehrere Experimente durchgeführt werden würden. Zum Beispiel könnte die Mehrdeutigkeit noch anders untersucht werden, indem man mehrere unterschiedliche Modelle hat und dann die ähnlichen Worte eines gleichen Testwortes vergleicht.\\
 
-Auch könnte analysiert werden wie sich subsampling\footnote{Beim subsampling wird das Ungleichgewicht von sehr häufig und sehr selten vorkommenden Worten im Trainingskorpus verringert\citep{DBLP:journals/corr/MikolovSCCD13}. } im Word2Vec Modell, im Blick auf die in dieser Arbeit analysierten Fragestellungen, verhält.\\
-Es wäre auch möglich das Word2Vec Modell mit N-Grammen, auch Phrases genannt, zu lernen, dann könnten auch Mehrwortbegriffe abgebildet und gesucht werden.
+Ein weiterer Ansatzpunk  für zukünftige Arbeiten ist, wie sich subsampling\footnote{Beim subsampling wird das Ungleichgewicht von sehr häufig und sehr selten vorkommenden Worten im Trainingskorpus verringert\citep{DBLP:journals/corr/MikolovSCCD13}. } im Word2Vec Modell, im Blick auf die in dieser Arbeit analysierten Fragestellungen, verhält. Es wäre auch möglich das Word2Vec Modell mit N-Grammen, auch Phrases genannt, zu lernen, dann könnten auch Mehrwortbegriffe abgebildet und gesucht werden.
 
 
 
