@@ -20,7 +20,7 @@
 \contentsline {section}{\numberline {5.1}Synonymsuche durch Rekursion}{14}{section.62}
 \contentsline {section}{\numberline {5.2}Konkretisierungen}{17}{section.70}
 \contentsline {section}{\numberline {5.3}Verallgemeinerungen}{20}{section.80}
-\contentsline {section}{\numberline {5.4}Unterschiedliche Beziehungen}{22}{section.88}
+\contentsline {section}{\numberline {5.4}Unterschiedliche Beziehungen}{23}{section.88}
 \contentsline {section}{\numberline {5.5}Erkennen von Mehrdeutigkeit}{25}{section.94}
 \contentsline {chapter}{\numberline {6}Fazit und Ausblick}{28}{chapter.103}
 \contentsline {section}{\numberline {6.1}Fazit}{28}{section.104}

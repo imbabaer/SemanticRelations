@@ -116,7 +116,7 @@ Goal of this thesis will be to determine whether a general body or a domain spec
 	\textbf{Begriff} & Erklärung\\
 	\hline	
 	\textbf{Ähnliche Worte} & Worte, die im Word2Vec-Modell mit der Methode\\
-	&  \textit{most\_similar()}, erhalten werden\\
+	&  \textit{gensim.models.word2vec.Word2Vec.most\_similar()}, erhalten werden\\
 	\textbf{SVM} & Support Vector Machine\\
 	\textbf{NBC} & Naive Bayes Classifier\\
 	\textbf{CBOW} & Continuous bag-of-words\\
@@ -558,7 +558,6 @@ In Tabelle \ref{tab:Experiment3} sind die Gesamtzahl der Testwörter, die Anzahl
  &  & \textbf{nicht verallgemeinert} & \textbf{verallgemeinert} &\textbf{ im Korpus} \\
 
 \hline
-\hline
  Gesamt & 236 & 102 & 134 & 0  \\
  \hline
  Technologie & 236 & 144 & 67 & 25 \\
@@ -593,7 +592,7 @@ In Tabelle \ref{tab:Experiment3} sind die Gesamtzahl der Testwörter, die Anzahl
  &&rapidshare (0,668), gnutella (0,653)\\
  	\hline
  	
-% security	&	Komplett&	cybersecurity (0,702), counterterrorism (0,685), iviz (0,668) \\
+ photoshop &	Technologie&	illustrator (0,781), lightroom (0,758), cs3 (0,710) \\
  	\hline
  	
  
@@ -670,8 +669,8 @@ Da im Gesamtmodell in mehr als der Hälfte der Fälle, eine Verallgemeinerung de
  in Beziehung& browser	 & Gesamt & browsers (0,882), firefox (0,812),\\
  &&& desktop (0,755), javascript (0,751)\\
  \hline
-verschiedenes& 	& Gesamt&  (0,),  (0,),\\
-&&&  (0,),  (0,)\\
+verschiedenes& encryption	& Gesamt&  encrypted (0,833),  authentication(0,815),\\
+&&&  encrypts (0,798),  decryption (0,789)\\
  	\hline
  
 \end{tabular}
@@ -737,9 +736,9 @@ davon Worte nicht im Korpus& 0   	& 1   \\
 	& \textbf{Gesamtmodell}	 	& \textbf{Technologiemodell}   \\
 
  \hline
- nicht erkannt & 60 &   59 \\
+ nicht erkannt & 59 &   58 \\
  \hline
- erkannt & 6 & 6  \\
+ erkannt & 7 & 7  \\
 \hline
  Wort nicht im Korpus & 0 & 1 \\
  \hline
@@ -756,7 +755,7 @@ davon Worte nicht im Korpus& 0   	& 1   \\
 \textbf{Suchbegriff} & \textbf{Modell} & \textbf{Erkannt} & \textbf{Ähnliche Worte}   \\
 \hline
  trojan & Gesamt & ja &rsplug (Kosinusähnlichkeit: 0,472), athena (0,462)\\
- &	&	& bundestrojaner (0,496), centaurs (0,475), \\
+ &	&	& bundestrojaner (0,496), centaurs (0,475) \\
  &  Technologie & ja & horse (0,586), malware (0,560), zinaps (0,476)\\
  \hline
  
@@ -775,10 +774,8 @@ raspberry& Gesamt& nein & apple (0,657), apricot (0,629), \\
 TODO: mehrdeutigkeiten sind ja immer andere beduetungen, somit kommen diese auch nicht so häufig im gleichen kontext vor, sodass sie durch word2vec zuverlässig abgebildet werden könnten.\\
 
 		
-		In beiden Modellen werden von den 66 mehrdeutigen Testbegriffen jeweils nur sechs als mehrdeutig erkannt. Jedoch sind dies elf unterschiedliche Testbegriffe, 
-denn die Modelle erkennen immer bei unterschiedlichen Begriffen die Mehrdeutigkeit und nur beim Begriff \textit{trojan} erkennen beide Modelle die Mehrdeutigkeit. Ein mehrdeutiger Testbegriff kommt im Technologiemodell gar nicht vor und 60 (Gesamtmodell) beziehungsweise 59 (Technologiemodell) mehrdeutige Begriffe werden nicht erkannt. 
-
-Allerdings werden bei XX Testbegriffen in den unterschiedlichen Modellen je eine unterschiedliche Bedeutung der mehrdeutigen Begriffe in den ähnlichen Worten dargestellt. Siehe dazu Tabelle \ref{tab:bspJeEinModellMehrdeutig}, dort sind einige Beispiele aufgelistet. Dargestellt sind die Testbegriffe, Modelltyp und die erhaltenen ähnlichen Worte.\\
+		Im beiden Modellen werden von den 66 mehrdeutigen Testbegriffen nur sieben erkannt. Jedoch sind dies 13 unterschiedliche Testbegriffe, denn die Modelle erkennen immer bei unterschiedlichen Begriffen die Mehrdeutigkeit und nur beim Begriff \textit{trojan} erkennen beide Modelle die Mehrdeutigkeit. Ein mehrdeutiger Testbegriff kommt im Technologiemodell gar nicht vor und 59 (Gesamtmodell) beziehungsweise 58 (Technologiemodell) mehrdeutige Begriffe werden nicht erkannt. \\
+Allerdings werden bei 35 Testbegriffen in den unterschiedlichen Modellen je eine unterschiedliche Bedeutung der mehrdeutigen Begriffe in den ähnlichen Worten dargestellt. Siehe dazu Tabelle \ref{tab:bspJeEinModellMehrdeutig}, dort sind einige Beispiele aufgelistet. Dargestellt sind die Testbegriffe, Modelltyp und die erhaltenen ähnlichen Worte mit Kosinusähnlichkeiten.\\
 		
 		\begin{table}[H]
 \caption{Beispiele Mehrdeutigkeiten in unterschiedlichen Modellen}
@@ -788,23 +785,36 @@ Allerdings werden bei XX Testbegriffen in den unterschiedlichen Modellen je eine
 \hline
 \textbf{Suchbegriff} & \textbf{Modell} & \textbf{Ähnliche Worte}   \\
 \hline
-pi  & Gesamt	 &  rsplug (Kosinusähnlichkeit: 0,472), athena (0,462)\\
- &			 	 &	 bundestrojaner (0,496), centaurs (0,475), \\
- &  Technologie  &  horse (0,586), malware (0,560), zinaps (0,476)\\
- \hline
+
  
-architecture & Gesamt		&  apple (0,657), apricot (0,629), \\
-&				&  blackcurrant (0,586),  \\
-&Technologie 	&  pi (0,677), cubieboard (0,524), trimeslice (0,519)\\
+architecture & Gesamt		&  revival (Kosinusähnlichkeit: 0,774), neoclassical (0,677), \\
+&				&  gothic (0,666),  \\
+&Technologie 	&  armv7a (0,514), multicore (0,494), xmos (0,477)\\
 \hline
- 
+fat & Gesamt		&  calories (0,615), milk (0,598), fatfree (0,595) \\
+&Technologie 	&  ntfs (0,780), exfat(0,751), fat32 (0,709) \\
+\hline
+ keyboard & Gesamt		&  synthesizer (0,769), accordion (0,768), guitar (0,752)\\
+&Technologie 	&  qwerty (0,672), mouse (0,667), keypad(0,641)\\
+\hline
+pi  & Gesamt	 &  theta (0,754), tau (0,729), rho (0,729), mu (0,695)\\
+ &  Technologie  &  raspberry (0,677), cubieboard (0,478), iyonix (0,455)\\
+ \hline
+ ps2 & Gesamt		&  ps3 (0,795), gamecube(0,764), n64 (0,756), snes (0,748)\\
+
+&Technologie 	&  keyboardmouse (0,764), centronics (0,676), rs232 (0,664)\\
+\hline
+ windows & Gesamt		&  sunhoods (0,745), sixoverone (0,743), \\
+&				&  nineovernine (0,736), sixoversix (0,721)  \\
+&Technologie 	&  vistawindows (0,699), vista (0,683), xp (0,656)\\
+\hline
 \end{tabular}
 \end{center}
 \end{table}
 		
 
 				
-		Aus der Tatsache, dass nur eine so geringe Menge von sechs Begriffen als mehrdeutig erkannt werden, kann geschlossen werden, dass sich beide Modelle nicht dazu eignen, Mehrdeutigkeiten in den ähnlichen Wörtern abzubilden. Im folgenden Kapitel wird unter der Rubrik Ausblick ein Vorschlag gemacht, wie eine Mehrdeutigkeit von Begriffen mit mehreren Word2Vec Modellen erkannt werden könnt.\\
+		Aus der Tatsache, dass nur eine so geringe Menge von sechs oder sieben Begriffen als mehrdeutig erkannt werden, kann geschlossen werden, dass sich beide Modelle nicht dazu eignen, Mehrdeutigkeiten in den ähnlichen Wörtern abzubilden. Im folgenden Kapitel wird unter der Rubrik Ausblick ein Vorschlag gemacht, wie eine Mehrdeutigkeit von Begriffen mit mehreren Word2Vec Modellen erkannt werden könnte.
 		
 
 \newpage
