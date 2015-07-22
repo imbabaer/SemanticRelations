@@ -22,11 +22,12 @@
 \contentsline {section}{\numberline {5.3}Verallgemeinerungen}{20}{section.80}
 \contentsline {section}{\numberline {5.4}Unterschiedliche Beziehungen}{22}{section.88}
 \contentsline {section}{\numberline {5.5}Erkennen von Mehrdeutigkeit}{25}{section.94}
-\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{27}{chapter.100}
-\contentsline {section}{\numberline {6.1}Fazit}{27}{section.101}
-\contentsline {section}{\numberline {6.2}Ausblick}{28}{section.102}
-\contentsline {chapter}{\numberline {7}Anhang}{32}{chapter.107}
-\contentsline {section}{\numberline {7.1}Testdatenvergleich}{32}{section.108}
-\contentsline {section}{\numberline {7.2}Testdaten}{34}{section.112}
-\contentsline {section}{\numberline {7.3}Reinigungsskript}{36}{section.115}
-\contentsline {section}{\numberline {7.4}Synonymliste}{39}{section.116}
+\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{28}{chapter.103}
+\contentsline {section}{\numberline {6.1}Fazit}{28}{section.104}
+\contentsline {section}{\numberline {6.2}Ausblick}{29}{section.105}
+\contentsline {chapter}{\numberline {7}Anhang}{33}{chapter.110}
+\contentsline {section}{\numberline {7.1}Testdatenvergleich}{33}{section.111}
+\contentsline {section}{\numberline {7.2}Testdaten}{35}{section.115}
+\contentsline {section}{\numberline {7.3}Reinigungsskript}{37}{section.118}
+\contentsline {section}{\numberline {7.4}Synonymliste}{40}{section.119}
+\contentsline {section}{\numberline {7.5}Mehrdeutige Testbegriffe}{41}{section.121}

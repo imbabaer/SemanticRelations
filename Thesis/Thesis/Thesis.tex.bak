@@ -368,7 +368,7 @@ Als Grundlage für die Experimente dienen die Testdaten\footnote{Siehe \ref{sec:
 		\subsection*{Durchführung}
 		Eine Liste mit den Synonymen der Testbegriffe wird vor dem Experiment mit der Hilfe eines Webservices\footnote{Über http://thesaurus.altervista.org/, abgerufen am 20.07.2015} erstellt\footnote{Siehe \ref{sec:Synonymliste}}. Dieser Webservice liefert aber nur für 109 der insgesamt 236 Testwörter Synonyme. So wurden für dieses Experiment nur diese 109 Testwörter benutzt.\\
 		Im ersten Schritt dieses Experiments müssen die ähnlichen Worte ($W_1$) der Testbegriffe, mit der Methode \textit{most\_similar()} des Word2Vec Modells, herausgefunden werden. Diese fünf Wörter ($W_1$) werden in der späteren Analyse nicht betrachtet. Im nächsten Schritt werden die fünf erhaltenen ähnlichen Wörter ($W_1$) dann als Eingabe für die \textit{most\_similar()}-Methode benutzt und liefern wieder jeweils fünf ähnliche Wörter ($W_2$) zurück. Die insgesamt 25 Begriffe werden im letzten Schritt des Experiments dann mit den Synonymen des ursprünglichen Testbegriff verglichen. Sobald einer der 25 erhaltenen Begriffe in der Liste der Synonyme des jeweiligen Testwortes enthalten ist, wird dieses Wort als \textit{Synonym enthalten} gezählt.\\
-		Die nachfolgende Tabelle listet die Resultate dieses Experiments auf. Es sind die Gesamtanzahl der Testwörter, die Anzahl an Testwörter, bei denen Synonyme gefunden wurden und die Anzahl der Testwörter, bei denen keine Synonyme gefunden wurden, sowie die Anzahl der Worte, die nicht im jeweiligen Modell enthalten sind, abgebildet.
+		Die nachfolgende Tabelle \ref{tab:experiment1} listet die Resultate dieses Experiments auf. Es sind die Gesamtanzahl der Testwörter, die Anzahl an Testwörter, bei denen Synonyme gefunden wurden und die Anzahl der Testwörter, bei denen keine Synonyme gefunden wurden, sowie die Anzahl der Worte, die nicht im jeweiligen Modell enthalten sind, abgebildet.
 		
 		
 
@@ -376,14 +376,15 @@ Als Grundlage für die Experimente dienen die Testdaten\footnote{Siehe \ref{sec:
 		
 \begin{table}[H]
 \caption{Experiment 1: Synonyme durch Rekursion}
+\label{tab:experiment1}
 \begin{center}
 \begin{tabular}{|l||l|l|l|l|}
 \hline
-\textbf{Korpus} & \textbf{Gesamtanzahl}	&\textbf{Synonyme} & \textbf{Synonyme}  & \textbf{Worte nicht}  \\
+\textbf{Modell} & \textbf{Gesamtanzahl}	&\textbf{Synonyme} & \textbf{Synonyme}  & \textbf{Worte nicht}  \\
  &			& \textbf{nicht enthalten} & \textbf{enthalten} & \textbf{im Korpus}  \\
 
 \hline
- Komplett & 109 & 97 & 12 & 0 \\
+ Gesamt & 109 & 97 & 12 & 0 \\
  \hline
  Technologie & 109 & 102 & 2 & 5 \\
  \hline
@@ -407,29 +408,29 @@ Als Grundlage für die Experimente dienen die Testdaten\footnote{Siehe \ref{sec:
  power	& Technologie	& supply	\\
  \hline
  \hline
-auto & Komplett & automobile\\
+auto & Gesamt & automobile\\
 \hline
-automobile & Komplett & car\\
+automobile & Gesamt & car\\
 \hline
-cyberwar & Komplett & cyberterrorism\\
+cyberwar & Gesamt & cyberterrorism\\
 \hline
-encryption & Komplett & cryptography\\
+encryption & Gesamt & cryptography\\
 \hline
-google & Komplett & search\\
+google & Gesamt & search\\
 \hline
-linux & Komplett & unix\\
+linux & Gesamt & unix\\
 \hline
-mouse & Komplett & rodent\\
+mouse & Gesamt & rodent\\
 \hline
-processor & Komplett & cpu\\
+processor & Gesamt & cpu\\
 \hline
-sun & Komplett & star\\
+sun & Gesamt & star\\
 \hline
-telecom & Komplett & telecommunication\\
+telecom & Gesamt & telecommunication\\
 \hline
-television & Komplett & tv\\
+television & Gesamt & tv\\
 \hline
-wifi & Komplett & wlan\\
+wifi & Gesamt & wlan\\
  	\hline
  
 \end{tabular}
@@ -454,7 +455,7 @@ wifi & Komplett & wlan\\
 		
 \begin{figure}[h]
   \begin{center}
-	\includegraphics[scale=0.55]{Konkretisierung_Baum.png}
+	\includegraphics[scale=0.55]{Konkretisierung_Baum2.png}
   \end{center}  
   \caption{Beispiel der Beziehungen zwischen Wörtern als Baumdiagramm dargestellt.}
   \label{pic:Konkretisierung}
@@ -465,7 +466,7 @@ wifi & Komplett & wlan\\
 		Bei diesem Experiment werden die Testwörter mit ihren fünf ähnlichsten Wörtern verglichen. Diese Untersuchung erfolgt von Hand, da es keine Auflistungen mit Konkretisierungen von Begriffen gibt. Außerdem wäre es zu aufwändig, eine solche Liste zu erstellen, da nicht vorhersehbar ist, wie stark die Suchbegriffe konkretisiert werden und somit sehr viele Daten erzeugt werden müssten. Sollten die Modelle hinsichtlich der Konkretisierungstiefe\footnote{Damit ist gemeint ob z.B. der Begriff \textit{Auto} mit \textit{BMW, Mercedes, VW} oder aber mit \textit{X5, A-Klasse, Tuareg} konkretisiert wird.} untersucht werden, könnte das in einem zusätzlichen Experiment analysiert werden. Dann müssten solche Auflistungen mit Konkretisierungen von Begriffen erstellt werden, um das unterschiedliche Verhalten aufzuzeigen. In diesem Experiment geht es aber darum, erst einmal herauszufinden, ob überhaupt eine Konkretisierung stattfindet unabhängig von der Konkretisierungstiefe.\\	
 		 Stellen mindestens drei der fünf ähnlichen Wörter eine Konkretisierung des Suchbegriffs dar, so wird dieser Eintrag als \textit{konkretisiert} markiert. Bei diesem Experiment war das Nachschlagen von mehreren ähnlichen Worten sehr zeitintensiv, denn um beurteilen zu können, ob es sich bei diesem Wort um eine Konkretisierung des Suchbegriffs handelt, müssen die inhaltlichen Beziehungen zwischen Suchbegriff und ähnlichen Worten klar sein. Um die Bedeutungen der Worte und die inhaltlichen Beziehungen zu recherchieren, wird Wikipedia\footnote{https://en.wikipedia.org/, abgerufen am 21.07.2015} und Google\footnote{https://www.google.de/, abgerufen am 21.07.2015} benutzt.\\
 		
-		In der folgenden Tabelle ist die Gesamtanzahl der Testwörter, die Anzahl der Suchbegriffe, die mit \textit{konkretisiert} markiert wurden, die Anzahl der Suchbegriffe,  die nicht mit \textit{konkretisiert} markiert wurden, sowie die Anzahl der nicht im Modell enthaltenen Worte. Die Daten sind nach Modellen getrennt aufgelistet. Des Weiteren sind einige Beispiele in Tabelle \ref{tab:BspKonkretisierung} aufgelistet. Diese Tabelle enthält neben den Suchbegriffen, Modell und den gefundenen konkretisierten ähnlichen Worten auch die Kosinusähnlichkeiten zu den Suchbegriffen.
+		In der folgenden Tabelle sind die Gesamtanzahl der Testwörter, die Anzahl der Suchbegriffe, die mit \textit{konkretisiert} markiert wurden, die Anzahl der Suchbegriffe,  die nicht mit \textit{konkretisiert} markiert wurden, sowie die Anzahl der nicht im Modell enthaltenen Worte. Die Daten sind nach Modellen getrennt aufgelistet. Des Weiteren sind einige Beispiele in Tabelle \ref{tab:BspKonkretisierung} aufgelistet. Diese Tabelle enthält neben den Suchbegriffen, Modell und den gefundenen konkretisierten ähnlichen Worten auch die Kosinusähnlichkeiten zu den Suchbegriffen.
 		
 \begin{table}[H]
 \caption{Experiment 2: Konkretisierung}
@@ -476,7 +477,7 @@ wifi & Komplett & wlan\\
  & &\textbf{nicht konkretisiert} & \textbf{konkretisiert} & \textbf{im Korpus} \\
 
 \hline
- Komplett & 236 & 199 & 37 & 0 \\
+ Gesamt & 236 & 199 & 37 & 0 \\
  \hline
  Technologie & 236 & 146 & 65 & 25 \\
  \hline
@@ -499,7 +500,7 @@ wifi & Komplett & wlan\\
  apple & Technologie & iphone (Kosinusähnlichkeit: 0,587), a6x (0,579)\\
  & & ipad (0,570), a5x (0,559)\\
  \hline
- architecture	   & Komplett & revival (0,774), neoclassical (0,677), gothic (0,667) \\
+ architecture	   & Gesamt & revival (0,774), neoclassical (0,677), gothic (0,667) \\
  & Technologie& armv7a (0,514), multicore (0,493), xmos (0,477) \\
 \hline
  fat	& Technologie	& exfat (0,751), vfat (0,724), fat32 (0,709)	\\
@@ -508,7 +509,7 @@ wifi & Komplett & wlan\\
  \hline
  photography	& Technologie& slrs(0,544), panoramic (0,543), polaroid (0,531)\\
  	\hline
- power	&	Komplett &	electricity (0,679), surgut2 (0,637), egbin (0,627) \\
+ power	&	Gesamt &	electricity (0,679), surgut2 (0,637), egbin (0,627) \\
  	\hline
  
 \end{tabular}
@@ -533,7 +534,7 @@ TODO: Insgesamt wenig Konkretisierungen, da Wörter-BEziehungen so entstehen, da
 		
 \begin{figure}[h]
   \begin{center}
-	\includegraphics[scale=0.55]{Verallgemeinerung_Baum.png}
+	\includegraphics[scale=0.55]{Verallgemeinerung_Baum2.png}
   \end{center}  
   \caption{Beispiel der Beziehungen zwischen Wörtern als Baumdiagramm dargestellt.}
   \label{pic:Verallgemeinerung}
@@ -545,7 +546,7 @@ TODO: Insgesamt wenig Konkretisierungen, da Wörter-BEziehungen so entstehen, da
 		
 		Wie beim vorherigen Experiment mussten viele Begriffe nachgeschlagen werden,  um die inhaltlichen Beziehungen zwischen dem Suchbegriff und den jeweiligen ähnlichen Worten beurteilen zu können.\\
 		
-In Tabelle \ref{tab:Experiment3} sind die Gesamtzahl der Testwörter, die Anzahl der Suchbegriffe, die mit \textit{verallgemeinert} markiert wurden, die Anzahl der Suchbegriffe,  die nicht mit \textit{verallgemeinert} markiert wurden, sowie die Anzahl der Worte, die nicht im Modell enthalten sind. Die Daten sind nach Modellen getrennt aufgelistet. Die Tabelle \ref{tab:bspVerallgemeinerung} enthält einige Beispiele der gefundenen Verallgemeinerungen. Es sind neben den Suchbegriffen, Modell und den gefundenen verallgemeinerten ähnlichen Worten, auch deren Kosinusähnlichkeiten zu den Suchbegriffen.
+In Tabelle \ref{tab:Experiment3} sind die Gesamtzahl der Testwörter, die Anzahl der Suchbegriffe, die mit \textit{verallgemeinert} markiert wurden, die Anzahl der Suchbegriffe,  die nicht mit \textit{verallgemeinert} markiert wurden, sowie die Anzahl der Worte, die nicht im Modell enthalten sind, aufgelistet. Die Daten sind nach Modellen getrennt aufgelistet. Die Tabelle \ref{tab:bspVerallgemeinerung} enthält einige Beispiele der gefundenen Verallgemeinerungen. Es sind neben den Suchbegriffen, Modell und den gefundenen verallgemeinerten ähnlichen Worten, auch deren Kosinusähnlichkeiten zu den Suchbegriffen.
 		
 \begin{table}[H]
 \caption{Experiment 3: Verallgemeinerung}
@@ -558,7 +559,7 @@ In Tabelle \ref{tab:Experiment3} sind die Gesamtzahl der Testwörter, die Anzahl
 
 \hline
 \hline
- Komplett & 236 & 102 & 134 & 0  \\
+ Gesamt & 236 & 102 & 134 & 0  \\
  \hline
  Technologie & 236 & 144 & 67 & 25 \\
  \hline
@@ -578,18 +579,17 @@ In Tabelle \ref{tab:Experiment3} sind die Gesamtzahl der Testwörter, die Anzahl
 \hline
 \textbf{Suchbegriff} & \textbf{Modell} & \textbf{Verallgemeinerung}   \\
 \hline
-\hline
- apple & Komplett & blackberry (Kosinusähnlichkeit: 0,704),\\
+ apple & Gesamt & blackberry (Kosinusähnlichkeit: 0,704),\\
  	&	& raspberry (0,657), webos (0,643)\\
  \hline
- asus	   & Komplett & netbook (0,767), lenovo (0,736), motherboards (0,714) \\
+ asus	   & Gesamt & netbook (0,767), lenovo (0,736), motherboards (0,714) \\
 \hline
- cookies	& Komplett& baked (0,666), cakes (0,663), muffins (0,654)\\
+ cookies	& Gesamt& baked (0,666), cakes (0,663), muffins (0,654)\\
  	\hline
- dell	 & Komplett & hewlettpackard (0,583), cisco (0,548), lenovo (0,515),\\
+ dell	 & Gesamt & hewlettpackard (0,583), cisco (0,548), lenovo (0,515),\\
  && compaq (0,506) \\
  \hline
- limewire	& Komplett& bittorrent (0,703), filesharing (0,702), kazaa (0,689)\\
+ limewire	& Gesamt& bittorrent (0,703), filesharing (0,702), kazaa (0,689)\\
  &&rapidshare (0,668), gnutella (0,653)\\
  	\hline
  	
@@ -619,13 +619,10 @@ Da im Gesamtmodell in mehr als der Hälfte der Fälle, eine Verallgemeinerung de
 		
 
 		\subsection*{Durchführung}
-		Für dieses Experiment werden beide Modelle untersucht, um eine Aussage zu treffen, ob sich die Beziehungsarten unterscheiden. Auch hier wird von Hand die Art, die die Beziehung zwischen den einzelnen Testbegriffen und den dazugehörigen ähnlichen Wörtern beschreibt, dem jeweiligen Testbegriff zugeordnet. In der Tabelle \ref{tab:experiment4} werden die Beziehungsarten und die Anzahl der Testbegriffe, die mit der jeweiligen Art markiert sind, nach Modelltyp getrennt, dargestellt. In der darauffolgenden Tabelle \ref{tab:bspBeziehungsarten} sind Beispiele zu den einzelnen Beziehungsarten aufgelistet. Neben der Art der Beziehungen ist der Suchbegriff, Modelltyp und die ähnlichen Worte mit den dazugehörigen Kosinusähnlichkeiten abgebildet.
-		
-		.\\
-		\textit{gegenteilig} absolut gar nicht
+		Für dieses Experiment werden beide Modelle untersucht, um eine Aussage zu treffen, ob sich die Beziehungsarten unterscheiden. Auch hier wird von Hand die Art, die die Beziehung zwischen den einzelnen Testbegriffen und den dazugehörigen ähnlichen Wörtern beschreibt, dem jeweiligen Testbegriff zugeordnet. \\
+		In der Tabelle \ref{tab:experiment4} werden die Beziehungsarten und die Anzahl der Testbegriffe, die mit der jeweiligen Art markiert sind, nach Modelltyp getrennt, dargestellt. In der darauffolgenden Tabelle \ref{tab:bspBeziehungsarten} sind Beispiele zu den einzelnen Beziehungsarten aufgelistet. Neben der Art der Beziehungen ist der Suchbegriff, Modelltyp und die ähnlichen Worte mit den dazugehörigen Kosinusähnlichkeiten abgebildet.\\
 		
 		
-		Die Arten \textit{synonym} und \textit{syntaktisch} traten, bei den in der Arbeit verwendeten Testdaten, nicht auf. 
 		
 \begin{table}[H]
 \caption{Experiment 4: Arten von Beziehungen}
@@ -633,8 +630,7 @@ Da im Gesamtmodell in mehr als der Hälfte der Fälle, eine Verallgemeinerung de
 \begin{center}
 \begin{tabular}{|l||l|l|}
 \hline
-\textbf{Beziehungsart}	& \textbf{Gesamtmodell}	&   \textbf{Technologie-}   \\
- 				&  				   & \textbf{modell}		 \\
+\textbf{Beziehungsart}	& \textbf{Gesamtmodell}	&   \textbf{Technologiemodell}   \\
 
 \hline
  syntaktisch & 0 	& 0 \\
@@ -667,15 +663,15 @@ Da im Gesamtmodell in mehr als der Hälfte der Fälle, eine Verallgemeinerung de
 \hline
 \textbf{Art} & \textbf{Suchbegriff} & \textbf{Modell} & \textbf{Ähnliche Worte}   \\
 \hline
- gleiches &chrome	   & Komplett & firefox (0,784), safari (0,686), ie8 (0,674) \\
+ gleiches &chrome	   & Gesamt & firefox (0,784), safari (0,686), ie8 (0,674) \\
    &	   & Technologie & firefox (0,733), safari (0,769), flock (0,667),\\
    &&& seamonkey (0,650) \\
 \hline
- in Beziehung& browser	 & Komplett & browsers (0,882), firefox (0,812),\\
+ in Beziehung& browser	 & Gesamt & browsers (0,882), firefox (0,812),\\
  &&& desktop (0,755), javascript (0,751)\\
  \hline
-verschiedenes& itunes	& Komplett& spotify (0,770), beatport (0,756),\\
-&&& preorder (0,718), download (0,694)\\
+verschiedenes& 	& Gesamt&  (0,),  (0,),\\
+&&&  (0,),  (0,)\\
  	\hline
  
 \end{tabular}
@@ -688,10 +684,10 @@ verschiedenes& itunes	& Komplett& spotify (0,770), beatport (0,756),\\
 		
 		
 		\subsection*{Interpretation/Ergebnis}
-TODO: Da wieder erst ab 3 von 5 ähnlihen WÖrtern gezählt wurde, ist bei synonym = 0, aber in experiment 1 wurden synonyme gefunden(allerdings nicht bei ähnlichen wörtern, sondern deren ähnliche wörter). es waren auch synonyme unter den ähnlichen wörtern der etstwörter, allerdings jeweils nur 1-2 und somit viel dieses wort in eine andere kategorie oder mixed.\\
+		Wie aus Tabelle \ref{tab:experiment4} ersichtlich ist, wurden keine Testbegriffe mit \textit{synonym}, \textit{syntaktisch} oder \textit{gegenteilig} markiert. Das hängt damit zusammen, dass die Bedingung für die Markierung war, dass diese Beziehungsart in mindestens drei der fünf ähnlichen Worte vorhanden sein muss. Zwar traten diese Arten der Beziehung vereinzelt auf, aber die Bedingung konnten diese drei Arten bei keinem Testbegriff erfüllen. Meist fielen diese Begriffe in die Kategorie \textit{verschiedenes}, da auch noch andere Arten vorhanden waren, aber keine dominierte. Mit einer Anzahl von 118 im Gesamtmodell und 126 im Technologiemodell war die Beziehungsart \textit{in Beziehung} am häufigsten vorhanden. Dies kann damit erklärt werden, dass im Word2Vec Modell Wörter die in ähnlichem Kontext stehen, auch nahe in der Vektorrepräsentation zusammen stehen. Die Art \textit{gleiches} war mit 81 Markierungen im Gesamtmodell am zweithäufigsten vorhanden, auch hier liegt nahe, dass es daran liegt, dass Wörter mit gleichem Kontext eine ähnliche Vektorrepräsentation haben. Im Technologiemodell tritt diese Beziehungsart nur 38 Mal auf, was daher kommen könnte, dass dieses Modell mit weniger Daten trainiert wurde und deswegen die Anzahl an Worte, die im gleichen Kontext stehen, auch geringer ist. Im Gesamtmodell steht die Art \textit{verschiedenes} mit 37 Vorkommen an dritter Stelle, beim Technologiemodell mit 47 an zweiter. Diese Art sagt nichts über die tatsächlichen Beziehungen aus, außer dass nicht eindeutig eine Art dominant vorhanden ist. \\
+		In beiden Modellen sind die vorhandenen Arten die gleichen. Das Gesamtmodell stellt verhältnismäßig mehr \textit{gleiches} als das Technologiemodell dar, das Technologiemodell jedoch mehr \textit{verschiedenes} und \textit{in Beziehung}. Der Unterschied in der Anzahl der vorkommenden Beziehungsarten ist erkennbar, allerdings ist er in den unterschiedlichen Modellen nicht sehr groß.
 		
 		
-		Wie man in der Auswertung der Daten erkennt, ist bei beiden Korpora die Beziehungsart \textit{in Beziehung} am stärksten vorhanden, dies kommt daher, dass im Word2Vec Modell Wörter die in ähnlichem Kontext stehen, auch nahe in der Vektorrepräsentation zusammen stehen. Die Art \textit{gleiches} ist im kompletten allgemeinen Korpus mit 34,3\% die zweithäufigste Art, allerdings kommt sie im Technologiekorpus nur ca. halb so oft vor (19,9\%). Hingegen ist die Anzahl mit \textit{verschiedenen} Arten etwas höher, sowie die \textit{in Beziehung}. Der Unterschied zwischen den Beziehungsarten in den unterschiedlichen Korpora ist also nicht zu groß, allerdings deutlich erkennbar.\\
 		
 		
 		
@@ -701,58 +697,70 @@ TODO: Da wieder erst ab 3 von 5 ähnlihen WÖrtern gezählt wurde, ist bei synon
 	
 \label{chap:Experiment5}
 		\subsection*{Beschreibung}
-		Das letzte Experiment beschäftigt sich mit der Mehrdeutigkeit von Worten. Es soll untersucht werden, ob im allgemeinen kompletten Korpus die unterschiedlichen Bedeutungen eines mehrdeutigen Wortes in den ähnlichen Worten repräsentiert werden.\\
-		\subsection*{Durchführung}
-		Auch hier wurden beide Korpora analysiert um zu vergleichen ob sie sich unterscheiden im Bezug auf mehrdeutige Worte.\\
+		Das letzte Experiment beschäftigt sich mit der Mehrdeutigkeit von Worten. Es wird untersucht, ob im Gesamtmodell die ähnlichen Worte eines mehrdeutigen Suchbegriffs, dessen unterschiedliche Bedeutungen repräsentieren. Oder ob dieses Verhalten häufiger im Technologiemodell aufzufinden ist.
+		Hier werden nur die 66 mehrdeutigen der insgesamt 236 Testbegriffen verwendet\footnote{Siehe Auflistung der mehrdeutigen Testworte unter \ref{sec:mehrdeutigetestbegriffe} .}. \\
 		
-		\begin{table}[H]
-\caption{Experiment 5: Erkennen von Mehrdeutigkeiten}
+		
+		\subsection*{Durchführung}
+Wie in den vorherigen Experimenten, werden in diesem Experiment die Testbegriffe und ihre fünf ähnlichen Worte von Hand analysiert. Sobald zwei der ähnlichen Wörter unterschiedliche Bedeutungen eines mehrdeutigen Testbegriffes darstellen, wird dieser Begriff als \textit{Mehrdeutigkeit erkannt} markiert. Sollte dies nicht der Fall sein, werden sie mit \textit{Mehrdeutigkeit nicht erkannt} markiert. Es werden beide Modelle untersucht.\\
+In Tabelle \ref{tab:experiment51} werden die Anzahl der mehrdeutigen Testbegriffe, die Anzahl der nicht mehrdeutigen Testbegriffe und wie viele der Testbegriffe jeweils nicht im Modell vorhanden sind, nach Modelltyp getrennt, aufgelistet. Die Tabelle \ref{tab:experiment52} bezieht sich komplett auf die mehrdeutigen Testbegriffe. Hier sind die Anzahl der Testbegriffe, die mit \textit{Mehrdeutigkeit erkannt}, sowie mit \textit{Mehrdeutigkeit nicht erkannt} markiert sind und die Anzahl der mehrdeutigen Testworte, die nicht im Modell enthalten sind, dargestellt. Einige Beispiele der erkannten und nicht erkannten Mehrdeutigkeiten sind in Tabelle \ref{tab:bspMehrdeutigkeiten} aufgelistet. Neben dem Suchbegriff, Modelltyp ist auch angegeben, ob die Begriffe als mehrdeutig erkannt wurden und es sind die jeweiligen ähnlichen Worte mit ihren Kosinusähnlichkeiten aufgeführt. \\
+
+		
+		\begin{table}[h]
+\caption{Experiment 5: Aufteilung mehrdeutiger Worte}
+\label{tab:experiment51}
 \begin{center}
-\begin{tabular}{|l||l|l||l|l|}
+\begin{tabular}{|l||l|l|}
 \hline
-				& Kompletter	& Relation 		  & Technologie-  & Relation\\
- 				& Korpus 		& zur Gesamtzahl  & Korpus		& zur Gesamtzahl\\
+				& \textbf{Gesamtmodell}		  & \textbf{Technologiemodell}   \\
 
 \hline
 
- Wort nicht im Korpus& 0 &  0,0\%	& 24 & 10,2\% \\
+ nicht mehrdeutig & 170 & 170\\
+ 
+davon Worte nicht im Korpus& 0   	& 24   \\
  \hline
- nicht mehrdeutig & 172 &  72,9\%	& 148 & 62,7\% (70,1\%)\\
+ mehrdeutig & 66   	& 66 \\
+davon Worte nicht im Korpus& 0   	& 1   \\
  \hline
- mehrdeutig & 64 & 27,1\% 	& 64 & 27,1\% (30,3\%)\\
- \hline 
-\hline
-	& Kompletter	& Relation zu	& Technologie-  & Relation zu \\
-	& Korpus 		& mehrdeutigen 	& Korpus		& mehrdeutigen \\
-	& 		 		& Worten	 	& 				& Worten\\
 
+\end{tabular}
+\end{center}
+\end{table}
+		\begin{table}[h]
+\caption{Experiment 5: Erkennen von mehrdeutigen Wörtern}
+\label{tab:experiment52}
+\begin{center}
+\begin{tabular}{|l||l|l|}
 \hline
- Wort nicht im Korpus & 0 & 0,0\% 	& 1 & 1,7\%\\
+
+	& \textbf{Gesamtmodell}	 	& \textbf{Technologiemodell}   \\
+
  \hline
- nicht erkannt & 58 &  90,6\%	& 57 & 89,1\%\\
+ nicht erkannt & 60 &   59 \\
  \hline
- erkannt & 6 &  9,4\%	& 6 & 9,4\% \\
+ erkannt & 6 & 6  \\
+\hline
+ Wort nicht im Korpus & 0 & 1 \\
  \hline
 \end{tabular}
 \end{center}
 \end{table}
 		
-		Die Prozentangabe in Klammern bezieht sich auf die Relation zu den im Korpus enthaltenen Worte (211 Stück) und nicht auf die Gesamtzahl an Testdaten(236 Stück).\\
-		
 \begin{table}[H]
 \caption{Beispiele zur Erkennung von Mehrdeutigkeiten}
+\label{tab:bspMehrdeutigkeiten}
 \begin{center}
 \begin{tabular}{|l||l|l|l|l|}
 \hline
-Suchbegriff & Korpus & Erkannt & Ähnliche Worte   \\
+\textbf{Suchbegriff} & \textbf{Modell} & \textbf{Erkannt} & \textbf{Ähnliche Worte}   \\
 \hline
-\hline
- trojan & Komplett & ja &rsplug (Kosinusähnlichkeit: 0,472), athena (0,462)\\
+ trojan & Gesamt & ja &rsplug (Kosinusähnlichkeit: 0,472), athena (0,462)\\
  &	&	& bundestrojaner (0,496), centaurs (0,475), \\
  &  Technologie & ja & horse (0,586), malware (0,560), zinaps (0,476)\\
  \hline
  
-raspberry& Komplett& nein & apple (0,657), apricot (0,629), \\
+raspberry& Gesamt& nein & apple (0,657), apricot (0,629), \\
 &&&blackcurrant (0,586),  \\
 &Technologie & nein & pi (0,677), cubieboard (0,524), trimeslice (0,519)\\
 \hline
@@ -763,9 +771,40 @@ raspberry& Komplett& nein & apple (0,657), apricot (0,629), \\
 		
 		
 		\subsection*{Interpretation/Ergebnis}
-		Erstaunlicherweise unterscheiden sich in diesem Experiment die beiden Korpora nicht in der Anzahl der erkannten Mehrdeutigkeiten. Allerdings hat öfters das eine Modell eine Bedeutung abgedeckt und das andere Modell eine oder die andere.\\
-		Es ist deutlich zu erkennen, dass beide Modelle nicht geeignet sind um eine Mehrdeutigkeit in den Testdaten in ihren ähnlichen Worten abzubilden.\\
-		Somit ist die Annahme dieses Experiments widerlegt.
+		
+TODO: mehrdeutigkeiten sind ja immer andere beduetungen, somit kommen diese auch nicht so häufig im gleichen kontext vor, sodass sie durch word2vec zuverlässig abgebildet werden könnten.\\
+
+		
+		In beiden Modellen werden von den 66 mehrdeutigen Testbegriffen jeweils nur sechs als mehrdeutig erkannt. Jedoch sind dies elf unterschiedliche Testbegriffe, 
+denn die Modelle erkennen immer bei unterschiedlichen Begriffen die Mehrdeutigkeit und nur beim Begriff \textit{trojan} erkennen beide Modelle die Mehrdeutigkeit. Ein mehrdeutiger Testbegriff kommt im Technologiemodell gar nicht vor und 60 (Gesamtmodell) beziehungsweise 59 (Technologiemodell) mehrdeutige Begriffe werden nicht erkannt. 
+
+Allerdings werden bei XX Testbegriffen in den unterschiedlichen Modellen je eine unterschiedliche Bedeutung der mehrdeutigen Begriffe in den ähnlichen Worten dargestellt. Siehe dazu Tabelle \ref{tab:bspJeEinModellMehrdeutig}, dort sind einige Beispiele aufgelistet. Dargestellt sind die Testbegriffe, Modelltyp und die erhaltenen ähnlichen Worte.\\
+		
+		\begin{table}[H]
+\caption{Beispiele Mehrdeutigkeiten in unterschiedlichen Modellen}
+\label{tab:bspJeEinModellMehrdeutig}
+\begin{center}
+\begin{tabular}{|l||l|l|l|l|}
+\hline
+\textbf{Suchbegriff} & \textbf{Modell} & \textbf{Ähnliche Worte}   \\
+\hline
+pi  & Gesamt	 &  rsplug (Kosinusähnlichkeit: 0,472), athena (0,462)\\
+ &			 	 &	 bundestrojaner (0,496), centaurs (0,475), \\
+ &  Technologie  &  horse (0,586), malware (0,560), zinaps (0,476)\\
+ \hline
+ 
+architecture & Gesamt		&  apple (0,657), apricot (0,629), \\
+&				&  blackcurrant (0,586),  \\
+&Technologie 	&  pi (0,677), cubieboard (0,524), trimeslice (0,519)\\
+\hline
+ 
+\end{tabular}
+\end{center}
+\end{table}
+		
+
+				
+		Aus der Tatsache, dass nur eine so geringe Menge von sechs Begriffen als mehrdeutig erkannt werden, kann geschlossen werden, dass sich beide Modelle nicht dazu eignen, Mehrdeutigkeiten in den ähnlichen Wörtern abzubilden. Im folgenden Kapitel wird unter der Rubrik Ausblick ein Vorschlag gemacht, wie eine Mehrdeutigkeit von Begriffen mit mehreren Word2Vec Modellen erkannt werden könnt.\\
 		
 
 \newpage
@@ -1267,5 +1306,34 @@ yahoo & rube, bumpkin, fictionalcharacter, character, searchengine, rustic, hays
 \end{tabular}
 \end{center}
 \end{table}
+
+\section{Mehrdeutige Testbegriffe}
+\label{sec:mehrdeutigetestbegriffe}
+\begin{table}[H]
+\caption{Vollständige Auflistung der mehrdeutigen Testbegriffe}
+\begin{center}
+\begin{tabular}{l|l|l|l}\\
+3ds & acer & acta & amazon\\
+android & anonymous & apple & arcade\\
+architecture & augmented & auto & battlefield\\
+bing & blackberry & blizzard & casual\\
+chrome & cookies & dell & diablo\\
+doodle & dotcom & drone & e3\\
+engine & events & fat & halo\\
+i & ie & indie & keyboard\\
+link & mario & mobile & monitor\\
+mouse & net & oracle & pi\\
+ps & ps2 & python & raider\\
+ram & raspberry & rpg & rts\\
+safari & seo & sonic & spam\\
+steam & stream & sun & surface\\
+ted & tomb & trojan & twitch\\
+vine & virus & web & windows\\
+worms & wow &  & \\
+
+\end{tabular}
+\end{center}
+\end{table}
 	
 \end{document}
+
