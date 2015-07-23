@@ -7,27 +7,27 @@
 \contentsline {section}{\numberline {2.2}Externe Programme und Hilfsmittel}{3}{section.14}
 \contentsline {section}{\numberline {2.3}Vorverarbeitung}{4}{section.20}
 \contentsline {chapter}{\numberline {3}Word2Vec}{5}{chapter.27}
-\contentsline {section}{\numberline {3.1}CBOW}{6}{section.31}
-\contentsline {section}{\numberline {3.2}Skip-gram}{6}{section.32}
-\contentsline {section}{\numberline {3.3}Hierarchical softmax}{7}{section.33}
-\contentsline {section}{\numberline {3.4}Negative sampling}{7}{section.34}
-\contentsline {section}{\numberline {3.5}Parameter}{7}{section.35}
-\contentsline {chapter}{\numberline {4}Wikipedia-Korpus}{9}{chapter.37}
-\contentsline {section}{\numberline {4.1}Gesamtkorpus}{9}{section.38}
-\contentsline {section}{\numberline {4.2}Teilkorpus}{11}{section.52}
-\contentsline {section}{\numberline {4.3}Testdaten}{12}{section.55}
-\contentsline {chapter}{\numberline {5}Experimente}{14}{chapter.59}
-\contentsline {section}{\numberline {5.1}Synonymsuche durch Rekursion}{14}{section.62}
-\contentsline {section}{\numberline {5.2}Konkretisierungen}{17}{section.70}
-\contentsline {section}{\numberline {5.3}Verallgemeinerungen}{20}{section.80}
-\contentsline {section}{\numberline {5.4}Unterschiedliche Beziehungen}{23}{section.88}
-\contentsline {section}{\numberline {5.5}Erkennen von Mehrdeutigkeit}{25}{section.94}
-\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{28}{chapter.103}
-\contentsline {section}{\numberline {6.1}Fazit}{28}{section.104}
-\contentsline {section}{\numberline {6.2}Ausblick}{29}{section.105}
-\contentsline {chapter}{\numberline {7}Anhang}{33}{chapter.110}
-\contentsline {section}{\numberline {7.1}Testdatenvergleich}{33}{section.111}
-\contentsline {section}{\numberline {7.2}Testdaten}{35}{section.115}
-\contentsline {section}{\numberline {7.3}Reinigungsskript}{37}{section.118}
-\contentsline {section}{\numberline {7.4}Synonymliste}{40}{section.119}
-\contentsline {section}{\numberline {7.5}Mehrdeutige Testbegriffe}{41}{section.121}
+\contentsline {section}{\numberline {3.1}CBOW}{6}{section.29}
+\contentsline {section}{\numberline {3.2}Skip-gram}{6}{section.30}
+\contentsline {section}{\numberline {3.3}Hierarchical softmax}{7}{section.31}
+\contentsline {section}{\numberline {3.4}Negative sampling}{7}{section.32}
+\contentsline {section}{\numberline {3.5}Parameter}{7}{section.33}
+\contentsline {chapter}{\numberline {4}Wikipedia-Korpus}{9}{chapter.35}
+\contentsline {section}{\numberline {4.1}Gesamtkorpus}{9}{section.36}
+\contentsline {section}{\numberline {4.2}Teilkorpus}{11}{section.50}
+\contentsline {section}{\numberline {4.3}Testdaten}{12}{section.53}
+\contentsline {chapter}{\numberline {5}Experimente}{14}{chapter.57}
+\contentsline {section}{\numberline {5.1}Synonymsuche durch Rekursion}{14}{section.60}
+\contentsline {section}{\numberline {5.2}Konkretisierungen}{17}{section.68}
+\contentsline {section}{\numberline {5.3}Verallgemeinerungen}{20}{section.78}
+\contentsline {section}{\numberline {5.4}Unterschiedliche Beziehungen}{23}{section.86}
+\contentsline {section}{\numberline {5.5}Erkennen von Mehrdeutigkeit}{25}{section.92}
+\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{28}{chapter.101}
+\contentsline {section}{\numberline {6.1}Fazit}{28}{section.102}
+\contentsline {section}{\numberline {6.2}Ausblick}{29}{section.103}
+\contentsline {chapter}{\numberline {7}Anhang}{33}{chapter.108}
+\contentsline {section}{\numberline {7.1}Testdatenvergleich}{33}{section.109}
+\contentsline {section}{\numberline {7.2}Testdaten}{35}{section.113}
+\contentsline {section}{\numberline {7.3}Reinigungsskript}{37}{section.116}
+\contentsline {section}{\numberline {7.4}Synonymliste}{40}{section.117}
+\contentsline {section}{\numberline {7.5}Mehrdeutige Testbegriffe}{41}{section.119}

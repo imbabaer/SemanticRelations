@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5575e204-4485-434a-9d40-906d2e34736e" name="Default" comment="">
       <change type="DELETED" beforePath="D:\SoftwareProjects\SemanticRelations\Korpora\Wikipedia\enwik9\pages1\cleanwikitextpages.bat" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Word2Vec.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -792,8 +791,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="48" width="1296" height="1040" extended-state="7" />
-    <editor active="true" />
+    <frame x="1912" y="48" width="1296" height="1040" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23990306" sideWeight="0.4992272" order="0" side_tool="false" content_ui="combo" />

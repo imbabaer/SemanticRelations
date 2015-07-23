@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  22 JUL 2015 19:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.28)  23 JUL 2015 16:25
 entering extended mode
 **Thesis.tex
 (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.tex
@@ -646,177 +646,178 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--189
  []
 
 
+Overfull \hbox (27.85948pt too wide) in paragraph at lines 190--194
+\OT1/cmr/m/n/12 syntaktische und se-man-ti-sche []Ahn-lich-kei-ten wer-den mit 
+word2vec ab-ge-bil-det(distributet...
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 190--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--200
+Underfull \hbox (badness 10000) in paragraph at lines 198--202
 
  []
 
-<CBOWvsSkip-gram.png, id=269, 764.8575pt x 554.07pt>
+<CBOWvsSkip-gram.png, id=261, 764.8575pt x 554.07pt>
 File: CBOWvsSkip-gram.png Graphic file (type png)
  <use CBOWvsSkip-gram.png>
-Package pdftex.def Info: CBOWvsSkip-gram.png used on input line 205.
+Package pdftex.def Info: CBOWvsSkip-gram.png used on input line 207.
 (pdftex.def)             Requested size: 420.67291pt x 304.73944pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--214
+Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
 
 [5
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 216--218
+Underfull \hbox (badness 10000) in paragraph at lines 218--220
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
 [6 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/CBOWvsSkip-gram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 222--224
+Underfull \hbox (badness 10000) in paragraph at lines 224--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--229
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
 
  []
 
 [7] [8]
 Kapitel 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
+Underfull \hbox (badness 10000) in paragraph at lines 276--276
 [][][]\OT1/cmr/m/n/10 Dump von M[]arz 2015, http://dumps.wikimedia.org/enwiki/l
 atest/enwiki-latest-pages-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--274
+Underfull \hbox (badness 10000) in paragraph at lines 273--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--278
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
 
  []
 
 [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 281--281
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
 [][][]\OT1/cmr/m/n/10 https://code.google.com/p/word2vec/source/browse/trunk/qu
 estions-words.txt, ab-ge-ru-fen
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 305--308
+Underfull \hbox (badness 10000) in paragraph at lines 308--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 316--318
+Underfull \hbox (badness 10000) in paragraph at lines 319--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--328
+Underfull \hbox (badness 10000) in paragraph at lines 327--331
 
  []
 
 [12] [13]
 Kapitel 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--362
+Underfull \hbox (badness 10000) in paragraph at lines 363--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--367
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
 
  []
 
 [14
 
 ] [15]
-Overfull \hbox (13.62907pt too wide) in paragraph at lines 440--441
+Overfull \hbox (13.62907pt too wide) in paragraph at lines 443--444
 []\OT1/cmr/m/n/12 In der Ta-bel-le [][]5.2[][] sind al-le ge-fun-de-nen Syn-ony
 -me und die da-zu-geh[]ori-gen Testw[]orter,
  []
 
 
-Overfull \hbox (2.0056pt too wide) in paragraph at lines 443--447
+Overfull \hbox (2.0056pt too wide) in paragraph at lines 446--450
 \OT1/cmr/m/n/12 Des Wei-te-ren kann das Er-geb-nis mit den ver-wen-de-ten Syn-o
 ny-men zu-sam-men h[]angen.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 443--447
+Underfull \hbox (badness 10000) in paragraph at lines 446--450
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
 
  []
 
-<Konkretisierung_Baum2.png, id=411, 794.97pt x 308.15125pt>
+<Konkretisierung_Baum2.png, id=402, 794.97pt x 308.15125pt>
 File: Konkretisierung_Baum2.png Graphic file (type png)
 
 <use Konkretisierung_Baum2.png>
-Package pdftex.def Info: Konkretisierung_Baum2.png used on input line 458.
+Package pdftex.def Info: Konkretisierung_Baum2.png used on input line 461.
 (pdftex.def)             Requested size: 437.23485pt x 169.4837pt.
 
-Overfull \hbox (10.4435pt too wide) in paragraph at lines 458--459
+Overfull \hbox (10.4435pt too wide) in paragraph at lines 461--462
  [] 
  []
 
 [17 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/Konkretisierung_Baum2.
 png>]
-Underfull \hbox (badness 10000) in paragraph at lines 465--468
+Underfull \hbox (badness 10000) in paragraph at lines 468--471
 
  []
 
 
-Overfull \hbox (25.83034pt too wide) in paragraph at lines 474--486
+Overfull \hbox (25.83034pt too wide) in paragraph at lines 477--489
  [] 
  []
 
 [18]
-Overfull \hbox (7.76083pt too wide) in paragraph at lines 495--516
+Overfull \hbox (7.76083pt too wide) in paragraph at lines 498--519
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--522
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 523--524
+Underfull \hbox (badness 10000) in paragraph at lines 524--525
 
  []
 
@@ -825,118 +826,123 @@ Underfull \hbox (badness 10000) in paragraph at lines 526--527
 
  []
 
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 532--534
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--530
 
  []
 
-<Verallgemeinerung_Baum2.png, id=443, 754.82pt x 322.20375pt>
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 535--537
+
+ []
+
+<Verallgemeinerung_Baum2.png, id=434, 754.82pt x 322.20375pt>
 File: Verallgemeinerung_Baum2.png Graphic file (type png)
 
 <use Verallgemeinerung_Baum2.png>
-Package pdftex.def Info: Verallgemeinerung_Baum2.png used on input line 537.
+Package pdftex.def Info: Verallgemeinerung_Baum2.png used on input line 540.
 (pdftex.def)             Requested size: 415.1523pt x 177.2126pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 547--548
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
 
  []
 
 
-Overfull \hbox (46.72615pt too wide) in paragraph at lines 555--567
+Overfull \hbox (46.72615pt too wide) in paragraph at lines 558--570
  [] 
  []
 
 
-Overfull \hbox (16.63852pt too wide) in paragraph at lines 577--600
+Overfull \hbox (16.63852pt too wide) in paragraph at lines 580--603
  [] 
  []
 
 [21 <D:/SoftwareProjects/SemanticRelations/Thesis/Thesis/Verallgemeinerung_Baum
 2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 606--607
+Underfull \hbox (badness 10000) in paragraph at lines 609--610
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 608--609
+Underfull \hbox (badness 10000) in paragraph at lines 611--612
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--611
+Underfull \hbox (badness 10000) in paragraph at lines 613--614
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--618
+Underfull \hbox (badness 10000) in paragraph at lines 619--621
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 621--623
+Underfull \hbox (badness 10000) in paragraph at lines 624--626
 
  []
 
 [23]
-Overfull \hbox (38.88704pt too wide) in paragraph at lines 661--677
+Overfull \hbox (38.88704pt too wide) in paragraph at lines 664--680
  [] 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 699--701
+Underfull \hbox (badness 10000) in paragraph at lines 702--704
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 704--706
+Underfull \hbox (badness 10000) in paragraph at lines 707--709
 
  []
 
 [25]
-Overfull \hbox (53.43184pt too wide) in paragraph at lines 753--768
+Overfull \hbox (53.43184pt too wide) in paragraph at lines 756--771
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 774--775
+Underfull \hbox (badness 10000) in paragraph at lines 777--778
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--779
+Underfull \hbox (badness 10000) in paragraph at lines 780--782
 
  []
 
 [26]
-Overfull \hbox (29.17172pt too wide) in paragraph at lines 784--812
+Overfull \hbox (29.17172pt too wide) in paragraph at lines 787--815
  [] 
  []
 
 [27]
 Kapitel 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 823--830
+Underfull \hbox (badness 10000) in paragraph at lines 826--833
 
  []
 
 [28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 832--834
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 835--837
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--842
+Underfull \hbox (badness 10000) in paragraph at lines 838--840
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--845
 
  []
 
@@ -955,44 +961,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 841--842
 ]
 Kapitel 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 865--866
+Underfull \hbox (badness 10000) in paragraph at lines 868--869
 
  []
 
 [33
 
 ] [34] [35] [36]
-Overfull \hbox (45.44542pt too wide) in paragraph at lines 1019--1020
+Overfull \hbox (45.44542pt too wide) in paragraph at lines 1022--1023
 \OT1/cmr/m/n/12 Das Ori-gi-nal-skript von Matt Ma-ho-ney kann un-ter http://mat
 tmahoney.net/dc/textdata.html
  []
 
 
-Overfull \hbox (11.63387pt too wide) in paragraph at lines 1084--1084
+Overfull \hbox (11.63387pt too wide) in paragraph at lines 1087--1087
 []\OT1/cmtt/m/n/12 # Program to filter Wikipedia XML dumps to "clean" text cons
 isting only[] 
  []
 
 
-Overfull \hbox (23.98387pt too wide) in paragraph at lines 1084--1084
+Overfull \hbox (23.98387pt too wide) in paragraph at lines 1087--1087
 []\OT1/cmtt/m/n/12 # All other characters are converted to spaces.  Only text w
 hich normally[] 
  []
 
 
-Overfull \hbox (11.63387pt too wide) in paragraph at lines 1084--1084
+Overfull \hbox (11.63387pt too wide) in paragraph at lines 1087--1087
 []  \OT1/cmtt/m/n/12 if (/<text /) {$text=1;}  # remove all but between <text> 
 ... </text>[] 
  []
 
 
-Overfull \hbox (5.45886pt too wide) in paragraph at lines 1084--1084
+Overfull \hbox (5.45886pt too wide) in paragraph at lines 1087--1087
 []    \OT1/cmtt/m/n/12 s/\[http:[^] ]*/[/g;    # remove normal url, preserve vi
 sible text[] 
  []
 
 [37]
-Overfull \hbox (3144.10516pt too wide) in paragraph at lines 1092--1317
+Overfull \hbox (3144.10516pt too wide) in paragraph at lines 1095--1320
  [] 
  []
 
@@ -1001,12 +1007,12 @@ Overfull \vbox (1063.14397pt too high) has occurred while \output is active []
 
 
 [40]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1348.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1351.
  [41]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1348.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1351.
  (D:\SoftwareProjects\SemanticRelations\Thesis\Thesis\Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1348.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1348.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1351.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1351.
 
 
 
@@ -1015,140 +1021,137 @@ Package rerunfilecheck Warning: File `Thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `Thesis.out':
-(rerunfilecheck)             Before: A7383541CA44B4ABBF548BABB0997709;2118
-(rerunfilecheck)             After:  0ACA34DA0C06705AE5658C07E22CD3E8;2117.
+(rerunfilecheck)             Before: 0ACA34DA0C06705AE5658C07E22CD3E8;2117
+(rerunfilecheck)             After:  8C2AC94A010B1EAEA175B2A009E91A25;2117.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1348.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1351.
  ) 
 Here is how much of TeX's memory you used:
- 6565 strings out of 493921
- 93864 string characters out of 3150478
- 211402 words of memory out of 3000000
+ 6562 strings out of 493921
+ 93820 string characters out of 3150478
+ 211401 words of memory out of 3000000
  9570 multiletter control sequences out of 15000+200000
  10322 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,9n,33p,1632b,434s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{table.123} has been referenced but does not exist
+pdfTeX warning (dest): name{table.122} has been referenced but does not exist
 , replaced by a fixed one
 
-pdfTeX warning (dest): name{table.121} has been referenced but does not exist, 
+pdfTeX warning (dest): name{table.117} has been referenced but does not exist, 
 replaced by a fixed one
 
-pdfTeX warning (dest): name{table.118} has been referenced but does not exist, 
+pdfTeX warning (dest): name{table.116} has been referenced but does not exist, 
 replaced by a fixed one
 
-pdfTeX warning (dest): name{table.115} has been referenced but does not exist, 
+pdfTeX warning (dest): name{table.113} has been referenced but does not exist, 
 replaced by a fixed one
 
-pdfTeX warning (dest): name{table.58} has been referenced but does not exist, r
+pdfTeX warning (dest): name{table.77} has been referenced but does not exist, r
 eplaced by a fixed one
 
-pdfTeX warning (dest): name{table.50} has been referenced but does not exist, r
+pdfTeX warning (dest): name{table.57} has been referenced but does not exist, r
 eplaced by a fixed one
 
-pdfTeX warning (dest): name{table.103} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{table.101} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{table.93} has been referenced but does not exist, r
+pdfTeX warning (dest): name{table.49} has been referenced but does not exist, r
 eplaced by a fixed one
 
-pdfTeX warning (dest): name{table.87} has been referenced but does not exist, r
+pdfTeX warning (dest): name{table.102} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.99} has been referenced but does not exist, r
 eplaced by a fixed one
 
-pdfTeX warning (dest): name{figure.83} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{table.79} has been referenced but does not exist, r
+pdfTeX warning (dest): name{table.92} has been referenced but does not exist, r
 eplaced by a fixed one
 
-pdfTeX warning (dest): name{figure.73} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{table.69} has been referenced but does not exist, r
+pdfTeX warning (dest): name{table.91} has been referenced but does not exist, r
 eplaced by a fixed one
 
-pdfTeX warning (dest): name{figure.31} has been referenced but does not exist, 
+pdfTeX warning (dest): name{table.86} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{table.85} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{figure.82} has been referenced but does not exist, 
 replaced by a fixed one
 
-pdfTeX warning (dest): name{section.122} has been referenced but does not exist
-, replaced by a fixed one
+pdfTeX warning (dest): name{table.78} has been referenced but does not exist, r
+eplaced by a fixed one
 
-pdfTeX warning (dest): name{section.120} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.116} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.112} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.111} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.106} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.104} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.95} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.89} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.81} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.71} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.63} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.60} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.56} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.53} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.39} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.38} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.36} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.28} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.21} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.15} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.12} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.11} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.10} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.7} has been referenced but does not exist, 
+pdfTeX warning (dest): name{figure.72} has been referenced but does not exist, 
 replaced by a fixed one
+
+pdfTeX warning (dest): name{table.68} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{table.67} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{figure.30} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{section.121} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.118} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.115} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.111} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.110} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.105} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.104} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.103} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.94} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.88} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.80} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.70} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.62} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.59} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.55} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.52} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.38} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.37} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.35} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.34} has been referenced but does not exist,
+ replaced by a fixed one
 
 <D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programme/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><D:/Programme/MiKTeX/fonts/typ
@@ -1160,9 +1163,9 @@ ublic/amsfonts/cm/cmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><D:/Programme/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/P
 rogramme/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Programme/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (48 pages, 437726 bytes).
+Output written on Thesis.pdf (48 pages, 436572 bytes).
 PDF statistics:
- 717 PDF objects out of 1000 (max. 8388607)
- 215 named destinations out of 1000 (max. 500000)
+ 712 PDF objects out of 1000 (max. 8388607)
+ 212 named destinations out of 1000 (max. 500000)
  280 words of extra memory for PDF output out of 10000 (max. 10000000)
 

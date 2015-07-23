@@ -185,16 +185,22 @@ Goal of this thesis will be to determine whether a general body or a domain spec
 	
 \newpage
 \chapter{Word2Vec}
-Im folgenden Kapitel wird kurz erklärt was Word2Vec\footnote{https://code.google.com/p/word2vec/} ist und welche wichtigen Parameter und Algorithmen bei der Berechnung und dem Erstellen von Word2Vec Modellen benutzt werden können.\\
+Ziel dieses Kapitels ist es, Word2Vec zu erklären und dazulegen, welche wichtigen Parameter und Algorithmen bei der Berechnung und dem Erstellen von Word2Vec Modellen benutzt werden können.\\
 
 Allgemeines zu Word2Vec,\\
  Vergleich zu anderen\\
-  syntaktische und semantische Ähnlichkeiten werden mit word2vec abgebildet\\
+  syntaktische und semantische Ähnlichkeiten werden mit word2vec abgebildet(distributet... - paper)\\
   Vektoraddition, -subtraktion (http://www.aclweb.org/anthology/N13-1090)\\
   
+Wie bereits die Bezeichnung Word2Vec verdeutlich, werden im Word2Vec Modell Worte als Vektoren dargestellt. 
 
-In Word2Vec Modellen werden Worte als Vektoren dargestellt\footnote{Word2Vec heißt wörtlich Wort zu Vektor.}. Hier wird mittels \textit{distributed representation}\cite{DBLP:journals/corr/abs-1301-3781} ein n-dimensionaler Vektorraum erzeugt, in dem jedes Wort aus den Trainingsdaten durch einen Vektor dargestellt wird.\\
-Als nächster Schritt werden die Vektoren in ein neuronales Netz gegeben und dort mittels eines Lernalgorithmus so verändert, dass Worte mit ähnlicher Bedeutung ähnliche Vektoren haben. Die Ähnlichkeit zwischen zwei Worten kann so berechnet werden, indem die Kosinusähnlichkeit zwischen den Vektordarstellungen der beiden Worte gebildet wird.\\
+Dies hat den Vorteil, dass anders als bei anderen Darstellungen, bei denen Wörter mit Indices dargestellt werden, die Wörter im Modell Beziehungen haben.
+
+
+
+
+In Word2Vec Modellen werden Worte als Vektoren dargestellt. Hier wird mittels \textit{distributed representation}\cite{DBLP:journals/corr/abs-1301-3781} ein n-dimensionaler Vektorraum erzeugt, in dem jedes Wort aus den Trainingsdaten durch einen Vektor dargestellt wird.\\
+Als nächster Schritt werden die Vektoren in ein neuronales Netz gegeben und dort mittels eines Lernalgorithmus so verändert, dass Worte mit ähnlicher Bedeutung ähnliche Vektoren haben. Die Ähnlichkeit zwischen zwei Worten kann berechnet werden, indem die Kosinusähnlichkeit zwischen den Vektordarstellungen der beiden Worte gebildet wird.\\
 Die Berechnung der Wortvektoren kann mit neuronalen Netzen unterschiedlicher Architektur erreicht werden, \textit{CBOW} oder \textit{Skip-gram}. Desweiteren stehen unterschiedliche Lernalgorithmen für die neuronalen Netze zur Verfügung, \textit{hierarchical softmax}  und \textit{negative sampling}.\\
 Beim Training können unterschiedliche Parameter eingestellt werden.\\
 
@@ -209,7 +215,7 @@ Beim Training können unterschiedliche Parameter eingestellt werden.\\
 \end{figure}
 
 \section{CBOW}
-	CBOW ist die Abkürzung für Continuous bag-of-words (dt. stetige Menge an Worten). Beim CBOW wird ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet\cite{DBLP:journals/corr/abs-1301-3781}.\\
+	CBOW ist die Abkürzung für Continuous bag-of-words. Beim CBOW wird ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet\cite{DBLP:journals/corr/abs-1301-3781}.\\
 	In der CBOW Architektur wird aus dem Kontext ein Wort vorhergesagt (siehe Abbildung \ref{cbowvsskipgram}). Die Anzahl, der aus dem Kontext zu verwendende Worte, wird mit dem Parameter \textit{window} angegeben.\\
 	
 	\section{Skip-gram}
@@ -232,7 +238,8 @@ Beim Training können unterschiedliche Parameter eingestellt werden.\\
 	\label{sec:Parameter}
 	\textbf{size}
 	\vspace{1em}\\
-	Mit dem Parameter \textit{size} wird die Anzahl der Dimensionen der Wortvektoren eingestellt. In einem n-dimensionalen Vektorraum nimmt n den Wert von \textit{size} an.\\	
+	Mit dem Parameter \textit{size} wird die Anzahl der Dimensionen der Wortvektoren eingestellt. In einem n-dimensionalen Vektorraum nimmt n den Wert von \textit{size} an.
+	TODO: übliche Werte\\	
 	\vspace{1em}\\
 	\textbf{window}
 	\vspace{1em}\\
