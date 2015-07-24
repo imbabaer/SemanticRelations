@@ -1,6 +1,18 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{MCCD13}
 
+\bibitem[DDL{\etalchar{+}}90]{deerwester1990indexing}
+Scott~C. Deerwester, Susan~T Dumais, Thomas~K. Landauer, George~W. Furnas, and
+  Richard~A. Harshman.
+\newblock Indexing by latent semantic analysis.
+\newblock {\em JAsIs}, 41(6):391--407, 1990.
+
+\bibitem[HMR86]{Hinton86}
+G.~E. Hinton, J.~L. McClelland, and D.~E. Rumelhart.
+\newblock Distributed representations.
+\newblock {\em Parallel distributed processing: Explorations in the
+  microstructure of cognition. Volume 1: Foundations}, pages 503--527, 1986.
+
 \bibitem[MCCD13]{DBLP:journals/corr/abs-1301-3781}
 Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.
 \newblock Efficient estimation of word representations in vector space.

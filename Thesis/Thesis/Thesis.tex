@@ -120,6 +120,11 @@ Goal of this thesis will be to determine whether a general body or a domain spec
 	\textbf{SVM} & Support Vector Machine\\
 	\textbf{NBC} & Naive Bayes Classifier\\
 	\textbf{CBOW} & Continuous bag-of-words\\
+	\textbf{tf-idf} & Term-Frequency Inverse Document Frequency\\
+	\textbf{LSI} & Latent Semantic Indexing\\
+	\textbf{NLP} & Natural Language Processing\\
+	\textbf{NNMF} & Nicht-negative Matrix Faktorisierung
+	
 
 \end{tabular}
 \newpage
@@ -186,22 +191,42 @@ Goal of this thesis will be to determine whether a general body or a domain spec
 \newpage
 \chapter{Word2Vec}
 Ziel dieses Kapitels ist es, Word2Vec zu erklären und dazulegen, welche wichtigen Parameter und Algorithmen bei der Berechnung und dem Erstellen von Word2Vec Modellen benutzt werden können.\\
+Wie bereits die Bezeichnung Word2Vec verdeutlicht, werden im Word2Vec Modell Worte als Vektoren dargestellt. Diese Idee der Darstellung von Wörtern ist nicht neu und hat schon eine längere Geschichte \cite{Hinton86}, auch im Bereich des \textit{Information retrieval} werden Daten als Vektoren dargestellt, so werden beispielsweise beim \textit{LSI} \cite{deerwester1990indexing} Dokumente als Vektoren dargestellt. \\
+Ein Ziel von Word2Vec ist es, semantisch oder syntaktisch ähnliche Wörter zu finden. Für dieses Vorhaben gab es schon vor Word2Vec andere statistische Methoden, so können neben dem schon genannten LSI auch mit dem Verfahren der NNMF ähnliche Wörter gefunden werden. Allerdings werden, bei den beiden genannten Verfahren und anderen NLP-Techniken (z.B. tf-idf), Worte nur als Anzahl in den jeweiligen Dokumenten dargestellt, dort kann eine Ähnlichkeit zwischen Wörtern nur dann gefunden werden, wenn diese Wörter in vielen Dokumenten gemeinsam vorkommen. Beim Word2Vec Modell wird ein anderer Ansatz benutzt, hier werden Wörter als ähnlich erkannt, wenn diese in den Trainingsdaten häufig im gleichen Kontext vorkommen. Dies hängt mit der Architektur des neuronalen Netzes, das beim Training des Modells benutzt wird, zusammen\footnote{Siehe \ref{sec:cbow} und \ref{sec:skipgram}}.\\
 
+Im ersten Schritt der Modellbildung werden alle unterschiedlichen Wörter aus den Trainingsdaten, in einem \textit{Vokabular} abgebildet und alle Wörter, die eine Mindestanzahl erfüllen, werden mittels \textit{distributed representation} in einem n-dimensionalen Vektorraum dargestellt \cite{DBLP:journals/corr/abs-1301-3781}. 
+Im nächsten Schritt dienen diese Vektorrepräsentationen der Wörter als Input für ein  neuronales Netz. 
+
+.\\
+
+Als nächster Schritt werden die Vektoren in ein neuronales Netz gegeben und dort mittels eines Lernalgorithmus so verändert, dass Worte mit ähnlicher Bedeutung ähnliche Vektoren haben. Die Ähnlichkeit zwischen zwei Worten kann berechnet werden, indem die Kosinusähnlichkeit zwischen den Vektordarstellungen der beiden Worte gebildet wird.\\
+
+
+
+.....\\
 Allgemeines zu Word2Vec,\\
  Vergleich zu anderen\\
   syntaktische und semantische Ähnlichkeiten werden mit word2vec abgebildet(distributet... - paper)\\
   Vektoraddition, -subtraktion (http://www.aclweb.org/anthology/N13-1090)\\
   
-Wie bereits die Bezeichnung Word2Vec verdeutlich, werden im Word2Vec Modell Worte als Vektoren dargestellt. 
-
-Dies hat den Vorteil, dass anders als bei anderen Darstellungen, bei denen Wörter mit Indices dargestellt werden, die Wörter im Modell Beziehungen haben.
 
 
 
+mit Word2Vec möchte man ja u.a. Wörter finden, die semantisch irgendwie zusammenhängen. Dafür gab es vor Word2Vec schon andere statistische Standardmethoden wie LSI oder NNMF. Der wesentliche Unterschied ist, dass letztgenannte Verfahren Wörter dann als semantisch korreliert finden, wenn Sie in vielen Dokumenten gemeinsam vorkommen.
 
-In Word2Vec Modellen werden Worte als Vektoren dargestellt. Hier wird mittels \textit{distributed representation}\cite{DBLP:journals/corr/abs-1301-3781} ein n-dimensionaler Vektorraum erzeugt, in dem jedes Wort aus den Trainingsdaten durch einen Vektor dargestellt wird.\\
+ Word2Vec aber erkennt Wörter dann als semantisch korreliert, wenn sie häufig im gleichen Kontext vorkommen. 
+ Das ist eine ganz andere Strategie. 
+ Und mit dieser neuen Strategie kommt man in vielen Anwendungen deutlich weiter als mit den herkömmlichen Methoden.\\
+
+
+
+
+
+In Word2Vec Modellen werden Worte als Vektoren dargestellt. Hier wird mittels \textit{distributed representation}ein n-dimensionaler Vektorraum erzeugt, in dem jedes Wort aus den Trainingsdaten durch einen Vektor dargestellt wird \cite{DBLP:journals/corr/abs-1301-3781}. \\
 Als nächster Schritt werden die Vektoren in ein neuronales Netz gegeben und dort mittels eines Lernalgorithmus so verändert, dass Worte mit ähnlicher Bedeutung ähnliche Vektoren haben. Die Ähnlichkeit zwischen zwei Worten kann berechnet werden, indem die Kosinusähnlichkeit zwischen den Vektordarstellungen der beiden Worte gebildet wird.\\
-Die Berechnung der Wortvektoren kann mit neuronalen Netzen unterschiedlicher Architektur erreicht werden, \textit{CBOW} oder \textit{Skip-gram}. Desweiteren stehen unterschiedliche Lernalgorithmen für die neuronalen Netze zur Verfügung, \textit{hierarchical softmax}  und \textit{negative sampling}.\\
+
+
+Die Berechnung der Wortvektoren kann mit neuronalen Netzen unterschiedlicher Architektur erreicht werden, \textit{CBOW} oder \textit{Skip-gram}. Des weiteren stehen unterschiedliche Lernalgorithmen für die neuronalen Netze zur Verfügung, \textit{hierarchical softmax}  und \textit{negative sampling}.\\
 Beim Training können unterschiedliche Parameter eingestellt werden.\\
 
 
@@ -215,16 +240,22 @@ Beim Training können unterschiedliche Parameter eingestellt werden.\\
 \end{figure}
 
 \section{CBOW}
+\label{sec:cbow}
 	CBOW ist die Abkürzung für Continuous bag-of-words. Beim CBOW wird ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet\cite{DBLP:journals/corr/abs-1301-3781}.\\
 	In der CBOW Architektur wird aus dem Kontext ein Wort vorhergesagt (siehe Abbildung \ref{cbowvsskipgram}). Die Anzahl, der aus dem Kontext zu verwendende Worte, wird mit dem Parameter \textit{window} angegeben.\\
 	
 	\section{Skip-gram}
+\label{sec:skipgram}
 	Bei der Skip-gram Architektur wird auch, wie beim CBOW Model, ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet \citep{DBLP:journals/corr/abs-1301-3781}.\\
 	Allerdings wird hier nicht ein Wort aus dem Kontext vorhergesagt, sondern aus einem Wort wird der Kontext vorhergesagt (siehe Abbildung \ref{cbowvsskipgram}).\\
 	
 	Mehrere verdeckte Schichten in neuronalen Netzen machen die Modelle genauer, allerdings kommt auch die meiste Komplexität des ganzen Models von solchen verdeckten Schichten \citep{DBLP:journals/corr/abs-1301-3781}. Mikolov et al. haben deshalb neuronale Netze ohne verdeckte Schichten bevorzugt, da damit sehr große Datenmengen viel effizienter gelernt werden können.\\
 	
 	\section{Hierarchical softmax}
+	 the hierarchical softmax first introduced by Bengio et al[16] and
+later evaluated in a paper by Morin and Bengio[17].
+
+
 	Eine Annäherung an das allgemeine softmax ist das hierarchical softmax \citep{DBLP:journals/corr/MikolovSCCD13}. Der Hauptvorteil ist, dass anstatt W Ausgabeknoten im neuronalen Netz nur ungefähr $log_2(W) $ Knoten ausgewertet werden müssen um die Wahrscheinlichkeiten zu errechnen. \\
 	Bei diesem Lernalgorithmus wird das Wörterbuch als Huffman Binärbaum dargestellt. Dies hat den weiteren Vorteil, dass häufig genutzte Worte kurze Kodierungen haben, was sich auf das Trainingstempo positiv auswirkt.\\
 	
