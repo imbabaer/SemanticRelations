@@ -192,10 +192,79 @@ Goal of this thesis will be to determine whether a general body or a domain spec
 \chapter{Word2Vec}
 Ziel dieses Kapitels ist es, Word2Vec zu erklären und dazulegen, welche wichtigen Parameter und Algorithmen bei der Berechnung und dem Erstellen von Word2Vec Modellen benutzt werden können.\\
 Wie bereits die Bezeichnung Word2Vec verdeutlicht, werden im Word2Vec Modell Worte als Vektoren dargestellt. Diese Idee der Darstellung von Wörtern ist nicht neu und hat schon eine längere Geschichte \cite{Hinton86}, auch im Bereich des \textit{Information retrieval} werden Daten als Vektoren dargestellt, so werden beispielsweise beim \textit{LSI} \cite{deerwester1990indexing} Dokumente als Vektoren dargestellt. \\
-Ein Ziel von Word2Vec ist es, semantisch oder syntaktisch ähnliche Wörter zu finden. Für dieses Vorhaben gab es schon vor Word2Vec andere statistische Methoden, so können neben dem schon genannten LSI auch mit dem Verfahren der NNMF ähnliche Wörter gefunden werden. Allerdings werden, bei den beiden genannten Verfahren und anderen NLP-Techniken (z.B. tf-idf), Worte nur als Anzahl in den jeweiligen Dokumenten dargestellt, dort kann eine Ähnlichkeit zwischen Wörtern nur dann gefunden werden, wenn diese Wörter in vielen Dokumenten gemeinsam vorkommen. Beim Word2Vec Modell wird ein anderer Ansatz benutzt, hier werden Wörter als ähnlich erkannt, wenn diese in den Trainingsdaten häufig im gleichen Kontext vorkommen. Dies hängt mit der Architektur des neuronalen Netzes, das beim Training des Modells benutzt wird, zusammen\footnote{Siehe \ref{sec:cbow} und \ref{sec:skipgram}}.\\
+Ein Ziel von Word2Vec ist es, semantisch oder syntaktisch ähnliche Wörter zu finden. Für dieses Vorhaben gab es schon vor Word2Vec andere statistische Methoden, so können neben dem schon genannten LSI auch mit dem Verfahren der NNMF ähnliche Wörter gefunden werden. Allerdings werden, bei den beiden genannten Verfahren und anderen NLP-Techniken (z.B. tf-idf), Worte nur als Anzahl in den jeweiligen Dokumenten dargestellt, dort kann eine Ähnlichkeit zwischen Wörtern nur dann gefunden werden, wenn diese Wörter in vielen Dokumenten gemeinsam vorkommen. Beim Word2Vec Modell wird ein anderer Ansatz benutzt, hier werden Wörter als ähnlich erkannt, wenn diese in den Trainingsdaten häufig im gleichen Kontext vorkommen.\\
 
-Im ersten Schritt der Modellbildung werden alle unterschiedlichen Wörter aus den Trainingsdaten, in einem \textit{Vokabular} abgebildet und alle Wörter, die eine Mindestanzahl erfüllen, werden mittels \textit{distributed representation} in einem n-dimensionalen Vektorraum dargestellt \cite{DBLP:journals/corr/abs-1301-3781}. 
-Im nächsten Schritt dienen diese Vektorrepräsentationen der Wörter als Input für ein  neuronales Netz. 
+
+
+Im ersten Schritt der Modellbildung werden alle unterschiedlichen Wörter aus den Trainingsdaten, in einem \textit{Vokabular} abgebildet und alle Wörter, die eine Mindestanzahl erfüllen, werden mittels \textit{distributed representation} in einem n-dimensionalen Vektorraum dargestellt \cite{DBLP:journals/corr/abs-1301-3781}.\\ 
+Im nächsten Schritt dienen diese Vektorrepräsentationen der Wörter als Input für ein  neuronales Netz. Mehrere nicht lineare verdeckte Schichten in neuronalen Netzen machen die Modelle genauer, allerdings kommt auch die meiste Komplexität des ganzen Models von solchen verdeckten Schichten. Durch die Komplexität steigt auch die Trainingsdauer. Mikolov et al. \citep{DBLP:journals/corr/abs-1301-3781} haben deshalb neuronale Netze ohne verdeckte Schichten bevorzugt, da damit sehr große Datenmengen viel effizienter gelernt werden können. So können mit einer optimierten Implementierung auf einem einzigen Rechner mehr als 100 Milliarden Wörter pro Tag trainiert werden \cite{DBLP:journals/corr/MikolovSCCD13}. \\
+In dem neuronalen Netz werden die Vektoren der Wörter dann gelernt und angepasst. Wie schon genannt, werden im Word2Vec Modell Wörter als ähnlich erkannt, wenn sie in den Trainingsdaten oft im gleichen Kontext vorkommen, das wird durch die Architektur und Arbeitsweise der neuronalen Netze erreicht. Mikolov et al. stellen zwei Architekurtypen von neuronalen Netze ohne verdeckte Schichten vor \citep{DBLP:journals/corr/abs-1301-3781}. Zum einen die CBOW und zum anderen die Skip-gram Architektur. In der Abbildung \ref{cbowvsskipgram} sind die Unterschiede der beiden Architekturen dargestellt.\\
+
+
+\begin{figure}[h]
+  \begin{center}
+	\includegraphics[scale=0.55]{CBOWvsSkip-gram.png}
+  \end{center}  
+  \caption{CBOW und Skip-gram im Vergleich, übersetzt nach \cite{DBLP:journals/corr/abs-1301-3781}}
+  \label{cbowvsskipgram}
+\end{figure}
+
+\section*{CBOW}
+Durch  Bengio et al. \cite{bengio2003neural} wurde das \textit{Feedforward Neural Net Language Model (NNLM)} beschrieben. Es ist ein neuronales Netz, mit Eingabe-, Projektions-, verdeckten- und Ausgabeschichten ist. Ziel des neuronalen Netzes ist es, aus N Eingabewörtern möglichst genau das darauf folgende Wort vorherzusagen.\\
+Die CBOW Architektur ist ähnlich zum NNLM, allerdings wurden die verdeckten Schichten entfernt und die Projektionsschicht wird von allen Wörtern geteilt. So werden alle Wörter auf die gleiche Position projiziert (das vorherzusagende Wort). Es werden auch nicht nur vergangene Wörter, sondern auch Wörter, die dem zu vorhersagenden Wort nachstehen, beim Training benutzt. Trainingskriterium ist hier das momentane (mittlere) Wort korrekt vorherzusagen. So lange werden die Vektoren der Wortrepräsentationen ständig angepasst. Beim CBOW Algorithmus wird ein Wort aus dem Kontext vorhergesagt.
+
+
+
+\section*{Skip-gram}
+Die Architektur des Skip-grams ist ähnlich zur CBOW Architektur. Allerdings wird bei Skip-gram nicht aus dem Kontext ein Wort vorhergesagt, sondern es wird ein Bereich an Wörtern, vor und nach dem aktuellen, anhand des aktuellen Wortes vorhergesagt. Wird der Bereich, der vorhergesagt wird, vergrößert, verbessern sich die Wortvektoren, allerdings erhöht dies die Berechnungskomplexität des gesamten Models. Da weiter entferntere Wörter weniger mit dem aktuellen Wort zu tun haben, als nahestehende, wird dies in den Gewichten beim Training beachtet\citep{DBLP:journals/corr/abs-1301-3781}. Beim Skip-gram Algorithmus wird aus einem Wort der Kontext vorhergesagt.\\
+
+Zur Skip-gram Architektur haben Mikolov et al. \citep{DBLP:journals/corr/MikolovSCCD13} eine weitere Arbeit verfasst, in der sie Methoden zur Verbesserung vorstellen, sowie die Trainingsfunktion des \textit{hierarchical softmax} erläutern und eine Alternative, das \textit{negative sampling}, vorschlagen.\\
+
+\subsection*{Hierarchical softmax\footnote{Vergleiche \cite{DBLP:journals/corr/MikolovSCCD13} in diesem Absatz.}}
+Ein mehr formelles Trainingsziel des Skip-gram Modells ist die durchschnittliche log Wahrscheinlichkeit zu maximieren, gegeben einer Sequenz von Trainingsworten $w_1, w_2,...,w_T$,\\
+ \begin{equation}
+\frac{1}{T} \sum_{t=1}^T \sum_{-c \le j \le c, j \neq 0} log p(w_{t+j}|w_t) 
+  \end{equation}
+  wobei $c$ die Größe des Kontextes darstellt. Die Definition der allgemeinen Softmax Funktion in Skip-gram definiert $p(w_{t+j}|w_t)$ als:
+  
+ \begin{equation}
+p(w_O|w_I)=\frac{\exp({v'_{w_O}}^T v_{w_I}) }{\sum_{w=1}^W \exp({v'_w}^{T} v_{w_I})} 
+%\frac{1}{T} \sum_{t=1}^T \sum_{-c \le j \le c, j \neq 0} log p(w_{t+j}|w_t) 
+  \end{equation}
+  mit $v_w$ und $v'_w$ als \glqq Input\grqq und \glqq Output\grqq{} der Vektorrepräsentation des Wortes $w$, sowie $W$ als Anzahl der Worte im Vokabular. Weil die Wahrscheinlichkeit $p$ proportional zu $W$ ist, ist diese Definition nicht zu gebrauchen, da $W$ oft sehr groß ($10^5 - 10^7$) ist. \cite{DBLP:journals/corr/MikolovSCCD13}\\
+  
+  
+  
+hs\\
+
+\subsection*{Negative sampling}
+
+ns\\
+
+Zum Training mit diesen Funktionen können folgende Parameter verwendet werden:\\
+
+\textbf{size}
+	\vspace{1em}\\
+	Mit dem Parameter \textit{size} wird die Anzahl der Dimensionen der Wortvektoren eingestellt. In einem n-dimensionalen Vektorraum nimmt n den Wert von \textit{size} an.
+	TODO: übliche Werte\\	
+	
+	\textbf{window}
+	\vspace{1em}\\
+	\textit{window} ist der maximale Abstand zwischen benachbarten Worten, innerhalb eines Satzes, die zur Berechnung der Wordvektoren betrachtet werden.\\
+	
+	\textbf{min\_count}
+	\vspace{1em}\\
+	Der Parameter \textit{min\_count} gibt an, wie oft ein Wort in den Testdaten mindestens vorkommen muss, um in das Wörterbuch aufgenommen zu werden.\\
+	
+	\textbf{negative}
+	\vspace{1em}\\
+	Dieser Parameter wird nur benötigt, wenn als Lernalgorithmus negative sampling verwendet wird\footnote{siehe \ref{sec:negativeSampling} Negative sampling}. Er gibt an, wie viele zufällig ausgewählten Worte verwendet werden sollen.\\
+
+
+
+Arten von Ähnlichkeiten
+
+
 
 .\\
 
@@ -209,11 +278,10 @@ Allgemeines zu Word2Vec,\\
   syntaktische und semantische Ähnlichkeiten werden mit word2vec abgebildet(distributet... - paper)\\
   Vektoraddition, -subtraktion (http://www.aclweb.org/anthology/N13-1090)\\
   
+\iffalse
 
-
-
+Maucher:
 mit Word2Vec möchte man ja u.a. Wörter finden, die semantisch irgendwie zusammenhängen. Dafür gab es vor Word2Vec schon andere statistische Standardmethoden wie LSI oder NNMF. Der wesentliche Unterschied ist, dass letztgenannte Verfahren Wörter dann als semantisch korreliert finden, wenn Sie in vielen Dokumenten gemeinsam vorkommen.
-
  Word2Vec aber erkennt Wörter dann als semantisch korreliert, wenn sie häufig im gleichen Kontext vorkommen. 
  Das ist eine ganz andere Strategie. 
  Und mit dieser neuen Strategie kommt man in vielen Anwendungen deutlich weiter als mit den herkömmlichen Methoden.\\
@@ -221,36 +289,18 @@ mit Word2Vec möchte man ja u.a. Wörter finden, die semantisch irgendwie zusamm
 
 
 
-
+Old:
 In Word2Vec Modellen werden Worte als Vektoren dargestellt. Hier wird mittels \textit{distributed representation}ein n-dimensionaler Vektorraum erzeugt, in dem jedes Wort aus den Trainingsdaten durch einen Vektor dargestellt wird \cite{DBLP:journals/corr/abs-1301-3781}. \\
 Als nächster Schritt werden die Vektoren in ein neuronales Netz gegeben und dort mittels eines Lernalgorithmus so verändert, dass Worte mit ähnlicher Bedeutung ähnliche Vektoren haben. Die Ähnlichkeit zwischen zwei Worten kann berechnet werden, indem die Kosinusähnlichkeit zwischen den Vektordarstellungen der beiden Worte gebildet wird.\\
 
+\fi
 
 Die Berechnung der Wortvektoren kann mit neuronalen Netzen unterschiedlicher Architektur erreicht werden, \textit{CBOW} oder \textit{Skip-gram}. Des weiteren stehen unterschiedliche Lernalgorithmen für die neuronalen Netze zur Verfügung, \textit{hierarchical softmax}  und \textit{negative sampling}.\\
 Beim Training können unterschiedliche Parameter eingestellt werden.\\
 
 
 
-\begin{figure}[h]
-  \begin{center}
-	\includegraphics[scale=0.55]{CBOWvsSkip-gram.png}
-  \end{center}  
-  \caption{CBOW und Skip-gram im Vergleich, übersetzt nach \cite{DBLP:journals/corr/abs-1301-3781}}
-  \label{cbowvsskipgram}
-\end{figure}
 
-\section{CBOW}
-\label{sec:cbow}
-	CBOW ist die Abkürzung für Continuous bag-of-words. Beim CBOW wird ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet\cite{DBLP:journals/corr/abs-1301-3781}.\\
-	In der CBOW Architektur wird aus dem Kontext ein Wort vorhergesagt (siehe Abbildung \ref{cbowvsskipgram}). Die Anzahl, der aus dem Kontext zu verwendende Worte, wird mit dem Parameter \textit{window} angegeben.\\
-	
-	\section{Skip-gram}
-\label{sec:skipgram}
-	Bei der Skip-gram Architektur wird auch, wie beim CBOW Model, ein neuronales Netz ohne verdeckte Schichten (hidden layer) verwendet \citep{DBLP:journals/corr/abs-1301-3781}.\\
-	Allerdings wird hier nicht ein Wort aus dem Kontext vorhergesagt, sondern aus einem Wort wird der Kontext vorhergesagt (siehe Abbildung \ref{cbowvsskipgram}).\\
-	
-	Mehrere verdeckte Schichten in neuronalen Netzen machen die Modelle genauer, allerdings kommt auch die meiste Komplexität des ganzen Models von solchen verdeckten Schichten \citep{DBLP:journals/corr/abs-1301-3781}. Mikolov et al. haben deshalb neuronale Netze ohne verdeckte Schichten bevorzugt, da damit sehr große Datenmengen viel effizienter gelernt werden können.\\
-	
 	\section{Hierarchical softmax}
 	 the hierarchical softmax first introduced by Bengio et al[16] and
 later evaluated in a paper by Morin and Bengio[17].
@@ -264,25 +314,8 @@ later evaluated in a paper by Morin and Bengio[17].
 	Alternativ zum hierarchical softmax kann das negative sampling als Lernalgorithmus für das neuronale Netz verwendet werden \citep{DBLP:journals/corr/MikolovSCCD13}.\\
 	Das negative sampling unterscheidet sich zum hierarchical softmax insofern, dass nicht die Ähnlichkeiten zu anderen Worten berechnet werden, sondern es wird davon ausgegangen, dass zufällig ausgewählte Worte mit einer hohen Wahrscheinlichkeit unähnlich, dem zu testenden Wort, sind. Wie viele solcher zufällig ausgewählter Worte benutzt werden sollen kann mit dem Parameter \textit{negative} angegeben werden.\\
 	
+
 	
-	\section{Parameter}
-	\label{sec:Parameter}
-	\textbf{size}
-	\vspace{1em}\\
-	Mit dem Parameter \textit{size} wird die Anzahl der Dimensionen der Wortvektoren eingestellt. In einem n-dimensionalen Vektorraum nimmt n den Wert von \textit{size} an.
-	TODO: übliche Werte\\	
-	\vspace{1em}\\
-	\textbf{window}
-	\vspace{1em}\\
-	\textit{window} ist der maximale Abstand zwischen benachbarten Worten, innerhalb eines Satzes, die zur Berechnung der Wordvektoren betrachtet werden.\\
-	\vspace{1em}\\
-	\textbf{min\_count}
-	\vspace{1em}\\
-	Der Parameter \textit{min\_count} gibt an, wie oft ein Wort in den Testdaten mindestens vorkommen muss, um in das Wörterbuch aufgenommen zu werden.\\
-	\vspace{1em}\\
-	\textbf{negative}
-	\vspace{1em}\\
-	Dieser Parameter wird nur benötigt, wenn als Lernalgorithmus negative sampling verwendet wird\footnote{siehe \ref{sec:negativeSampling} Negative sampling}. Er gibt an, wie viele zufällig ausgewählten Worte verwendet werden sollen.
 	
 	
 
@@ -317,7 +350,7 @@ Da der \textit{hierarchical softmax} Lernalgorithmus eher für selten vorkommend
 
 Um die optimalen Parameter für das Training des Modells herauszufinden wurde ein kleinerer Wikipedia Auszug\footnote{http://mattmahoney.net/dc/enwik9.zip, abgerufen am 30.06.2015, beinhaltet die ersten 1 Milliarde Zeichen des Gesamtkorpus} als Trainingsdaten benutzt und mit unterschiedlichen Parametern wurden mehrere Modelle gelernt und evaluiert (siehe Tabelle \ref{tab:VergleichParameter}).\\
 Die Word2Vec-Klasse in der Gensim-Implementierung beinhaltet eine Evaluationsfunktion\footnote{\textit{gensim.models.word2vec.Word2Vec.accuracy(FILENAME)}}, die die Accuracy des Models berechnet. Die Funktion erwartet einen Dateinamen einer Datei, in der jede Zeile ein 4-Tupel ist und die einzelnen Abschnitte mit \glqq : SECTION NAME\grqq{} unterteilt sind. Ein solches 4-Tupel besteht aus zwei Wortpaaren, deren Worte die gleiche Beziehung untereinander haben, zum Beispiel \glqq Athens Greece Berlin Germany\grqq , hier stellen beide Wortpaare die Beziehung zwischen einem Land und dessen Hauptstadt dar. Auf der Google Code Seite ist eine solche Datei als Beispiel vorhanden\footnote{https://code.google.com/p/word2vec/source/browse/trunk/questions-words.txt, abgerufen am 29.06.2015}. In diesem Beispiel sind 14 Kategorien\footnote{\textit{capital-common-countries, capital-world, currency, city-in-state, family, gram1-adjective-to-adverb, gram2-opposite, gram3-comparative, gram4-superlative, gram5-present-participle, gram6-nationality-adjective, gram7-past-tense, gram8-plural, gram9-plural-verbs}} mit insgesamt 19544 4-Tupel aufgelistet.\\
-Das Word2Vec Modell stellt eine Funktion bereit, \textit{most\_similar(positive=[], negative=[], topn=N)}, bei der die Vektoren der Wörter im Array \textit{positive} aufaddiert und die Vektoren der Wörter in \textit{negative} davon subtrahiert werden. Die Funktion liefert die \textit{N} Wörter zurück, deren Vektordarstellungen eine maximale Kosinusähnlichkeit mit dem Ergebnis der Vektoraddition und -subtraktion haben. Diese Funktion wird auch in der Evaluationsfunktion benutzt, indem die ersten drei Wörter des 4-Tupels in \textit{positive} und \textit{negative} eingeteilt werden\footnote{\textit{most\_similar(positive=[\grq Greece\grq,\grq Berlin\grq], negative=[\grq Athens \grq], topn=1)}}, wird das vierte Wort, hier \glq Germany\grq, korrekt vom Model vorhergesagt, wird dieser Testdatensatz als erfolgreich gezählt. Sollten Wörter nicht im Modell dargestellt sein, wirkt sich dies nicht negativ auf die Accuracy aus, denn die Gesamtaccuracy eines Modells wird als Verhältnis, zwischen der Anzahl der richtig vorhergesagten Wörter und der Anzahl der Testdatensätze, bei denen alle Wörter eine Vektordarstellung im Modell haben, dargestellt. In der Tabelle \ref{tab:VergleichParameter} werden die unterschiedlichen Parameter\footnote{Siehe \ref{sec:Parameter}. Auf der Google Code Seite von Word2Vec wird eine window size bei der Skip-gram Architektur von 10 vorgeschlagen, somit wird sie hier nicht verändert.} und die erreichte Gesamtaccuracy dargestellt. In diesem Modell waren nur bei 13144 der 19544 4-Tupel alle Wörter als Vektordarstellungen im Modell vorhanden.
+Das Word2Vec Modell stellt eine Funktion bereit, \textit{most\_similar(positive=[], negative=[], topn=N)}, bei der die Vektoren der Wörter im Array \textit{positive} aufaddiert und die Vektoren der Wörter in \textit{negative} davon subtrahiert werden. Die Funktion liefert die \textit{N} Wörter zurück, deren Vektordarstellungen eine maximale Kosinusähnlichkeit mit dem Ergebnis der Vektoraddition und -subtraktion haben. Diese Funktion wird auch in der Evaluationsfunktion benutzt, indem die ersten drei Wörter des 4-Tupels in \textit{positive} und \textit{negative} eingeteilt werden\footnote{\textit{most\_similar(positive=[\grq Greece\grq,\grq Berlin\grq], negative=[\grq Athens \grq], topn=1)}}, wird das vierte Wort, hier \glq Germany\grq, korrekt vom Model vorhergesagt, wird dieser Testdatensatz als erfolgreich gezählt. Sollten Wörter nicht im Modell dargestellt sein, wirkt sich dies nicht negativ auf die Accuracy aus, denn die Gesamtaccuracy eines Modells wird als Verhältnis, zwischen der Anzahl der richtig vorhergesagten Wörter und der Anzahl der Testdatensätze, bei denen alle Wörter eine Vektordarstellung im Modell haben, dargestellt. In der Tabelle \ref{tab:VergleichParameter} werden die unterschiedlichen Parameter\footnote{Auf der Google Code Seite von Word2Vec wird eine window size bei der Skip-gram Architektur von 10 vorgeschlagen, somit wird sie hier nicht verändert.} und die erreichte Gesamtaccuracy dargestellt. In diesem Modell waren nur bei 13144 der 19544 4-Tupel alle Wörter als Vektordarstellungen im Modell vorhanden.
 
 
 \begin{table}[h]

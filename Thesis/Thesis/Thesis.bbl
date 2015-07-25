@@ -1,6 +1,11 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{MCCD13}
 
+\bibitem[BDVJ03]{bengio2003neural}
+Yoshua Bengio, R{\'e}jean Ducharme, Pascal Vincent, and Christian Janvin.
+\newblock A neural probabilistic language model.
+\newblock {\em The Journal of Machine Learning Research}, 3:1137--1155, 2003.
+
 \bibitem[DDL{\etalchar{+}}90]{deerwester1990indexing}
 Scott~C. Deerwester, Susan~T Dumais, Thomas~K. Landauer, George~W. Furnas, and
   Richard~A. Harshman.

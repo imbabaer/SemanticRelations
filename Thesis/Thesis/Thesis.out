@@ -7,27 +7,24 @@
 \BOOKMARK [1][]{section.14}{2.2 Externe Programme und Hilfsmittel}{chapter.10}% 7
 \BOOKMARK [1][]{section.20}{2.3 Vorverarbeitung}{chapter.10}% 8
 \BOOKMARK [0][]{chapter.27}{3 Word2Vec}{}% 9
-\BOOKMARK [1][]{section.30}{3.1 CBOW}{chapter.27}% 10
-\BOOKMARK [1][]{section.31}{3.2 Skip-gram}{chapter.27}% 11
-\BOOKMARK [1][]{section.32}{3.3 Hierarchical softmax}{chapter.27}% 12
-\BOOKMARK [1][]{section.33}{3.4 Negative sampling}{chapter.27}% 13
-\BOOKMARK [1][]{section.34}{3.5 Parameter}{chapter.27}% 14
-\BOOKMARK [0][]{chapter.36}{4 Wikipedia-Korpus}{}% 15
-\BOOKMARK [1][]{section.37}{4.1 Gesamtkorpus}{chapter.36}% 16
-\BOOKMARK [1][]{section.51}{4.2 Teilkorpus}{chapter.36}% 17
-\BOOKMARK [1][]{section.54}{4.3 Testdaten}{chapter.36}% 18
-\BOOKMARK [0][]{chapter.58}{5 Experimente}{}% 19
-\BOOKMARK [1][]{section.61}{5.1 Synonymsuche durch Rekursion}{chapter.58}% 20
-\BOOKMARK [1][]{section.69}{5.2 Konkretisierungen}{chapter.58}% 21
-\BOOKMARK [1][]{section.79}{5.3 Verallgemeinerungen}{chapter.58}% 22
-\BOOKMARK [1][]{section.87}{5.4 Unterschiedliche Beziehungen}{chapter.58}% 23
-\BOOKMARK [1][]{section.93}{5.5 Erkennen von Mehrdeutigkeit}{chapter.58}% 24
-\BOOKMARK [0][]{chapter.102}{6 Fazit und Ausblick}{}% 25
-\BOOKMARK [1][]{section.103}{6.1 Fazit}{chapter.102}% 26
-\BOOKMARK [1][]{section.104}{6.2 Ausblick}{chapter.102}% 27
-\BOOKMARK [0][]{chapter.109}{7 Anhang}{}% 28
-\BOOKMARK [1][]{section.110}{7.1 Testdatenvergleich}{chapter.109}% 29
-\BOOKMARK [1][]{section.114}{7.2 Testdaten}{chapter.109}% 30
-\BOOKMARK [1][]{section.117}{7.3 Reinigungsskript}{chapter.109}% 31
-\BOOKMARK [1][]{section.118}{7.4 Synonymliste}{chapter.109}% 32
-\BOOKMARK [1][]{section.120}{7.5 Mehrdeutige Testbegriffe}{chapter.109}% 33
+\BOOKMARK [1][]{section.37}{3.1 Hierarchical softmax}{chapter.27}% 10
+\BOOKMARK [1][]{section.38}{3.2 Negative sampling}{chapter.27}% 11
+\BOOKMARK [0][]{chapter.39}{4 Wikipedia-Korpus}{}% 12
+\BOOKMARK [1][]{section.40}{4.1 Gesamtkorpus}{chapter.39}% 13
+\BOOKMARK [1][]{section.54}{4.2 Teilkorpus}{chapter.39}% 14
+\BOOKMARK [1][]{section.57}{4.3 Testdaten}{chapter.39}% 15
+\BOOKMARK [0][]{chapter.61}{5 Experimente}{}% 16
+\BOOKMARK [1][]{section.64}{5.1 Synonymsuche durch Rekursion}{chapter.61}% 17
+\BOOKMARK [1][]{section.72}{5.2 Konkretisierungen}{chapter.61}% 18
+\BOOKMARK [1][]{section.82}{5.3 Verallgemeinerungen}{chapter.61}% 19
+\BOOKMARK [1][]{section.90}{5.4 Unterschiedliche Beziehungen}{chapter.61}% 20
+\BOOKMARK [1][]{section.96}{5.5 Erkennen von Mehrdeutigkeit}{chapter.61}% 21
+\BOOKMARK [0][]{chapter.105}{6 Fazit und Ausblick}{}% 22
+\BOOKMARK [1][]{section.106}{6.1 Fazit}{chapter.105}% 23
+\BOOKMARK [1][]{section.107}{6.2 Ausblick}{chapter.105}% 24
+\BOOKMARK [0][]{chapter.112}{7 Anhang}{}% 25
+\BOOKMARK [1][]{section.113}{7.1 Testdatenvergleich}{chapter.112}% 26
+\BOOKMARK [1][]{section.117}{7.2 Testdaten}{chapter.112}% 27
+\BOOKMARK [1][]{section.120}{7.3 Reinigungsskript}{chapter.112}% 28
+\BOOKMARK [1][]{section.121}{7.4 Synonymliste}{chapter.112}% 29
+\BOOKMARK [1][]{section.123}{7.5 Mehrdeutige Testbegriffe}{chapter.112}% 30
