@@ -12,11 +12,23 @@ Scott~C. Deerwester, Susan~T Dumais, Thomas~K. Landauer, George~W. Furnas, and
 \newblock Indexing by latent semantic analysis.
 \newblock {\em JAsIs}, 41(6):391--407, 1990.
 
+\bibitem[GH12]{gutmann2012noise}
+Michael~U Gutmann and Aapo Hyv{\"a}rinen.
+\newblock Noise-contrastive estimation of unnormalized statistical models, with
+  applications to natural image statistics.
+\newblock {\em The Journal of Machine Learning Research}, 13(1):307--361, 2012.
+
 \bibitem[HMR86]{Hinton86}
 G.~E. Hinton, J.~L. McClelland, and D.~E. Rumelhart.
 \newblock Distributed representations.
 \newblock {\em Parallel distributed processing: Explorations in the
   microstructure of cognition. Volume 1: Foundations}, pages 503--527, 1986.
+
+\bibitem[MB05]{morin2005hierarchical}
+Frederic Morin and Yoshua Bengio.
+\newblock Hierarchical probabilistic neural network language model.
+\newblock In {\em Proceedings of the international workshop on artificial
+  intelligence and statistics}, pages 246--252. Citeseer, 2005.
 
 \bibitem[MCCD13]{DBLP:journals/corr/abs-1301-3781}
 Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.
@@ -28,6 +40,12 @@ Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean.
 \newblock Distributed representations of words and phrases and their
   compositionality.
 \newblock {\em CoRR}, abs/1310.4546, 2013.
+
+\bibitem[MT12]{mnih2012fast}
+Andriy Mnih and Yee~Whye Teh.
+\newblock A fast and simple algorithm for training neural probabilistic
+  language models.
+\newblock {\em arXiv preprint arXiv:1206.6426}, 2012.
 
 \bibitem[MYZ13]{DBLP:conf/naacl/MikolovYZ13}
 Tomas Mikolov, Wen{-}tau Yih, and Geoffrey Zweig.

@@ -15,7 +15,7 @@ linkcolor = black,
 plainpages = false,
 hypertexnames = false,
 citecolor = black] {hyperref}
-
+\usepackage{bbold}
 
 \begin{document}
 
@@ -81,7 +81,6 @@ zur Erlangung des akademischen Grades eines \textsc{Bachelor of Science}
 &&\small Hochschule der Medien, Stuttgart\\
 \end{tabular}
 \end{flushleft}
-
 \newpage
 \chapter*{Erklärung}
 Hiermit versichere ich, Ruben Müller, ehrenwörtlich, dass ich die 
@@ -123,7 +122,9 @@ Goal of this thesis will be to determine whether a general body or a domain spec
 	\textbf{tf-idf} & Term-Frequency Inverse Document Frequency\\
 	\textbf{LSI} & Latent Semantic Indexing\\
 	\textbf{NLP} & Natural Language Processing\\
-	\textbf{NNMF} & Nicht-negative Matrix Faktorisierung
+	\textbf{NNMF} & Nicht-negative Matrix Faktorisierung\\
+	\textbf{NNLM} & Neuronal Net Language Model\\
+	\textbf{NCE} & Noise Contrastive Estimation\\
 	
 
 \end{tabular}
@@ -192,7 +193,7 @@ Goal of this thesis will be to determine whether a general body or a domain spec
 \chapter{Word2Vec}
 Ziel dieses Kapitels ist es, Word2Vec zu erklären und dazulegen, welche wichtigen Parameter und Algorithmen bei der Berechnung und dem Erstellen von Word2Vec Modellen benutzt werden können.\\
 Wie bereits die Bezeichnung Word2Vec verdeutlicht, werden im Word2Vec Modell Worte als Vektoren dargestellt. Diese Idee der Darstellung von Wörtern ist nicht neu und hat schon eine längere Geschichte \cite{Hinton86}, auch im Bereich des \textit{Information retrieval} werden Daten als Vektoren dargestellt, so werden beispielsweise beim \textit{LSI} \cite{deerwester1990indexing} Dokumente als Vektoren dargestellt. \\
-Ein Ziel von Word2Vec ist es, semantisch oder syntaktisch ähnliche Wörter zu finden. Für dieses Vorhaben gab es schon vor Word2Vec andere statistische Methoden, so können neben dem schon genannten LSI auch mit dem Verfahren der NNMF ähnliche Wörter gefunden werden. Allerdings werden, bei den beiden genannten Verfahren und anderen NLP-Techniken (z.B. tf-idf), Worte nur als Anzahl in den jeweiligen Dokumenten dargestellt, dort kann eine Ähnlichkeit zwischen Wörtern nur dann gefunden werden, wenn diese Wörter in vielen Dokumenten gemeinsam vorkommen. Beim Word2Vec Modell wird ein anderer Ansatz benutzt, hier werden Wörter als ähnlich erkannt, wenn diese in den Trainingsdaten häufig im gleichen Kontext vorkommen.\\
+Ein Ziel von Word2Vec ist es, semantisch oder syntaktisch ähnliche\footnote{Die Ähnlichkeit zwischen zwei Worten kann berechnet werden, indem die Kosinusähnlichkeit zwischen den Vektordarstellungen der beiden Worte gebildet wird.} Wörter zu finden. Für dieses Vorhaben gab es schon vor Word2Vec andere statistische Methoden, so können neben dem schon genannten LSI auch mit dem Verfahren der NNMF ähnliche Wörter gefunden werden. Allerdings werden, bei den beiden genannten Verfahren und anderen NLP-Techniken (z.B. tf-idf), Worte nur als Anzahl in den jeweiligen Dokumenten dargestellt, dort kann eine Ähnlichkeit zwischen Wörtern nur dann gefunden werden, wenn diese Wörter in vielen Dokumenten gemeinsam vorkommen. Beim Word2Vec Modell wird ein anderer Ansatz benutzt, hier werden Wörter als ähnlich erkannt, wenn diese in den Trainingsdaten häufig im gleichen Kontext vorkommen.\\
 
 
 
@@ -211,66 +212,69 @@ In dem neuronalen Netz werden die Vektoren der Wörter dann gelernt und angepass
 
 \section*{CBOW}
 Durch  Bengio et al. \cite{bengio2003neural} wurde das \textit{Feedforward Neural Net Language Model (NNLM)} beschrieben. Es ist ein neuronales Netz, mit Eingabe-, Projektions-, verdeckten- und Ausgabeschichten ist. Ziel des neuronalen Netzes ist es, aus N Eingabewörtern möglichst genau das darauf folgende Wort vorherzusagen.\\
-Die CBOW Architektur ist ähnlich zum NNLM, allerdings wurden die verdeckten Schichten entfernt und die Projektionsschicht wird von allen Wörtern geteilt. So werden alle Wörter auf die gleiche Position projiziert (das vorherzusagende Wort). Es werden auch nicht nur vergangene Wörter, sondern auch Wörter, die dem zu vorhersagenden Wort nachstehen, beim Training benutzt. Trainingskriterium ist hier das momentane (mittlere) Wort korrekt vorherzusagen. So lange werden die Vektoren der Wortrepräsentationen ständig angepasst. Beim CBOW Algorithmus wird ein Wort aus dem Kontext vorhergesagt.
+Die CBOW Architektur ist ähnlich zum NNLM, allerdings wurden die verdeckten Schichten entfernt und die Projektionsschicht wird von allen Wörtern geteilt. So werden alle Wörter auf die gleiche Position projiziert (das vorherzusagende Wort). Es werden auch nicht nur vergangene Wörter, sondern auch Wörter, die dem zu vorhersagenden Wort nachstehen, beim Training benutzt. Trainingskriterium ist hier das momentane (mittlere) Wort korrekt vorherzusagen. So lange werden die Vektoren der Wortrepräsentationen ständig angepasst. Kurz gesagt, beim CBOW Algorithmus wird ein Wort aus dem Kontext vorhergesagt.
 
 
 
 \section*{Skip-gram}
-Die Architektur des Skip-grams ist ähnlich zur CBOW Architektur. Allerdings wird bei Skip-gram nicht aus dem Kontext ein Wort vorhergesagt, sondern es wird ein Bereich an Wörtern, vor und nach dem aktuellen, anhand des aktuellen Wortes vorhergesagt. Wird der Bereich, der vorhergesagt wird, vergrößert, verbessern sich die Wortvektoren, allerdings erhöht dies die Berechnungskomplexität des gesamten Models. Da weiter entferntere Wörter weniger mit dem aktuellen Wort zu tun haben, als nahestehende, wird dies in den Gewichten beim Training beachtet\citep{DBLP:journals/corr/abs-1301-3781}. Beim Skip-gram Algorithmus wird aus einem Wort der Kontext vorhergesagt.\\
+Die Architektur des Skip-grams ist ähnlich zur CBOW Architektur. Allerdings wird bei Skip-gram nicht aus dem Kontext ein Wort vorhergesagt, sondern es wird ein Bereich an Wörtern, vor und nach dem aktuellen, anhand des aktuellen Wortes vorhergesagt. Wird der Bereich, der vorhergesagt wird, vergrößert, verbessern sich die Wortvektoren, allerdings erhöht dies die Berechnungskomplexität des gesamten Models. Da weiter entferntere Wörter weniger mit dem aktuellen Wort zu tun haben, als nahestehende, wird dies in den Gewichten beim Training beachtet\citep{DBLP:journals/corr/abs-1301-3781}. Kurz gesagt, beim Skip-gram Algorithmus wird aus einem Wort der Kontext vorhergesagt.\\
 
 Zur Skip-gram Architektur haben Mikolov et al. \citep{DBLP:journals/corr/MikolovSCCD13} eine weitere Arbeit verfasst, in der sie Methoden zur Verbesserung vorstellen, sowie die Trainingsfunktion des \textit{hierarchical softmax} erläutern und eine Alternative, das \textit{negative sampling}, vorschlagen.\\
 
-\subsection*{Hierarchical softmax\footnote{Vergleiche \cite{DBLP:journals/corr/MikolovSCCD13} in diesem Absatz.}}
-Ein mehr formelles Trainingsziel des Skip-gram Modells ist die durchschnittliche log Wahrscheinlichkeit zu maximieren, gegeben einer Sequenz von Trainingsworten $w_1, w_2,...,w_T$,\\
+\subsection*{Hierarchical softmax\footnote{Vergleiche \cite{DBLP:journals/corr/MikolovSCCD13} in diesem Abschnitt.}}
+Ein mehr formelles Trainingsziel des Skip-gram Modells beschreiben Mikolov et al.\cite{DBLP:journals/corr/MikolovSCCD13} als die durchschnittliche log Wahrscheinlichkeit zu maximieren, gegeben einer Sequenz von Trainingsworten $w_1, w_2,...,w_T$,\\
  \begin{equation}
-\frac{1}{T} \sum_{t=1}^T \sum_{-c \le j \le c, j \neq 0} log p(w_{t+j}|w_t) 
+\frac{1}{T} \sum_{t=1}^T \sum_{-c \le j \le c, j \neq 0} \textrm{log } p(w_{t+j}|w_t) 
   \end{equation}
   wobei $c$ die Größe des Kontextes darstellt. Die Definition der allgemeinen Softmax Funktion in Skip-gram definiert $p(w_{t+j}|w_t)$ als:
   
  \begin{equation}
 p(w_O|w_I)=\frac{\exp({v'_{w_O}}^T v_{w_I}) }{\sum_{w=1}^W \exp({v'_w}^{T} v_{w_I})} 
-%\frac{1}{T} \sum_{t=1}^T \sum_{-c \le j \le c, j \neq 0} log p(w_{t+j}|w_t) 
   \end{equation}
   mit $v_w$ und $v'_w$ als \glqq Input\grqq und \glqq Output\grqq{} der Vektorrepräsentation des Wortes $w$, sowie $W$ als Anzahl der Worte im Vokabular. Weil die Wahrscheinlichkeit $p$ proportional zu $W$ ist, ist diese Definition nicht zu gebrauchen, da $W$ oft sehr groß ($10^5 - 10^7$) ist. \cite{DBLP:journals/corr/MikolovSCCD13}\\
   
-  
-  
-hs\\
+Eine Annäherung an die allgemeine softmax Funktion ist die hierarchical softmax Funktion. Morin und Bengio verwendeten diese im Kontext der \textit{neuronal network language models} zuerst \cite{morin2005hierarchical}. Nach Mikolov et al. \cite{DBLP:journals/corr/MikolovSCCD13} ist der Hauptvorteil, dass anstatt $W$ Ausgabeknoten im neuronalen Netz nur ungefähr $log_2(W) $ Knoten ausgewertet werden müssen, um die Wahrscheinlichkeiten zu errechnen. Weiter beschreiben sie, dass jedes Wort $w$ durch einen geeigneten Pfad vom Wurzelknoten aus erreicht werden kann. So ist $n(w,j)$ der j-te Knoten auf dem Weg von der Wurzel zum Wort $w$ mit der Pfadlänge von $L(w)$. Daraus ergibt sich, dass $n(w,1)$ der Wurzelknoten ist und $n(w,L(w))=w$. Außerdem ist $ch(n)$ als beliebiger aber fixer Kindknoten von $w$ definiert. Der Ausdruck [x] sei 1, wenn x wahr ist, andernfalls -1. Das \textit{hierarchische softmax} definiert die Wahrscheinlichkeit $p(w_O|w_I)$ wie folgt:\\
+ \begin{equation}
+p(w|w_I)=  \prod_{j=1}^{L(w)-1} \sigma([n(w,j+1) = ch(n(w,j))]\cdot {v'_{n(w,j)}}^T v_{w_I } )
+  \end{equation}
+  wobei $\sigma$ die Sigmoid-Funktion $\sigma(x)=\frac{1}{1+\exp(-x)} $ darstellt.
+Nach Mikolov et al. \cite{DBLP:journals/corr/MikolovSCCD13} ist belegt, dass $\sum_{w=1}^W P(w|w_I) = 1$, das impliziert, dass die Berechnungskosten von $\textrm{log } p(w_O|w_I)$ proportional zu $L(w_O)$ sind, wobei dies im Durchschnitt nicht größer als $log W$ ist. Anders als bei der allgemeinen Definition des softmax im Skip-gram, bei der jedem Wort $w$ zwei Darstellungen $v_w$ und $v'_w$ zugeordnet werden, wird bei der Definition des hierarchical softmax jedem Wort $w$ eine Darstellung  $v_w$ und jedem inneren Knoten $n$ des Binärbaumes je eine Darstellung $v'_n$ zugeordnet.
+Mikolov et al. \cite{DBLP:journals/corr/MikolovSCCD13} erklären, dass die Struktur des Baumes, der beim hierarchical softmax benutzt wird, einen großen Einfluss auf die Performanz hat. Sie verwenden einen Huffman Binärbaum, dieser ist so aufgebaut, dass häufig genutzte Worte kurze Kodierungen haben, was sich positiv auf das Trainingstempo auswirkt.\\
+
 
 \subsection*{Negative sampling}
+Als Alternative zur hierarchical softmax Funktion kann \textit{Noise Contrastive Estimation(NCE)} benutzt werden \cite{DBLP:journals/corr/MikolovSCCD13}. Die NCE wurde zuerst von Gutmann und Hyvarinen \cite{gutmann2012noise} beschrieben und durch Mnih und Teh \cite{mnih2012fast} im Bereich der Sprachmodellierung verwendet. Nach Mikolov et al. \cite{DBLP:journals/corr/MikolovSCCD13} sieht die NCE es für notwendig, dass ein gutes Modell Daten von Rauschen unterscheiden kann. Mikolov et al. \cite{DBLP:journals/corr/MikolovSCCD13} erläutern, dass die NCE zur Maximierung der log Wahrscheinlichkeit der softmax Funktion dienen kann, wobei sich aber das Skip-gram Modell nur mit dem Lernen von qualitativ hochwertigen Vektordarstellungen beschäftigt. Deshalb haben Mikolov et al. \cite{DBLP:journals/corr/MikolovSCCD13}, mit der Voraussetzung, dass bei der Vektordarstellung die Qualität erhalten bleibt, das \textit{Negative sampling} wie folgt definiert:\\
+\begin{equation}
+\textrm{log }   \sigma({v'_{w_O}}^Tv_{w_I}) + \sum_{i=1}^k \mathbb{E}_{{w_i}\sim P_n(w)}\left[\textrm{log }\sigma({-v'_{w_i}}^Tv_{w_I})\right]
+\end{equation}
+Mit diesem Term wird dann jeder $\textrm{log }P(w_O|w_I)$ Term im Skip-gram ersetzt. Ziel ist es, das Zielwort $w_O$ aus der Rauschverteilung $P_n(w)$ mittels logistischer Regression zu erkennen\citep{DBLP:journals/corr/MikolovSCCD13}. Bei der Regression gibt es $k$ Negativbeispiele, wobei nach Experimenten von Mikolov et al. \citep{DBLP:journals/corr/MikolovSCCD13}, $k$ zwischen 5-20 in kleineren Trainingssets und zwischen 2-5 bei großen Trainingssets liegen sollte. Mikolov et al. \citep{DBLP:journals/corr/MikolovSCCD13} fanden auch durch Experimente eine optimale Rauschverteilung für $P_n(w)$ und dass die Unigramverteilung $U(w)$ um $3/4$ potenziert (z.B. ${U(w)}^{3/4} / Z)$, die Unigram- und Uniformverteilung weit übertreffen.\\
+Der Hauptunterschied zwischen Negative sampling und NCE ist nach Mikolov et al. \citep{DBLP:journals/corr/MikolovSCCD13}, dass bei der NCE sowohl die Stichprobe, als auch die numerische Wahrscheinlichkeit der Rauschverteilung gebraucht wird. Hingegen braucht Negative sampling nur die Stichproben. Sowie, dass NCE die log Wahrscheinlichkeit des softmax durchschnittlich maximiert, was aber nicht wichtig für diese Anwendung ist\citep{DBLP:journals/corr/MikolovSCCD13}.\\
 
-ns\\
-
+Kurz gesagt, unterscheidet sich das negative sampling zum hierarchical softmax insofern, dass nicht die Ähnlichkeiten zu anderen Worten berechnet werden, sondern es wird davon ausgegangen, dass zufällig ausgewählte Worte mit einer hohen Wahrscheinlichkeit unähnlich, dem zu testenden Wort, sind.\\
 Zum Training mit diesen Funktionen können folgende Parameter verwendet werden:\\
 
 \textbf{size}
 	\vspace{1em}\\
-	Mit dem Parameter \textit{size} wird die Anzahl der Dimensionen der Wortvektoren eingestellt. In einem n-dimensionalen Vektorraum nimmt n den Wert von \textit{size} an.
-	TODO: übliche Werte\\	
+	Mit dem Parameter \textit{size} wird die Anzahl der Dimensionen der Wortvektoren eingestellt. In einem n-dimensionalen Vektorraum nimmt n den Wert von \textit{size} an. In \citep{DBLP:journals/corr/abs-1301-3781} werden bei den Beispielen Werte zwischen 50 und 1000 für \textit{size} verwendet.\\	
 	
 	\textbf{window}
 	\vspace{1em}\\
-	\textit{window} ist der maximale Abstand zwischen benachbarten Worten, innerhalb eines Satzes, die zur Berechnung der Wordvektoren betrachtet werden.\\
+	\textit{window} ist der maximale Abstand zwischen benachbarten Worten, innerhalb eines Satzes, die zur Berechnung der Wordvektoren betrachtet werden ($\widehat{=}$ Kontext). Auf der Google Code Seite von Word2Vec\footnote{https://code.google.com/p/word2vec/, abgerufen am 26.07.2015} wird eine \textit{window} Größe bei der Skip-gram Architektur von ungefähr zehn, bei CBOW von ungefähr fünf vorgeschlagen.\\
 	
 	\textbf{min\_count}
 	\vspace{1em}\\
-	Der Parameter \textit{min\_count} gibt an, wie oft ein Wort in den Testdaten mindestens vorkommen muss, um in das Wörterbuch aufgenommen zu werden.\\
+	Der Parameter \textit{min\_count} gibt an, wie oft ein Wort in den Testdaten mindestens vorkommen muss, um in das Wörterbuch aufgenommen zu werden. In der Gensim-Implementierung von Word2Vec\footnote{https://radimrehurek.com/gensim/, abgerufen am 24.06.2015} wird ein voreingestellter Wert von fünf verwendet.\\
 	
 	\textbf{negative}
 	\vspace{1em}\\
-	Dieser Parameter wird nur benötigt, wenn als Lernalgorithmus negative sampling verwendet wird\footnote{siehe \ref{sec:negativeSampling} Negative sampling}. Er gibt an, wie viele zufällig ausgewählten Worte verwendet werden sollen.\\
+	Dieser Parameter wird nur benötigt, wenn als Lernalgorithmus negative sampling verwendet wird. Er gibt an, wie viele zufällig ausgewählten Worte beim Test auf Ähnlichkeit verwendet werden sollen. Im Artikel von Mikolov et al. \citep{DBLP:journals/corr/MikolovSCCD13} wird für diesen Wert bei kleinen Trainingskorpora ein Wert aus dem Bereich zwischen 5 und 20 vorgeschlagen, für große Trainingskorpora zwischen 2 und 5.\\
 
 
-
-Arten von Ähnlichkeiten
+\section*{Unterschiedliche Arten von Ähnlichkeiten}
 
 
 
 .\\
-
-Als nächster Schritt werden die Vektoren in ein neuronales Netz gegeben und dort mittels eines Lernalgorithmus so verändert, dass Worte mit ähnlicher Bedeutung ähnliche Vektoren haben. Die Ähnlichkeit zwischen zwei Worten kann berechnet werden, indem die Kosinusähnlichkeit zwischen den Vektordarstellungen der beiden Worte gebildet wird.\\
-
-
 
 .....\\
 Allgemeines zu Word2Vec,\\
@@ -293,28 +297,28 @@ Old:
 In Word2Vec Modellen werden Worte als Vektoren dargestellt. Hier wird mittels \textit{distributed representation}ein n-dimensionaler Vektorraum erzeugt, in dem jedes Wort aus den Trainingsdaten durch einen Vektor dargestellt wird \cite{DBLP:journals/corr/abs-1301-3781}. \\
 Als nächster Schritt werden die Vektoren in ein neuronales Netz gegeben und dort mittels eines Lernalgorithmus so verändert, dass Worte mit ähnlicher Bedeutung ähnliche Vektoren haben. Die Ähnlichkeit zwischen zwei Worten kann berechnet werden, indem die Kosinusähnlichkeit zwischen den Vektordarstellungen der beiden Worte gebildet wird.\\
 
-\fi
 
 Die Berechnung der Wortvektoren kann mit neuronalen Netzen unterschiedlicher Architektur erreicht werden, \textit{CBOW} oder \textit{Skip-gram}. Des weiteren stehen unterschiedliche Lernalgorithmen für die neuronalen Netze zur Verfügung, \textit{hierarchical softmax}  und \textit{negative sampling}.\\
 Beim Training können unterschiedliche Parameter eingestellt werden.\\
 
+\fi
 
 
-
+\iffalse
 	\section{Hierarchical softmax}
 	 the hierarchical softmax first introduced by Bengio et al[16] and
-later evaluated in a paper by Morin and Bengio[17].
+later evaluated in a paper by Morin and Bengio[17].q2
 
 
 	Eine Annäherung an das allgemeine softmax ist das hierarchical softmax \citep{DBLP:journals/corr/MikolovSCCD13}. Der Hauptvorteil ist, dass anstatt W Ausgabeknoten im neuronalen Netz nur ungefähr $log_2(W) $ Knoten ausgewertet werden müssen um die Wahrscheinlichkeiten zu errechnen. \\
 	Bei diesem Lernalgorithmus wird das Wörterbuch als Huffman Binärbaum dargestellt. Dies hat den weiteren Vorteil, dass häufig genutzte Worte kurze Kodierungen haben, was sich auf das Trainingstempo positiv auswirkt.\\
-	
+
 	\section{Negative sampling}
 	\label{sec:negativeSampling}
 	Alternativ zum hierarchical softmax kann das negative sampling als Lernalgorithmus für das neuronale Netz verwendet werden \citep{DBLP:journals/corr/MikolovSCCD13}.\\
 	Das negative sampling unterscheidet sich zum hierarchical softmax insofern, dass nicht die Ähnlichkeiten zu anderen Worten berechnet werden, sondern es wird davon ausgegangen, dass zufällig ausgewählte Worte mit einer hohen Wahrscheinlichkeit unähnlich, dem zu testenden Wort, sind. Wie viele solcher zufällig ausgewählter Worte benutzt werden sollen kann mit dem Parameter \textit{negative} angegeben werden.\\
 	
-
+	\fi
 	
 	
 	
@@ -1088,9 +1092,8 @@ yahoo & youtube & zelda & zynga\\
 \section{Reinigungsskript}
 	\label{sec:Perlskript}
 Das Originalskript von Matt Mahoney kann unter http://mattmahoney.net/dc/textdata.html gefunden werden.
+Verändertes Skript:\\
 \begin{verbatim}
-
-
 #!/usr/bin/perl
 
 # Program to filter Wikipedia XML dumps to "clean" text consisting only 
@@ -1158,11 +1161,11 @@ while (<>) {
 \section{Synonymliste}	
 	\label{sec:Synonymliste}
 	\begin{table}[H]
-\caption{Synonymliste}
+\caption{Synonymliste, erhalten aus einem Webservice unter http://thesaurus.altervista.org/ }
 \begin{center}
 \begin{tabular}{|l|l|}
 \hline
-Wort & Synonym\\
+\textbf{Wort} & \textbf{Synonym}\\
 \hline
 acer & genusacer, dicotgenus, magnoliopsidgenus\\
 \hline
