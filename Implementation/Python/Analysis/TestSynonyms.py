@@ -135,6 +135,3 @@ simfileLargeModel = open('SynonymsInFullModel.txt','w')
 testFunction2(model,testdatadict,simfileLargeModel,5)
 
 
-
-from Test1.soundtest import playTADA
-playTADA()

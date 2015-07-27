@@ -88,16 +88,10 @@ console
 
 cybercrime
 -------------------------------
-cybercrime
--------------------------------
--, -, -, -, -
 -------------------------------
 
 cyberwar
 -------------------------------
-cyberwar
--------------------------------
--, -, -, -, -
 -------------------------------
 
 data
@@ -172,10 +166,6 @@ halo
 -------------------------------
 -------------------------------
 
-handheld
--------------------------------
--------------------------------
-
 hardware
 -------------------------------
 -------------------------------
@@ -234,9 +224,6 @@ monitor
 
 motoring
 -------------------------------
-motoring
--------------------------------
--, -, -, -, -
 -------------------------------
 
 mouse
@@ -373,9 +360,6 @@ technology
 
 technophile
 -------------------------------
-technophile
--------------------------------
--, -, -, -, -
 -------------------------------
 
 ted
@@ -400,9 +384,6 @@ trojan
 
 twitch
 -------------------------------
-twitch
--------------------------------
--, -, -, -, -
 -------------------------------
 
 twitter
@@ -451,10 +432,20 @@ yahoo
 
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Synonyms:
-Synonyms found: 2
-engineering	discipline
-power	supply
+Synonyms found: 12
+auto	automobile
+automobile	car
+cyberwar	cyberterrorism
+encryption	cryptography
+google	search
+linux	unix
+mouse	rodent
+processor	cpu
+sun	star
+telecom	telecommunication
+television	tv
+wifi	wlan
 
-No synonyms found: 102
+No synonyms found: 96
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 

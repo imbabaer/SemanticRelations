@@ -141,7 +141,7 @@ Goal of this thesis will be to determine whether a general body or a domain spec
 
 
 	\section{Verwandte Arbeiten}
-	
+	Wörter als kontinuierliche Vektoren darzustellen hat eine lange Geschichte \citep{Hinton86}, \cite{williams1986learning},\cite{elman1990finding}. Auch neuronale Netze zu benutzen um Wortvektoren zu lernen, wurde bereits bei \citep{bengio2003neural} beschrieben und in \cite{mikolovMaster} und \cite{mikolov2009neural} erweitert. Die Arbeitsweise von Word2Vec wurde in \citep{DBLP:journals/corr/abs-1301-3781} und \citep{DBLP:journals/corr/MikolovSCCD13} beschrieben, die Ähnlichkeiten zwischen Wörter mit einfachen algebraischen Operationen zu errechnen wurde in \citep{DBLP:conf/naacl/MikolovYZ13} erklärt.
 	
 	
 	
@@ -271,16 +271,26 @@ Zum Training mit diesen Funktionen können folgende Parameter verwendet werden:\
 
 
 \section*{Unterschiedliche Arten von Ähnlichkeiten}
+Die gelernten Wortrepräsentationen sind erstaunlicherweise sehr gut im Erkennen von syntaktischen und semantischen Regelmäßigkeiten in natürlicher Sprache und diese bedeutungsvollen Beziehungen werden in einer sehr einfachen Art und Weise erfasst\cite{DBLP:conf/naacl/MikolovYZ13}. Es kann festgestellt werden, dass \textit{groß} zu \textit{größer} die gleiche Beziehung hat, wie \textit{klein} zu \textit{kleiner}\citep{DBLP:journals/corr/abs-1301-3781}. Dadurch können Fragen in der Art \glqq Welches Wort ist ähnlich zu \textit{klein}, in der Form in der \textit{am größten} zu \textit{groß} ähnlich ist?\grqq. Um solche Fragen beantworten zu können, reicht es aus, einfache algebraische Operationen auf den Vektordarstellungen der Wörter auszuführen\citep{DBLP:journals/corr/abs-1301-3781}. So muss um das Wort zu finden, welches ähnlich zu \textit{klein} im gleichen Sinn wie \textit{am größten} zu \textit{groß} ist, folgender Vektor errechnet werden $X = vector(\textrm{\glqq am größten\grqq}) - vector(\textrm{\glqq groß\grqq}) + vector(\textrm{\glqq klein\grqq})$, dann wird der Vektorraum abgesucht um das nächste Wort dieses Vektors $X$ zu finden\citep{DBLP:journals/corr/abs-1301-3781}. Der Abstand wird mit der Kosinusähnlichkeit gemessen. Das dann erhaltene Wort wird als Lösung für die Frage verwendet. Jede solche Ähnlichkeit wird mit einem beziehungsspezifischen Offsetvektor charakterisiert\citep{DBLP:conf/naacl/MikolovYZ13}, so sind Wortpaare, die die gleiche Art von Ähnlichkeit haben, durch den gleichen Offsetvektor getrennt. In Figur \ref{fig:offsetvectors} ist dies veranschaulicht. Dadurch, dass jede Beziehung ihren eigenen Offsetvektor hat, erlaubt es das Modell, dass die einzelnen Worte viele unterschiedliche Beziehungen haben können.\\
 
 
 
-.\\
+\begin{figure}[h]
+  \begin{center}
+	\includegraphics[scale=0.65]{OffsetVector2.png}
+  \end{center}  
+  \caption{Ähnlichkeiten von Worten, als Offsetvektoren dargestellt. Nach Figur 2 in \citep{DBLP:conf/naacl/MikolovYZ13}.}
+  \label{fig:offsetvectors}
+\end{figure}
 
-.....\\
-Allgemeines zu Word2Vec,\\
- Vergleich zu anderen\\
-  syntaktische und semantische Ähnlichkeiten werden mit word2vec abgebildet(distributet... - paper)\\
-  Vektoraddition, -subtraktion (http://www.aclweb.org/anthology/N13-1090)\\
+Wortvektoren, die solche semantische Ähnlichkeiten darstellen können, könnten auch zur Verbesserung in vielen bereits existierenden NLP Anwendungen, wie maschinelles Übersetzen, Informationsgewinnung oder Systeme zur Fragebeantwortung, verwendet werden\citep{DBLP:journals/corr/abs-1301-3781}.\\
+
+
+
+%Allgemeines zu Word2Vec,\\
+ %Vergleich zu anderen\\
+  %syntaktische und semantische Ähnlichkeiten werden mit word2vec abgebildet(distributet... - paper)\\
+  %Vektoraddition, -subtraktion (http://www.aclweb.org/anthology/N13-1090)\\
   
 \iffalse
 
@@ -441,7 +451,7 @@ Als Grundlage für die Experimente dienen die Testdaten\footnote{Siehe \ref{sec:
 		Im ersten Experiment wird untersucht, ob es möglich ist, im Word2Vec Modell Synonyme eines Begriffs zu finden. Hierzu sollen allerdings nicht die ähnlichen Worte der Testbegriffe betrachtet werden, sondern deren ähnliche Worte. Die Suche nach ähnlichen Worten wird somit ein Mal rekursiv angewandt. Die Überlegung ist, dass durch den rekursiven Aufruf Rückbeziehungen zu den ursprünglichen Suchbegriffen und deren Synonymen entstehen. Eine Anwendung für die Synonymsuche durch Rekursion könnte ein Thesaurus-Lexikon sein.\\
 		
 		\subsection*{Durchführung}
-		Eine Liste mit den Synonymen der Testbegriffe wird vor dem Experiment mit der Hilfe eines Webservices\footnote{Über http://thesaurus.altervista.org/, abgerufen am 20.07.2015} erstellt\footnote{Siehe \ref{sec:Synonymliste}}. Dieser Webservice liefert aber nur für 109 der insgesamt 236 Testwörter Synonyme. So wurden für dieses Experiment nur diese 109 Testwörter benutzt.\\
+		Eine Liste mit den Synonymen der Testbegriffe wird vor dem Experiment mit der Hilfe eines Webservices\footnote{Über http://thesaurus.altervista.org/, abgerufen am 20.07.2015} erstellt\footnote{Siehe \ref{sec:Synonymliste}}. Dieser Webservice liefert aber nur für 108 der insgesamt 236 Testwörter Synonyme. So wurden für dieses Experiment nur diese 108 Testwörter benutzt.\\
 		Im ersten Schritt dieses Experiments müssen die ähnlichen Worte ($W_1$) der Testbegriffe, mit der Methode \textit{most\_similar()} des Word2Vec Modells, herausgefunden werden. Diese fünf Wörter ($W_1$) werden in der späteren Analyse nicht betrachtet. Im nächsten Schritt werden die fünf erhaltenen ähnlichen Wörter ($W_1$) dann als Eingabe für die \textit{most\_similar()}-Methode benutzt und liefern wieder jeweils fünf ähnliche Wörter ($W_2$) zurück. Die insgesamt 25 Begriffe werden im letzten Schritt des Experiments dann mit den Synonymen des ursprünglichen Testbegriff verglichen. Sobald einer der 25 erhaltenen Begriffe in der Liste der Synonyme des jeweiligen Testwortes enthalten ist, wird dieses Wort als \textit{Synonym enthalten} gezählt.\\
 		Die nachfolgende Tabelle \ref{tab:experiment1} listet die Resultate dieses Experiments auf. Es sind die Gesamtanzahl der Testwörter, die Anzahl an Testwörter, bei denen Synonyme gefunden wurden und die Anzahl der Testwörter, bei denen keine Synonyme gefunden wurden, sowie die Anzahl der Worte, die nicht im jeweiligen Modell enthalten sind, abgebildet.
 		
@@ -459,9 +469,9 @@ Als Grundlage für die Experimente dienen die Testdaten\footnote{Siehe \ref{sec:
  &			& \textbf{nicht enthalten} & \textbf{enthalten} & \textbf{im Korpus}  \\
 
 \hline
- Gesamt & 109 & 97 & 12 & 0 \\
+ Gesamt & 108 & 96 & 12 & 0 \\
  \hline
- Technologie & 109 & 102 & 2 & 5 \\
+ Technologie & 108 & 101 & 2 & 5 \\
  \hline
  
 \end{tabular}
@@ -594,11 +604,7 @@ wifi & Gesamt & wlan\\
 		
 		\subsection*{Interpretation/Ergebnis}
 Im Technologiemodell konkretisieren in 65 der 236 Testfälle	die ähnlichen Worte den jeweiligen Suchbegriff, im Gesamtmodell jedoch nur in 37 Fällen. Somit bestätigt sich die Annahme, dass im Gesamtmodell weniger Konkretisierungen auftreten. Dies hat den Grund, dass sich die Daten im Gesamtmodell nicht auf eine Fachrichtung beschränken wie im Technologiemodell. So werden beim Training mit Technologiedaten im Word2Vec Modell die Beziehungen beibehalten, die beim Training mit dem kompletten Wikipediakorpus durch andere, allgemeine Wörter noch weiter verändert werden. \\
-
-TODO: Insgesamt wenig Konkretisierungen, da Wörter-BEziehungen so entstehen, dass wo im gleichen zusammenhang stehen, werden als ähnlich erkannt.\\
-
-		
-		Zu beobachten ist, dass der Technologiekorpus besser konkretisiert, als der komplette allgemeine Korpus. Da dies aber nur in ca. 30\% der Testfälle passiert, ist es schwierig, zu verallgemeinern, dass die ähnlichen Worte im Technologiekorpus eine Konkretisierung sind, somit ist auch hier die Annahme des Experiments widerlegt.\\
+Da die Anzahl der Testfälle, bei denen die ähnlichen Wörter den Testbegriff konkretisieren, nicht so hoch ist, kann daraus geschlossen werden, dass diese Begriffe und die Worte, die sie konkretisieren, nicht so häufig im gleichen Kontext in den Trainingsdaten vorhanden waren.\\
 		
 		
 	
@@ -678,11 +684,9 @@ In Tabelle \ref{tab:Experiment3} sind die Gesamtzahl der Testwörter, die Anzahl
 
   
 		\subsection*{Interpretation/Ergebnis}
-		Im Gesamtmodell weißen bei 134 Testbegriffen mindestens drei der dazugehörigen ähnlichen Worte eine Verallgemeinerung des Testwortes auf. Im Technologiemodell ist dies nur bei 67 Begriffen der Fall. Somit bestätigt sich die Vermutung, dass im Gesamtmodell mehr Verallgemeinerungen zu finden sind. Dies hängt mit der Tatsache zusammen, dass das Gesamtmodell mit Daten, die nicht auf ein spezielles Thema beschränkt sind, trainiert wurde und diese Begriffe in allen unterschiedlichen Zusammenhängen im Trainingskorpus enthalten waren. \\
+		Im Gesamtmodell weisen bei 134 Testbegriffen mindestens drei der dazugehörigen ähnlichen Worte eine Verallgemeinerung des Testwortes auf. Im Technologiemodell ist dies nur bei 67 Begriffen der Fall. Somit bestätigt sich die Vermutung, dass im Gesamtmodell mehr Verallgemeinerungen zu finden sind. Dies hängt mit der Tatsache zusammen, dass das Gesamtmodell mit Daten, die nicht auf ein spezielles Thema beschränkt sind, trainiert wurde und diese Begriffe in vielen unterschiedlichen Zusammenhängen im Trainingskorpus enthalten sind. Die allgemeineren ähnlichen Worte müssen in den Trainingsdaten also häufiger im gleichen Kontext wie die Testbegriffe vorgekommen sein, als andere Worte.\\
 		
-TODO:		Die Begriffe müssen deshalb öfter in allgemeinen Zusammenhängen in den Trainingsdaten vorgekommen sein, als speziell über das konkrete Thema. Dadurch wurde das Modell beim Training beeinflusst.\\
-
-Da im Gesamtmodell in mehr als der Hälfte der Fälle, eine Verallgemeinerung der Suchbegriffe in den ähnlichen Daten festgestellt wurde, kann davon ausgegangen werden, dass durch die ähnlichen Worte in, mit allgemeinen Daten trainierten, Modellen die Suchbegriffe allgemeiner dargestellt werden.\\
+		
 		
 		
 	
@@ -846,10 +850,10 @@ raspberry& Gesamt& nein & apple (0,657), apricot (0,629), \\
 		
 		\subsection*{Interpretation/Ergebnis}
 		
-TODO: mehrdeutigkeiten sind ja immer andere beduetungen, somit kommen diese auch nicht so häufig im gleichen kontext vor, sodass sie durch word2vec zuverlässig abgebildet werden könnten.\\
+
 
 		
-		Im beiden Modellen werden von den 66 mehrdeutigen Testbegriffen nur sieben erkannt. Jedoch sind dies 13 unterschiedliche Testbegriffe, denn die Modelle erkennen immer bei unterschiedlichen Begriffen die Mehrdeutigkeit und nur beim Begriff \textit{trojan} erkennen beide Modelle die Mehrdeutigkeit. Ein mehrdeutiger Testbegriff kommt im Technologiemodell gar nicht vor und 59 (Gesamtmodell) beziehungsweise 58 (Technologiemodell) mehrdeutige Begriffe werden nicht erkannt. \\
+		Im beiden Modellen werden von den 66 mehrdeutigen Testbegriffen nur sieben erkannt. Jedoch sind dies 13 unterschiedliche Testbegriffe, denn die Modelle erkennen immer bei unterschiedlichen Begriffen die Mehrdeutigkeit und nur beim Begriff \textit{trojan} erkennen beide Modelle die Mehrdeutigkeit. Ein mehrdeutiger Testbegriff kommt im Technologiemodell gar nicht vor und 59 im Gesamtmodell beziehungsweise 58 im Technologiemodell mehrdeutige Begriffe werden nicht erkannt. Die sehr geringe Anzahl an erkannten Mehrdeutigkeiten kann auch damit zusammen hängen, dass diese Begriffe in den unterschiedlichen Bedeutungen oft sehr unterschiedliche Dinge beschreiben und somit eher selten im gleichen Kontext in den Trainingsdaten vorkommen. Und da Word2Vec die Ähnlichkeiten über den gleichen Kontext bildet, kann die Mehrdeutigkeit schlecht damit abgebildet werden.\\
 Allerdings werden bei 35 Testbegriffen in den unterschiedlichen Modellen je eine unterschiedliche Bedeutung der mehrdeutigen Begriffe in den ähnlichen Worten dargestellt. Siehe dazu Tabelle \ref{tab:bspJeEinModellMehrdeutig}, dort sind einige Beispiele aufgelistet. Dargestellt sind die Testbegriffe, Modelltyp und die erhaltenen ähnlichen Worte mit Kosinusähnlichkeiten.\\
 		
 		\begin{table}[H]
@@ -1160,10 +1164,12 @@ while (<>) {
 
 \section{Synonymliste}	
 	\label{sec:Synonymliste}
+	Siehe CD-Rom
+\iffalse
 	\begin{table}[H]
-\caption{Synonymliste, erhalten aus einem Webservice unter http://thesaurus.altervista.org/ }
+\caption{Synonymliste, erhalten aus einem Webservice unter http://thesaurus.altervista.org/, Teil 1}
 \begin{center}
-\begin{tabular}{|l|l|}
+\begin{tabular}{ |l|p{13cm}|}
 \hline
 \textbf{Wort} & \textbf{Synonym}\\
 \hline
@@ -1215,11 +1221,26 @@ cybercrime & lawbreaking, crime\\
 \hline
 cyberwar & cyberterrorism, terrorism, actofterrorism, terroristact\\
 \hline
+
 data & assemblage, information, aggregation, collection, accumulation\\
 \hline
 dell & dingle, holler, hollow\\
 \hline
 doodle & scrabble, draw, scribble, drawing\\
+\hline
+
+
+
+\end{tabular}
+\end{center}
+\end{table}
+
+	\begin{table}[H]
+\caption{Synonymliste, erhalten aus einem Webservice unter http://thesaurus.altervista.org/, Teil 2 }
+\begin{center}
+\begin{tabular}{ |l|p{13cm}|}
+\hline
+\textbf{Wort} & \textbf{Synonym}\\
 \hline
 drone & heavierthanaircraft, bourdon, dawdler, droneon, laggard, idler, go, utter, speak, layabout, poke, dronepipe, pilotlessaircraft, verbalize, pitchcontour, lagger, sound, modulation, monotone, loafer, mouth, bum, intonation, taborpipe, droning, radiocontrolledaircraft, bee, pipe, donothing, verbalise, talk, trailer\\
 \hline
@@ -1251,7 +1272,20 @@ gps & globalpositioningsystem, navigationalsystem\\
 \hline
 halo & annulus, toroid, anulus, glory, gloriole, nimbus, light, anchorring, atmosphericphenomenon, aura, aureole, ring, lightness, doughnut\\
 \hline
-handheld & \\
+
+
+
+\end{tabular}
+\end{center}
+\end{table}
+
+
+	\begin{table}[H]
+\caption{Synonymliste, erhalten aus einem Webservice unter http://thesaurus.altervista.org/, Teil 3 }
+\begin{center}
+\begin{tabular}{ |l|p{14cm}|}
+\hline
+\textbf{Wort} & \textbf{Synonym}\\
 \hline
 hardware & instrumentation, software, munition, component, arms, computerhardware, ironware, weaponry, implementsofwar, constituent, weaponssystem, element, instrumentality\\
 \hline
@@ -1271,8 +1305,10 @@ laptop & laptopcomputer, portablecomputer\\
 \hline
 link & datalink, nexus, relate, colligate, dissociate, shape, disconnectedness, connect, electricalcircuit, radiolink, connexion, programline, disconnect, yoke, attach, union, fixing, fastener, unite, communicationchannel, connectedness, statement, tie, cogitate, channel, communicationsystem, form, associate, linearunit, electriccircuit, unification, linkup, fastening, line, linkage, join, instruction, intergroupcommunication, cerebrate, connection, contact, command, holdfast, circuit, liaison, think, tiein\\
 \hline
+
 linux & unix, unixsystem, unixoperatingsystem\\
 \hline
+
 live & ringing, gothrough, dead, bouncy, springy, exist, lively, inplay, go, loaded, animate, liveborn, holdout, liveout, untaped, living, elastic, recorded, current, hot, vital, resilient, dwell, inhabit, unrecorded, unfilmed, viable, be, livein, liveon, alive, survive, active, holdup, last, reverberant, see, know, experience, endure, subsist, undergo, charged\\
 \hline
 macintosh & fabric, cloth, material, raincoat, textile, mackintosh, mac, waterproof, mack\\
@@ -1285,6 +1321,19 @@ motoring & driving\\
 \hline
 mouse & pussyfoot, gnawer, gnawinganimal, bruise, walk, rodent, individual, shiner, manipulate, contusion, electronicdevice, sneakaway, computermouse, blackeye, creep, someone, somebody, sneakout, sneak, soul, person, mortal\\
 \hline
+
+\end{tabular}
+\end{center}
+\end{table}
+
+	\begin{table}[H]
+\caption{Synonymliste, erhalten aus einem Webservice unter http://thesaurus.altervista.org/, Teil 4 }
+\begin{center}
+\begin{tabular}{ |l|p{13cm}|}
+\hline
+\textbf{Wort} & \textbf{Synonym}\\
+\hline
+
 net & takehome, sack, tissue, fabric, nett, gross, netprofit, takeholdof, goal, profit, netincome, textile, earnings, income, pay, weave, final, trap, cyberspace, material, lucre, web, internet, bear, cloth, mesh, gain, catch, computernetwork, gameequipment, meshing, network, last, clear, yield, meshwork, benefit, ultimate, sackup, grab, profits\\
 \hline
 oracle & prophesier, diviner, seer, prophet, vaticinator, shrine, prophecy, divination\\
@@ -1313,8 +1362,22 @@ ps & note, postscript, annotation, notation\\
 \hline
 python & mythicalcreature, boa, mythicalmonster, spirit, disembodiedspirit\\
 \hline
+
 raider & corporateinvestor, spoiler, looter, despoiler, thief, plunderer, pillager, freebooter, stealer\\
 \hline
+
+\end{tabular}
+\end{center}
+\end{table}
+
+	\begin{table}[H]
+\caption{Synonymliste, erhalten aus einem Webservice unter http://thesaurus.altervista.org/, Teil 5 }
+\begin{center}
+\begin{tabular}{ |l|p{13cm}|}
+\hline
+\textbf{Wort} & \textbf{Synonym}\\
+\hline
+
 ram & pound, force, house, sign, thrust, ariestheram, individual, mansion, crash, signofthezodiac, sheep, drive, jam, aries, cram, chockup, volatilestorage, someone, somebody, clash, tup, wad, tool, jampack, collide, randomaccessmemory, drivein, ramdown, planetaryhouse, soul, person, stuff, starsign, mortal, read/writememory, randommemory\\
 \hline
 raspberry & razz, bramblebush, shout, hiss, yell, hoot, raspberrybush, bird, bronxcheer, cry, call, berry, boo, outcry, vociferation, razzing, drupelet, snort\\
@@ -1345,6 +1408,20 @@ sun & lie, lord'sday, sunshine, star, influentialperson, solarize, light, expose
 \hline
 surface & layer, opencast, publicknowledge, ascend, bound, aspect, open, comeon, goup, skindeep, superficial, appear, aerofoil, subsurface, overhead, artefact, comeup, showup, rise, turnup, shallow, artifact, earth'ssurface, device, boundary, coat, controlsurface, cover, bounds, opencut, facet, comeout, generalknowledge, aboveground, gradeconstructed, airfoil, riseup\\
 \hline
+
+
+\end{tabular}
+\end{center}
+\end{table}
+
+	\begin{table}[H]
+\caption{Synonymliste, erhalten aus einem Webservice unter http://thesaurus.altervista.org/, Teil 6 }
+\begin{center}
+\begin{tabular}{ |l|p{14cm}|}
+\hline
+\textbf{Wort} & \textbf{Synonym}\\
+\hline
+
 tablet & bar, dose, lozenge, paper, pad, tab, cake, padofpaper, slab, pill\\
 \hline
 technology & discipline, appliedscience, field, study, profession, fieldofstudy, engineeringscience, subjectarea, application, engineering, branchofknowledge, bailiwick, subjectfield, practicalapplication, subject\\
@@ -1390,6 +1467,8 @@ yahoo & rube, bumpkin, fictionalcharacter, character, searchengine, rustic, hays
 \end{tabular}
 \end{center}
 \end{table}
+
+\fi
 
 \section{Mehrdeutige Testbegriffe}
 \label{sec:mehrdeutigetestbegriffe}

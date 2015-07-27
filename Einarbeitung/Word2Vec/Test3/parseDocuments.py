@@ -150,10 +150,10 @@ print "--------------------News from test------------------------"
 
 testfiles2=[]
 print 'get testfiles'
-for x in range(0,1):
+for x in range(0,420):
     print str(x)
     list = get_filelist(mypathtest2+'/'+str(x)+'/texts')
-    for fi in list[:50]:
+    for fi in list:
         testfunction(mypathtest2+'/'+str(x)+'/texts/'+fi,classifier)
 
 print 'done'

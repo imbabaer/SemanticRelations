@@ -2,9 +2,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces CBOW und Skip-gram im Vergleich, \IeC {\"u}bersetzt nach \cite {DBLP:journals/corr/abs-1301-3781}}}{6}{figure.29}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \IeC {\"A}hnlichkeiten von Worten, als Offsetvektoren dargestellt. Nach Figur 2 in \citep {DBLP:conf/naacl/MikolovYZ13}.}}{11}{figure.42}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Beispiel der Beziehungen zwischen W\IeC {\"o}rtern als Baumdiagramm dargestellt.}}{20}{figure.77}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Beispiel der Beziehungen zwischen W\IeC {\"o}rtern als Baumdiagramm dargestellt.}}{24}{figure.87}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Beispiel der Beziehungen zwischen W\IeC {\"o}rtern als Baumdiagramm dargestellt.}}{20}{figure.78}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Beispiel der Beziehungen zwischen W\IeC {\"o}rtern als Baumdiagramm dargestellt.}}{24}{figure.88}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

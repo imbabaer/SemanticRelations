@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{MCCD13}
+\begin{thebibliography}{MKB{\etalchar{+}}09}
 
 \bibitem[BDVJ03]{bengio2003neural}
 Yoshua Bengio, R{\'e}jean Ducharme, Pascal Vincent, and Christian Janvin.
@@ -11,6 +11,11 @@ Scott~C. Deerwester, Susan~T Dumais, Thomas~K. Landauer, George~W. Furnas, and
   Richard~A. Harshman.
 \newblock Indexing by latent semantic analysis.
 \newblock {\em JAsIs}, 41(6):391--407, 1990.
+
+\bibitem[Elm90]{elman1990finding}
+Jeffrey~L Elman.
+\newblock Finding structure in time.
+\newblock {\em Cognitive science}, 14(2):179--211, 1990.
 
 \bibitem[GH12]{gutmann2012noise}
 Michael~U Gutmann and Aapo Hyv{\"a}rinen.
@@ -34,6 +39,18 @@ Frederic Morin and Yoshua Bengio.
 Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.
 \newblock Efficient estimation of word representations in vector space.
 \newblock {\em CoRR}, abs/1301.3781, 2013.
+
+\bibitem[Mik07]{mikolovMaster}
+Tomas Mikolov.
+\newblock {Language Modeling for Speech Recognition in Czech}.
+\newblock Master's thesis, Brno University of Technology, 2007.
+
+\bibitem[MKB{\etalchar{+}}09]{mikolov2009neural}
+Tom{\'a}{\v{s}} Mikolov, Ji{\v{r}}{\'\i} Kopeck{\`y}, Luk{\'a}{\v{s}} Burget,
+  Ond{\v{r}}ej Glembek, and Jan~Honza {\v{C}}ernock{\`y}.
+\newblock Neural network based language models for highly inflective languages.
+\newblock In {\em Acoustics, Speech and Signal Processing, 2009. ICASSP 2009.
+  IEEE International Conference on}, pages 4725--4728. IEEE, 2009.
 
 \bibitem[MSC{\etalchar{+}}13]{DBLP:journals/corr/MikolovSCCD13}
 Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean.
@@ -61,5 +78,10 @@ Radim {\v R}eh{\r u}{\v r}ek and Petr Sojka.
 \newblock In {\em {Proceedings of the LREC 2010 Workshop on New Challenges for
   NLP Frameworks}}, pages 45--50, Valletta, Malta, May 2010. ELRA.
 \newblock http://is.muni.cz/publication/884893/en.
+
+\bibitem[WH86]{williams1986learning}
+DE~Rumelhart GE Hinton~RJ Williams and GE~Hinton.
+\newblock Learning representations by back-propagating errors.
+\newblock {\em Nature}, pages 323--533, 1986.
 
 \end{thebibliography}
