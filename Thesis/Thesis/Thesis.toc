@@ -7,22 +7,21 @@
 \contentsline {section}{\numberline {2.2}Externe Programme und Hilfsmittel}{3}{section.14}
 \contentsline {section}{\numberline {2.3}Vorverarbeitung}{4}{section.20}
 \contentsline {chapter}{\numberline {3}Word2Vec}{5}{chapter.27}
-\contentsline {chapter}{\numberline {4}Wikipedia-Korpus}{12}{chapter.43}
-\contentsline {section}{\numberline {4.1}Gesamtkorpus}{12}{section.44}
-\contentsline {section}{\numberline {4.2}Teilkorpus}{14}{section.58}
-\contentsline {section}{\numberline {4.3}Testdaten}{15}{section.61}
-\contentsline {chapter}{\numberline {5}Experimente}{17}{chapter.65}
-\contentsline {section}{\numberline {5.1}Synonymsuche durch Rekursion}{17}{section.68}
-\contentsline {section}{\numberline {5.2}Konkretisierungen}{20}{section.76}
-\contentsline {section}{\numberline {5.3}Verallgemeinerungen}{23}{section.86}
-\contentsline {section}{\numberline {5.4}Unterschiedliche Beziehungen}{25}{section.94}
-\contentsline {section}{\numberline {5.5}Erkennen von Mehrdeutigkeit}{28}{section.100}
-\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{31}{chapter.109}
-\contentsline {section}{\numberline {6.1}Fazit}{31}{section.110}
-\contentsline {section}{\numberline {6.2}Ausblick}{32}{section.111}
-\contentsline {chapter}{\numberline {7}Anhang}{37}{chapter.116}
-\contentsline {section}{\numberline {7.1}Testdatenvergleich}{37}{section.117}
-\contentsline {section}{\numberline {7.2}Testdaten}{39}{section.121}
-\contentsline {section}{\numberline {7.3}Reinigungsskript}{41}{section.124}
-\contentsline {section}{\numberline {7.4}Synonymliste}{42}{section.125}
-\contentsline {section}{\numberline {7.5}Mehrdeutige Testbegriffe}{43}{section.126}
+\contentsline {chapter}{\numberline {4}Wikipedia-Korpus}{12}{chapter.44}
+\contentsline {section}{\numberline {4.1}Gesamtkorpus}{12}{section.45}
+\contentsline {section}{\numberline {4.2}Teilkorpus}{14}{section.59}
+\contentsline {section}{\numberline {4.3}Testdaten}{15}{section.62}
+\contentsline {chapter}{\numberline {5}Experimente}{17}{chapter.66}
+\contentsline {section}{\numberline {5.1}Synonymsuche durch Rekursion}{17}{section.69}
+\contentsline {section}{\numberline {5.2}Konkretisierungen}{20}{section.77}
+\contentsline {section}{\numberline {5.3}Verallgemeinerungen}{23}{section.87}
+\contentsline {section}{\numberline {5.4}Unterschiedliche Beziehungen}{25}{section.95}
+\contentsline {section}{\numberline {5.5}Erkennen von Mehrdeutigkeit}{28}{section.101}
+\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{31}{chapter.110}
+\contentsline {section}{\numberline {6.1}Fazit}{31}{section.111}
+\contentsline {section}{\numberline {6.2}Ausblick}{32}{section.112}
+\contentsline {chapter}{\numberline {7}Anhang}{37}{chapter.117}
+\contentsline {section}{\numberline {7.1}Testdatenvergleich}{37}{section.118}
+\contentsline {section}{\numberline {7.2}Testdaten}{39}{section.122}
+\contentsline {section}{\numberline {7.3}Reinigungsskript}{41}{section.125}
+\contentsline {section}{\numberline {7.4}Mehrdeutige Testbegriffe}{43}{section.126}

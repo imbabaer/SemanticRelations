@@ -7,22 +7,21 @@
 \BOOKMARK [1][]{section.14}{2.2 Externe Programme und Hilfsmittel}{chapter.10}% 7
 \BOOKMARK [1][]{section.20}{2.3 Vorverarbeitung}{chapter.10}% 8
 \BOOKMARK [0][]{chapter.27}{3 Word2Vec}{}% 9
-\BOOKMARK [0][]{chapter.43}{4 Wikipedia-Korpus}{}% 10
-\BOOKMARK [1][]{section.44}{4.1 Gesamtkorpus}{chapter.43}% 11
-\BOOKMARK [1][]{section.58}{4.2 Teilkorpus}{chapter.43}% 12
-\BOOKMARK [1][]{section.61}{4.3 Testdaten}{chapter.43}% 13
-\BOOKMARK [0][]{chapter.65}{5 Experimente}{}% 14
-\BOOKMARK [1][]{section.68}{5.1 Synonymsuche durch Rekursion}{chapter.65}% 15
-\BOOKMARK [1][]{section.76}{5.2 Konkretisierungen}{chapter.65}% 16
-\BOOKMARK [1][]{section.86}{5.3 Verallgemeinerungen}{chapter.65}% 17
-\BOOKMARK [1][]{section.94}{5.4 Unterschiedliche Beziehungen}{chapter.65}% 18
-\BOOKMARK [1][]{section.100}{5.5 Erkennen von Mehrdeutigkeit}{chapter.65}% 19
-\BOOKMARK [0][]{chapter.109}{6 Fazit und Ausblick}{}% 20
-\BOOKMARK [1][]{section.110}{6.1 Fazit}{chapter.109}% 21
-\BOOKMARK [1][]{section.111}{6.2 Ausblick}{chapter.109}% 22
-\BOOKMARK [0][]{chapter.116}{7 Anhang}{}% 23
-\BOOKMARK [1][]{section.117}{7.1 Testdatenvergleich}{chapter.116}% 24
-\BOOKMARK [1][]{section.121}{7.2 Testdaten}{chapter.116}% 25
-\BOOKMARK [1][]{section.124}{7.3 Reinigungsskript}{chapter.116}% 26
-\BOOKMARK [1][]{section.125}{7.4 Synonymliste}{chapter.116}% 27
-\BOOKMARK [1][]{section.126}{7.5 Mehrdeutige Testbegriffe}{chapter.116}% 28
+\BOOKMARK [0][]{chapter.44}{4 Wikipedia-Korpus}{}% 10
+\BOOKMARK [1][]{section.45}{4.1 Gesamtkorpus}{chapter.44}% 11
+\BOOKMARK [1][]{section.59}{4.2 Teilkorpus}{chapter.44}% 12
+\BOOKMARK [1][]{section.62}{4.3 Testdaten}{chapter.44}% 13
+\BOOKMARK [0][]{chapter.66}{5 Experimente}{}% 14
+\BOOKMARK [1][]{section.69}{5.1 Synonymsuche durch Rekursion}{chapter.66}% 15
+\BOOKMARK [1][]{section.77}{5.2 Konkretisierungen}{chapter.66}% 16
+\BOOKMARK [1][]{section.87}{5.3 Verallgemeinerungen}{chapter.66}% 17
+\BOOKMARK [1][]{section.95}{5.4 Unterschiedliche Beziehungen}{chapter.66}% 18
+\BOOKMARK [1][]{section.101}{5.5 Erkennen von Mehrdeutigkeit}{chapter.66}% 19
+\BOOKMARK [0][]{chapter.110}{6 Fazit und Ausblick}{}% 20
+\BOOKMARK [1][]{section.111}{6.1 Fazit}{chapter.110}% 21
+\BOOKMARK [1][]{section.112}{6.2 Ausblick}{chapter.110}% 22
+\BOOKMARK [0][]{chapter.117}{7 Anhang}{}% 23
+\BOOKMARK [1][]{section.118}{7.1 Testdatenvergleich}{chapter.117}% 24
+\BOOKMARK [1][]{section.122}{7.2 Testdaten}{chapter.117}% 25
+\BOOKMARK [1][]{section.125}{7.3 Reinigungsskript}{chapter.117}% 26
+\BOOKMARK [1][]{section.126}{7.4 Mehrdeutige Testbegriffe}{chapter.117}% 27
