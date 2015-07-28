@@ -1,20 +1,10 @@
+'''
+In diesem Skript werden die Saetze und Worte des Technologiekorpus gezaehlt.
+Ausserdem werden alle Artikel gezaehlt, die mit 'tech' klassifiziert wurden.
+'''
 import time
-
-starttime = time.time()
-folder="../../../Korpora/Wikipedia/"
-#largefile = open(folder+'lates-pages-articles_no-punctuation-and-lower_new','r')
-wordcount = 0
-sentcount = 0
-
-print 'start counting'
-with open(folder+'pages/tech_no-punctuation-and-lower') as infile:
-    for line in infile:
-        wordcount+=len(line.split())
-        sentcount+=1
-
-
-
 import os
+
 def get_filelist(path):
     files = []
     for (dirpath, dirnames, filenames) in os.walk(path):
@@ -22,10 +12,29 @@ def get_filelist(path):
         break
     return files
 
+
+starttime = time.time()
+folder="../../../Korpora/Wikipedia/"
+wordcount = 0
+sentcount = 0
+
+print 'start counting'
+with open(folder+'pages/tech_no-punctuation-and-lower') as infile:
+    for line in infile:
+        words = len(line.split())
+        wordcount+= words
+        if words >1:
+            sentcount+=1
+        if sentcount % 100000 == 0:
+            print str(sentcount)
+
+
+
 mypathpages ='D:/SoftwareProjects/SemanticRelations/Korpora/Wikipedia/pages'
 
 
 articles=0
+
 for x in range(0,421):
     print str(x)
     list = get_filelist(mypathpages+'/'+str(x)+'/texts')

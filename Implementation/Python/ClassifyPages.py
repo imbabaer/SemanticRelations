@@ -61,26 +61,21 @@ mypathsport='D:/SoftwareProjects/SemanticRelations/Korpora/Wikipedia/enwik9/clas
 mypathpages ='D:/SoftwareProjects/SemanticRelations/Korpora/Wikipedia/pages'
 
 
-
-
-techfiles = get_filelist(mypathtech)
-entfiles = get_filelist(mypathentert)
-politicfiles = get_filelist(mypathpolitic)
-sciencefiles = get_filelist(mypathscience)
-sportfiles = get_filelist(mypathsport)
-
-
-
 print 'train model'
 print '\ttrain tech'
+techfiles = get_filelist(mypathtech)
 train(mypathtech,techfiles,'tech',classifier)
 print '\ttrain entertainment'
+entfiles = get_filelist(mypathentert)
 train(mypathentert,entfiles,'entertainment',classifier)
 print '\ttrain politic'
+politicfiles = get_filelist(mypathpolitic)
 train(mypathpolitic,politicfiles,'politic',classifier)
 print '\ttrain sport'
+sportfiles = get_filelist(mypathsport)
 train(mypathsport,sportfiles,'sport',classifier)
 print '\ttrain science'
+sciencefiles = get_filelist(mypathscience)
 train(mypathscience,sciencefiles,'science',classifier)
 
 

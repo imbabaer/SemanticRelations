@@ -1,3 +1,8 @@
+'''
+In diesem Skript werden eine Liste mit allen Testdaten und den dazugehoerigen Synonymen erstellt und in eine Textdatei
+geschrieben, sowie eine Liste mit allen Woertern, die auch Synonyme besitzen.
+dict.csv muss zuvor mittels dem SynonymListBuilder.py Skript erstellt werden.
+'''
 import csv
 mydict = {}
 reader = csv.reader(open('dict.csv', 'rb'))

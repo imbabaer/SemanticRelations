@@ -1,9 +1,10 @@
 '''
-parts from: https://github.com/Nucc/Thesaurus/blob/master/thesaurus.py
+Teile aus: https://github.com/Nucc/Thesaurus/blob/master/thesaurus.py
+In diesem Skript wird aus den Daten des Webservices unter 'http://thesaurus.altervista.org/thesaurus/v1'
+und den Testdaten ein dictionary erstellt, in dem die Testdaten als key und die Synonyme als value-Liste enthalten sind.
+Dieses wird als .csv Datei gespeichert.
 '''
 import csv
-from xml.dom.minidom import parse, parseString
-
 import json
 
 try:
@@ -86,6 +87,7 @@ class SynonymList:
         try:
             data = self.get_json_from_api()
             for entry in data["response"]:
+                #Bereinigen der response Daten
                 result.append((entry["list"]["synonyms"].replace(" ","").replace("-","").replace("(antonym)","").replace("(similarterm)","").replace("(relatedterm)","").lower().split("|")))
         except (KeyError, HTTPError):
             if 'data' in locals():

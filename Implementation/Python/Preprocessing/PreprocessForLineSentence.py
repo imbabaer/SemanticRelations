@@ -1,5 +1,5 @@
 '''
-Dieses Skript verarbeitet die vom Wiki-Markup gereinigten Texte sodass sie als Input für die Klasse 'gensim.models.word2vec.LineSentence' dienen.
+Dieses Skript verarbeitet die vom Wiki-Markup gereinigten Texte sodass sie als Input fuer die Klasse 'gensim.models.word2vec.LineSentence' dienen.
 Dazu muessen die Daten von Satzzeichen befreit, lowercase und je Zeile ein Satz sein.
 '''
 import nltk
@@ -9,7 +9,6 @@ import datetime
 
 time1 = time.time()
 
-#get sentences
 folder="../../../Korpora/Wikipedia/"
 
 sent_tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
@@ -20,9 +19,6 @@ print str(starttime)
 print datetime.datetime.now()
 f = open ('t7times','w')
 f.write(str((datetime.datetime.now())))
-
-#fileenwik9preprocessed = open(folder+'enwik9/text')
-#data = fileenwik9preprocessed.read()
 
 file = open(folder+'lates-pages-articles_no-punctuation-and-lower','w')
 #file = open(folder+'/enwik9/tech_no-punctuation-and-lower','w')

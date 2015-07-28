@@ -1,0 +1,1180 @@
+3d
+no subsample:	2d, masterimage, wayfinder, graphics, rendering
+0.001:			2d, 2d3d, libraryapi, masterimage, animation
+0.00001:		2d, cad, animation, rendering, 2d3d
+
+3ds
+no subsample:	obj, maya, eshop, blender, iges
+0.001:			eshop, maya, blender, obj, softimage
+0.00001:		nintendo, wii, nintendos, game, ds
+
+3g
+no subsample:	2g, hsdpa, 35g, hspa, 85090019002100
+0.001:			2g, hsdpa, 35g, hspa, quadband
+0.00001:		hsdpa, quadband, hspa, mbps, 2g
+
+4chan
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+4g
+no subsample:	lte, 42576, mytouch, 800850900180021002600, 3g
+0.001:			lte, mytouch, 42576, 35g, 800850900180021002600
+0.00001:		lte, mytouch, mbps, 3g, 85090019002100
+
+acer
+no subsample:	neotouch, betouch, 5720, e130, p300
+0.001:			neotouch, betouch, e130, timelinex, 4740
+0.00001:		neotouch, aspire, betouch, ultrabook, travelmate
+
+acta
+no subsample:	xnor, probabilities, porosity, lrc, companding
+0.001:			undergoes, burntin, wisc, capacitively, kcl
+0.00001:		5050, sh2, indium, igcts, 68ec030
+
+activision
+no subsample:	topend, mince, macwrite, koalapainter, informix4gl
+0.001:			brl, nowdefunct, mathstar, celebrated, s3s
+0.00001:		arun, clm, javalang, ventura, bridgeboard
+
+adobe
+no subsample:	dreamweaver, acrobat, photoshop, indesign, cs3
+0.001:			dreamweaver, photoshop, acrobat, macromedia, lightroom
+0.00001:		photoshop, flex, acrobat, indesign, dreamweaver
+
+amazon
+no subsample:	ec2, elastic, hbase, s3, aws
+0.001:			ec2, elastic, aws, zimbra, iplanet
+0.00001:		ec2, elastic, s3, cloud, apps
+
+android
+no subsample:	jelly, bean, gingerbread, kitkat, lollipop
+0.001:			jelly, bean, gingerbread, sandwich, kitkat
+0.00001:		412, officially, gingerbread, jelly, bean
+
+anonymous
+no subsample:	sasl, crammd5, jabber, digestmd5, ntlm
+0.001:			apop, sasl, digestmd5, crammd5, ntlm
+0.00001:		mfc, indexing, dependencies, wizards, managing
+
+aol
+no subsample:	icq, msn, messenger, hotmail, gadugadu
+0.001:			icq, msn, messenger, yahoo, hotmail
+0.00001:		msn, icq, instant, messenger, hotmail
+
+apple
+no subsample:	iphone, a6x, ipad, apples, a5x
+0.001:			apples, iphone, a5x, a6x, ipad
+0.00001:		itunes, ipod, apples, ipad, iphone
+
+app
+no subsample:	getjar, itunes, ios, iphone, apps
+0.001:			getjar, itunes, store, apps, iphone
+0.00001:		ios, apps, microsofts, genre, softmaker
+
+augmented
+no subsample:	vyzar, xarmex, gme, reality, labview
+0.001:			vyzar, xarmex, sightspace, philosophical, reality
+0.00001:		xarmex, wiglet, sightspace, 80x86, 2340
+
+arcade
+no subsample:	flyer, nickelodeon, hollyoaks, halo, spiderman
+0.001:			flyer, nickelodeon, mortal, kombat, spiderman
+0.00001:		gangwon, anyone, gyeonggi, 1740, sourcei
+
+architecture
+no subsample:	armv7a, multicore, architectures, baroque, xmos
+0.001:			architectures, vliw, baroque, armv7a, neoclassical
+0.00001:		embedded, mvs, netstation, entirex, powerful
+
+arpanet
+no subsample:	internetwork, plip, igrp, nbf, characteroriented
+0.001:			fixedline, ona, dualbus, 8021p, autovon
+0.00001:		bitforbit, crosscompatible, mensch, kilobaud, distcc
+
+asus
+no subsample:	eee, tf701t, tf300t, notebook, eeebox
+0.001:			eee, tf701t, tf300t, netbook, classmate
+0.00001:		eee, netbooks, notebooks, lenovo, notebook
+
+auto
+no subsample:	stylemarginleft, marginright, aperturepriority, shutterpriority, padding5em
+0.001:			stylemarginleft, marginright, aperturepriority, shutterpriority, padding5em
+0.00001:		width, 85, tablelayout, marginright, stylemargin
+
+automobile
+no subsample:	powertrain, motorcycle, trucks, isuzu, duramax
+0.001:			movers, marque, scooters, motorcycle, powertrain
+0.00001:		isuzu, scooter, automotive, hondas, peruvian
+
+battlefield
+no subsample:	crews, desalination, enemy, impetus, crafts
+0.001:			rehabilitation, mse, interiors, longrange, contractors
+0.00001:		maneuvers, xbow, aldor, phonenet, feldman
+
+bing
+no subsample:	34mm, carburetors, slide, pistonported, carburetor
+0.001:			34mm, carburetors, slide, carburetor, pistonported
+0.00001:		34mm, carburetors, slide, sperry, rigid
+
+biometrics
+no subsample:	californiabased, farmer, norpak, usbased, atex
+0.001:			norpak, telvent, iit, elsa, californiabased
+0.00001:		tcpam, bellcore, mwi, freephone, untested
+
+bitcoin
+no subsample:	bips, cmis, openstack, extranet, payments
+0.001:			bips, usaepay, tagpay, pubsoft, systemvue
+0.00001:		bips, htpasswd, kazuhiko, jj, kernelcad
+
+bittorrent
+no subsample:	xmpp, vuze, torrent, edonkey, freecast
+0.001:			xmpp, torrent, edonkey, filesharing, vuze
+0.00001:		torrent, proxies, hypertext, client, jar
+
+blackberry
+no subsample:	playbook, symbian, bada, ios, webos
+0.001:			bada, playbook, symbian, sidekick, ios
+0.00001:		ios, playbook, apps, app, outlook
+
+blizzard
+no subsample:	entertainments, relic, jagex, gamers, warcraft
+0.001:			relic, entertainments, monopoly, tilebased, activision
+0.00001:		celerity, raton, bacula, skia, amanda
+
+blogging
+no subsample:	thingamablog, rias, netflix, photovideo, fmle
+0.001:			thingamablog, opendisc, rias, dropbox, oscommerce
+0.00001:		thingamablog, xhtmlvoice, affair, 3dcrafter, visualizer
+
+blog
+no subsample:	forums, softpedia, announces, engadget, archiveorg
+0.001:			forums, archiveorg, sagetv, softpedia, webpage
+0.00001:		genealogyj, blogger, docs, ross, clojure
+
+bluray
+no subsample:	recordable, dvd, discs, bdre, bdmv
+0.001:			discs, recordable, dvd, bdr, rewritable
+0.00001:		dvd, discs, players, recordable, cd
+
+broadband
+no subsample:	xdsl, wimax, dialup, ntelos, ses
+0.001:			xdsl, subscribers, landline, telephony, ses
+0.00001:		residential, ses, subscriber, cellular, handsets
+
+browser
+no subsample:	browsers, 20xhtml, rekonq, browsing, chromium
+0.001:			browsers, rekonq, safari, scraping, flock
+0.00001:		browsers, web, googles, email, genre
+
+casual
+no subsample:	complained, aesthetically, gamers, cheaply, keygens
+0.001:			usas, sonyericsson, brochures, filmmakers, internetconnected
+0.00001:		1361, firewalling, rootkit, v4l2, advise
+
+chatroulette
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+chrome
+no subsample:	safari, firefox, flock, seamonkey, mozilla
+0.001:			firefox, safari, seamonkey, mozilla, maxthon
+0.00001:		safari, firefox, mozilla, explorer, apps
+
+chromebook
+no subsample:	arndale, corby, xcover, spica, cht
+0.001:			arndale, corby, cht, s8500, xcover
+0.00001:		arndale, brightview, a50p, 2518, mistra
+
+cispa
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+computing
+no subsample:	heterogeneous, hpc, highperformance, serviceoriented, soa
+0.001:			hpc, heterogeneous, highperformance, pervasive, cloud
+0.00001:		databases, ssrs, restful, managing, procedural
+
+console
+no subsample:	consoles, openpandora, eighthgeneration, livearea, dreamcast
+0.001:			consoles, classix, dreamcast, eighthgeneration, game
+0.00001:		emulators, consoles, gaming, emulating, resizes
+
+cookies
+no subsample:	wml, bookmarks, json, hotstuff, dhtml
+0.001:			bookmarks, mailto, mhtml, bho, mailboxes
+0.00001:		validates, singlepurpose, fxcop, bitpim, dcraw
+
+craigslist
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+crowdfunding
+no subsample:	teachtext, rdoff, vbx, progresses, macwrite
+0.001:			indiegogo, kissflow, mid2011, radisys, pokki
+0.00001:		dpdk, scribble, xcb, 19941998, iccube
+
+crowdsourcing
+no subsample:	deductive, tripping, complications, intervening, grooveboxes
+0.001:			recirculating, deductive, microprogramming, resorting, pits
+0.00001:		user32dll, ratdvd, sweet16, qfe, 3730
+
+cryptocurrency
+no subsample:	scriptbasic, gftp, vpopmail, heirloom, gpllicensed
+0.001:			mapirpc, gftp, openbsm, openmsx, winedt
+0.00001:		aguascalientes, chaff, hindu, photometric, xsave
+
+cybercrime
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+cyberwar
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+darknet
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+data
+no subsample:	subdivisions, insular, subnational, unrecognized, information
+0.001:			subdivisions, unrecognized, subnational, insular, indexes
+0.00001:		tabular, describe, analyze, bind, implement
+
+dell
+no subsample:	poweredge, inspiron, u2415, venue, compellent
+0.001:			poweredge, u2415, paneltypetn, inspiron, paneltypeips
+0.00001:		venue, inspiron, paneltypeips, poweredge, paneltypetn
+
+diablo
+no subsample:	powertoys, maemo, menuetos, gdos, pws
+0.001:			treos, gdos, fp1, alphavm, 3ivx
+0.00001:		plink, fujitsus, rtai, pg200, 3530
+
+doodle
+no subsample:	outliner, udig, cleanmail, koalapainter, codeview
+0.001:			jtreg, vinux, realmode, vgacopy, qimo
+0.00001:		cleanmail, tristan, incits, arduinome, uimx
+
+dotcom
+no subsample:	g7000, videopac, tentatively, revolutionary, tracfone
+0.001:			pubsoft, retailer, outlawed, seagoing, lawsuit
+0.00001:		kris, maconmac, lombardy, truform, sast
+
+drone
+no subsample:	fixedwing, uav, multirotor, twinengine, ytqchs
+0.001:			fixedwing, airliner, twinengine, bomber, uav
+0.00001:		tatara, pablo, twinengine, hora, usgs
+
+dropbox
+no subsample:	onedrive, icloud, appointments, gmail, ondevice
+0.001:			mailboxes, skydrive, dict, pcloud, yahoos
+0.00001:		flavours, icloud, gurus, imgburn, lync
+
+e3
+no subsample:	e30, x30, omd, multia, e3s
+0.001:			645z, e30, rangefinderstyle, d3200, d21
+0.00001:		d7100, tseries, kraft, 17th, e3s
+
+ebay
+no subsample:	cheaply, blogs, fspot, legally, myspace
+0.001:			kotare1, dexdrive, usermade, xtensions, cheaply
+0.00001:		qls, textmaker, dring, companyslogan, torch
+
+email
+no subsample:	messaging, imap4, mail, sms, icq
+0.001:			sms, icq, imap4, mms, webmail
+0.00001:		sms, imap, clients, smtp, pop3
+
+emoji
+no subsample:	gb2312, underline, negativeacknowledge, doublebyte, futamura
+0.001:			teachtext, negativeacknowledge, uniq, macwrite, uuencode
+0.00001:		mlcad, easlm, normative, freegem, aplx
+
+encryption
+no subsample:	256bit, aes256, aes, decryption, encrypted
+0.001:			256bit, aes256, aes, decryption, encrypted
+0.00001:		256bit, passwords, proxies, credentials, attributes
+
+energy
+no subsample:	power, renewable, plants, pumpedstorage, geothermal
+0.001:			power, renewable, plants, ultracapacitors, heat
+0.00001:		power, plants, solar, water, gas
+
+engine
+no subsample:	engines, singleignition, ej22, simonini, twostroke
+0.001:			engines, hirth, horizontallyopposed, twincylinder, turbocharged
+0.00001:		aircooled, twin, cylinder, engines, liquidcooled
+
+engineering
+no subsample:	geotechnical, bachelor, society, computeraided, disciplines
+0.001:			bachelor, geotechnical, society, cae, biomedical
+0.00001:		petroleum, manufacturing, robotics, engineers, agriculture
+
+ereader
+no subsample:	psf2, autostereoscopic, ppsspp, fbreader, psf1
+0.001:			hanlin, vgm, shazam, playnow, showcase
+0.00001:		concentrated, foreseeable, relic, magnetostrictive, ftl
+
+events
+no subsample:	actions, notifications, triggers, relationships, callbacks
+0.001:			actions, notifications, reminders, undertake, callbacks
+0.00001:		analyze, defining, requests, responses, resources
+
+facebook
+no subsample:	twitter, myspace, yahoo, youtube, orkut
+0.001:			twitter, myspace, youtube, yahoo, picasa
+0.00001:		twitter, social, myspace, email, xmpp
+
+fat
+no subsample:	hfs, ntfs, exfat, vfat, fat32
+0.001:			ntfs, hfs, fat32, vfat, ext3
+0.00001:		hfs, filesystems, ntfs, fat32, filesystem
+
+filesharing
+no subsample:	tftp, ndmp, rlogin, gnutella, edonkey
+0.001:			gopher, ndmp, nntp, edonkey, sntp
+0.00001:		pwd, 3560, ebml, worldn, californiabased
+
+firefox
+no subsample:	safari, mozilla, chrome, seamonkey, explorer
+0.001:			safari, chrome, mozilla, seamonkey, explorer
+0.00001:		mozilla, safari, chrome, explorer, browsers
+
+flickr
+no subsample:	ccby, picasa, digg, httrack, iphoto
+0.001:			ccby, otherversions, picasa, licence, slideshows
+0.00001:		ccby, otherversions, licence, picasa, selfmade
+
+foursquare
+no subsample:	mango, ninite, simplenote, esobi, onfolio
+0.001:			mysms, shazam, seafile, byteshot, osmand
+0.00001:		acfs, paperpile, solvace, correlations, dieter
+
+gadget
+no subsample:	mutter, onfolio, launchpad, monobook, toolbar
+0.001:			nightingale, wikibrowse, nepomuk, enlarge, onfolio
+0.00001:		nominate, discjuggler, xma, patrollers, consent
+
+game
+no subsample:	games, consoles, eighthgeneration, sega, boy
+0.001:			games, sega, boy, eighthgeneration, shooter
+0.00001:		games, homebrew, console, demos, ps3
+
+gameplay
+no subsample:	portionsingle, screenshotpng, screenshot, frameless, alta
+0.001:			portionsingle, screenshotpng, illustrates, frameless, depicts
+0.00001:		monkeys, shogi, 6309, showcase, aaclc
+
+gamergate
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+games
+no subsample:	game, roleplaying, gaming, multiplayer, consoles
+0.001:			game, roleplaying, multiplayer, firstperson, puzzle
+0.00001:		game, lite, downloadable, homebrew, ps3
+
+gaming
+no subsample:	consoles, ps3, games, handheld, microconsole
+0.001:			consoles, eighthgeneration, handheld, games, multiplayer
+0.00001:		gamepads, grew, vicii, troff, wallet
+
+ghz
+no subsample:	dualcore, msm8926, quadcore, krait, msm8225
+0.001:			dualcore, krait, quadcore, msm8926, snapdragon
+0.00001:		dualcore, quadcore, processor, singlecore, krait
+
+gmail
+no subsample:	dropbox, docs, google, inbox, yahoo
+0.001:			dropbox, hotmail, inbox, bookmarks, yahoos
+0.00001:		sharing, account, configure, content, textbased
+
+google
+no subsample:	gmail, googles, yahoo, apps, youtube
+0.001:			hangouts, googles, gmail, yahoo, maps
+0.00001:		totalwikis57, search, report, apps, hangouts
+
+googlemail
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+gps
+no subsample:	glonass, fmradio, agps, assisted, navigation
+0.001:			glonass, fmradio, agps, assisted, navigation
+0.00001:		amplifies, analogously, speakerphone, treats, receiver
+
+groupon
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+gta
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+hacking
+no subsample:	hacker, ecatt, slashdot, dre, blogger
+0.001:			hacker, nuvoiz, ecatt, agat, investigating
+0.00001:		prolific, highz, clike, softmac, 9210
+
+halo
+no subsample:	halloween, spiderman, baseball, zelda, scoobydoo
+0.001:			halloween, spiderman, nickelodeon, batman, baseball
+0.00001:		kingsoft, opencandy, zelda, onenote, cambria
+
+handheld
+no subsample:	consoles, gaming, pdas, openpandora, batteryoperated
+0.001:			pdas, consoles, gaming, smartphones, eighthgeneration
+0.00001:		snes, ega, cartridge, pvrs, 4416
+
+hardware
+no subsample:	accelerators, dpdk, imote2, peripherals, commodity
+0.001:			hsa, commodity, fpgabased, tailored, milkymist
+0.00001:		computers, computer, well, emulators, offering
+
+hashtag
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+hd
+no subsample:	1080p, 720p, 30fps, 1280x720, 1280720
+0.001:			1080p, 720p, 30fps, 1280x720, 1280720
+0.00001:		720p, 1080p, radeon, ati, 4x
+
+heartbleed
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+htc
+no subsample:	evo, 8xt, p4350, touch2, wildfire
+0.001:			evo, amaze, desire, wildfire, 8xt
+0.00001:		desire, att, smartphone, pda, verizon
+
+html5
+no subsample:	css3, jquery, dhtml, silverlight, gwt
+0.001:			css3, jquery, crossbrowser, javascript, silverlight
+0.00001:		ajax, silverlight, javascript, css, publish
+
+i
+no subsample:	ost, turkestan, stigar, obanade, forlag
+0.001:			ost, turkestan, svenska, forlag, tjufofem
+0.00001:		took, myself, islam, my, created
+
+ibm
+no subsample:	mainframe, system360, system370, eserver, zenterprise
+0.001:			system370, system360, ibms, mainframe, mainframes
+0.00001:		mainframe, ibms, qnx, compatibles, zos
+
+icloud
+no subsample:	dropbox, mobileme, smss, syncing, xdmcp
+0.001:			isync, mobileme, ipconfig, rootless, xchat
+0.00001:		lync, xdarwin, mutable, 6620, xmule
+
+ie
+no subsample:	sensitive, properly, outdoors, lumped, intrinsically
+0.001:			turboprop, clutches, sensitive, case, mutation
+0.00001:		assigns, acquire, try, interpreting, corrected
+
+imac
+no subsample:	xserve, macbook, 512ke, applehistorycom, pippin
+0.001:			xserve, intelbased, macintoshes, filepower, 512ke
+0.00001:		useravailable, 16mb, scriptstyle, superdrive, 8mb
+
+indie
+no subsample:	isac, gamers, garnered, cnn, kart
+0.001:			senior, messe, brussels, salamanca, marin
+0.00001:		digimon, edk, salamanca, duster, weightlifting
+
+instagram
+no subsample:	twitter, facebook, myspace, orkut, picasa
+0.001:			vimeo, dailymotion, digg, twitter, picasa
+0.00001:		orkut, dailymotion, ebuddy, photobucket, osmf
+
+intel
+no subsample:	i7, t2300, 160ghz, i5, i52450m
+0.001:			i7, i3, 160ghz, centrino, i5
+0.00001:		intels, vpro, i5, pentium, i7
+
+internet
+no subsample:	aol, chat, webmail, msn, edonkey
+0.001:			voip, seamonkey, msn, nettalk, xerobank
+0.00001:		chat, messaging, mms, photo, sms
+
+ios
+no subsample:	blackberry, symbian, mac, v105, v94
+0.001:			blackberry, mac, jailbreaking, iphone, v105
+0.00001:		app, os, desktop, runs, apples
+
+ipad
+no subsample:	ipod, iphone, 3gs, minis, 5s
+0.001:			ipod, iphone, 3gs, 5s, minis
+0.00001:		ipod, iphone, apple, 4th, 4s
+
+iphone
+no subsample:	ipad, ipod, 3gs, 5c, 4s
+0.001:			ipad, ipod, 3gs, 5s, 4s
+0.00001:		ipad, ipod, apple, itunes, 4th
+
+ipod
+no subsample:	ipad, iphone, 3gs, minis, 5g
+0.001:			ipad, iphone, 3gs, 5g, 4s
+0.00001:		ipad, iphone, apple, apples, 4th
+
+isp
+no subsample:	wisp, bras, subscribers, pdn, gprsumts
+0.001:			wisp, besteffort, bras, extranet, igd
+0.00001:		mpls, over, transfer, conversation, ipbased
+
+itunes
+no subsample:	hyperfine, iphoto, iphoneipadipod, dacp, iphoneipad
+0.001:			iphoto, hyperfine, mobileme, iphoneipad, app
+0.00001:		quicktime, apple, natively, apples, iphone
+
+keyboard
+no subsample:	slideout, qwerty, mouse, touchpad, keypad
+0.001:			slideout, qwerty, keypad, touchpad, keyboards
+0.00001:		qwerty, touchpad, mouse, slideout, onscreen
+
+kickstarter
+no subsample:	businessman, lars, senao, hazelcast, geoff
+0.001:			openstudio, businessman, resursp, blackcoin, joeco
+0.00001:		bacterial, vericut, 089, maconmac, swizzle
+
+kindle
+no subsample:	getjar, syncing, cellphones, iphoneipad, netflix
+0.001:			getjar, mozillabased, iphoneipadipod, sidekick, realplayer
+0.00001:		getjar, dborderbottomdashed, ogo, amazons, zw
+
+kinect
+no subsample:	lifecam, video4linux, mvp, onenote, gdm
+0.001:			lifecam, screensavers, mvp, ppsspp, solitaire
+0.00001:		conformant, banners, paia, faad, landserf
+
+laptop
+no subsample:	notebook, laptops, allinone, netbooks, nettop
+0.001:			notebook, ultraportable, netbooks, nettop, allinone
+0.00001:		pc, notebook, 512kb, notebooks, netbooks
+
+lenovo
+no subsample:	ideacentre, thinkcentre, c315, c100, thinkpad
+0.001:			ideacentre, thinkcentre, allinone, ideapad, thinkpad
+0.00001:		ideacentre, thinkcentre, toshiba, allinone, successor
+
+lg
+no subsample:	optimus, l9, l7, l5, gt540
+0.001:			optimus, l9, l5, l7, gt540
+0.00001:		optimus, l9, l5, l7, smartphone
+
+limewire
+no subsample:	openjdk, amule, distcc, agrep, autoconf
+0.001:			liveconnect, pyside, dld, hdt, openchange
+0.00001:		dualbus, dqdb, cei, formalisms, tcap
+
+link
+no subsample:	b09azonionb, bandscoutcom, bjimdocomb, bpeniob, tripodcom
+0.001:			shadabmuslimcom, sanshinshopcom, steylermissionarede, izadarinfo, yeudoinet
+0.00001:		search, linkwatcher, totalwikis57, list, domaintools
+
+linkedin
+no subsample:	myspace, bcast, identica, cmis, advertisers
+0.001:			cartographic, teamviewer, rublon, paperpile, yahoos
+0.00001:		sparkle, xal, nkr, qooxdoo, panic
+
+linux
+no subsample:	gnulinux, freebsd, archlinux, osx, bsds
+0.001:			gnulinux, joli, freebsd, archlinux, rtems
+0.00001:		suse, solaris, gnulinux, cygwin, hpux
+
+live
+no subsample:	fmle, cd, youtube, messenger, skydrive
+0.001:			cd, fmle, ingest, hotmail, ripping
+0.00001:		hotmail, podcasts, notifications, notes, updates
+
+machinima
+no subsample:	nearrealtime, swizzling, blacklisting, appropriately, iterated
+0.001:			filmmaking, computergenerated, fullmotion, cinematic, microscopy
+0.00001:		truth, hexen, mk4, applicationserver, astro25
+
+macintosh
+no subsample:	iigs, audiovision, everymaccom, incs, g3
+0.001:			iigs, geoport, audiovision, everymaccom, zp150
+0.00001:		floppy, pc, workstation, 68k, highend
+
+macworld
+no subsample:	wwdc, expo, axiotron, 11th, ces
+0.001:			wwdc, cebit, axiotron, tradeshow, namm
+0.00001:		vaxvms, papyrus, 65c816, ataris, singleplayer
+
+malware
+no subsample:	spyware, viruses, malicious, virus, rootkits
+0.001:			malicious, spyware, infected, viruses, virus
+0.00001:		malicious, viruses, akin, worms, trojans
+
+mario
+no subsample:	bros, brawl, zelda, yoshis, theft
+0.001:			bros, zelda, brawl, yoshis, kart
+0.00001:		zelda, bros, n72, n92, n77
+
+megaupload
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+microsoft
+no subsample:	20032008, windows, vistawindows, microsofts, sysinternals
+0.001:			20032008, windows, onenote, 31x, xpvista
+0.00001:		vista, windows, office, microsofts, beta
+
+minecraft
+no subsample:	psscor2, wasce, tatham, titlemicrosoft, edt
+0.001:			aubit4gl, milkytracker, realvnc, cernlib, jcreator
+0.00001:		ctss, httrack, nucalc, caa, logarithms
+
+mmorpg
+no subsample:	roi, ricardo, textmate, rui, glk
+0.001:			firstperson, ubisoft, shooter, nfl, multiplayer
+0.00001:		evp, tbz, grabit, osprey, glofiish
+
+mobile
+no subsample:	phone, 3denabled, phones, bada, smartphones
+0.001:			3denabled, pdas, phone, smartphones, phones
+0.00001:		phone, phones, pda, smartphone, handset
+
+monitor
+no subsample:	snarfer, monitors, iphost, 15inch, label48
+0.001:			snarfer, monitors, iphost, monitored, monitoring
+0.00001:		matching, polarization, outlined, omit, pdn
+
+motoring
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+mouse
+no subsample:	keyboard, trackpad, joystick, qwertz, touchpad
+0.001:			trackpad, keyboard, joystick, touchpad, orbita
+0.00001:		keyboard, onscreen, dpad, plugged, inserting
+
+mozilla
+no subsample:	seamonkey, firefox, flock, safari, thunderbird
+0.001:			firefox, seamonkey, safari, thunderbird, camino
+0.00001:		firefox, safari, thunderbird, addons, explorer
+
+myspace
+no subsample:	twitter, facebook, orkut, digg, picasa
+0.001:			twitter, facebook, digg, utalk, hotmail
+0.00001:		twitter, vmmark, social, facebook, gadugadu
+
+nes
+no subsample:	snes, famicom, n64, sega, boy
+0.001:			snes, famicom, boy, sega, gamecube
+0.00001:		snes, cartridges, floppies, dvdrom, microdrive
+
+net
+no subsample:	winrt, silverlight, framework, xamarin, discutils
+0.001:			clr, winrt, winforms, wpf, framework
+0.00001:		java, framework, php, perl, studio
+
+netbook
+no subsample:	subnotebook, nettop, lenovo, p300, c315
+0.001:			subnotebook, laptop, nettop, allinone, indias
+0.00001:		subnotebook, gos, minix, vaxvms, s20
+
+nfs
+no subsample:	cifs, tftp, smb, ftps, sftp
+0.001:			cifs, tftp, smb, sftp, ftps
+0.00001:		smb, client, tftp, servers, ssh
+
+nintendo
+no subsample:	ds, gamecube, eshop, dsi, wii
+0.001:			ds, gamecube, dsi, wii, eshop
+0.00001:		ds, wii, homebrew, dsi, boy
+
+nokia
+no subsample:	asha, lumia, xpressmusic, belle, c503
+0.001:			asha, lumia, xpressmusic, n97, belle
+0.00001:		xpressmusic, nokias, asha, 6110, n80
+
+oracle
+no subsample:	sybase, db2, ase, informix, 9i
+0.001:			informix, db2, 9i, 11g, sybase
+0.00001:		db2, postgresql, sybase, mysql, sqlite
+
+ouya
+no subsample:	bada, sailfish, playbook, sidekick, maemo
+0.001:			sidekick, allmyapps, sailfish, pocketpc, garnet
+0.00001:		digimag, gurobi, wemc, myalathurweeblycom, 865
+
+p2p
+no subsample:	peertopeer, filesharing, fileswire, edonkey, gopher
+0.001:			peertopeer, filesharing, sntp, b2bua, kad
+0.00001:		dcom, asciidoc, paradigm, assurance, x400
+
+paypal
+no subsample:	visiting, geocoding, autoconfiguration, ssltls, xchat
+0.001:			visiting, xchat, credential, chromes, dropbox
+0.00001:		payments, ebml, partnerships, 2kb, crsx
+
+pc
+no subsample:	imagehp, ultramobile, compatibles, screwlock, eeebox
+0.001:			ultramobile, classmate, imagehp, laptop, presario
+0.00001:		laptop, offered, upgrade, pcs, macs
+
+phablet
+no subsample:	dualsim, ninetology, smartwatch, androidbased, smartphone
+0.001:			dualsim, ninetology, gratia, 122inch, dualscreen
+0.00001:		zr, women, audiovox, 1894, capitol
+
+phishing
+no subsample:	nslookup, vijayawada, eeepcitrunsonlinuxcomthenews1latestnews92gdiumanothereeepccompetitor, fids, rediffcom
+0.001:			qm, minimalism, classful, rediffcom, fids
+0.00001:		dnas, 1361, emg, qip, nanolinux
+
+photography
+no subsample:	cinematography, slrs, panoramic, mediumformat, polaroid
+0.001:			cinematography, photographers, slrs, slr, mediumformat
+0.00001:		crop, d300s, 360degree, noninterchangeable, rangefinder
+
+photoshop
+no subsample:	illustrator, lightroom, acrobat, cs3, indesign
+0.001:			illustrator, cs3, lightroom, indesign, adobe
+0.00001:		adobe, acrobat, pixelnovel, lightroom, cs5
+
+pi
+no subsample:	raspberry, cubieboard, iyonix, trimslice, maverick
+0.001:			raspberry, singleboard, cubieboard, trimslice, s390
+0.00001:		header12, hp45, macworks, raspberry, ttests
+
+pinterest
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+piracy
+no subsample:	infringement, indefinitely, convince, autowikibrowser, harm
+0.001:			convince, eligible, trick, harm, warned
+0.00001:		beamwidth, 42375, acelp, ghosting, substitutionpermutation
+
+pirate
+no subsample:	inferior, artwork, seldom, audiences, counterfeit
+0.001:			inferior, laserdiscs, artwork, xploder, unsuitable
+0.00001:		unsuitable, dsr, denominations, microprocessorbased, pspell
+
+platform
+no subsample:	edsp, javabased, framework, application, j2me
+0.001:			edsp, leverages, javabased, appboard, platforms
+0.00001:		platforms, microsofts, integrates, developers, javabased
+
+playback
+no subsample:	h263, realvideo, divx, aacaaceaac, xvid
+0.001:			realvideo, h263, divx, truetone, aacaaceaac
+0.00001:		mpeg4, h264, music, video, vc1
+
+playstation
+no subsample:	vita, ps3, xbox, gamecube, wii
+0.001:			vita, gamecube, ps3, xbox, wii
+0.00001:		vita, xbox, 360, wii, ps3
+
+pokemon
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+power
+no subsample:	energy, plants, pumpedstorage, plant, electricity
+0.001:			energy, electricity, plants, supply, plant
+0.00001:		energy, plant, plants, solar, electricity
+
+processor
+no subsample:	cpu, dualcore, msm8225, quadcore, msm8926
+0.001:			cpu, dualcore, msm8225, ghz, quadcore
+0.00001:		dualcore, cpu, 2gb, ghz, atom
+
+programming
+no subsample:	influencedby, imperative, objectivec, footnote, multiparadigm
+0.001:			multiparadigm, cms2, prototypebased, ada, metaprogramming
+0.00001:		java, perl, highlevel, python, php
+
+ps
+no subsample:	mm940, cc860, rpmcommon, 2184, mm1000
+0.001:			mm940, cc860, 2184, rpmcommon, lbft
+0.00001:		2800, intercooler, 4700, 1152, sr1
+
+ps2
+no subsample:	keyboardmouse, centronics, minidin8, rs232, db9
+0.001:			keyboardmouse, db25, centronics, hil, de9
+0.00001:		centronics, 64k, eprom, scart, eeprom
+
+ps3
+no subsample:	ps4, xbox, psp, vita, nintendos
+0.001:			ps4, xbox, nintendos, psp, playstation
+0.00001:		consoles, xbox, gamepads, lth, stylish
+
+ps4
+no subsample:	ps3, n64, xbox, powertoys, ppsspp
+0.001:			ps3, precededby, fastpictureviewer, xpvista7, smartglass
+0.00001:		dfx, virtualmin, v102, easlm, mpeg21
+
+psp
+no subsample:	ps3, sensme, playstation, playnow, microconsole
+0.001:			ps3, gamecube, playstation, sonys, psx
+0.00001:		console, rights, ivolume, 3do, accordingly
+
+python
+no subsample:	perl, ruby, tcl, objectivec, erlang
+0.001:			perl, tcl, ruby, objectivec, php
+0.00001:		perl, bindings, php, ruby, java
+
+raider
+no subsample:	tomb, hd7, trophy, elder, amaze
+0.001:			fxr150, tomb, 150cc, hatchback, heron
+0.00001:		fx125, fxr150, boulevard, 150cc, gearequipped
+
+ram
+no subsample:	512, mb, 1gb, lpddr1, 256mb
+0.001:			512, mb, 1gb, ddr2, sdram
+0.00001:		mb, expandable, kb, 512, 256
+
+raspberry
+no subsample:	pi, cubieboard, trimslice, 20141226, banana
+0.001:			pi, trimslice, dreamplug, cubieboard, kirin
+0.00001:		webmatrix, spamtracking, kirin, trimslice, indoeuropean
+
+rayman
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+recommendation
+no subsample:	g9923, p862, itut, recommendations, vseries
+0.001:			g9923, p862, itut, recommendations, vseries
+0.00001:		itut, recommendations, g9923, itu, p862
+
+reddit
+no subsample:	digg, comets, deities, pipedream, curated
+0.001:			digg, webmaster, scholar, vimeo, photobucket
+0.00001:		22x, registrations, superconductivity, yobi, farmers
+
+retro
+no subsample:	spectravideo, datel, pcengine, genesis3d, coleco
+0.001:			pcengine, bandai, carnival, remake, entertainments
+0.00001:		boa, brochures, transitive, wsil, bram
+
+robot
+no subsample:	renaming, contenttemplates, wikipedianonfree, radiologo, gfdlselfen
+0.001:			renaming, radiologo, contenttemplates, tvlogo, wikipedianonfree
+0.00001:		radiologo, tvlogo, contenttemplates, wikipedianonfree, renaming
+
+rpg
+no subsample:	pli, cobol, quiktran, literate, snobol
+0.001:			pli, literate, cobol, setl, cms2
+0.00001:		hdls, bnf, drda, as400, documentsmy
+
+rts
+no subsample:	cts, dcd, dtr, dsr, onebit
+0.001:			dsr, onhook, dtr, propagated, sigbus
+0.00001:		fdhd, octanes, mdas, idsl, addressdata
+
+safari
+no subsample:	firefox, chrome, maxthon, flock, seamonkey
+0.001:			firefox, editarea, maxthon, chrome, seamonkey
+0.00001:		firefox, chrome, mozilla, browsers, explorer
+
+samsung
+no subsample:	galaxy, filesamsung, xcover, spica, tab
+0.001:			galaxy, tab, xcover, spica, duos
+0.00001:		galaxy, tab, ace, ativ, s4
+
+search
+no subsample:	gives, howtomakebiodieselcom, yeudoinet, storeusus, alcornedu
+0.001:			gives, howtomakebiodieselcom, storeusus, selayaronlinecom, touhouwikinet
+0.00001:		linkwatcher, veinor, totalwikis57, domaintools, interwiki
+
+security
+no subsample:	networking, auditing, intrusion, encryption, certificates
+0.001:			auditing, privacy, encryption, ipsec, networking
+0.00001:		networking, contains, supported, computer, task
+
+seo
+no subsample:	glpi, pylint, multiobjective, budgeting, matlabsimulink
+0.001:			web2py, ibatis, jbpm, pylint, faceted
+0.00001:		robertson, webix, z990, qc, flevoland
+
+skype
+no subsample:	hotmail, icq, iphoneipad, maxthon, msn
+0.001:			netflix, icq, hotmail, mpegdash, flock
+0.00001:		im, voicemail, yahoo, submission, adobes
+
+smartphone
+no subsample:	phablet, androidbased, ninetology, 3denabled, pda
+0.001:			androidbased, phablet, pda, tablet, internetenabled
+0.00001:		smartphones, htc, evo, marketed, pocket
+
+smartphones
+no subsample:	pdas, tablets, netbooks, cellphones, internetenabled
+0.001:			pdas, tablets, 3denabled, cellphones, netbooks
+0.00001:		smartphone, tablets, tablet, branded, released
+
+smartwatch
+no subsample:	a6000, a58, phablet, vivaz, s312
+0.001:			phablet, dualsim, a6000, vivaz, a58
+0.00001:		mikhail, a6000, ophcrack, foamcore, modeeffective
+
+smartwatches
+no subsample:	blasters, cellphones, bluetoothenabled, stylish, communicators
+0.001:			rublon, blasters, boundless, tapatalk, paysaber
+0.00001:		bookstore, upmarket, netsurf, ensemble, russell
+
+software
+no subsample:	cae, notetaking, opencpn, kdeedu, maptitude
+0.001:			masterplex, opencpn, foss, econometrics, opensource
+0.00001:		free, opensource, licenses, projects, repository
+
+sonic
+no subsample:	soot, blowers, showcase, smartwatch, hero
+0.001:			blowers, soot, singer, luxury, racer
+0.00001:		rigidity, soot, blowers, hi8, evapotranspiration
+
+sony
+no subsample:	xperia, ericsson, cybershot, vivaz, aino
+0.001:			xperia, ericsson, acro, vivaz, aino
+0.00001:		xperia, ericsson, smartphone, series, midrange
+
+sopa
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+spam
+no subsample:	interwiki, totalwikis57, essexcountynynet, marniesettle, commercehelpercom
+0.001:			totalwikis57, interwiki, eriecountynycom, eagles, wikia
+0.00001:		domaintools, uarticlesblogspotcom, interwiki, totalwikis57, veinor
+
+spotify
+no subsample:	logitechs, gapless, bsp, usermade, trillian
+0.001:			gapless, rtsprtp, hulu, submenus, chumby
+0.00001:		scalers, iopener, ors, slimserver, heightfield
+
+steam
+no subsample:	narrowgauge, standardgauge, locomotive, genset, soot
+0.001:			gasfuelled, boilers, turbines, narrowgauge, diesel
+0.00001:		turbines, locomotive, gas, axle, motor
+
+stream
+no subsample:	streams, elementary, packetized, mpegts, mpeg
+0.001:			streams, mpeg, mpegts, streamed, transcoded
+0.00001:		streams, elementary, listen, streamed, spanning
+
+starcraft
+no subsample:	nascom, 3b20s, 1512, iisi, mince
+0.001:			oric, pippin, drivegenesis, watara, tetris
+0.00001:		k64, e616, octanes, pbasic, filetohashatxt
+
+stuxnet
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+sun
+no subsample:	microsystems, x4500, t31, netra, xvm
+0.001:			microsystems, t31, t2000, netra, jackie
+0.00001:		microsystems, nov, aug, oct, asianfc
+
+surface
+no subsample:	sailcloth, dacron, surfaces, tubing, aluminum
+0.001:			sailcloth, dacron, tubing, covered, boltedtogether
+0.00001:		boltedtogether, aluminum, surfaces, covered, tubing
+
+symbian
+no subsample:	v94, v93, bada, maemo, blackberry
+0.001:			v94, v93, bada, maemo, garnet
+0.00001:		v94, 3rd, 5th, s60, v93
+
+tablet
+no subsample:	phablet, androidbased, smartphone, internetenabled, smartphones
+0.001:			androidbased, internetenabled, smartphone, tablets, pda
+0.00001:		smartphones, mini, netbooks, notebooks, discontinued
+
+technology
+no subsample:	leadcore, suncomm, ethics, viga, tianxiang
+0.001:			develops, ocz, suncomm, nuvoton, leadcore
+0.00001:		association, danish, automobile, industry, society
+
+technophile
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+ted
+no subsample:	19981999, autoshade, pc1640, 5620, mk14
+0.001:			genesis3d, sn76489, vicii, sn76489a, p2000t
+0.00001:		apaches, com1, manmachine, randomization, microprocessorbased
+
+telecom
+no subsample:	telstra, rogers, italia, kpn, prepaid
+0.001:			telstra, prepaid, italia, telecoms, rogers
+0.00001:		prepaid, chenderoh, carnegie, chihuahua, alliance
+
+television
+no subsample:	turkishlanguage, radio, broadcasting, uefa, spanishlanguage
+0.001:			uefa, radio, lgbtrelated, broadcasting, directtohome
+0.00001:		broadcasting, radio, rds, terrestrial, cw
+
+tetris
+no subsample:	creature, tekken, vbx, teachtext, opn2c
+0.001:			creature, tekken, vbx, brawl, watara
+0.00001:		xara, filepower, victim, videodisc, dtss
+
+titanfall
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+tomb
+no subsample:	raider, chronicles, 753, starcraft, tiger
+0.001:			raider, 1202, eaa, chronicles, 548
+0.00001:		11164, carboxylate, diac, ricky36, onlyor
+
+trojan
+no subsample:	horse, malware, spyware, horses, zinaps
+0.001:			horse, malware, virus, spyware, horses
+0.00001:		saloon, municipalities, jfig, worship, puretext
+
+tumblr
+no subsample:	wechat, seafile, cloudike, digg, sns
+0.001:			seafile, forfone, tweets, zeropc, yandexdisk
+0.00001:		weiss, pcloud, mi435, colossus, microblogging
+
+twitch
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+twitter
+no subsample:	myspace, facebook, orkut, picasa, digg
+0.001:			facebook, myspace, picasa, digg, youtube
+0.00001:		social, facebook, myspace, online, genre
+
+viber
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+
+vine
+no subsample:	dojo, incubator, ofbiz, tapestry, jena
+0.001:			wicket, dojo, cxf, phobos, jena
+0.00001:		dojo, coroners, gwt, fy, logtalk
+
+virus
+no subsample:	malware, viruses, infecting, infected, infects
+0.001:			infected, malware, infects, viruses, malicious
+0.00001:		accomplish, troff, microdrives, xnu, fdc
+
+warcraft
+no subsample:	tetris, screensavers, catechumen, relic, blizzard
+0.001:			creature, tetris, starcraft, cry, p2000t
+0.00001:		robbins, mlan, incrementing, com1, preferring
+
+web
+no subsample:	sitespecific, browser, scraping, mothra, ajaxbased
+0.001:			sitespecific, scraping, browser, webbased, dynpro
+0.00001:		ajax, googles, browser, application, frameworks
+
+whatsapp
+no subsample:	emesene, wechat, myspace, ippbx, pagers
+0.001:			wechat, teamviewer, shazam, aerofs, myspace
+0.00001:		qtss, bongo, prodigy, abscbn, romplers
+
+wheel
+no subsample:	pants, wheels, windshield, nosewheel, fairing
+0.001:			pants, wheels, fairing, nosewheel, windshield
+0.00001:		fairing, gear, single, pants, tricycle
+
+wifi
+no subsample:	connectivity, bluetooth, bgn, 21edr, 80211bgn
+0.001:			connectivity, bluetooth, bgn, 80211bgn, 80211
+0.00001:		connectivity, bgn, bluetooth, 80211bgn, 80211
+
+wii
+no subsample:	nintendos, gamecube, nintendo, ds, eshop
+0.001:			nintendos, gamepad, gamecube, nintendo, playstation
+0.00001:		nintendo, ds, nintendos, homebrew, 3ds
+
+wikipedia
+no subsample:	wikiprojects, collaborations, talkversion, editorial, talkwikiproject
+0.001:			collaborations, talkwikiproject, wikiprojects, essays, teamwork
+0.00001:		here, geolocation, books, deletion, mediawiki
+
+windows
+no subsample:	vistawindows, vista, 20032008, 98se, xp
+0.001:			98se, 20032008, vistawindows, vista, xp
+0.00001:		vista, xp, nt, microsoft, runs
+
+windows7
+no subsample:	rc1, powertoys, ecomstation, deadline, intercast
+0.001:			lynxos, ecomstation, dtrace, 44bsd, rtems
+0.00001:		cambria, raton, 44bsd, ventura, turbografx16
+
+wireless
+no subsample:	wired, wwan, ntelos, aircard, wlan
+0.001:			wired, headsets, proxim, wlan, aircard
+0.00001:		glonass, routers, connectivity, handsets, bluetooth
+
+worms
+no subsample:	viruses, trojans, infecting, rootkits, quiktran
+0.001:			viruses, trojans, wargames, infecting, oneofakind
+0.00001:		obs, infections, tandys, downy, whitegreen
+
+wow
+no subsample:	incompressible, burntin, electrolytic, flutter, multiturn
+0.001:			110111, kcl, capacitively, idtv, myoutput
+0.00001:		coercivity, pc1512, cmix, controlz, mtp2
+
+xbox
+no subsample:	ps3, 360, playstation, ps4, wii
+0.001:			360, ps3, playstation, ps4, wii
+0.00001:		360, ps3, consoles, playstation, wii
+
+xp
+no subsample:	vista, 3264bit, operatingsystemdesc, sp2, nt4
+0.001:			vista, sp2, 3264bit, nt4, includedwith
+0.00001:		vista, nt, windows, x64, mac
+
+y2k
+no subsample:	wisc, fogging, mks30, onebyte, microinstructions
+0.001:			sh5, prep, costcutting, z280, arm6
+0.00001:		selfclocking, styletextalignleftbackgroundwhite, interline, recompiler, koalapad
+
+yahoo
+no subsample:	icq, msn, facebook, aol, myspace
+0.001:			icq, aol, msn, facebook, messenger
+0.00001:		im, msn, instant, messenger, myspace
+
+youtube
+no subsample:	metacafe, twitter, facebook, dailymotion, vimeo
+0.001:			facebook, twitter, vimeo, dailymotion, picasa
+0.00001:		photos, videos, facebook, podcasts, print
+
+zelda
+no subsample:	bros, brawl, theft, mario, tekken
+0.001:			bros, brawl, mario, capcom, drivegenesis
+0.00001:		brawl, bros, scalpel, winscp, 7250i
+
+zynga
+no subsample:	-, -, -, -, -
+0.001:			-, -, -, -, -
+0.00001:		-, -, -, -, -
+

@@ -1,23 +1,8 @@
+'''
+In diesem Skript werden die aehnlichen Worte der Testbegriffe in ein Textfile geschrieben.
+'''
 import gensim, logging
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
-
-def getSimilar(model,word,topn):
-    retModel = model.most_similar(positive=[word], topn=topn)
-    ret = ''
-    for x in range(0,topn):
-        ret += str(retModel[x][0])+' : '+str(retModel[x][1])+', '
-    return ret
-
-def getTabs(string,length):
-    x=int((length-len(string))/4)
-    if int((length-len(string)))%4 != 0:
-        x+=1
-    if x > 0:
-        x+=1
-    else:
-        x=1
-    return '\t'*(x)
-
 
 def printStatistics(simfile,low, high, total,found, notfound):
     simfile.write('Statistics:\n')
@@ -25,16 +10,18 @@ def printStatistics(simfile,low, high, total,found, notfound):
     simfile.write('Found testdata: '+str(found)+'\n')
     simfile.write('NotFound testdata: '+str(notfound)+'\n')
 
+    #Worte mit hoechster und niedrigster Kosinusaehnlichkeit werden ausgegeben
     simfile.write('High:\n'+ 'search for: '+str(high[2])+'\t>\t'+str(high[1])+' : '+str(high[0])+'\n')
     simfile.write('Low:\n'+ 'search for: '+str(low[2])+'\t>\t'+ str(low[1])+' : '+str(low[0]))
 
 #write the data into the simfile
-def helpFunction1(model,simfile,topn,td,low,high):
+def writeSimilaritiesToFile(model,simfile,topn,td,low,high):
     simfile.write('-------------------------------\n')
-    ret = model.most_similar(positive=[td], topn=5)
+    ret = model.most_similar(positive=[td], topn=topn)
     for x in range(0,topn):
         str1=str(ret[x][0])+' : '+str(ret[x][1])
-        simfile.write(str1+getTabs(str1,40)+'||\t'+getSimilar(model,str(ret[x][0]),topn)+'\n')
+        simfile.write(str1+'\n')
+        #Auswertung fuer Kosinusaehnlichkeit-Statistik
         if ret[x][1] < low[0]:
             low=[ret[x][1],ret[x][0],td]
         if ret[x][1] > high[0]:
@@ -42,8 +29,9 @@ def helpFunction1(model,simfile,topn,td,low,high):
     simfile.write('-------------------------------\n')
     return [low,high]
 
-def testFunction2(model,model2,simfile,topn):
-    testdatafile = open('testdata.txt','r')
+def makeSimFile(model,simfile,topn,testdatafile):
+
+
     testdata = testdatafile.readlines()
     testdatafile.close()
     #statistics for lowest and highest cosine similarity
@@ -59,10 +47,7 @@ def testFunction2(model,model2,simfile,topn):
         try:
             print td
             simfile.write(td+'\n')
-            ret = helpFunction1(model,simfile,topn,td,low,high)
-            low = ret[0]
-            high = ret[1]
-            ret = helpFunction1(model2,simfile,topn,td,low,high)
+            ret = writeSimilaritiesToFile(model,simfile,topn,td,low,high)
             low = ret[0]
             high = ret[1]
             simfile.write('\n')
@@ -84,10 +69,17 @@ def testFunction2(model,model2,simfile,topn):
 modelTech = gensim.models.Word2Vec.load("../Models/techModel300105")
 print 'loaded modelTech'
 
-modelFull = gensim.models.Word2Vec.load("../Models/largeModel300105")
-print 'loaded modelFull'
 
-simfile = open('recursiveCombinedSimilarities.txt','w')
-testFunction2(modelFull,modelTech,simfile,5)
+testdatafileTech = open('testdataTechSmall.txt','r')
+testdatafileMedicine = open('testdataMedicine.txt','r')
+testdatafileFashion = open('testdataFashion.txt','r')
+
+simfileTech = open('TestdataAnalysisCombinedSimilaritiesTech.txt','w')
+simfileMedicine = open('TestdataAnalysisCombinedSimilaritiesMedicine.txt','w')
+simfileFashion = open('TestdataAnalysisCombinedSimilaritiesFashion.txt','w')
+
+makeSimFile(modelTech,simfileTech,5,testdatafileTech)
+makeSimFile(modelTech,simfileMedicine,5,testdatafileMedicine)
+makeSimFile(modelTech,simfileFashion,5,testdatafileFashion)
 print 'done.'
 

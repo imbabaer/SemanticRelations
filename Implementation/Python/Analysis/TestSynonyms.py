@@ -1,3 +1,8 @@
+'''
+In diesem Skript werden Synonyme der Testdaten gesucht und analysiert.
+
+dict.csv muss zuvor mittels dem SynonymListBuilder.py Skript erstellt werden.
+'''
 import gensim, logging
 import csv
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
@@ -9,51 +14,36 @@ def getSimilar(model,word,topn):
         ret.append(retModel[x][0])
     return ret
 
-def getTabs(string,length):
-    x=int((length-len(string))/4)
-    if int((length-len(string)))%4 != 0:
-        x+=1
-    if x > 0:
-        x+=1
-    else:
-        x=1
-    return '\t'*(x)
-
-
-def printStatistics(simfile,low, high, total,found, notfound):
-    simfile.write('Statistics:\n')
-    simfile.write('Total testdata: '+str(total)+'\n')
-    simfile.write('Found testdata: '+str(found)+'\n')
-    simfile.write('NotFound testdata: '+str(notfound)+'\n')
-
-    simfile.write('High:\n'+ 'search for: '+str(high[2])+'\t>\t'+str(high[1])+' : '+str(high[0])+'\n')
-    simfile.write('Low:\n'+ 'search for: '+str(low[2])+'\t>\t'+ str(low[1])+' : '+str(low[0]))
-
-def helpFunction1(model,simfile,topn,td,low,high,testdatadict):
+def findSynonyms(model,simfile,topn,td,low,high,testdatadict):
     simfile.write('-------------------------------\n')
-    ret = model.most_similar(positive=[td], topn=5)
+    ret = model.most_similar(positive=[td], topn=topn)
     synonymfound = False
     recursivewords = []
     synonym = ""
     for x in range(0,topn):
+        #Rekursivaufruf der getSimilar-Methode
         rets= getSimilar(model,str(ret[x][0]),topn)
         for e in rets:
             recursivewords.append(e)
+        #Fuer Statisik der Kosinusaehnlichkeiten
         if ret[x][1] < low[0]:
             low=[ret[x][1],ret[x][0],td]
         if ret[x][1] > high[0]:
             high=[ret[x][1],ret[x][0],td]
+
+    #Suche in den 'recursivewords' solange, bis ein Eintrag in der Synonymliste vorhanden ist
     for entry in recursivewords:
         if (not synonymfound):
             synonymfound = entry in testdatadict[td]
             if(synonymfound):
                 synonym = entry
+                simfile.write(synonym+'\n')
                 break
     syn = (synonymfound, synonym)
     simfile.write('-------------------------------\n')
     return [low,high,syn,not synonymfound]
 
-def testFunction2(model,testdatadict,simfile,topn):
+def makeSimFile(model,testdatadict,simfile,topn):
 
     low = [10.0,'','']
     high = [0,'','']
@@ -68,7 +58,7 @@ def testFunction2(model,testdatadict,simfile,topn):
         try:
             print td
             simfile.write(td+'\n')
-            ret = helpFunction1(model,simfile,topn,td,low,high,testdatadict)
+            ret = findSynonyms(model,simfile,topn,td,low,high,testdatadict)
             low = ret[0]
             high = ret[1]
             syn = ret[2]
@@ -82,10 +72,6 @@ def testFunction2(model,testdatadict,simfile,topn):
             found +=1
 
         except Exception, e:
-            #num=4 if len(td)<4 else (20-len(td))/4
-            #num=num+1 if len(td)%4 != 0 else num
-            simfile.write(td+'\n')
-            simfile.write('-------------------------------\n')
             simfile.write('-, -, -, -, -\n')
             simfile.write('-------------------------------\n\n')
             print type(e)
@@ -95,43 +81,45 @@ def testFunction2(model,testdatadict,simfile,topn):
     simfile.write("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n")
     simfile.write("Synonyms:\n")
     simfile.write("Synonyms found: "+ str(len(synonyms))+"\n")
+    #Ausgabe der gefundenen Synonyme
     for syn in synonyms:
         simfile.write(syn[0]+"\t"+syn[1][1]+"\n")
 
     simfile.write("\nNo synonyms found: "+ str(len(nosynonyms))+"\n")
     simfile.write("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n\n")
-    #printStatistics(simfile,low,high,total,found,notfound)
     simfile.close()
-
 
 
 mydict = {}
 reader = csv.reader(open('../GetSynonyms/dict.csv', 'rb'))
 mydict = dict(x for x in reader)
+#Erstellen des bereinigten dictionary, in dem die Testdaten als key und die dazugehoerigen Synonyme in einer Liste als value stehen.
 testdatadict={}
 for key in sorted(mydict):
     value = mydict[key]
+    #Wenn es Synoyme fuer diesen Testbegriff gibt
     if(value):
         values = value.split(",")
         cleaned_list = []
         for val in values:
             val = val.replace(";","")
+            #durch das Entfernen von '-' (bei der Erstellung des dict.csv) kann es vorkommen, dass Synonyme gleich dem Testwort in der Liste stehen
             if(val != key):
                 cleaned_list.append(val)
         if (len(cleaned_list)>0):
             testdatadict[key] = cleaned_list
 
 
-model3 = gensim.models.Word2Vec.load("../Test1/techModel300105")
+model3 = gensim.models.Word2Vec.load("../Models/techModel300105")
 print 'loaded model3'
-simfile5 = open('SynonymsInTechModel.txt','w')
+simfileTech = open('SynonymsInTechModel.txt','w')
 
-testFunction2(model3,testdatadict,simfile5,5)
+makeSimFile(model3,testdatadict,simfileTech,5)
 
-model = gensim.models.Word2Vec.load("../Test1/largeModel300105")
+model = gensim.models.Word2Vec.load("../Models/largeModel300105")
 print 'loaded model'
 simfileLargeModel = open('SynonymsInFullModel.txt','w')
 
-testFunction2(model,testdatadict,simfileLargeModel,5)
+makeSimFile(model,testdatadict,simfileLargeModel,5)
 
 

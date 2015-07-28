@@ -1,3 +1,6 @@
+'''
+In diesem Skript wird das komplette Wiki-XML File mit einem SAX-Parser geparst und in einzelne Artikel geschrieben.
+'''
 from xml.sax import make_parser, handler
 import os
 import codecs
