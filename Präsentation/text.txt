@@ -1,0 +1,19 @@
+﻿Motivation und Problemstellung
+Eine Aufgabe des NLP ist es, Beziehungen zwischen Wörtern darzustellen. Um solche Beziehungen darzustellen gibt es unterschiedliche Techniken bzw. Vorgehgensweisen. Neben z.B. tf-idf können semantische Beziehungen auch mit Word2Vec dargestellt werden. Und um Word2Vec soll es in dieser Arbeit auch gehen. Es soll untersucht werden, wie sich unterschiedliche Textgrundlagen (Korpora) als Trainingsdaten auf die Beziehungen zwischen den Wörtern im Modell auswirken. Die Ergebnisse der Arbeit sollen es ermöglichen, dass für eine gewisse Fragestellung oder Anwendung des Word2Vec Modells, die richtigen Trainingsdaten ausgewählt werden können.
+
+Word2Vec
+
+
+Daten und Vorverarbeitung
+Für das Training von Word2Vec Modellen wird eine große Anzahl an Trainingsdaten benötigt. Eine große Anzahl bedeutet hier, im Optimalfall mehrere Milliarden von Wörtern. Auf der Googlecode-Seite von Word2Vec werden online verfügbare Datensätze aufgelistet. Unter anderem auch der komplette Wikipediakorpus und ein kleinerer Teilkorpus mit den ersten 1 Milliarde Zeichen. In dieser Arbeit sollen Modelle mit unterschiedlichen Trainingskorpora verglichen werden, also müssen diese unterschiedlichen Korpora erstellt werden. Die Wahl fiel dann zum einen auf den gesamten Wikipediakorpus und zum anderen auf einen domänenspezifischen Teilkorpus, der aus allen Artikeln des Gesamtkorpus besteht, die sich mit der Thematik Technologie/Pc/Internet befassen. Um diesen Teilkorpus zu erhalten, waren eingige Vorverarbeitungsschritte nötig. Der komplette Wikipediakorpus kann als große XML-Datei heruntergeladen werden. Um aus dieser Datei die einzelnen Artikel zu extrahieren, muss sie mit einem SAX-Parser geparst werden. Wenn dann die einzelnen Artikel als separate Dateien vorliegen, können diese Klassifiziert werden. Für die Klassifizierung wurde der, im DataMining-Praktikum erstellte, Naive Bayes Klassifikator benutzt. Um ihn zu trainieren mussten zuerst von Hand Artikel getaggt werden. Für jede Klasse sollten 100 Artikel für das Training des NBCs gefunden werden. Und bei den fünf Klassen (tech, entertainment, sport, science, politic) waren das dann 500 Artikel die gefunden werden mussten. Das hat einige Zeit in Anspruch genommen, da oft die Wikipediaartikel nicht eindeutig zuordenbar waren und ich sie dann lieber nicht für das Training verwendet habe. Nach der Klassifizierung wurden dann alle Artikel mit einem Perlskript vom Wiki-Markup gereinigt. Dieses Skript wurde auch auf die große XML-Datei angewandt um den Gesamtkorpus zu reinigen. Nachdem die einzelnen Artikel gereinigt waren, wurden sie wieder zusammengefügt. Die Word2Vec-Implementierung in Gensim sieht es vor, dass die Trainingsdaten als Array aus einzelnen Sätzen eingegeben werden. Da die Datei mit dem kompletten Wikipediakorpus sehr groß ist, kann sie zwar direkt in Python geöffnet werden, allerdings wird das Array mit den einzelnen Sätzen zu groß (bei über 40 GB habe ich dann abgebrochen). Die Word2Vec Klasse kann alternativ zu dem Array aus Sätzen auch ein Objekt der Klasse "gensim.models.word2vec.LineSentence" entgegen nehmen. In der Input-Datei dieser Klasse müssen die einzelnen Zeilen je einen Satz enthalten. So habe ich dann den Gesamtkorpus zuerst von Satzzeichen und Großschreibung befreit und dann die einzelnen Sätze in je eine Zeile gebracht. Damit konnte ich dann mittels der erwähnten "LineSentence" Klasse das Word2Vec Modell erstellen und trainieren. Beim Technologiekorpus bin ich dann gleich vorgegangen. Theoretisch wäre diese Datei nicht so groß gewesen und man hätte einfach ein Array mit den einzelnen Sätzen erstellen können, da ich die Skripte ja schon hatte habe ich einfach die gleiche Vorangehensweise benutzt. 
+
+
+Wikipedia Korpus
+
+
+Experimente
+
+
+Fazit und Ausblick
+
+
